@@ -59,7 +59,7 @@ function Square(props) {
 
 ## Forcing Dark Syntax Highlighting
 
-You can force dark syntax highlighting even on light theme. Proved `dark` metadata to do that.
+You can force dark syntax highlighting even on light theme. Provide `dark` parameter to do that. Swith to light mode to see code block below still using dark theme.
 
 ~~~
 ```jsx dark
