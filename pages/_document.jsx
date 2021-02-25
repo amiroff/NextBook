@@ -20,7 +20,6 @@ class MyDocument extends Document {
         <body className='with-custom-webkit-scrollbars with-custom-css-scrollbars dark-mode'>
           <Main />
           <NextScript />
-          <script async defer src='https://buttons.github.io/buttons.js'></script>
         </body>
       </Html>
     )
