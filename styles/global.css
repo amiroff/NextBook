@@ -187,12 +187,17 @@ details p:nth-child(2) {
   color: var(--dm-link-text-color);
 }
 
-.page-toc-container {
+.page-toc-container li {
   border-left: 1px solid rgba(128, 128, 128, 0.432);
 }
 
 .page-toc-container li {
-  padding-left: 1em;
+  padding: 0.4rem 0 0.4rem 1.8rem;
+  margin: 0;
+}
+
+.page-toc-container li.page-toc-active {
+  border-color: var(--indigo-color);
 }
 
 .sidebar-link {
