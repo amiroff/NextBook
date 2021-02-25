@@ -35,6 +35,17 @@ function SideBar({ toc }) {
               <br />
             </div>
           ))}
+          <p className='text-center'>
+            <a
+              className='github-button'
+              href='https://github.com/amiroff/NextBook'
+              data-color-scheme='no-preference: light; light: light; dark: dark;'
+              data-size='large'
+              aria-label='Star amiroff/NextBook on GitHub'
+            >
+              Star
+            </a>
+          </p>
         </div>
       </div>
     </>
