@@ -1,0 +1,20 @@
+{
+  "projectTitle": "NextBook: Create lovely documentation with MDX!",
+  "projectURL": "https://myawesomebook.com",
+  "toc": [
+    {
+      "part": "Documentation",
+      "chapters": [
+        { "title": "Getting Started", "path": "/documentation/getting-started" },
+        { "title": "NextBook Features", "path": "/documentation/nextbook-features" },
+        { "title": "Markdown Reference", "path": "/documentation/markdown" },
+        { "title": "Fenced Code Usage", "path": "/documentation/fencedcode" },
+        { "title": "Using MDX", "path": "/documentation/using-mdx" }
+      ]
+    },
+    {
+      "part": "Contributing",
+      "chapters": [{ "title": "Missing Features", "path": "/contributing/missing-features" }]
+    }
+  ]
+}

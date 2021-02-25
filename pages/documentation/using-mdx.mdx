@@ -1,0 +1,66 @@
+---
+part: Documentation
+title: Using MDX
+---
+
+## What Is MDX?
+
+MDX to markdown is the same as JSX to JS. To quote the [original site](https://mdxjs.com/),
+
+> MDX is an authorable format that lets you seamlessly write JSX in your Markdown documents. You can import components, such as interactive charts or alerts, and embed them within your content. This makes writing long-form content with components a blast 🚀.
+
+... and this one:
+
+> Writing is fun again when you combine components, that can even be dynamic or load data, with the simplicity of Markdown for long-form content.
+
+Basically, renaming your `.md` file to `.mdx` gives you ability to import and use React components as if it was a normal React or Next.js app.
+
+Here is a small demo video for curious:
+
+<iframe
+  width='100%'
+  height='400'
+  src='https://www.youtube-nocookie.com/embed/d2sQiI5NFAM'
+  frameborder='0'
+  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+  allowfullscreen
+></iframe>
+
+## Basic Usage Example
+
+Say we have a basic React counter component like this:
+
+```jsx title=components/counter.jsx
+import React, { useState } from 'react'
+
+export default function Counter() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <div style={{ border: '1px solid purple', padding: '1rem' }}>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+    </div>
+  )
+}
+```
+
+We then include it in our `.mdx` file and display it just like in React application:
+
+```markdown title=pages/docs/mypage.mdx
+import Counter from '../../components/counter'
+
+<Counter />
+```
+
+will result in:
+
+import Counter from '../../components/counter'
+
+<Counter />
+
+Voila! This way you can create dynamic components for your documentation like never before. Live code editors, quizes, exams, cheatsheets, comments, you name it. Possibilities are endless.
+
+## More MDX Wizardy
+
+For more information what can be achieved with MDX, see the official [site]([original site](https://mdxjs.com/)).

@@ -1,0 +1,34 @@
+import Link from 'next/link'
+import Highlight from './highlight'
+
+export const Table = (props) => <table className='table custom-table' {...props} />
+
+export const Blockquote = (props) => <blockquote className='blockquote' {...props} />
+
+export const Pre = ({ children }) => <>{children}</>
+
+export const Details = (props) => <details className='collapse-panel mw-full my-10' {...props} />
+
+export const Summary = (props) => <summary className='collapse-header text-muted' {...props} />
+
+export const CustomLink = (props) => (
+  <Link {...props}>
+    <a {...props} />
+  </Link>
+)
+
+export const Image = (props) => (
+  <span className='rounded p-5 border my-10 d-block'>
+    <img className='img-fluid rounded p-5 d-block' {...props} />
+    <span className='text-center d-block'>{props.alt}</span>
+  </span>
+)
+
+export const Code = (props) => {
+  const language = props.className?.replace(/language-/, '') || 'text'
+  return (
+    <Highlight lang={language} {...props}>
+      {props.children.replace(/\n+$/, '')}
+    </Highlight>
+  )
+}
