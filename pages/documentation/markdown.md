@@ -115,8 +115,6 @@ Footnote 2 link. [^second]
 
 [^first]: Footnote **can have markup**
 
-    and multiple paragraphs.
-
 [^second]: Footnote text.
 
 ## Code
