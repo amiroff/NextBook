@@ -203,7 +203,10 @@ details p:nth-child(2) {
 .sidebar-link {
   line-height: 1.6rem;
   height: 1rem;
-  /* padding: 4px 0px 0px 10px; */
+}
+
+.sidebar-link.active {
+  border-right: 1px solid var(--indigo-color) !important;
 }
 
 .sidebar-icon {

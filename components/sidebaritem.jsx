@@ -6,8 +6,8 @@ const SideBarItem = ({ history, item, pathname }) => {
 
   const classnameActive =
     pathname === item.path
-      ? 'sidebar-link sidebar-link-with-icon align-items-baseline active'
-      : 'sidebar-link sidebar-link-with-icon align-items-baseline'
+      ? 'sidebar-link sidebar-link-with-icon active'
+      : 'sidebar-link sidebar-link-with-icon'
 
   useEffect(() => {
     // using useEffect because localstorage is not available at build time
