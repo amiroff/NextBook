@@ -1,22 +1,12 @@
 :root {
-  --primary-color: var(--indigo-color); /* Before: var(--blue-color) */
-  --primary-color-light: var(--indigo-color-light); /* Before: var(--blue-color-light) */
-  --primary-color-very-light: var(
-    --indigo-color-very-light
-  ); /* Before: var(--blue-color-very-light) */
-  --primary-color-dark: var(--indigo-color-dark); /* Before: var(--blue-color-dark) */
-  --primary-color-very-dark: var(
-    --indigo-color-very-dark
-  ); /* Before: var(--blue-color-very-dark) */
-  --primary-box-shadow-color: var(
-    --indigo-box-shadow-color
-  ); /* Before: var(--blue-box-shadow-color) */
-  --primary-box-shadow-color-darker: var(
-    --indigo-box-shadow-color-darker
-  ); /* Before: var(--blue-box-shadow-color-darker) */
-  --text-color-on-primary-color-bg: var(
-    --text-color-on-indigo-color-bg
-  ); /* Before: var(--text-color-on-blue-color-bg) */
+  --primary-color: var(--indigo-color);
+  --primary-color-light: var(--indigo-color-light);
+  --primary-color-very-light: var(--indigo-color-very-light);
+  --primary-color-dark: var(--indigo-color-dark);
+  --primary-color-very-dark: var(--indigo-color-very-dark);
+  --primary-box-shadow-color: var(--indigo-box-shadow-color);
+  --primary-box-shadow-color-darker: var(--indigo-box-shadow-color-darker);
+  --text-color-on-primary-color-bg: var(--text-color-on-indigo-color-bg);
 }
 
 body {
@@ -42,6 +32,13 @@ pre,
   padding: 1.2rem;
   font-size: 1em;
   background-color: #ffffff;
+}
+
+p code,
+li code {
+  background-color: var(--primary-box-shadow-color);
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 
 pre,
