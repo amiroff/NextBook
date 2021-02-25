@@ -19,4 +19,4 @@ Main reasons to try **NextBook** on your next project are:
 
 ## Learn More
 
-Here is some more information if case you are interested.
+Check the [demo site](https://next-book.vercel.app/) for more information.
