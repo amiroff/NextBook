@@ -25,10 +25,7 @@ export default function Layout({ title, description, children }) {
         }}
       />
       <Head>
-        <meta
-          content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
-          name='viewport'
-        />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport' />
       </Head>
       <NavBar docTitle={projectTitle} />
       <SideBar toc={toc} />

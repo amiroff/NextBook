@@ -10,8 +10,8 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Helvetica, Arial, 'Cantarell',
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 15px;
   font-weight: 400;
@@ -21,6 +21,7 @@ body {
   -moz-scroll-behavior: smooth;
   -ms-scroll-behavior: smooth;
   scroll-behavior: smooth;
+  line-height: 2.4rem;
 }
 
 pre,
@@ -81,6 +82,10 @@ h6 {
 ul {
   margin-left: 3rem;
   list-style-position: outside;
+}
+
+li {
+  line-height: 1.8rem;
 }
 
 ul.contains-task-list {
@@ -302,4 +307,23 @@ ul.contains-task-list li {
 
 .react-syntax-highlighter-line-number {
   margin-right: 1.2rem;
+}
+
+a:not(.sidebar-link) {
+  color: black;
+  text-decoration: underline;
+}
+
+a:not(.sidebar-link):hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.dark-mode a:not(.sidebar-link) {
+  color: white;
+}
+
+.dark-mode a:not(.sidebar-link):hover {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
