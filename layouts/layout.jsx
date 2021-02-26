@@ -7,7 +7,7 @@ import Head from 'next/head'
 import tocContent from '../toc.json'
 
 export default function Layout({ title, description, children }) {
-  const { projectTitle, projectURL, toc } = tocContent
+  const { projectTitle, projectURL, projectDescription, toc } = tocContent
 
   return (
     <div
@@ -16,7 +16,7 @@ export default function Layout({ title, description, children }) {
     >
       <NextSeo
         title={title}
-        description={description}
+        description={description ? description : projectDescription}
         openGraph={{
           type: 'book',
           url: projectURL,
@@ -25,7 +25,7 @@ export default function Layout({ title, description, children }) {
         }}
       />
       <Head>
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport' />
+        <meta content='width=device-width, initial-scale=1.0, maximum-scale=5.0' name='viewport' />
       </Head>
       <NavBar docTitle={projectTitle} />
       <SideBar toc={toc} />

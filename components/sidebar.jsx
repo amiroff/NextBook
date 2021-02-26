@@ -18,7 +18,7 @@ function SideBar({ toc }) {
   return (
     <>
       <div className='sidebar'>
-        <Search />
+        {/* <Search /> */}
         <div className='sidebar-menu'>
           {toc.map((toc) => (
             <div key={toc.part}>
