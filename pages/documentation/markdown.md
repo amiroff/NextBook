@@ -29,7 +29,7 @@ By default, all `.md` and `.mdx` files will use `layouts/index.jsx` as layout. Y
 
 Markdown allows using html tags. This way you can use modern html5 tags, embed audio and video and everything else not covered by standard markdown. Here is an example and what it generates:
 
-```xml
+```html
 <details>
   <summary>Toggle Me...</summary>
   <p>
@@ -306,7 +306,7 @@ results in:
 ![](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
 
-## Emojies
+## Emojis
 
 Just use typical 🥳 emojis.  
 <kbd>control + command + space</kbd> on MacOS and <kbd>windows + .</kbd> on Windows.

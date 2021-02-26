@@ -31,12 +31,17 @@ pre,
   margin: 1rem 0 1rem 0;
   padding: 1.2rem;
   font-size: 1em;
-  background-color: #ffffff;
+  background-color: rgb(250, 250, 250); /* use material UI theme bg */
+}
+
+.dark-mode pre,
+.dark-mode .code {
+  background-color: #212428; /* overwrite material UI theme bg */
 }
 
 p code,
 li code {
-  background-color: var(--primary-box-shadow-color);
+  background-color: var(--dm-code-bg-color);
   padding: 2px 4px;
   border-radius: 4px;
 }
@@ -285,7 +290,7 @@ ul.contains-task-list li {
 }
 
 .dark-mode .code-header {
-  background-color: var(--dm-sidebar-bg-color);
+  background-color: var(--dm-code-border-color);
 }
 
 .code-header + .code {

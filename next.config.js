@@ -5,11 +5,15 @@ const externalLinks = require('remark-external-links')
 const remarkSubSuper = require('remark-sub-super')
 const hints = require('remark-hint')
 const breaks = require('remark-breaks')
-const withMdxEnhanced = require('next-mdx-enhanced')
+const withPlugins = require('next-compose-plugins')
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 nextConfig = { reactStrictMode: true }
 
-module.exports = withMdxEnhanced({
+const withMdxEnhanced = require('next-mdx-enhanced')({
   defaultLayout: true,
   fileExtensions: ['mdx', 'md'],
   remarkPlugins: [externalLinks, slug, hints, remarkSubSuper, breaks],
@@ -24,4 +28,6 @@ module.exports = withMdxEnhanced({
     phase: 'both',
   },
   reExportDataFetching: false,
-})(nextConfig)
+})
+
+module.exports = withPlugins([[withBundleAnalyzer], [withMdxEnhanced]], nextConfig)

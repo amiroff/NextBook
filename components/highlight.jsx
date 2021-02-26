@@ -1,8 +1,42 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { atomOneDark, atomOneLight } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
+import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash'
+import css from 'react-syntax-highlighter/dist/cjs/languages/prism/css'
+import django from 'react-syntax-highlighter/dist/cjs/languages/prism/django'
+import git from 'react-syntax-highlighter/dist/cjs/languages/prism/git'
+import ini from 'react-syntax-highlighter/dist/cjs/languages/prism/ini'
+import javascript from 'react-syntax-highlighter/dist/cjs/languages/prism/javascript'
+import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json'
+import jsx from 'react-syntax-highlighter/dist/cjs/languages/prism/jsx'
+import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown'
+import html from 'react-syntax-highlighter/dist/cjs/languages/prism/markup'
+import powershell from 'react-syntax-highlighter/dist/cjs/languages/prism/powershell'
+import python from 'react-syntax-highlighter/dist/cjs/languages/prism/python'
+import shellSession from 'react-syntax-highlighter/dist/cjs/languages/prism/shell-session'
+import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql'
+import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript'
+import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml'
+import { materialDark, materialLight } from './prism'
 import { useLocalStorage } from 'react-use'
+import { ThemeContext } from './themecontext'
+
+SyntaxHighlighter.registerLanguage('markdown', markdown)
+SyntaxHighlighter.registerLanguage('css', css)
+SyntaxHighlighter.registerLanguage('html', html)
+SyntaxHighlighter.registerLanguage('bash', bash)
+SyntaxHighlighter.registerLanguage('powershell', powershell)
+SyntaxHighlighter.registerLanguage('yaml', yaml)
+SyntaxHighlighter.registerLanguage('ini', ini)
+SyntaxHighlighter.registerLanguage('jsx', jsx)
+SyntaxHighlighter.registerLanguage('shellSession', shellSession)
+SyntaxHighlighter.registerLanguage('git', git)
+SyntaxHighlighter.registerLanguage('sql', sql)
+SyntaxHighlighter.registerLanguage('json', json)
+SyntaxHighlighter.registerLanguage('typescript', typescript)
+SyntaxHighlighter.registerLanguage('python', python)
+SyntaxHighlighter.registerLanguage('django', django)
+SyntaxHighlighter.registerLanguage('javascript', javascript)
 
 const Highlight = ({
   lang,
@@ -15,19 +49,20 @@ const Highlight = ({
   dark,
   children,
 }) => {
+  const theme = useContext(ThemeContext)
   const [copied, setCopied] = useState(false)
-  const [darkMode] = useLocalStorage('darkMode', true)
   const markedArray = marked.split(',').map(function (n) {
     return Number(n)
   })
 
   const customPreStyles = dark ? 'code dark' : 'code'
   const customPre = (props) => <pre className={customPreStyles}>{props.children}</pre>
+  let colorMode = dark ? materialDark : theme === 'dark' ? materialDark : materialLight
 
   let wrapper = (lineNumber) => {
     const style = {}
     if (lineNumber && markedArray.includes(lineNumber)) {
-      style.backgroundColor = '#cccccc30'
+      style.backgroundColor = '#99999910'
       style.display = 'block'
     }
     return {
@@ -97,7 +132,7 @@ const Highlight = ({
         language={lang}
         showLineNumbers={numbered}
         startingLineNumber={parseInt(startline)}
-        style={dark === true ? atomOneDark : darkMode === true ? atomOneDark : atomOneLight}
+        style={colorMode}
         wrapLines
         lineProps={wrapper}
         PreTag={customPre}

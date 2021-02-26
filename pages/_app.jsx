@@ -1,14 +1,16 @@
 import { MDXProvider } from '@mdx-js/react'
 import {
   Blockquote,
-  Image,
-  CustomLink,
-  Pre,
-  Table,
-  Details,
-  Summary,
   Code,
+  CustomLink,
+  Details,
+  Image,
+  Pre,
+  Summary,
+  Table,
 } from 'components/mdxcomponents'
+import { ThemeContext, ToggleThemeContext } from 'components/themecontext'
+import { useState } from 'react'
 import '../styles/global.css'
 
 const components = {
@@ -23,10 +25,22 @@ const components = {
 }
 
 function MyApp({ Component, pageProps }) {
+  const [theme, setTheme] = useState('dark')
+
+  function toggleTheme() {
+    setTheme((currentTheme) => {
+      return currentTheme === 'dark' ? 'light' : 'dark'
+    })
+  }
+
   return (
-    <MDXProvider components={components}>
-      <Component {...pageProps} />
-    </MDXProvider>
+    <ThemeContext.Provider value={theme}>
+      <ToggleThemeContext.Provider value={toggleTheme}>
+        <MDXProvider components={components}>
+          <Component {...pageProps} />
+        </MDXProvider>
+      </ToggleThemeContext.Provider>
+    </ThemeContext.Provider>
   )
 }
 

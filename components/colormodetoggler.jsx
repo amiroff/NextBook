@@ -1,19 +1,21 @@
-import { useEffect } from 'react'
-import { useLocalStorage } from 'react-use'
+import { useContext, useEffect } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
+import { ThemeContext, ToggleThemeContext } from './themecontext'
 
-function ColorModeToggler({ toggle }) {
-  const [darkMode, setDarkMode] = useLocalStorage('darkMode', true)
-  useShortcuts(['shift', 'R'], () => setDarkMode(!darkMode), [darkMode])
+function ColorModeToggler() {
+  const theme = useContext(ThemeContext)
+  const toggleTheme = useContext(ToggleThemeContext)
+
+  useShortcuts(['shift', 'R'], () => toggleTheme(), [theme])
 
   useEffect(() => {
     const body = document.body
-    if (darkMode) {
+    if (theme === 'dark') {
       body.classList.add('dark-mode')
     } else {
       body.classList.remove('dark-mode')
     }
-  }, [darkMode])
+  }, [theme])
 
   return (
     <>
@@ -23,7 +25,7 @@ function ColorModeToggler({ toggle }) {
       <button
         className='btn btn-action'
         type='button'
-        onClick={() => setDarkMode(!darkMode)}
+        onClick={toggleTheme}
         title='Toggle color mode'
       >
         <div className='hidden-dm'>
