@@ -24,7 +24,7 @@ be displayed in monospace font.
 
 ## Syntax Highlighting
 
-You can add syntax highlighting by specifying code's language. For a list of supported languages see [this demo](https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/). The themes used are [Atom One Light](https://github.com/atom/one-light-syntax) and [Atom One Dark](https://github.com/atom/one-dark-syntax) depending on color mode you choose. You can customise these, or add you own via Highlight.js [themes](https://github.com/highlightjs/highlight.js/tree/master/src/styles).
+You can add syntax highlighting by specifying code's language from the list below after triple ```. NextBook uses [PrismJS](https://github.com/PrismJS) for themes and language definitions as it is the most complete currently.
 
 ~~~
 ```jsx
@@ -188,7 +188,7 @@ urlpatterns = [
 Lines of code can have automatic numbering. Provide `numbered` metadata to achive that:
 
 ~~~
-```xml numbered
+```html numbered
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -205,7 +205,7 @@ Lines of code can have automatic numbering. Provide `numbered` metadata to achiv
 ~~~
 results in:
 
-```xml numbered
+```html numbered
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -225,7 +225,7 @@ results in:
 Code can start from any provided number. Use `numbered` together with `startline` metadata to achive that. Default startline if not provided is `1`.
 
 ~~~
-```xml numbered startline=3
+```html numbered startline=3
 <head>
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -238,7 +238,7 @@ Code can start from any provided number. Use `numbered` together with `startline
 ~~~
 results in:
 
-```xml numbered startline=3
+```html numbered startline=3
 <head>
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -254,7 +254,7 @@ results in:
 In some cases there's a need to highlight/mark some lines and then describe each line seperately. Any number of lines can be marked by providing `marked` metadata together with `numbered` like so:
 
 ~~~
-```xml numbered marked=2,5,6,10
+```html numbered marked=2,5,6,10
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -273,7 +273,7 @@ In some cases there's a need to highlight/mark some lines and then describe each
 ~~~
 results in:
 
-```xml numbered marked=2,5,6,10
+```html numbered marked=2,5,6,10
 <!DOCTYPE html>
 <html lang='en'>
 <head>
