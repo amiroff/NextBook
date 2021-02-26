@@ -22,7 +22,7 @@ function SideBar({ toc }) {
         <div className='sidebar-menu'>
           {toc.map((toc) => (
             <div key={toc.part}>
-              <h4 className='sidebar-title'>{toc.part}</h4>
+              <span className='sidebar-title'>{toc.part}</span>
               <div className='sidebar-divider'></div>
               {toc.chapters.map((item) => (
                 <SideBarItem

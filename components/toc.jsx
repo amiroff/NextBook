@@ -7,7 +7,7 @@ function TOC() {
     <div className='toc w-400'>
       {toc.map((toc) => (
         <div key={toc.part} className='m-10'>
-          <h4 className='mt-20 mb-10'>{toc.part}</h4>
+          <div className='mt-20 mb-10 text-24 font-size-22'>{toc.part}</div>
           <ul>
             {toc.chapters.map((item) => (
               <li key={item.path}>
