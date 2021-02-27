@@ -7,7 +7,7 @@ tags: [markdown, reference, NextBook, md]
 updated: 25-02-2021
 ---
 
-### Front Matter
+## Front Matter
 
 YAML front matter can be used to add title, description, part info, tags and update date to your pages. This page includes a front matter like this:
 
@@ -25,7 +25,7 @@ updated: 25-02-2021
 !> Note: specifying layout is optional
 By default, all `.md` and `.mdx` files will use `layouts/index.jsx` as layout. You can use this property to use another one and completely change looks and layout of the page.
 
-### HTML Tags
+## HTML Tags
 
 Markdown allows using html tags. This way you can use modern html5 tags, embed audio and video and everything else not covered by standard markdown. Here is an example and what it generates:
 
@@ -46,7 +46,7 @@ results in:
   </p>
 </details>
 
-### Text Manipulation
+## Text Manipulation
 
 ```text
 **This is bold text**
@@ -327,7 +327,7 @@ results in:
 ![](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
 
-If you want to just include simple image, without bells and whistles above, use html `img` tag with `raw` class:
+If you want to just include simple image without bells and whistles above, use html `img` tag with `raw` class:
 
 ```
 <a
@@ -347,33 +347,44 @@ results in:
 >
   <img src='https://vercel.com/button' alt='Deploy with Vercel' className='raw' />
 </a>
+
+## Notifications
+
+These are custom features often needed to display hints. I find them very useful.
+
+### Hints
+
+```
+!> A Hint Title
+Make sure to check out [Markdown Guide](https://www.markdownguide.org/) to check the basic markdown syntax you can use with NextBook.
+```
+results in:
+
+!> A Hint Title
+Make sure to check out [Markdown Guide](https://www.markdownguide.org/) to check the basic markdown syntax you can use with NextBook.
+
+### Warnings
+
+```
+?> And Warning Title
+Try to keep usage of html elements to rare cases where standard markdown does not cover your basic markup needs.
+```
+results in:
+
+?> And Warning Title
+Try to keep usage of html elements to rare cases where standard markdown does not cover your basic markup needs.
+
+### Errors
+
+```
+x> An Error Title
+Ooooops, an unknown error occured.
+```
+results in:
+x> An Error Title
+Ooooops, an unknown error occured.
 
 ## Emojis
 
 Nothing fancy, just use typical 🥳 emojis.  
 <kbd>control + command + space</kbd> on MacOS and <kbd>windows + .</kbd> on Windows.
-
-## Hints / Warnings / Errors
-
-These are custom features often needed to display hints. I find them very useful.
-
-```
-!> A Hint Title
-Make sure to check out [Markdown Guide](https://www.markdownguide.org/) to check the basic markdown syntax you can use with NextBook.
-
-?> And Warning Title
-Try to keep usage of html elements to rare cases where standard markdown does not cover your basic markup needs.
-
-x> An Error Title
-Ooooops, an unknown error occured.
-```
-results in:
-
-!> A Hint Title
-Make sure to check out [Markdown Guide](https://www.markdownguide.org/) to check the basic markdown syntax you can use with NextBook.
-
-?> And Warning Title
-Try to keep usage of html elements to rare cases where standard markdown does not cover your basic markup needs.
-
-x> An Error Title
-Ooooops, an unknown error occured.

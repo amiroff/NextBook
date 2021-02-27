@@ -3,7 +3,7 @@ part: Documentation
 title: NextBook Features
 ---
 
-### User Interface
+## User Interface
 
 - Fast and responsive UI, content should be readable and accessible on most devices.
 - Good out of the box look thanks to [Halfmoon](https://www.gethalfmoon.com/).
@@ -12,26 +12,26 @@ title: NextBook Features
 - Side menu that keeps reader's progress.
 - In-page dynamic table of contents (if titles are used within the document) with scroolspy.
 
-### Functionality & Speed
+## Functionality & Speed
 
 - A pre-built, single page JAMSTACK application for good SEO and fast [FCP](https://developer.mozilla.org/en-US/docs/Glossary/First_contentful_paint).
 - Fast page loading and pre-loading.
 - Cross-page linking with no page reload.
 
-### Content Creation
+## Content Creation
 
 - Rich [markdown](https://www.markdownguide.org/) suport for content.
 - For more interactivity, [MDX](https://mdxjs.com/) power is at your fingertips.
 - Fenced code with metadata support allowing code titles, line numbers, links to source, clipboard copying, line highlighting.
 - Need even more dynamic features? See [customization & extensibility](#customization--extensibility) below.
 
-### Collaboration & Deployment
+## Collaboration & Deployment
 
 - You own your data, content is in plain text markdown files, no proprietary formats or apps.
 - Collaborate with peers and deploy via GIT.
 - No hassle, automatic [deployment](https://vercel.com/new).
 
-### Customization & Extensibility
+## Customization & Extensibility
 
 - Built on open-source. Nuff said.
 - Customizable and easy to read code.

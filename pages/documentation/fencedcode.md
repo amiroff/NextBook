@@ -24,7 +24,9 @@ be displayed in monospace font.
 
 ## Syntax Highlighting
 
-You can add syntax highlighting by specifying code's language from the list below after triple ```. NextBook uses [PrismJS](https://github.com/PrismJS) for themes and language definitions as it is the most complete currently.
+### Theme-Aware Highlighting
+
+You can add syntax highlighting by specifying code's language from the list below after triple ```. NextBook uses [PrismJS](https://github.com/PrismJS) for themes and language definitions as it is the most complete currently. When application's theme changes, so does the fenced code theme. Try it now by pressing <kbd>shift</kbd> + <kbd>R</kbd>.
 
 ~~~
 ```jsx
@@ -57,9 +59,9 @@ function Square(props) {
 }
 ```
 
-## Forcing Dark Syntax Highlighting
+### Forced Dark Theme
 
-You can force dark syntax highlighting even on light theme. Provide `dark` parameter to do that. Swith to light mode to see code block below still using dark theme.
+You can force dark syntax highlighting even on light theme. Provide `dark` parameter to do that. Swith to light mode by pressing <kbd>shift</kbd> + <kbd>R</kbd>. to see code block below still using dark theme.
 
 ~~~
 ```jsx dark
@@ -92,7 +94,11 @@ function Square(props) {
 }
 ```
 
-## Code Title
+## Code Header Information
+
+You can display various information like title, link to source and clipboard button in code header. 
+
+### Code Title
 
 Often you need to tell which file you are talking about. You can specify this by adding `title` info:
 
@@ -127,7 +133,7 @@ function Square(props) {
 }
 ```
 
-## Linked Code Title
+### Linked Code Title
 
 In case you need to link to original source you can pass `link` metadata. Now, title will be a link to the specified URL.
 
@@ -150,7 +156,7 @@ def diff(a, b):
     return a - b
 ```
 
-## Copying To Clipboard
+### Clipboard Button
 
 A classic nowadays, any code block can have automatic `Copy` icon. Just provide `clipboard` metadata:
 
@@ -184,6 +190,8 @@ urlpatterns = [
 ```
 
 ## Line Numbering
+
+### Automatic Numbering
 
 Lines of code can have automatic numbering. Provide `numbered` metadata to achive that:
 
@@ -220,9 +228,9 @@ results in:
 </html>
 ```
 
-## Manual Numbering
+### Automatic Numbering With Manual Offset
 
-Code can start from any provided number. Use `numbered` together with `startline` metadata to achive that. Default startline if not provided is `1`.
+Code can start from any provided number. Use `numbered` together with `startline` metadata to achive that. Default startline is `1` unless provided.
 
 ~~~
 ```html numbered startline=3

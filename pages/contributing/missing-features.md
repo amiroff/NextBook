@@ -8,7 +8,7 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [ ] Global search.
 - [ ] Side menu quick filter.
 - [ ] Jumping between parts without touching side menu.
-- [ ] In-page TOC indentation for sub headings.
+- [x] In-page TOC indentation for sub headings.
 - [ ] Automatic side menu generation, drop `config.json` altogether.
 - [x] Localization.
 - [ ] Live code edit & preview support.
