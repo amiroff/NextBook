@@ -1,4 +1,5 @@
 import Scrollspy from 'react-scrollspy-ez'
+import Text from './text'
 
 function InPageToc({ tocRaw }) {
   let tocIds = []
@@ -9,7 +10,7 @@ function InPageToc({ tocRaw }) {
   if (tocIds.length) {
     return (
       <div className='content position-fixed page-toc top-10'>
-        <h2 className='content-title'>Page Contents</h2>
+        <h2 className='content-title'><Text tid='Page Contents' /></h2>
         <Scrollspy
           ids={tocIds}
           itemContainerClassName='page-toc-container'

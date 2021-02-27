@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash'
@@ -18,7 +18,7 @@ import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql'
 import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript'
 import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml'
 import { materialDark, materialLight } from './prism'
-import { useLocalStorage } from 'react-use'
+import Text, { _ } from './text'
 import { ThemeContext } from './themecontext'
 
 SyntaxHighlighter.registerLanguage('markdown', markdown)
@@ -89,7 +89,7 @@ const Highlight = ({
               <button
                 className='copy-to-clipboard btn btn-sm btn-primary '
                 type='button'
-                title='Copy to clipboard'
+                title={_('Copy to clipboard')}
               >
                 {copied ? (
                   <svg
@@ -122,7 +122,7 @@ const Highlight = ({
                     />
                   </svg>
                 )}
-                {copied ? 'Copied!' : 'Copy'}
+                {copied ? <Text tid='Copied!' /> : <Text tid='Copy' />}
               </button>
             </CopyToClipboard>
           )}

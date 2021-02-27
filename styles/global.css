@@ -202,7 +202,8 @@ details p:nth-child(2) {
 }
 
 .page-toc-container li {
-  padding: 0.4rem 0 0.4rem 1.8rem;
+  padding: 0.6rem 0 0.6rem 1.8rem;
+  line-height: 1.4em;
   margin: 0;
 }
 

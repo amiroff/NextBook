@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import tocContent from '../toc.json'
+import config from '../config.json'
 import { useRouter } from 'next/router'
 import { useShortcuts } from 'react-shortcuts-hook'
+import { _ } from './text'
 
 function PrevNextNav() {
   const router = useRouter()
-  const { toc } = tocContent
+  const { toc } = config
 
   // isolate current chapter array
   const currentPart = toc.find((part) =>
@@ -30,7 +31,7 @@ function PrevNextNav() {
           {prevChapter && (
             <>
               <Link href={prevChapter.path}>
-                <a className='hyperlink pt-0 d-block' title='Previous chapter'>
+                <a className='hyperlink pt-0 d-block' title={_('Previous chapter')}>
                   ❮ {prevChapter.title}
                 </a>
               </Link>
@@ -44,7 +45,7 @@ function PrevNextNav() {
           {nextChapter && (
             <>
               <Link href={nextChapter.path}>
-                <a className='hyperlink pt-0 d-block' title='Next chapter'>
+                <a className='hyperlink pt-0 d-block' title={_('Next chapter')}>
                   {nextChapter.title} ❯
                 </a>
               </Link>

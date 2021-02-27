@@ -8,7 +8,7 @@ title: Getting Started With NextBook
 - Clone the repo from [repo](https://github.com/amiroff/NextBook) or just use degit: `npx degit amiroff/NextBook`
 - Run `npm install` or `yarn install` in project folder.
 - Create your [markdown, mdx](/documentation/markdown) or jsx content in `pages` folder.
-- Update `toc.json` with your table of contents.
+- Update `config.json` with your table of contents.
 - Deploy your respository to [edge](https://vercel.com/new).
 - Profit!
 

@@ -1,8 +1,8 @@
 import Link from 'next/link'
-import tocContent from '../toc.json'
+import config from '../config.json'
 
 function TOC() {
-  const { toc } = tocContent
+  const { toc } = config
   return (
     <div className='toc w-400'>
       {toc.map((toc) => (

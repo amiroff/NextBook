@@ -2,6 +2,7 @@
 
 import InPageToc from 'components/inpagetoc'
 import PrevNextNav from 'components/prevnextnav'
+import Text from 'components/text'
 import Layout from 'layouts/layout'
 
 export default function DocsLayout({ children, frontMatter }) {
@@ -18,16 +19,20 @@ export default function DocsLayout({ children, frontMatter }) {
               {frontMatter.description && <p>{frontMatter.description}</p>}
               {frontMatter.tags && (
                 <div className='mb-5'>
-                  <span>Keywords: </span>
+                  <span>
+                    <Text tid="Keywords" />: {''}
+                  </span>
                   {frontMatter.tags.map((tag) => (
-                    <span className='badge  p-5 mr-5' key={tag}>
+                    <span className='badge p-5 ml-3 mr-5' key={tag}>
                       {`#${tag}`}
                     </span>
                   ))}
                 </div>
               )}
               {frontMatter.updated && (
-                <div className='mt-5'>Last update: {frontMatter.updated}</div>
+                <div className='mt-5'>
+                  <Text tid='Last Update' />: {frontMatter.updated}
+                </div>
               )}
               <hr className='mt-20' />
             </div>

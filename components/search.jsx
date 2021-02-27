@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
+import Text from './text'
 
 function Search() {
   const searchInput = useRef(null)
@@ -14,7 +15,7 @@ function Search() {
       <input
         className='form-control search'
         type='text'
-        placeholder='Search content'
+        placeholder={<Text tid='Search content' />}
         ref={searchInput}
       />
       <div className='mt-10 font-size-12 hidden-sm-and-down text-muted'>
