@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useLocalStorage } from 'react-use'
 import ColorModeToggler from './colormodetoggler'
 import { useShortcuts } from 'react-shortcuts-hook'
+import { _ } from './text'
 
 function NavBar({ docTitle }) {
   const [sideBar, setSideBar] = useLocalStorage('sideBar', true)
@@ -27,7 +28,7 @@ function NavBar({ docTitle }) {
             className='btn btn-action'
             type='button'
             onClick={() => setSideBar(!sideBar)}
-            title='Table Of Contents'
+            title={_('Table Of Contents')}
           >
             <svg
               className='w-6 h-6 svg-button'

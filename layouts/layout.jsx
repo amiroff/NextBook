@@ -4,10 +4,10 @@ import NavBar from 'components/navbar'
 import SideBar from 'components/sidebar'
 import { NextSeo } from 'next-seo'
 import Head from 'next/head'
-import tocContent from '../toc.json'
+import config from '../config.json'
 
 export default function Layout({ title, description, children }) {
-  const { projectTitle, projectURL, projectDescription, toc } = tocContent
+  const { projectTitle, projectURL, projectDescription, toc } = config
 
   return (
     <div
