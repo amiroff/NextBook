@@ -36,3 +36,13 @@ I needed a usable, fairly dynamic and good looking book/documentation creation t
 
 With NextBook, I tried to make it stupid simple writing technical docs while keeping featureset minimal. Just creating markdown content files and updating table of contents should be enough to deploy a statically generated docs/book with the advantages of hybrid React app and even node API to do anything fancy (grading, level switching, you name it..) along the road.
 
+**Ready To Start?**
+
+<a
+  href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook'
+  target='_blank'
+  rel='noopener'
+>
+  <img src='https://vercel.com/button' alt='Deploy with Vercel' className='raw' />
+</a>
+

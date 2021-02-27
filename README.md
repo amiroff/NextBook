@@ -17,6 +17,9 @@ Main reasons to try **NextBook** on your next project are:
 - Unlimited dynamic features can be added with [MDX](https://mdxjs.com/)
 - Very customisable and extensible
 
+## Get Started
+[![Clone and deploy NOW!](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook)
+
 ## Learn More
 
 Check the [demo site](https://next-book.vercel.app/) for more information.
