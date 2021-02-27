@@ -17,12 +17,16 @@ export const CustomLink = (props) => (
   </Link>
 )
 
-export const Image = (props) => (
-  <span className='rounded p-5 border my-10 d-block'>
-    <img className='img-fluid rounded p-5 d-block' {...props} />
-    <span className='text-center d-block'>{props.alt}</span>
-  </span>
-)
+export const Image = (props) => {
+  return props.className === 'raw' ? (
+    <img {...props} />
+  ) : (
+    <span className='rounded p-5 border my-10 d-block'>
+      <img className='img-fluid rounded p-5 d-block' {...props} />
+      <span className='text-center d-block'>{props.alt}</span>
+    </span>
+  )
+}
 
 export const Code = (props) => {
   const language = props.className?.replace(/language-/, '') || 'text'
