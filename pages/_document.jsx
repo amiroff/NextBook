@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head />
-        <body className='with-custom-webkit-scrollbars with-custom-css-scrollbars dark-mode'>
+        <body className='with-custom-webkit-scrollbars with-custom-css-scrollbars auto-scaling-disabled dark-mode'>
           <Main />
           <NextScript />
         </body>
