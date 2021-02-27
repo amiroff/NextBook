@@ -13,7 +13,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   font-feature-settings: 'kern';
   text-rendering: optimizeLegibility;
@@ -79,8 +79,13 @@ h6 {
   padding: 0.8rem;
 }
 
-ul {
+ul,
+ol {
   margin-left: 3rem;
+}
+
+ul,
+ol {
   list-style-position: outside;
 }
 
@@ -88,12 +93,13 @@ li {
   line-height: 1.8rem;
 }
 
-ul.contains-task-list {
-  list-style-type: none;
-}
-
 ul > li {
   list-style-type: disc;
+}
+
+ul.contains-task-list {
+  list-style-type: none;
+  margin: 0;
 }
 
 li p {

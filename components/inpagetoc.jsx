@@ -19,7 +19,6 @@ function InPageToc({ tocRaw }) {
       </div>
     )
   } else {
-    console.info('Tip: add titles (hX) to your document to leverage In-Page Table Of Contents')
     return null
   }
 }
