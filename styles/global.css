@@ -330,3 +330,11 @@ a:not(.sidebar-link):hover {
   color: var(--primary-color);
   text-decoration: underline;
 }
+
+/* hide native arrow from summary tag */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
