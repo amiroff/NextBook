@@ -211,6 +211,27 @@ results in:
 57. foo
 1. bar
 
+## Checkboxes
+
+These are often used to indicate todo items.
+
+```
+**TODO LIST**
+
+- [x] Clone repo
+- [x] Create some pages
+- [ ] Commit & Push
+- [ ] Deploy!
+```
+results in:
+
+**TODO LIST**
+
+- [x] Clone repo
+- [x] Create some pages
+- [ ] Commit & Push
+- [ ] Deploy!
+
 ## Tables
 
 Tables are a bit tricky, because you have to use all those pipes, but this is how markdown was designed. Using a special markdown editor like [Typora](https://typora.io/) will make your life easier with these. 
@@ -306,9 +327,30 @@ results in:
 ![](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
 
+If you want to just include simple image, without bells and whistles above, use html `img` tag with `raw` class:
+
+```
+<a
+  href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook'
+  target='_blank'
+  rel='noopener'
+>
+  <img src='https://vercel.com/button' alt='Deploy with Vercel' className='raw' />
+</a>
+```
+results in:
+
+<a
+  href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook'
+  target='_blank'
+  rel='noopener'
+>
+  <img src='https://vercel.com/button' alt='Deploy with Vercel' className='raw' />
+</a>
+
 ## Emojis
 
-Just use typical 🥳 emojis.  
+Nothing fancy, just use typical 🥳 emojis.  
 <kbd>control + command + space</kbd> on MacOS and <kbd>windows + .</kbd> on Windows.
 
 ## Hints / Warnings / Errors
