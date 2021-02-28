@@ -7,13 +7,14 @@ Here is a list of feature which are planned to be implemented in future in no pa
 
 - [ ] Global search.
 - [ ] Side menu quick filter.
+- [ ] Folding side menu contents.
+- [ ] Automatic side menu generation, drop `config.json` altogether.
 - [ ] Jumping between parts without touching side menu.
 - [x] In-page TOC indentation for sub headings.
-- [ ] Automatic side menu generation, drop `config.json` altogether.
 - [x] Localization.
 - [ ] Live code edit & preview support.
 - [ ] Automatic image optimization using next/image.
-- [ ] Ability to highlight lines without displaying line numbers.
+- [ ] Fenced code: highlight lines without displaying line numbers.
 
 If you want to contribute with these, or if you have other ideas you can follow the basic **pull request route**:
 

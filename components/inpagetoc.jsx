@@ -23,8 +23,8 @@ function InPageToc({ tocRaw }) {
 
   if (tocIds.length) {
     return (
-      <div className='content position-fixed page-toc top-10'>
-        <h2 className='content-title'>
+      <div className='content position-fixed page-toc top-10 m-0 mt-20 mr-5'>
+        <h2 className='content-title ml-10'>
           <Text tid='Page Contents' />
         </h2>
         <Scrollspy
