@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Highlight from './highlight'
+import Text, { _ } from './text'
 
 export const Table = (props) => <table className='table custom-table' {...props} />
 
@@ -21,9 +22,14 @@ export const Image = (props) => {
   return props.className === 'raw' ? (
     <img {...props} />
   ) : (
-    <span className='rounded p-5 border my-10 d-block'>
-      <img className='img-fluid rounded p-5 d-block' {...props} />
-      <span className='text-center d-block'>{props.alt}</span>
+    <span>
+      <img className='img-fluid rounded my-10 p-5 d-block' {...props} />
+      <span className='text-left font-italic ml-10'>
+        <span className='font-weight-bold'>
+          <Text tid='Figure' />
+        </span>
+        : {props.alt}
+      </span>
     </span>
   )
 }

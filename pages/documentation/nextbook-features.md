@@ -12,9 +12,18 @@ title: NextBook Features
 - Side menu that keeps reader's progress.
 - In-page dynamic table of contents (if titles are used within the document) with scroolspy.
 
+## SEO
+
+- SEO optimised meta tags, 
+- robots.txt generated at build time 
+- Sitemap generated at built time
+- Great lighthouse score (100% in all fields):
+
+![Lighthouse Scores](/images/lighthouse-score.png)
+
 ## Functionality & Speed
 
-- A pre-built, single page JAMSTACK application for good SEO and fast [FCP](https://developer.mozilla.org/en-US/docs/Glossary/First_contentful_paint).
+- A pre-built, single page [JAMSTACK](https://jamstack.org/) application for fast [FCP](https://developer.mozilla.org/en-US/docs/Glossary/First_contentful_paint).
 - Fast page loading and pre-loading.
 - Cross-page linking with no page reload.
 
