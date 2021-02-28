@@ -83,14 +83,9 @@ h6 {
   padding: 0.8rem;
 }
 
-ul,
-ol {
-  margin-left: 3rem;
-}
-
-ul,
-ol {
-  list-style-position: outside;
+.md-content ul,
+.md-content ol {
+  margin-left: 1em;
 }
 
 li {
