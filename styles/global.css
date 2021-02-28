@@ -7,7 +7,6 @@
   --primary-box-shadow-color: var(--indigo-box-shadow-color);
   --primary-box-shadow-color-darker: var(--indigo-box-shadow-color-darker);
   --text-color-on-primary-color-bg: var(--text-color-on-indigo-color-bg);
-  --base-border-radius: 1.4rem;
 }
 
 body {
@@ -243,9 +242,10 @@ blockquote {
   border-left: 3px solid rgba(204, 204, 204, 0.452);
 }
 
-.responsive-image {
+.img-fluid {
   max-width: 100%;
   height: auto;
+  border-radius: 1rem;
 }
 
 .custom-table th {

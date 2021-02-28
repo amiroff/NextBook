@@ -5,7 +5,7 @@ function InPageTocElement(props) {
   // remove 1 from first heading to prevent exe left padding and add standard left padding
   const style = { paddingLeft: `${props.levels[props.children] - 1 + 0.5}em` }
   return (
-    <li style={style} className={props.className}>
+    <li style={style} className={props.className} {...props}>
       {props.children}
     </li>
   )
