@@ -26,6 +26,10 @@ export default function Layout({ title, description, children }) {
       />
       <Head>
         <meta content='width=device-width, initial-scale=1.0, maximum-scale=5.0' name='viewport' />
+        <meta
+          name='google-site-verification'
+          content='6NCUAOmwT6024Sb1WKubeknfrtCOuHEvY6XLIdLmcak'
+        />
       </Head>
       <NavBar docTitle={projectTitle} />
       <SideBar toc={toc} />
