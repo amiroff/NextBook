@@ -12,6 +12,7 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [ ] Jumping between parts without touching side menu.
 - [x] In-page TOC indentation for sub headings.
 - [x] Localization.
+- [x] Add sitemap.
 - [ ] Live code edit & preview support.
 - [ ] Automatic image optimization using next/image.
 - [ ] Fenced code: highlight lines without displaying line numbers.

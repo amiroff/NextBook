@@ -5,6 +5,7 @@
     "dev": "next",
     "devdebug": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "export": "next export"
   },
@@ -33,6 +34,7 @@
     "remark-sub-super": "^1.0.19"
   },
   "devDependencies": {
+    "next-sitemap": "^1.5.8",
     "prettier": "^2.2.1"
   },
   "license": "MIT"
