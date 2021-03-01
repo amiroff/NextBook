@@ -35,7 +35,7 @@ function SideBar({ toc }) {
 
   useEffect(() => {
     if (keyword !== '') {
-      // loop over cuttent TOC and create a new one with only chapters matching search
+      // keep only parts with chapters matching search criteria
       const filteredToc = toc.map((item) => {
         const newItem = { part: item.part }
         newItem.chapters = item.chapters.filter(({ title }) =>
@@ -68,7 +68,6 @@ function SideBar({ toc }) {
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
             />
-
             {clearVisible && (
               <div className='input-group-append'>
                 <button className='btn p-0' type='button' onClick={clear} title={_('Reset search')}>
