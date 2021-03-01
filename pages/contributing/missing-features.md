@@ -5,14 +5,14 @@ title: Missing Features
 
 Here is a list of feature which are planned to be implemented in future in no particular order. 
 
-- [ ] Global search.
-- [ ] Side menu quick filter.
-- [ ] Folding side menu contents.
-- [ ] Automatic side menu generation, drop `config.json` altogether.
-- [ ] Jumping between parts without touching side menu.
+- [x] Side menu quick filter.
 - [x] In-page TOC indentation for sub headings.
 - [x] Localization.
 - [x] Add sitemap.
+- [ ] Global search.
+- [ ] Folding side menu contents.
+- [ ] Automatic side menu generation, drop `config.json` altogether.
+- [ ] Jumping between parts without touching side menu.
 - [ ] Live code edit & preview support.
 - [ ] Automatic image optimization using next/image.
 - [ ] Fenced code: highlight lines without displaying line numbers.
