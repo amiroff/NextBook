@@ -50,9 +50,14 @@ kbd {
 
 p code,
 li code {
-  background-color: var(--dm-navbar-bg-color);
+  background-color: rgb(233, 233, 233);
   padding: 2px 4px;
   border-radius: 4px;
+}
+
+.dark-mode p code,
+.dark-mode li code {
+  background-color: var(--dm-navbar-bg-color);
 }
 
 pre,
