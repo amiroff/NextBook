@@ -13,7 +13,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Calibri, Helvetica, Arial, Cantarell,
     'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
   font-feature-settings: 'kern';
   text-rendering: optimizeLegibility;
@@ -41,19 +41,23 @@ code {
 
 .dark-mode pre,
 .dark-mode .code {
-  background-color: #212428; /* overwrite material UI theme bg */
+  background-color: var(--dm-navbar-bg-color); /* overwrite material UI theme bg */
+}
+
+kbd {
+  white-space: pre;
 }
 
 p code,
 li code {
-  background-color: var(--dm-code-bg-color);
+  background-color: var(--dm-navbar-bg-color);
   padding: 2px 4px;
   border-radius: 4px;
 }
 
 pre,
 .code.dark {
-  background-color: #212428;
+  background-color: var(--dm-navbar-bg-color);
   color: var(--dm-code-text-color);
 }
 
@@ -75,25 +79,19 @@ h5,
 h6 {
   font-weight: 500;
   margin-top: 3rem;
-}
-
-li {
-  line-height: 1.8rem;
+  line-height: 4.4rem;
 }
 
 ul > li {
   list-style-type: disc;
 }
 
-.md-content li {
-  list-style-position: outside;
-  margin-left: 1em;
+.md-content p {
   line-height: 3rem;
 }
 
-.md-content p {
-  line-height: 3rem;
-  text-align: justify;
+.app-title {
+  font-size: 1.5rem;
 }
 
 .svg-button {
@@ -109,8 +107,8 @@ ul > li {
 
 .md-content li {
   list-style-position: outside;
-  margin-left: 1em;
-  line-height: 2rem;
+  margin-left: 0.4em;
+  line-height: 2.2rem;
 }
 
 ul.contains-task-list {
@@ -239,7 +237,13 @@ details p:nth-child(2) {
 }
 
 .sidebar-link.active {
-  border-right: 1px solid var(--indigo-color) !important;
+  border-right: 2px solid black !important;
+  color: black !important;
+}
+
+.dark-mode .sidebar-link.active {
+  border-right: 2px solid white !important;
+  color: white !important;
 }
 
 .sidebar-icon {

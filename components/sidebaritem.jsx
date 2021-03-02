@@ -6,8 +6,8 @@ const SideBarItem = ({ history, item, pathname }) => {
 
   const classnameActive =
     pathname === item.path
-      ? 'sidebar-link sidebar-link-with-icon active'
-      : 'sidebar-link sidebar-link-with-icon'
+      ? 'sidebar-link font-size-14 sidebar-link-with-icon active'
+      : 'sidebar-link font-size-14 sidebar-link-with-icon'
 
   useEffect(() => {
     // using useEffect because localstorage is not available at build time
@@ -20,9 +20,7 @@ const SideBarItem = ({ history, item, pathname }) => {
     <Link href={item.path} key={item.path}>
       <a className={classnameActive}>
         <span className='sidebar-icon bg-transparent'>
-          <i className={bulletStyle === '•' ? 'text-primary' : ''} aria-hidden='true'>
-            {bulletStyle}
-          </i>
+          <i aria-hidden='true'>{bulletStyle}</i>
         </span>
         {item.title}
       </a>

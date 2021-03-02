@@ -49,11 +49,11 @@ function NavBar({ docTitle }) {
             <kbd className='text-muted'>shift</kbd> + <kbd className='text-muted'>M</kbd>
           </div>
         </div>
-        <h1 className='ml-auto mr-auto font-weight-lights font-size-18 my-5'>
+        <span className='ml-auto mr-auto font-weight-bold app-title my-5'>
           <Link href='/'>
             <a className='text-decoration-none'>{docTitle}</a>
           </Link>
-        </h1>
+        </span>
         <div className='navbar-content ml-10 ml-xs-auto'>
           <ColorModeToggler />
         </div>

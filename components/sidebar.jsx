@@ -57,13 +57,13 @@ function SideBar({ toc }) {
         <div className='sidebar-content'>
           <div className='input-group'>
             <label htmlFor='search' className='sr-only'>
-              <Text tid='Search content' />
+              <Text tid='Filter content' />
             </label>
             <input
               id='search'
-              className='form-control search'
+              className='form-control search rounded'
               type='text'
-              placeholder={_('Search content')}
+              placeholder={_('Filter content')}
               ref={searchInput}
               value={keyword}
               onChange={(e) => setKeyword(e.target.value)}
@@ -97,7 +97,7 @@ function SideBar({ toc }) {
         <div className='sidebar-menu'>
           {filteredToc.map((toc) => (
             <div key={toc.part}>
-              <span className='sidebar-title'>{toc.part}</span>
+              <span className='sidebar-title font-size-15 font-weight-bold'>{toc.part}</span>
               <div className='sidebar-divider'></div>
               {toc.chapters?.map((item) => (
                 <SideBarItem
