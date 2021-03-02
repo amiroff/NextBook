@@ -22,7 +22,7 @@ NextBook is quick and easy way to buid technical books or documentation that sup
 - Sitemap generated at built time.
 - Great lighthouse score (100% in all fields).
 
-![Lighthouse Scores](/images/lighthouse-score.png)
+![Lighthouse Scores](public/images/lighthouse-score.png)
 
 ### Functionality & Speed
 
