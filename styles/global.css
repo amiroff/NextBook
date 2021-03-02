@@ -77,6 +77,25 @@ h6 {
   margin-top: 3rem;
 }
 
+li {
+  line-height: 1.8rem;
+}
+
+ul > li {
+  list-style-type: disc;
+}
+
+.md-content li {
+  list-style-position: outside;
+  margin-left: 1em;
+  line-height: 3rem;
+}
+
+.md-content p {
+  line-height: 3rem;
+  text-align: justify;
+}
+
 .svg-button {
   width: 3.2rem;
   height: 3.2rem;
@@ -88,12 +107,10 @@ h6 {
   margin-left: 1em;
 }
 
-li {
-  line-height: 1.8rem;
-}
-
-ul > li {
-  list-style-type: disc;
+.md-content li {
+  list-style-position: outside;
+  margin-left: 1em;
+  line-height: 2rem;
 }
 
 ul.contains-task-list {
