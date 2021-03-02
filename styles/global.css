@@ -44,6 +44,11 @@ code {
   background-color: var(--dm-navbar-bg-color); /* overwrite material UI theme bg */
 }
 
+.sidebar {
+  border: none;
+  background-color: #f7f7f7;
+}
+
 kbd {
   white-space: pre;
 }
@@ -187,6 +192,10 @@ details p:nth-child(2) {
   box-shadow: var(--dm-collapse-content-box-shadow);
 }
 
+.page-toc {
+  margin-top: 5rem;
+}
+
 .page-toc ul,
 .page-toc li {
   padding: 0;
@@ -221,8 +230,9 @@ details p:nth-child(2) {
 }
 
 .page-toc-container li {
+  font-size: 1.5rem;
   padding: 0.4rem 0 0.4rem 0rem;
-  line-height: 1.4em;
+  line-height: 2rem;
   margin: 0;
 }
 
