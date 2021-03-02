@@ -16,20 +16,20 @@ title: Getting Started With NextBook
 
 I needed a usable, fairly dynamic and good looking book/documentation creation tool. All available options like [GitBook](https://www.gitbook.com/), [mdBook](https://rust-lang.github.io/mdBook/), [Gatsby](https://www.gatsbyjs.com/) and [Leanpub](https://leanpub.com/) while great tools themeselves (kudos to devs!), did not meet my needs. Some of them offered parts of these, but overall even payed ones could not offer the full package. The features I was looking for were:
 
-- Good looking, simple, responsive and readble UI,
-- A single page application with good SEO,
-- Fast interface, page loading and pre-loading,
-- Keyboard shortcuts for frequently used actions,
+- Good looking, simple, responsive and readable UI.
+- A single page application with good SEO.
+- Fast interface, page loading and pre-loading.
+- Keyboard shortcuts for frequently used actions.
 - Dark mode support!
-- Owning my data, committing to repository and seeing the results,
-- Customizable and easy to read code. I want to tweak it to fit my needs,
-- In-page dynamic table of contents with scroolspy,
-- Rich markdown support, with extras line notes, footnotes, sub and sup support,
-- Something more than what basic fenced code offers. Like line highlighting and linking to source,
-- Use JSX inside markdown, to add interactivity,
-- Use frontmatter for all the metadata,
-- Fast markdown editor, or better yet, use my own favourite editor,
-- Have unlimited and **free** contributors,
+- Owning my data, committing to repository and seeing the results.
+- Customizable and easy to read code. I want to tweak it to fit my needs.
+- In-page dynamic table of contents with scroolspy.
+- Rich markdown support, with extras like notes, footnotes, sub and sup support.
+- Something more than what basic fenced code offers. Like line highlighting and linking to source, copying to clipboard.
+- Use JSX inside markdown, to add interactivity.
+- Use frontmatter for all the metadata.
+- Fast markdown editor, or better yet, use my own favourite editor.
+- Have unlimited and **free** contributors.
 - And other small details.
 
 ## Enter NextBook

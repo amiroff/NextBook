@@ -16,6 +16,7 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [ ] Live code edit & preview support.
 - [ ] Automatic image optimization using next/image.
 - [ ] Fenced code: highlight lines without displaying line numbers.
+- [ ] Epub export.
 
 If you want to contribute with these, or if you have other ideas you can follow the basic **pull request route**:
 
