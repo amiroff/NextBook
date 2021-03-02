@@ -6,7 +6,7 @@ NextBook is quick and easy way to buid technical books or documentation that sup
 
 ## Primary Features
 
-## User Interface
+### User Interface
 
 - Fast and responsive UI, content should be readable and accessible on most devices.
 - Good out of the box looks thanks to [Halfmoon](https://www.gethalfmoon.com/).
@@ -15,7 +15,7 @@ NextBook is quick and easy way to buid technical books or documentation that sup
 - Side menu that keeps reader's progress.
 - In-page dynamic table of contents (if titles are used within the document) with scroolspy.
 
-## SEO
+### SEO
 
 - SEO optimised meta tags.
 - robots.txt generated at build time.
