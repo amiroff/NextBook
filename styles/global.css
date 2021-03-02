@@ -10,8 +10,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Calibri, Helvetica, Arial, Cantarell,
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 1.5rem;
   font-weight: 400;
