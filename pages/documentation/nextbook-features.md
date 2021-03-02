@@ -6,18 +6,18 @@ title: NextBook Features
 ## User Interface
 
 - Fast and responsive UI, content should be readable and accessible on most devices.
-- Good out of the box look thanks to [Halfmoon](https://www.gethalfmoon.com/).
+- Good out of the box looks thanks to [Halfmoon](https://www.gethalfmoon.com/).
 - Keyboard shortcuts to toggle features (sidebar, lights off, next/previous page navigation).
-- Built-in light and dark mode (press <kbd>shift + R</kbd>) for pleasant reading that sticks between sessions.
+- Built-in light and dark mode (press <kbd>shift + R</kbd>) for pleasant reading.
 - Side menu that keeps reader's progress.
 - In-page dynamic table of contents (if titles are used within the document) with scroolspy.
 
 ## SEO
 
-- SEO optimised meta tags, 
-- robots.txt generated at build time 
-- Sitemap generated at built time
-- Great lighthouse score (100% in all fields):
+- SEO optimised meta tags.
+- robots.txt generated at build time.
+- Sitemap generated at built time.
+- Great lighthouse score (100% in all fields).
 
 ![Lighthouse Scores](/images/lighthouse-score.png)
 
@@ -25,7 +25,7 @@ title: NextBook Features
 
 - A pre-built, single page [JAMSTACK](https://jamstack.org/) application for fast [FCP](https://developer.mozilla.org/en-US/docs/Glossary/First_contentful_paint).
 - Fast page loading and pre-loading.
-- Cross-page linking with no page reload.
+- Cross-page linking with no page reloads.
 
 ## Content Creation
 
@@ -36,9 +36,9 @@ title: NextBook Features
 
 ## Collaboration & Deployment
 
-- You own your data, content is in plain text markdown files, no proprietary formats or apps.
-- Collaborate with peers and deploy via GIT.
-- No hassle, automatic [deployment](https://vercel.com/new).
+- You own your data, content is in plain markdown files, no proprietary formats or apps.
+- Collaborate with peers and deploy via familiar GIT workflows as you're used to do with code.
+- No hassle, automatic [deployment](https://vercel.com/new) with a single push.
 
 ## Customization & Extensibility
 
