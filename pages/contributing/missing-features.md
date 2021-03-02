@@ -9,7 +9,8 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [x] In-page TOC indentation for sub headings.
 - [x] Localization.
 - [x] Add sitemap.
-- [ ] Global search.
+- [ ] Global search. (Algolia?)
+- [ ] Analytics. (Splitbee?)
 - [ ] Folding side menu contents.
 - [ ] Automatic side menu generation, drop `config.json` altogether.
 - [ ] Jumping between parts without touching side menu.
