@@ -22,19 +22,16 @@ export const Image = (props) => {
   return props.className === 'raw' ? (
     <img {...props} />
   ) : (
-    <span>
-      <div>
+    <>
+      <span className='d-block'>
         <img className='img-fluid m-5 d-block mx-auto' {...props} />
-      </div>
+      </span>
       {props.alt && (
-        <div className='text-left font-italic ml-10 text-center'>
-          <span className='font-weight-bold'>
-            <Text tid='Figure' />
-          </span>
-          : {props.alt}
-        </div>
+        <span className='text-left font-italic ml-10 text-center d-block'>
+          <Text tid='Figure' className='font-weight-bold' />: {props.alt}
+        </span>
       )}
-    </span>
+    </>
   )
 }
 

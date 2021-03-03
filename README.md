@@ -12,7 +12,8 @@ NextBook is quick and easy way to buid technical books or documentation that sup
 - Good out of the box looks thanks to [Halfmoon](https://www.gethalfmoon.com/).
 - Keyboard shortcuts to toggle features (sidebar, lights off, next/previous page navigation).
 - Built-in light and dark mode (press <kbd>shift + R</kbd>) for pleasant reading.
-- Side menu that keeps reader's progress.
+- Smooth progressbar on top indicating how far on the page you are.
+- Side menu that keeps reader's read progress.
 - In-page dynamic table of contents (if titles are used within the document) with scroolspy.
 
 ### SEO

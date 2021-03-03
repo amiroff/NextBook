@@ -4,8 +4,8 @@ export function _(tid) {
   return config.text[tid] || tid
 }
 
-function Text({ tid }) {
-  return _(tid)
+function Text(props) {
+  return <span {...props}>{_(props.tid)}</span>
 }
 
 export default Text

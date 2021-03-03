@@ -5,9 +5,20 @@ import SideBar from 'components/sidebar'
 import { NextSeo } from 'next-seo'
 import Head from 'next/head'
 import config from '../config.json'
+import { useScroll } from 'react-use'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Layout({ title, description, children }) {
   const { projectTitle, projectURL, projectDescription, toc } = config
+  const scrollRef = useRef(null)
+  const { x, y } = useScroll(scrollRef)
+  const [progressStyle, setprogressStyle] = useState({})
+
+  useEffect(() => {
+    const windowHeight = scrollRef.current.scrollHeight - scrollRef.current.clientHeight
+    const percentage = y / windowHeight
+    setprogressStyle({ transform: `scale(${percentage}, 1)`, opacity: `${percentage}` })
+  }, [x, y])
 
   return (
     <div
@@ -31,9 +42,15 @@ export default function Layout({ title, description, children }) {
           content='6NCUAOmwT6024Sb1WKubeknfrtCOuHEvY6XLIdLmcak'
         />
       </Head>
+
+      <div className='progressBarContainer'>
+        <div className='progressBar' style={progressStyle} />
+      </div>
       <NavBar docTitle={projectTitle} />
       <SideBar toc={toc} />
-      <div className='content-wrapper'>{children}</div>
+      <div className='content-wrapper' ref={scrollRef}>
+        {children}
+      </div>
     </div>
   )
 }
