@@ -15,6 +15,7 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [ ] Automatic side menu generation, drop `config.json` altogether.
 - [ ] Jumping between parts without touching side menu.
 - [ ] Live code edit & preview support.
+- [ ] Tabbed content
 - [ ] Automatic image optimization using next/image.
 - [ ] Fenced code: highlight lines without displaying line numbers.
 - [ ] Epub export.

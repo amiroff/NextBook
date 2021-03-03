@@ -321,11 +321,13 @@ You will use images a lot! Drop your images or svg vectors in public folder and 
 ```
 ![](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
+![Git Branching](/images/branching.svg 'Excalidraw FTW')
 ```
 results in:
 
 ![](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
+![Git Branching](/images/branching.svg)
 
 If you want to just include simple image without bells and whistles above, use html `img` tag with `raw` class:
 
@@ -381,6 +383,7 @@ x> An Error Title
 Ooooops, an unknown error occured.
 ```
 results in:
+
 x> An Error Title
 Ooooops, an unknown error occured.
 
