@@ -381,3 +381,29 @@ details > summary {
 details > summary::-webkit-details-marker {
   display: none;
 }
+
+/* Progress bar */
+.progressBarContainer {
+  position: fixed;
+  z-index: 99;
+  background: rgba(255, 255, 255, 0);
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.progressBar {
+  background: linear-gradient(to left, rgba(255, 0, 0, 0.7), rgba(238, 130, 238, 1));
+  transform-origin: top left;
+  transform: scale(0, 0);
+  opacity: 0;
+}
+
+.dark-mode .progressBar {
+  background: linear-gradient(to left, rgb(130, 146, 238), rgb(18, 151, 96));
+}
+
+.progressBarContainer,
+.progressBar {
+  height: 3px;
+}

@@ -9,6 +9,7 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [x] In-page TOC indentation for sub headings.
 - [x] Localization.
 - [x] Add sitemap.
+- [x] Top progressbar as scroll happens.
 - [ ] Global search. (Algolia?)
 - [ ] Analytics. (Splitbee?)
 - [ ] Folding side menu contents.
