@@ -23,14 +23,16 @@ export const Image = (props) => {
     <img {...props} />
   ) : (
     <span>
-      <img className='img-fluid m-5 d-block' {...props} />
+      <div>
+        <img className='img-fluid m-5 d-block mx-auto' {...props} />
+      </div>
       {props.alt && (
-        <span className='text-left font-italic ml-10'>
+        <div className='text-left font-italic ml-10 text-center'>
           <span className='font-weight-bold'>
             <Text tid='Figure' />
           </span>
           : {props.alt}
-        </span>
+        </div>
       )}
     </span>
   )
