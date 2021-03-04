@@ -2,6 +2,8 @@
 
 ## What Is NextBook?
 
+**Try live example [here](https://next-book.vercel.app)**
+
 NextBook is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It's built with [MDX](https://mdxjs.com/), [Next.js](https://nextjs.org/) and [React](https://reactjs.org/) and works by compiling markdown or MDX down to plain static html. This way, first content render on user's device is very fast, then hydration kicks in and React takes over to add dynamic stuff. The possibilities are endless.
 
 ## Primary Features
