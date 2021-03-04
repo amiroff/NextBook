@@ -414,3 +414,42 @@ Ooooops, an unknown error occured.
 
 Nothing fancy, just use typical 🥳 emojis.  
 <kbd>control + command + space</kbd> on MacOS and <kbd>windows + .</kbd> on Windows.
+
+## Tabs
+
+While [markdown spec](https://commonmark.org) does not offer any tabbed interface, NextBook has you covered here. Use `tabs` and `tab` tags as follows. Note that these are not JSX elements, just pseudo-html, you don't have to import them into your document.
+
+```html
+<tabs>
+<tab label='Windows Directions'>
+
+Install via [chocolatey](https://chocolatey.org):
+
+`choco install python`
+
+</tab>
+<tab label='MacOS Directions'>
+
+Install via [brew](https://brew.sh):
+
+`brew install python3`
+</tab>
+</tabs>
+```
+results in:
+
+<tabs>
+<tab label='Windows Directions'>
+
+Install via [chocolatey](https://chocolatey.org):
+
+`choco install python`
+
+</tab>
+<tab label='MacOS Directions'>
+
+Install via [brew](https://brew.sh):
+
+`brew install python3`
+</tab>
+</tabs>

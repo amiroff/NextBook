@@ -45,7 +45,7 @@ function SideBar({ toc }) {
     <>
       <div className='sidebar'>
         <div className='sidebar-content'>
-          <label htmlFor='search' className='sr-only' autoC>
+          <label htmlFor='search' className='sr-only'>
             <Text tid='Filter content' />
           </label>
           <input
