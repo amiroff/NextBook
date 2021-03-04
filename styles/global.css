@@ -1,3 +1,4 @@
+@import url('https://rsms.me/inter/inter.css');
 :root {
   --primary-color: var(--indigo-color);
   --primary-color-light: var(--indigo-color-light);
@@ -10,9 +11,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Calibri, Helvetica, Arial, Cantarell,
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
+  font-family: 'Inter var', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Calibri,
+    Helvetica, Arial, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 1.6rem;
   font-weight: 400;
   font-feature-settings: 'kern';
@@ -92,6 +93,10 @@ h6 {
   line-height: 4.4rem;
 }
 
+h1 {
+  font-weight: 600;
+}
+
 ul > li {
   list-style-type: disc;
 }
@@ -118,7 +123,7 @@ ul > li {
 .md-content li {
   list-style-position: outside;
   margin-left: 0.4em;
-  line-height: 2.2rem;
+  line-height: 2rem;
 }
 
 ul.contains-task-list {
@@ -407,13 +412,14 @@ details > summary::-webkit-details-marker {
 
 mark {
   display: inline-block;
-  background-color: rgba(255, 255, 0, 0.5);
+  background: linear-gradient(to top, yellow, rgba(255, 255, 0, 0.3));
   padding: 0 2px 0 2px;
   border-radius: 1px;
-  line-height: 2.4rem;
+  line-height: 2rem;
   color: black;
+  transform: skew(-5deg);
 }
 
 .dark-mode mark {
-  background-color: rgba(255, 255, 0, 0.8);
+  background: yellow;
 }
