@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Highlight from './highlight'
 import Text, { _ } from './text'
+import { useState } from 'react'
 
 export const Table = (props) => <table className='table custom-table' {...props} />
 
@@ -41,5 +42,33 @@ export const Code = (props) => {
     <Highlight lang={language} {...props}>
       {props.children.replace(/\n+$/, '')}
     </Highlight>
+  )
+}
+
+export const Tab = ({ children }) => <div className='tab-content'>{children}</div>
+
+export const Tabs = (props) => {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  let tabs = props.children.map((child, index) => {
+    let style =
+      activeIndex === index
+        ? 'btn font-size-14 btn-rounded active border-top-0 border-bottom'
+        : 'btn font-size-14 btn-rounded alt-dm tab-label border-top-0 border-bottom'
+
+    return (
+      <button className={style} onClick={() => setActiveIndex(index)} key={index}>
+        {child.props.label}
+      </button>
+    )
+  })
+
+  return (
+    <div className='tabbed-content rounded-bottom p-0 m-0'>
+      <div className='btn-group w-full' role='group'>
+        {tabs}
+      </div>
+      <div className='card bg-transparent m-0 border-0 p-5'>{props.children[activeIndex]}</div>
+    </div>
   )
 }

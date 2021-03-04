@@ -10,13 +10,13 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [x] Localization.
 - [x] Add sitemap.
 - [x] Top progressbar as scroll happens.
+- [x] Tabbed content
 - [ ] Global search. (Algolia?)
 - [ ] Analytics. (Splitbee?)
 - [ ] Folding side menu contents.
 - [ ] Automatic side menu generation, drop `config.json` altogether.
 - [ ] Jumping between parts without touching side menu.
 - [ ] Live code edit & preview support.
-- [ ] Tabbed content
 - [ ] Automatic image optimization using next/image.
 - [ ] Fenced code: highlight lines without displaying line numbers.
 - [ ] Epub export.

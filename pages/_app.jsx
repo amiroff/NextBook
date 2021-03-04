@@ -8,6 +8,8 @@ import {
   Pre,
   Summary,
   Table,
+  Tabs,
+  Tab,
 } from 'components/mdxcomponents'
 import { ThemeContext, ToggleThemeContext } from 'components/themecontext'
 import { useState } from 'react'
@@ -23,6 +25,8 @@ const components = {
   details: Details,
   summary: Summary,
   code: Code,
+  tabs: Tabs,
+  tab: Tab,
 }
 
 function MyApp({ Component, pageProps }) {
