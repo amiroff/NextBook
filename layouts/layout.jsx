@@ -29,7 +29,7 @@ export default function Layout({ title, description, children }) {
         title={title}
         description={description ? description : projectDescription}
         openGraph={{
-          type: 'book',
+          type: 'website',
           url: projectURL,
           title: title,
           description: description,
