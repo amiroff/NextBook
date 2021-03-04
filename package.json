@@ -28,6 +28,7 @@
     "react-syntax-highlighter": "^15.4.3",
     "react-use": "^17.1.1",
     "remark-breaks": "^2.0.1",
+    "remark-code-import": "^0.2.0",
     "remark-external-links": "^8.0.0",
     "remark-hint": "^1.0.9",
     "remark-mark-plus": "^1.0.21",

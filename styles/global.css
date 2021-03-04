@@ -314,12 +314,9 @@ ul.contains-task-list li {
   margin-right: 1rem;
 }
 
-.copy-to-clipboard * {
+.copy-to-clipboard svg {
   vertical-align: sub;
   display: inline-block;
-}
-
-.copy-to-clipboard svg {
   width: 16px;
   margin-right: 4px;
 }

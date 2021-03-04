@@ -5,7 +5,7 @@ export function _(tid) {
 }
 
 function Text(props) {
-  return <span {...props}>{_(props.tid)}</span>
+  return <span className={props.className}>{_(props.tid)}</span>
 }
 
 export default Text

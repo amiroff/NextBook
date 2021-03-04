@@ -297,3 +297,57 @@ results in:
 ...
 
 ```
+
+## Including External Code File
+
+Sometimes code to display is so big that it's inconvenient to embed it in markdown document. For cases like this, including original file with `file` is possible. Provided path should be relative to current document.
+
+~~~
+```jsx file=../404.jsx numbered clipboard title=404.jsx
+```
+~~~
+results in:
+
+```jsx file=../404.jsx numbered clipboard title=404.jsx
+```
+
+## Escaping Code Block
+
+To escape (prevent from working as intended) block and simply display how fenced code is being used, wrap it with `~~~`:
+
+````
+~~~
+```html
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+~~~
+````
+will result in:
+
+~~~
+```html
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+```
+~~~

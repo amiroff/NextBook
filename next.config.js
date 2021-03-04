@@ -6,6 +6,7 @@ const remarkSubSuper = require('remark-sub-super')
 const hints = require('remark-hint')
 const breaks = require('remark-breaks')
 const remarkMark = require('remark-mark-plus')
+const codeImport = require('remark-code-import')
 const withPlugins = require('next-compose-plugins')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -17,7 +18,7 @@ nextConfig = { reactStrictMode: true }
 const withMdxEnhanced = require('next-mdx-enhanced')({
   defaultLayout: true,
   fileExtensions: ['mdx', 'md'],
-  remarkPlugins: [externalLinks, slug, hints, remarkSubSuper, breaks, remarkMark],
+  remarkPlugins: [externalLinks, slug, hints, remarkSubSuper, breaks, remarkMark, codeImport],
   rehypePlugins: [],
   extendFrontMatter: {
     process: (mdxContent, frontMatter) => {
