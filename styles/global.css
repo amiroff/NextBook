@@ -410,10 +410,13 @@ details > summary::-webkit-details-marker {
 
 mark {
   display: inline-block;
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.5);
   padding: 0 2px 0 2px;
   border-radius: 1px;
   line-height: 2.4rem;
-  opacity: 0.9;
   color: black;
+}
+
+.dark-mode mark {
+  background-color: rgba(255, 255, 0, 0.8);
 }
