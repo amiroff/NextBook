@@ -75,6 +75,19 @@ Superscript: 19^th^
 
 Subscript: H~2~O
 
+## Horizontal Lines
+
+Both of these work:
+
+```text
+---
+***
+```
+results in:
+
+---
+***
+
 ## Blockquotes
 
 ```text
