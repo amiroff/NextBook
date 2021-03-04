@@ -30,6 +30,7 @@
     "remark-breaks": "^2.0.1",
     "remark-external-links": "^8.0.0",
     "remark-hint": "^1.0.9",
+    "remark-mark-plus": "^1.0.21",
     "remark-slug": "^6.0.0",
     "remark-sub-super": "^1.0.19"
   },

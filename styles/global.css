@@ -407,3 +407,13 @@ details > summary::-webkit-details-marker {
 .progressBar {
   height: 3px;
 }
+
+mark {
+  display: inline-block;
+  background-color: yellow;
+  padding: 0 2px 0 2px;
+  border-radius: 1px;
+  line-height: 2.4rem;
+  opacity: 0.9;
+  color: black;
+}
