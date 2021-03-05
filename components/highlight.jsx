@@ -60,10 +60,11 @@ const Highlight = ({
   let colorMode = dark ? materialDark : theme === 'dark' ? materialDark : materialLight
 
   let wrapper = (lineNumber) => {
-    const style = {}
+    const style = { borderLeft: '3px solid transparent', paddingLeft: '10px' }
     if (lineNumber && markedArray.includes(lineNumber)) {
       style.backgroundColor = '#99999910'
       style.display = 'block'
+      style.borderLeft = '3px solid #9e9e9e'
     }
     return {
       style,
@@ -74,7 +75,7 @@ const Highlight = ({
   return (
     <>
       {(clipboard || title) && (
-        <div className='code-header border-bottom-0 code'>
+        <div className='code-header'>
           <div className='code-filename'>
             {link ? (
               <a href={link} target='_blank' rel='noreferrer'>

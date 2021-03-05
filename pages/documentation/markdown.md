@@ -92,11 +92,11 @@ results in:
 Wrap the text you want to mark/highlight  with `==`
 
 ```text
-Lorem ==ipsum dolor==  sit amet.
+Lorem ==ipsum dolor== sit amet.
 ```
 results in:
 
-Lorem ==ipsum dolor==  sit amet.
+Lorem ==ipsum dolor== sit amet.
 
 ## Blockquotes
 
