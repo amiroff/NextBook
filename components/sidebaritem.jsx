@@ -20,7 +20,7 @@ const SideBarItem = ({ history, item, pathname }) => {
     <Link href={item.path} key={item.path}>
       <a className={classnameActive}>
         <span className='sidebar-icon bg-transparent'>
-          <i aria-hidden='true'>{bulletStyle}</i>
+          <span aria-hidden='true'>{bulletStyle}</span>
         </span>
         {item.title}
       </a>
