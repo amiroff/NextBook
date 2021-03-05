@@ -8,7 +8,7 @@ import config from '../config.json'
 import { useScroll } from 'react-use'
 import { useEffect, useRef, useState } from 'react'
 
-export default function Layout({ title, description, children }) {
+export default function Layout({ title, description, children, part }) {
   const { projectTitle, projectURL, projectDescription, toc } = config
   const scrollRef = useRef(null)
   const { x, y } = useScroll(scrollRef)
@@ -26,7 +26,7 @@ export default function Layout({ title, description, children }) {
       data-sidebar-type='overlayed-sm-and-down'
     >
       <NextSeo
-        title={title}
+        title={`${title} | ${projectTitle}`}
         description={description ? description : projectDescription}
         openGraph={{
           type: 'website',
@@ -47,7 +47,7 @@ export default function Layout({ title, description, children }) {
         <div className='progressBar' style={progressStyle} />
       </div>
       <NavBar docTitle={projectTitle} />
-      <SideBar toc={toc} />
+      <SideBar toc={toc} part={part} />
       <div className='content-wrapper' ref={scrollRef}>
         {children}
       </div>
