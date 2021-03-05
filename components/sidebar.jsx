@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from 'react'
-import { useLocalStorage } from 'react-use'
 import { useShortcuts } from 'react-shortcuts-hook'
-import SideBarItem from './sidebaritem'
+import { useLocalStorage } from 'react-use'
+import SideBarSection from './sidebarsection'
 import Text, { _ } from './text'
 
-function SideBar({ toc }) {
+function SideBar({ toc, part }) {
   const router = useRouter()
   const [chapters, setChapters] = useLocalStorage('visitedChapters', [])
   const [keyword, setKeyword] = useState('')
@@ -64,20 +64,14 @@ function SideBar({ toc }) {
           </div>
         </div>
         <div className='sidebar-menu'>
-          {filteredToc.map((toc) => (
-            <div key={toc.part}>
-              <span className='sidebar-title font-size-15 font-weight-bold'>{toc.part}</span>
-              <div className='sidebar-divider'></div>
-              {toc.chapters?.map((item) => (
-                <SideBarItem
-                  item={item}
-                  pathname={router.pathname}
-                  history={chapters}
-                  key={item.path}
-                />
-              ))}
-              <br />
-            </div>
+          {filteredToc.map((toc, id) => (
+            <SideBarSection
+              toc={toc}
+              part={part}
+              pathName={router.pathname}
+              history={chapters}
+              key={id}
+            />
           ))}
         </div>
       </div>

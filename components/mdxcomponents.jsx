@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import Highlight from './highlight'
-import Text, { _ } from './text'
 import { useState } from 'react'
+import Highlight from './highlight'
+import Text from './text'
 
 export const Table = (props) => <table className='table custom-table' {...props} />
 

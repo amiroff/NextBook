@@ -11,9 +11,9 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [x] Add sitemap.
 - [x] Top progressbar as scroll happens.
 - [x] Tabbed content
+- [x] Folding side menu contents.
 - [ ] Global search. (Algolia?)
 - [ ] Analytics. (Splitbee?)
-- [ ] Folding side menu contents.
 - [ ] Automatic side menu generation, drop `config.json` altogether.
 - [ ] Jumping between parts without touching side menu.
 - [ ] Live code edit & preview support.

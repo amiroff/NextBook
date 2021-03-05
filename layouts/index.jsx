@@ -10,6 +10,7 @@ export default function DocsLayout({ children, frontMatter }) {
     <Layout
       title={frontMatter.part ? `${frontMatter.part} - ${frontMatter.title}` : frontMatter.title}
       description={frontMatter.description}
+      part={frontMatter.part}
     >
       <div className='container-fluid'>
         <div className='row'>
@@ -20,7 +21,7 @@ export default function DocsLayout({ children, frontMatter }) {
               {frontMatter.tags && (
                 <div className='mb-5'>
                   <span>
-                    <Text tid="Keywords" />: {''}
+                    <Text tid='Keywords' />: {''}
                   </span>
                   {frontMatter.tags.map((tag) => (
                     <span className='badge p-5 ml-3 mr-5' key={tag}>

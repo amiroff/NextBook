@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 const SideBarItem = ({ history, item, pathname }) => {
-  const [bulletStyle, setBulletStyle] = useState('◦')
+  const [bulletStyle, setBulletStyle] = useState('•')
 
   const classnameActive =
     pathname === item.path
@@ -12,7 +12,7 @@ const SideBarItem = ({ history, item, pathname }) => {
   useEffect(() => {
     // using useEffect because localstorage is not available at build time
     if (history.includes(item.path)) {
-      setBulletStyle('•')
+      setBulletStyle('⭑')
     }
   }, [history, item])
 
