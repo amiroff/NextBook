@@ -12,6 +12,7 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [x] Top progressbar as scroll happens.
 - [x] Tabbed content
 - [x] Folding side menu contents.
+- [x] Fenced code: highlight lines without displaying line numbers.
 - [ ] Force hide in-page TOC menu
 - [ ] Global search. (Algolia?)
 - [ ] Analytics. (Splitbee?)
@@ -19,7 +20,6 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [ ] Jumping between parts without touching side menu.
 - [ ] Live code edit & preview support.
 - [ ] Automatic image optimization using next/image.
-- [ ] Fenced code: highlight lines without displaying line numbers.
 - [ ] Epub export.
 
 If you want to contribute with these, or if you have other ideas you can follow the basic **pull request route**:

@@ -240,8 +240,6 @@ Code can start from any provided number. Use `numbered` together with `startline
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Document</title>
 </head>
-...
-
 ```
 ~~~
 results in:
@@ -253,16 +251,14 @@ results in:
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Document</title>
 </head>
-...
-
 ```
 
 ## Line Marking
 
-In some cases there's a need to highlight/mark some lines and then describe each line seperately. Any number of lines can be marked by providing `marked` metadata together with `numbered` like so:
+In some cases there's a need to highlight/mark some lines and then describe each line seperately. Any number of lines can be marked by providing `marked` parameter:
 
 ~~~
-```html numbered marked=2,5,6,10
+```html marked=2,5,6,10
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -275,13 +271,11 @@ In some cases there's a need to highlight/mark some lines and then describe each
     <h1>Hello World!</h1>
 </body>
 </html>
-...
-
 ```
 ~~~
 results in:
 
-```html numbered marked=2,5,6,10
+```html marked=2,5,6,10
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -294,8 +288,41 @@ results in:
     <h1>Hello World!</h1>
 </body>
 </html>
-...
+```
 
+You can also pass every other parameter mentioned above together. Here we are adding some of them:
+
+~~~
+```html clipboard numbered marked=2,5,6,10 title=public/index.html link=https://gist.github.com/amiroff/04d57ef025845b191d9cd30c7ca13f20 
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>
+```
+~~~
+results in 
+
+```html clipboard numbered marked=2,5,6,10 title=public/index.html link=https://gist.github.com/amiroff/04d57ef025845b191d9cd30c7ca13f20 
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>
 ```
 
 ## Including External Code File
@@ -311,9 +338,9 @@ results in:
 ```jsx file=../404.jsx numbered clipboard title=404.jsx
 ```
 
-## Escaping Code Block
+## Escaping Code Blocks
 
-To escape (prevent from working as intended) block and simply display how fenced code is being used, wrap it with `~~~`:
+To escape (prevent from displaying as highlighted code) block and simply display how fenced code is being used in source, wrap it with `~~~`:
 
 ````
 ~~~

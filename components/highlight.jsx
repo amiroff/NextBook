@@ -60,7 +60,7 @@ const Highlight = ({
   let colorMode = dark ? materialDark : theme === 'dark' ? materialDark : materialLight
 
   let wrapper = (lineNumber) => {
-    const style = { borderLeft: '3px solid transparent', paddingLeft: '10px' }
+    const style = { borderLeft: '3px solid transparent', paddingLeft: '20px' }
     if (lineNumber && markedArray.includes(lineNumber)) {
       style.backgroundColor = '#99999910'
       style.display = 'block'
@@ -129,17 +129,19 @@ const Highlight = ({
           )}
         </div>
       )}
-      <SyntaxHighlighter
-        language={lang}
-        showLineNumbers={numbered}
-        startingLineNumber={parseInt(startline)}
-        style={colorMode}
-        wrapLines
-        lineProps={wrapper}
-        PreTag={customPre}
-      >
-        {children}
-      </SyntaxHighlighter>
+      <div className={markedArray.length > 1 && !numbered ? 'clean' : ''}>
+        <SyntaxHighlighter
+          language={lang}
+          showLineNumbers={markedArray.length > 1 && !numbered ? true : numbered}
+          startingLineNumber={parseInt(startline)}
+          style={colorMode}
+          wrapLines
+          lineProps={wrapper}
+          PreTag={customPre}
+        >
+          {children}
+        </SyntaxHighlighter>
+      </div>
     </>
   )
 }
