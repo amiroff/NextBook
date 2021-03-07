@@ -26,35 +26,30 @@ function PrevNextNav() {
 
   return (
     <>
-      <div className='row my-20'>
-        <div className='text-left font-size-16 col-6'>
-          {prevChapter && (
-            <>
-              <Link href={prevChapter.path}>
-                <a className='hyperlink pt-0 d-block' title={_('Previous chapter')}>
-                  ❮ {prevChapter.title}
-                </a>
-              </Link>
+      <div className='row my-20 d-flex justify-content-between'>
+        {prevChapter ? (
+          <Link href={prevChapter.path}>
+            <a title={_('Previous chapter')} className='font-size-16 prev-page'>
+              ❮ {prevChapter.title}
               <div className='mt-5 ml-10 font-size-12 hidden-sm-and-down text-muted'>
-                <kbd className='text-muted'>shift</kbd> + <kbd className='text-muted'>❮</kbd>
+                <kbd>shift</kbd> + <kbd>❮</kbd>
               </div>
-            </>
-          )}
-        </div>
-        <div className='text-right font-size-16 col-6'>
-          {nextChapter && (
-            <>
-              <Link href={nextChapter.path}>
-                <a className='hyperlink pt-0 d-block' title={_('Next chapter')}>
-                  {nextChapter.title} ❯
-                </a>
-              </Link>
+            </a>
+          </Link>
+        ) : (
+          <div className='col-5'></div>
+        )}
+
+        {nextChapter && (
+          <Link href={nextChapter.path}>
+            <a className='font-size-16 next-page text-right' title={_('Next chapter')}>
+              {nextChapter.title} ❯
               <div className='mt-5 ml-10 font-size-12 hidden-sm-and-down text-muted'>
-                <kbd className='text-muted'>shift</kbd> + <kbd className='text-muted'>❯</kbd>
+                <kbd>shift</kbd> + <kbd>❯</kbd>
               </div>
-            </>
-          )}
-        </div>
+            </a>
+          </Link>
+        )}
       </div>
     </>
   )

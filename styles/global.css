@@ -43,7 +43,7 @@ pre.code {
 
 .dark-mode pre,
 .dark-mode .code {
-  background-color: var(--dm-navbar-bg-color); /* overwrite material UI theme bg */
+  background-color: var(--dm-sidebar-bg-color);
 }
 
 .sidebar {
@@ -64,12 +64,12 @@ li code {
 
 .dark-mode p code,
 .dark-mode li code {
-  background-color: var(--dm-navbar-bg-color);
+  background-color: var(--dm-sidebar-bg-color);
 }
 
 pre,
 .code.dark {
-  background-color: var(--dm-navbar-bg-color);
+  background-color: var(--dm-sidebar-bg-color);
   color: var(--dm-code-text-color);
 }
 
@@ -348,7 +348,7 @@ ul.contains-task-list li {
 }
 
 .dark-mode .code-header {
-  background-color: var(--dm-sidebar-bg-color);
+  background-color: var(--dm-navbar-bg-color);
 }
 
 .code-header + .code-body .code {
@@ -385,6 +385,25 @@ details > summary {
 }
 details > summary::marker {
   display: none;
+}
+
+.next-page,
+.prev-page {
+  border: 1px solid var(--lm-horizontal-rule-color);
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  width: 49%;
+  text-decoration: none !important;
+}
+
+.dark-mode .next-page,
+.dark-mode .prev-page {
+  border: 1px solid var(--dm-horizontal-rule-color);
+}
+
+.next-page:hover,
+.prev-page:hover {
+  border: 1px solid var(--primary-color);
 }
 
 /* Progress bar */
