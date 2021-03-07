@@ -11,7 +11,7 @@ var _default = {
     wordSpacing: 'normal',
     wordBreak: 'normal',
     wordWrap: 'normal',
-    color: '#90a4ae',
+    color: '#40525c',
     fontSize: '1em',
     lineHeight: '1.5em',
     MozTabSize: '4',

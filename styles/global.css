@@ -18,6 +18,7 @@ body {
 kbd,
 pre,
 code,
+.code-filename,
 .code {
   font-family: 'IBM Plex Mono', 'SF Mono', 'Cascadia Code', 'Consolas', 'Menlo',
     'Bitsream Vera Sans Mono', 'Droid Sans Mono', 'Ubuntu Mono', monospace;
@@ -27,7 +28,7 @@ code,
   font-size: 1.5rem;
   border-radius: 6px;
   font-size: 1.5rem;
-  background-color: #fafafa;
+  background-color: #f5f7f9;
 }
 
 pre.code {
@@ -47,7 +48,7 @@ pre.code {
 
 .sidebar {
   border: none;
-  background-color: #f7f7f7;
+  background-color: #f5f7f9;
 }
 
 kbd {
@@ -56,7 +57,7 @@ kbd {
 
 p code,
 li code {
-  background-color: rgb(233, 233, 233);
+  background-color: #f5f7f9;
   padding: 2px 4px;
   border-radius: 4px;
 }
@@ -329,6 +330,8 @@ ul.contains-task-list li {
 .code-filename {
   flex: 1;
   padding: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 .code-header {
@@ -340,7 +343,7 @@ ul.contains-task-list li {
   border-radius: 6px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  background-color: var(--lm-code-border-color);
+  background-color: #e7eaec;
   font-family: inherit;
 }
 
@@ -348,9 +351,7 @@ ul.contains-task-list li {
   background-color: var(--dm-sidebar-bg-color);
 }
 
-.code-header + .code {
-  margin-top: 0;
-  border-top: 0;
+.code-header + .code-body .code {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -382,7 +383,7 @@ a:not(.sidebar-link):hover {
 details > summary {
   list-style: none;
 }
-details > summary::-webkit-details-marker {
+details > summary::marker {
   display: none;
 }
 

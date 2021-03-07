@@ -129,7 +129,7 @@ const Highlight = ({
           )}
         </div>
       )}
-      <div className={markedArray.length > 1 && !numbered ? 'clean' : ''}>
+      <div className={markedArray.length > 1 && !numbered ? 'clean code-body' : 'code-body'}>
         <SyntaxHighlighter
           language={lang}
           showLineNumbers={markedArray.length > 1 && !numbered ? true : numbered}
