@@ -51,7 +51,10 @@ function NavBar({ docTitle }) {
         </div>
         <span className='ml-auto mr-auto font-weight-bold app-title my-5'>
           <Link href='/'>
-            <a className='text-decoration-none'>{docTitle}</a>
+            <a className='text-decoration-none d-flex align-items-center'>
+              <img src='/icon.svg' alt='NextBook Logo' width='34px' className='mr-5' />
+              {docTitle}
+            </a>
           </Link>
         </span>
         <div className='navbar-content ml-10 ml-xs-auto'>
