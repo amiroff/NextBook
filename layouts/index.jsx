@@ -14,7 +14,7 @@ export default function DocsLayout({ children, frontMatter }) {
     >
       <div className='container-fluid'>
         <div className='row'>
-          <div className='col-lg-9 px-20'>
+          <div className={frontMatter.hide_toc ? 'col-lg-12 px-20' : 'col-lg-9 px-20'}>
             <div className='my-20'>
               {frontMatter.title && <h1>{frontMatter.title}</h1>}
               {frontMatter.description && <p>{frontMatter.description}</p>}
@@ -44,9 +44,11 @@ export default function DocsLayout({ children, frontMatter }) {
               <PrevNextNav />
             </div>
           </div>
-          <div className='col-lg-3 d-none d-lg-block'>
-            <InPageToc tocRaw={frontMatter.tocRaw} />
-          </div>
+          {!frontMatter.hide_toc && (
+            <div className='col-lg-3 d-none d-lg-block'>
+              <InPageToc tocRaw={frontMatter.tocRaw} />
+            </div>
+          )}
         </div>
       </div>
     </Layout>
