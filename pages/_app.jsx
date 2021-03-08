@@ -31,9 +31,11 @@ const components = {
   tab: Tab,
 }
 
-splitbee.init({
-  token: config.splitBeeToken,
-})
+if (config.splitBeeToken) {
+  splitbee.init({
+    token: config.splitBeeToken,
+  })
+}
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('dark')

@@ -261,14 +261,18 @@ details p:nth-child(2) {
   height: 1rem;
 }
 
-.sidebar-link.active {
-  border-right: 2px solid black !important;
-  color: black !important;
+.sidebar-link.active,
+.sidebar-link.active:hover,
+.sidebar-link:hover {
+  color: black;
+  background-color: var(--lm-base-body-bg-color);
 }
 
-.dark-mode .sidebar-link.active {
-  border-right: 2px solid white !important;
-  color: white !important;
+.dark-mode .sidebar-link.active,
+.dark-mode .sidebar-link.active:hover,
+.dark-mode .sidebar-link:hover {
+  color: white;
+  background-color: var(--dm-base-body-bg-color);
 }
 
 .sidebar-icon {

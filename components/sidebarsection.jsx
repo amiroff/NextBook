@@ -3,7 +3,7 @@ import SideBarItem from './sidebaritem'
 
 const IconRight = () => (
   <svg
-    height='16px'
+    height='20px'
     className='sidebar-title-icon'
     fill='none'
     stroke='currentColor'
@@ -16,7 +16,7 @@ const IconRight = () => (
 
 const IconDown = () => (
   <svg
-    height='16px'
+    height='20px'
     className='sidebar-title-icon'
     fill='none'
     stroke='currentColor'
@@ -41,11 +41,11 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
   return (
     <div className='sidebar-section'>
       <div
-        className='d-flex align-items-start sidebar-title font-size-14 font-weight-bold'
+        className='d-flex justify-content-between sidebar-title font-size-14 font-weight-bold'
         onClick={toggleMenu}
       >
-        <div>{menuVisible ? <IconDown /> : <IconRight />}</div>
         <div className='part-title'>{toc.part}</div>
+        <div>{menuVisible ? <IconDown /> : <IconRight />}</div>
       </div>
       <div className={menuVisible ? '' : 'd-none'}>
         {toc.chapters?.map((item, id) => (
