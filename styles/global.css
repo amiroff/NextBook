@@ -437,17 +437,14 @@ details > summary::marker {
 }
 
 mark {
-  display: inline-block;
-  background: linear-gradient(to top, yellow, rgba(255, 255, 0, 0.3));
-  padding: 0 2px 0 2px;
-  border-radius: 1px;
-  line-height: 2rem;
-  color: black;
-  transform: skew(-5deg);
+  background-color: transparent !important;
+  color: inherit;
+  box-shadow: inset 0 -0.4em 0 0 #e2fca4, 0 0.1em 0 0 #e2fca4;
 }
 
 .dark-mode mark {
-  background: yellow;
+  color: black;
+  box-shadow: inset 0 -1.4em 0 0 #e2fca4, 0 0.1em 0 0 #e2fca4;
 }
 
 .sidebar-title {
