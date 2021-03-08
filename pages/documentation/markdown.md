@@ -308,35 +308,6 @@ results in:
 | git status   |   git status   |    git status |
 | git diff     |    git diff    |      git diff |
 
-## Links
-
-Links can be auto-detected, but it would be better to be implicit and have support other markdown tools. Also, all external links in your documentation will be autodetected and appropriate html code will be generated.
-
-```
-[link to github](https://github.com)
-
-[link with title](https://github.com 'Github FTW')
-
-With angle brackets: <https://github.com/remarkjs>
-
-Autoconverted link https://github.com/remarkjs
-
-Cross page [absolute link](/documentation/getting-started) for single page app navigation.
-```
-results in:
-
-[link to github](https://github.com)
-
-[link with title](https://github.com 'Github FTW')
-
-With angle brackets: <https://github.com/remarkjs>
-
-Autoconverted link https://github.com/remarkjs
-
-Cross page [absolute link](/documentation/getting-started) for single page app navigation.
-
-
-
 ## Images
 
 You will use images a lot! Drop your images or svg vectors in public folder and link to them. NextBook will autoscale them for small displays. You can add captions and `alt` information to your images.
@@ -352,7 +323,7 @@ results in:
 ![The Surface](/images/surface.jpg 'The Surface Device')
 ![Git Branching](/images/branching.svg)
 
-If you want to just include simple image without bells and whistles above, use html `img` tag with `raw` class:
+If you want to just include simple image without bells and whistles above, use markdown image with `raw` in alt description or html `img` tag with `raw` class:
 
 ```
 <a
@@ -365,13 +336,58 @@ If you want to just include simple image without bells and whistles above, use h
 ```
 results in:
 
-<a
-  href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook'
-  target='_blank'
-  rel='noopener'
->
-  <img src='https://vercel.com/button' alt='Deploy with Vercel' className='raw' />
-</a>
+<img src='https://vercel.com/button' alt='Deploy with Vercel' className='raw' />
+
+and:
+```
+![Deploy with Vercel raw](https://vercel.com/button)
+```
+results in:
+
+![Deploy with Vercel raw](https://vercel.com/button)
+
+## Links
+
+Links can be auto-detected, but it would be better to be implicit and have support other markdown tools. Also, all external links in your documentation will be autodetected and appropriate html code will be generated.
+
+```
+[link to github](https://github.com)
+
+[link with title](https://github.com 'Github FTW')
+
+With angle brackets: <https://github.com/remarkjs>
+
+Autoconverted link https://github.com/remarkjs
+
+Cross page [absolute link](/documentation/getting-started) for single page app navigation.
+
+Linking with image: 
+
+[![Deploy with Vercel raw][1]][2]
+
+[1]:  https://vercel.com/button
+[2]:  https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook "Deploy With Vercel now!"
+
+```
+results in:
+
+[link to github](https://github.com)
+
+[link with title](https://github.com 'Github FTW')
+
+With angle brackets: <https://github.com/remarkjs>
+
+Autoconverted link https://github.com/remarkjs
+
+Cross page [absolute link](/documentation/getting-started) for single page app navigation.
+
+Linking with image: 
+
+[![Deploy with Vercel raw][1]][2]
+
+[1]:  https://vercel.com/button
+[2]:  https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook "Deploy With Vercel now!"
+
 
 ## Notifications
 

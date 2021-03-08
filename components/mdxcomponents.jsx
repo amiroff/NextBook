@@ -20,8 +20,8 @@ export const CustomLink = (props) => (
 )
 
 export const Image = (props) => {
-  return props.className === 'raw' ? (
-    <img {...props} />
+  return props.className === 'raw' || props.alt?.includes('raw') ? (
+    <img {...props} alt={props.alt.replace('raw', '').trim()} />
   ) : (
     <>
       <span className='d-block'>
