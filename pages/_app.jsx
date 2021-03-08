@@ -14,8 +14,8 @@ import {
 } from 'components/mdxcomponents'
 import { ThemeContext, ToggleThemeContext } from 'components/themecontext'
 import { useState } from 'react'
-import '../styles/global.css'
 import '../styles/halfmoon-variables.min.css'
+import '../styles/global.css'
 
 const components = {
   table: Table,
