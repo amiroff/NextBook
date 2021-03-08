@@ -13,9 +13,9 @@ Here is a list of feature which are planned to be implemented in future in no pa
 - [x] Tabbed content
 - [x] Folding side menu contents.
 - [x] Fenced code: highlight lines without displaying line numbers.
-- [ ] Force hide in-page TOC menu
+- [x] Force hide in-page TOC menu.
+- [x] Analytics with Splitbee.
 - [ ] Global search. (Algolia?)
-- [ ] Analytics. (Splitbee?)
 - [ ] Automatic side menu generation, drop `config.json` altogether.
 - [ ] Jumping between parts without touching side menu.
 - [ ] Live code edit & preview support.

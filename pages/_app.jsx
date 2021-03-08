@@ -1,4 +1,5 @@
 import { MDXProvider } from '@mdx-js/react'
+import splitbee from '@splitbee/web'
 import {
   Blockquote,
   Code,
@@ -7,14 +8,14 @@ import {
   Image,
   Pre,
   Summary,
+  Tab,
   Table,
   Tabs,
-  Tab,
 } from 'components/mdxcomponents'
 import { ThemeContext, ToggleThemeContext } from 'components/themecontext'
 import { useState } from 'react'
-import '../styles/halfmoon-variables.min.css'
 import '../styles/global.css'
+import '../styles/halfmoon-variables.min.css'
 
 const components = {
   table: Table,
@@ -28,6 +29,8 @@ const components = {
   tabs: Tabs,
   tab: Tab,
 }
+
+splitbee.init()
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('dark')
