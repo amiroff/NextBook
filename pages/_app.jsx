@@ -1,4 +1,5 @@
 import { MDXProvider } from '@mdx-js/react'
+import config from '../config.json'
 import splitbee from '@splitbee/web'
 import {
   Blockquote,
@@ -30,7 +31,9 @@ const components = {
   tab: Tab,
 }
 
-splitbee.init()
+splitbee.init({
+  token: config.splitBeeToken,
+})
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState('dark')
