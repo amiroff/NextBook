@@ -6,8 +6,8 @@ const SideBarItem = ({ history, item, pathname }) => {
 
   const classnameActive =
     pathname === item.path
-      ? 'sidebar-link font-size-14 sidebar-link-with-icon active'
-      : 'sidebar-link font-size-14 sidebar-link-with-icon'
+      ? 'sidebar-link pl-5 font-size-14 sidebar-link-with-icon active'
+      : 'sidebar-link pl-5 font-size-14 sidebar-link-with-icon'
 
   useEffect(() => {
     // using useEffect because localstorage is not available at build time

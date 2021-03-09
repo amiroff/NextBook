@@ -429,7 +429,7 @@ Ooooops, an unknown error occured.
 ## Emojis
 
 Nothing fancy, just use typical 🥳 emojis.  
-<kbd>control + command + space</kbd> on MacOS and <kbd>windows + .</kbd> on Windows.
+<kbd>control + command + space</kbd> on  and <kbd>windows + .</kbd> on Windows.
 
 ## Tabs
 
@@ -444,7 +444,7 @@ Install via [chocolatey](https://chocolatey.org):
 `choco install python`
 
 </tab>
-<tab label='MacOS Directions'>
+<tab label='macOS Directions'>
 
 Install via [brew](https://brew.sh):
 
@@ -462,7 +462,7 @@ Install via [chocolatey](https://chocolatey.org):
 `choco install python`
 
 </tab>
-<tab label='MacOS Directions'>
+<tab label='macOS Directions'>
 
 Install via [brew](https://brew.sh):
 

@@ -457,13 +457,11 @@ mark {
 }
 
 .sidebar-section .sidebar-title {
-  width: 210px;
   line-height: 2rem;
   margin-top: 1rem;
 }
 
 .sidebar-section .sidebar-title-icon {
-  margin-right: 4px;
   margin-top: 2px;
 }
 .sidebar-section .sidebar-icon {
