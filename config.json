@@ -18,9 +18,13 @@
     "Next chapter": "Next chapter",
     "Filter content": "Filter content",
     "Figure": "Figure",
-    "Reset search": "Reset search"
+    "Reset search": "Reset search",
+    "You are here": " (You are here)"
   },
   "toc": [
+    {
+      "chapters": [{ "title": "Welcome to NextBook", "path": "/" }]
+    },
     {
       "part": "Documentation",
       "chapters": [
@@ -33,7 +37,10 @@
     },
     {
       "part": "Contributing",
-      "chapters": [{ "title": "Missing Features", "path": "/contributing/missing-features" }]
+      "chapters": [{ "title": "Contributing Features", "path": "/contributing/contributing" }]
+    },
+    {
+      "chapters": [{ "title": "WIP Features", "path": "/wip-features" }]
     }
   ]
 }

@@ -30,6 +30,14 @@ const IconDown = () => (
 const SideBarSection = ({ toc, pathName, history, part }) => {
   const [menuVisible, setMenuVisible] = useState(true)
 
+  const chapterItems = (
+    <div>
+      {toc.chapters?.map((item, id) => (
+        <SideBarItem item={item} pathname={pathName} history={history} key={id} />
+      ))}
+    </div>
+  )
+
   const toggleMenu = () => {
     setMenuVisible((current) => !current)
   }
@@ -40,18 +48,22 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
 
   return (
     <div className='sidebar-section'>
-      <div
-        className='d-flex justify-content-between sidebar-title font-size-14 font-weight-bold'
-        onClick={toggleMenu}
-      >
-        <div className='part-title'>{toc.part}</div>
-        <div>{menuVisible ? <IconDown /> : <IconRight />}</div>
-      </div>
-      <div className={menuVisible ? '' : 'd-none'}>
-        {toc.chapters?.map((item, id) => (
-          <SideBarItem item={item} pathname={pathName} history={history} key={id} />
-        ))}
-      </div>
+      {/* display toggleable titlebar only when we have a part */}
+      {toc.part && (
+        <div
+          className='d-flex justify-content-between sidebar-title font-size-14 font-weight-bold'
+          onClick={toggleMenu}
+        >
+          <div className='part-title'>{toc.part}</div>
+          <div>{menuVisible ? <IconDown /> : <IconRight />}</div>
+        </div>
+      )}
+
+      {toc.part ? (
+        <div className={menuVisible ? '' : 'd-none'}>{chapterItems}</div>
+      ) : (
+        <div>{chapterItems}</div>
+      )}
     </div>
   )
 }

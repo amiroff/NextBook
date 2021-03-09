@@ -1,25 +1,30 @@
 import Link from 'next/link'
 import config from '../config.json'
+import { useRouter } from 'next/router'
+import Text from './text'
 
 function TOC() {
   const { toc } = config
+  const router = useRouter()
+
   return (
     <div className='toc w-400'>
       {toc.map((toc) => (
-        <div key={toc.part} className='m-10'>
-          <div className='mt-20 mb-10 text-24 font-size-22'>{toc.part}</div>
-          <ul>
+        <>
+          <div className='ml-5 mb-10 font-size-22' key={toc.part}>
+            {toc.part}
+          </div>
+          <ul className=''>
             {toc.chapters.map((item) => (
               <li key={item.path}>
                 <Link href={item.path}>
-                  <a href={item.path} className='hyperlink'>
-                    {item.title}
-                  </a>
+                  <a href={item.path}>{item.title}</a>
                 </Link>
+                {item.path === router.pathname && <Text tid='You are here' className='ml-5' />}
               </li>
             ))}
           </ul>
-        </div>
+        </>
       ))}
     </div>
   )
