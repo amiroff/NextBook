@@ -2,8 +2,6 @@
 title: Create Lovely Documentation With MDX!
 ---
 
-import TOC from '../components/toc'
-
 ## Why NextBook?
 
 I needed a usable, fairly dynamic and good looking book/documentation creation tool. All available options like [GitBook](https://www.gitbook.com/), [mdBook](https://rust-lang.github.io/mdBook/), [Gatsby](https://www.gatsbyjs.com/) and [Leanpub](https://leanpub.com/) while great tools themeselves (kudos to devs!), did not meet my needs. Some of them offered parts of these, but overall even payed ones could not offer the full package or were complex to get started quickly. The features I was looking for were:
@@ -52,9 +50,3 @@ Main reasons to try **NextBook** on your next documentation project are:
 >
   <img src='https://vercel.com/button' alt='Deploy with Vercel' className='raw' />
 </a>
-
-## Learn More
-
-Here is some more information if case you are interested.
-
-<TOC />

@@ -1,7 +1,6 @@
 ---
 part: Documentation
 title: Getting Started With NextBook
-hide_toc: true
 ---
 
 ## Up & Running With Single Click
