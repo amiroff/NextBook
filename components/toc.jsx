@@ -9,9 +9,9 @@ function TOC() {
 
   return (
     <div className='toc w-400'>
-      {toc.map((toc) => (
+      {toc.map((toc, id) => (
         <>
-          <div className='ml-5 mb-10 font-size-22' key={toc.part}>
+          <div className='ml-5 mb-10 font-size-22' key={id}>
             {toc.part}
           </div>
           <ul className=''>
