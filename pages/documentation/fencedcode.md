@@ -15,6 +15,7 @@ Everything within fenced code will
 be displayed in monospace font.
 ```
 ~~~
+
 results in:
 
 ```
@@ -33,29 +34,30 @@ You can add syntax highlighting by specifying code's language from the list belo
 import React, { useState } from 'react'
 
 function Square(props) {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState(null)
 
   return (
     <button className="square" onClick={() => alert('click')}>
       {props.value}
     </button>
-  );
+  )
 }
 ```
 ~~~
+
 results in:
 
 ```jsx
 import React, { useState } from 'react'
 
 function Square(props) {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState(null)
 
   return (
     <button className="square" onClick={() => alert('click')}>
       {props.value}
     </button>
-  );
+  )
 }
 ```
 
@@ -68,29 +70,30 @@ You can force dark syntax highlighting even on light theme. Provide `dark` param
 import React, { useState } from 'react'
 
 function Square(props) {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState(null)
 
   return (
     <button className="square" onClick={() => alert('click')}>
       {props.value}
     </button>
-  );
+  )
 }
 ```
 ~~~
+
 results in:
 
-```jsx dark
+```jsx
 import React, { useState } from 'react'
 
 function Square(props) {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState(null)
 
   return (
     <button className="square" onClick={() => alert('click')}>
       {props.value}
     </button>
-  );
+  )
 }
 ```
 
@@ -107,29 +110,30 @@ Often you need to tell which file you are talking about. You can specify this by
 import React, { useState } from 'react'
 
 function Square(props) {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState(null)
 
   return (
     <button className="square" onClick={() => alert('click')}>
       {props.value}
     </button>
-  );
+  )
 }
 ```
 ~~~
+
 results in:
 
 ```jsx title=app.jsx
 import React, { useState } from 'react'
 
 function Square(props) {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState(null)
 
   return (
     <button className="square" onClick={() => alert('click')}>
       {props.value}
     </button>
-  );
+  )
 }
 ```
 
@@ -146,6 +150,7 @@ def diff(a, b):
     return a - b
 ```
 ~~~
+
 results in:
 
 ```python title=inspect.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py
@@ -174,6 +179,7 @@ urlpatterns = [
 ]
 ```
 ~~~
+
 results in:
 
 ```python title=inspect.py clipboard
@@ -211,6 +217,7 @@ Lines of code can have automatic numbering. Provide `numbered` metadata to achiv
 </html>
 ```
 ~~~
+
 results in:
 
 ```html numbered
@@ -242,6 +249,7 @@ Code can start from any provided number. Use `numbered` together with `startline
 </head>
 ```
 ~~~
+
 results in:
 
 ```html numbered startline=3
@@ -273,6 +281,7 @@ In some cases there's a need to highlight/mark some lines and then describe each
 </html>
 ```
 ~~~
+
 results in:
 
 ```html marked=2,5,6,10
@@ -333,6 +342,7 @@ Sometimes code to display is so big that it's inconvenient to embed it in markdo
 ```jsx file=../404.jsx numbered clipboard title=404.jsx
 ```
 ~~~
+
 results in:
 
 ```jsx file=../404.jsx numbered clipboard title=404.jsx
