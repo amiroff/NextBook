@@ -40,7 +40,7 @@
       "chapters": [{ "title": "Contributing Features", "path": "/contributing/contributing" }]
     },
     {
-      "chapters": [{ "title": "WIP Features", "path": "/wip-features" }]
+      "chapters": [{ "title": "In Progress Features", "path": "/in-progress-features" }]
     }
   ]
 }

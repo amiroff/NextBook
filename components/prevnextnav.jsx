@@ -8,18 +8,27 @@ function PrevNextNav() {
   const router = useRouter()
   const { toc } = config
 
-  // isolate current chapter array
+  // isolate current part array
   const currentPart = toc.find((part) =>
     part.chapters.some((chapter) => chapter.path === router.pathname)
   )
+  const currentPartIndex = toc.indexOf(currentPart)
+
+  // find previous and next parts even if they do not exist
+  const prevPart = toc[currentPartIndex - 1]
+  const nextPart = toc[currentPartIndex + 1]
+
   // find index of current title
   const currentChapterIndex = currentPart?.chapters.findIndex(
     (chapter) => chapter.path === router.pathname
   )
-  // find previous and next pages
-  const prevChapter = currentPart?.chapters[currentChapterIndex - 1]
-  const nextChapter = currentPart?.chapters[currentChapterIndex + 1]
-  // TODO: implement part switching
+
+  // find previous page, iff not, use last page of previous part
+  let prevChapter =
+    currentPart?.chapters[currentChapterIndex - 1] ||
+    prevPart?.chapters[prevPart?.chapters.length - 1]
+  // find next page, if not, use first page of next part
+  let nextChapter = currentPart?.chapters[currentChapterIndex + 1] || nextPart?.chapters[0]
 
   useShortcuts(['shift', 'ArrowRight'], () => nextChapter && router.push(nextChapter.path))
   useShortcuts(['shift', 'ArrowLeft'], () => prevChapter && router.push(prevChapter.path))

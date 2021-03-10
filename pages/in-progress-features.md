@@ -15,8 +15,8 @@ Here is a list of features which are planned to be implemented in future in no p
 - [x] Force hide in-page TOC menu.
 - [x] Analytics with Splitbee.
 - [x] Standalone chapters with no part information.
+- [x] Cross-part navigation.
 - [ ] Global search. (Algolia?)
-- [ ] Jumping between parts without touching side menu.
 - [ ] Live code edit & preview support.
 - [ ] Automatic image optimization using next/image.
 - [ ] Epub export.
