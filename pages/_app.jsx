@@ -38,7 +38,7 @@ if (config.splitBeeToken) {
 }
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState('light')
 
   function toggleTheme() {
     setTheme((currentTheme) => {
