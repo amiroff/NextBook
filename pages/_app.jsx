@@ -32,7 +32,7 @@ const components = {
   tab: Tab,
 }
 
-if (config.splitBeeToken) {
+if (process.env.NEXT_PUBLIC_ENVIRONMENT !== 'development' && config.splitBeeToken) {
   splitbee.init({
     token: config.splitBeeToken,
   })
