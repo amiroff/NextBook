@@ -339,13 +339,13 @@ results in
 Sometimes code to display is so big that it's inconvenient to embed it in markdown document. For cases like this, including original file with `file` is possible. Provided path should be relative to current document.
 
 ~~~
-```jsx file=../../public/manifest.webmanifest
+```json file=../../public/manifest.webmanifest
 ```
 ~~~
 
 results in:
 
-```jsx file=../../public/manifest.webmanifest
+```json file=../../public/manifest.webmanifest
 ```
 
 ## Escaping Code Blocks
