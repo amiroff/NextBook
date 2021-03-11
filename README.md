@@ -25,7 +25,7 @@ NextBook is quick and easy way to buid technical books or documentation that sup
 - SEO optimised meta tags.
 - robots.txt generated at build time.
 - Sitemap generated at built time.
-- Great lighthouse score (100% in all fields).
+- Great lighthouse score.
 
 ![Lighthouse Scores](public/images/lighthouse-score.png)
 
@@ -34,6 +34,7 @@ NextBook is quick and easy way to buid technical books or documentation that sup
 - A pre-built, single page [JAMSTACK](https://jamstack.org/) application for fast [FCP](https://developer.mozilla.org/en-US/docs/Glossary/First_contentful_paint).
 - Fast page loading and pre-loading.
 - Cross-page linking with no page reloads.
+- Optional analytics with [SplitBee](https://splitbee.io/).
 
 ### Content Creation
 
