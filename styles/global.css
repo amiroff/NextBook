@@ -267,14 +267,17 @@ details p:nth-child(2) {
 .sidebar-link.active:hover,
 .sidebar-link:hover {
   color: black;
-  background-color: var(--lm-base-body-bg-color);
 }
 
 .dark-mode .sidebar-link.active,
 .dark-mode .sidebar-link.active:hover,
 .dark-mode .sidebar-link:hover {
   color: white;
-  background-color: var(--dm-base-body-bg-color);
+}
+
+.part-items .sidebar-link {
+  /* indent chapters under part a little */
+  margin-left: 4px;
 }
 
 .sidebar-icon {
