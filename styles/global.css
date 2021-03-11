@@ -1,11 +1,11 @@
-@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght,CRSV,MONO@300..800,0,1&display=swap');
 
 body {
-  font-family: 'Inter var', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
   font-size: 1.6rem;
-  font-weight: 400;
   font-feature-settings: 'kern';
   text-rendering: optimizeLegibility;
   -webkit-scroll-behavior: smooth;
@@ -20,7 +20,7 @@ pre,
 code,
 .code-filename,
 .code {
-  font-family: 'IBM Plex Mono', 'SF Mono', 'Cascadia Code', 'Consolas', 'Menlo',
+  font-family: 'Recursive', 'SF Mono', 'Menlo', 'Cascadia Code', 'Consolas',
     'Bitsream Vera Sans Mono', 'Droid Sans Mono', 'Ubuntu Mono', monospace;
 }
 
@@ -53,6 +53,11 @@ pre.code {
 .sidebar {
   border: none;
   background-color: #f5f7f9;
+  font-weight: 500;
+}
+
+.dark-mode .sidebar {
+  font-weight: 400;
 }
 
 kbd {
@@ -232,11 +237,13 @@ details p:nth-child(2) {
 .page-toc-container li {
   color: rgba(0, 0, 0, 0.5);
   border-left: 1px solid rgba(0, 0, 0, 0.2);
+  font-weight: 500;
 }
 
 .dark-mode .page-toc-container li {
   color: rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 400;
 }
 
 .page-toc-container li {
@@ -339,7 +346,7 @@ ul.contains-task-list li {
   flex: 1;
   padding: 1.2rem;
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .code-header {

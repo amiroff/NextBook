@@ -83,7 +83,7 @@ function Square(props) {
 
 results in:
 
-```jsx
+```jsx dark
 import React, { useState } from 'react'
 
 function Square(props) {
