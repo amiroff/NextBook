@@ -33,7 +33,12 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
   const chapterItems = (
     <div>
       {toc.chapters?.map((item, id) => (
-        <SideBarItem item={item} pathname={pathName} history={history} key={id} />
+        <SideBarItem
+          item={item}
+          pathname={pathName}
+          bulletStyle={history.includes(item.path) ? '⭑' : '•'}
+          key={id}
+        />
       ))}
     </div>
   )
