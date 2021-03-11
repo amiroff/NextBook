@@ -1,7 +1,7 @@
 ---
 layout: index
 part: Documentation
-title: NextBook Features
+title: Markdown Usage
 description: While this is not a complete markdown referece, here are markdown features that you can use right away in your books.
 tags: [markdown, reference, NextBook, md]
 updated: 25-02-2021
@@ -15,7 +15,7 @@ YAML front matter can be used to add title, description, part info, tags and upd
 ---
 layout: index
 part: Documentation
-title: NextBook Features
+title: Markdown Usage
 description: While this is not a complete markdown referece, here are markdown features that you can use right away in your books.
 tags: [markdown, reference, NextBook, md]
 updated: 25-02-2021
@@ -429,7 +429,7 @@ Ooooops, an unknown error occured.
 ## Emojis
 
 Nothing fancy, just use typical 🥳 emojis.  
-<kbd>control + command + space</kbd> on  and <kbd>windows + .</kbd> on Windows.
+Press <kbd>control</kbd> + <kbd>command</kbd> + <kbd>space</kbd> on macOS and <kbd>windows</kbd> + <kbd>.</kbd> on Windows.
 
 ## Tabs
 

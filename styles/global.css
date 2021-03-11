@@ -174,8 +174,12 @@ li p {
 }
 
 .hint::first-line {
-  font-weight: bold;
+  font-weight: 550;
   line-height: 3rem;
+}
+
+.font-weight-bold {
+  font-weight: 550 !important;
 }
 
 details p:nth-child(2) {

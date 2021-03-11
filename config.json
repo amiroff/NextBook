@@ -30,7 +30,7 @@
       "chapters": [
         { "title": "Getting Started", "path": "/documentation/getting-started" },
         { "title": "NextBook Features", "path": "/documentation/nextbook-features" },
-        { "title": "Markdown Reference", "path": "/documentation/markdown" },
+        { "title": "Markdown Usage", "path": "/documentation/markdown" },
         { "title": "Fenced Code Usage", "path": "/documentation/fencedcode" },
         { "title": "Using MDX", "path": "/documentation/using-mdx" }
       ]
