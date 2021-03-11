@@ -60,10 +60,10 @@ const Highlight = ({
   let colorMode = dark ? materialDark : theme === 'dark' ? materialDark : materialLight
 
   let wrapper = (lineNumber) => {
-    const style = { borderLeft: '3px solid transparent', paddingLeft: '20px' }
+    const style = { borderLeft: '3px solid transparent', display: 'block', paddingLeft: '20px' }
     if (lineNumber && markedArray.includes(lineNumber)) {
-      style.backgroundColor = '#99999910'
-      style.display = 'block'
+      style.backgroundColor = '#9e9e9e20'
+
       style.borderLeft = '3px solid #9e9e9e'
     }
     return {
