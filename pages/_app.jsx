@@ -1,5 +1,4 @@
 import { MDXProvider } from '@mdx-js/react'
-import config from '../config.json'
 import splitbee from '@splitbee/web'
 import {
   Blockquote,
@@ -14,7 +13,9 @@ import {
   Tabs,
 } from 'components/mdxcomponents'
 import { ThemeContext, ToggleThemeContext } from 'components/themecontext'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useLocalStorage } from 'react-use'
+import config from '../config.json'
 import '../styles/halfmoon-variables.min.css'
 import '../styles/global.css'
 
@@ -38,13 +39,24 @@ if (config.splitBeeToken) {
 }
 
 function MyApp({ Component, pageProps }) {
-  const [theme, setTheme] = useState('light')
+  const [storedTheme, setStoredTheme] = useLocalStorage('theme', config.defaultTheme)
+  const [theme, setTheme] = useState(storedTheme)
 
   function toggleTheme() {
     setTheme((currentTheme) => {
       return currentTheme === 'dark' ? 'light' : 'dark'
     })
   }
+
+  useEffect(() => {
+    const body = document.body
+    if (theme === 'dark') {
+      body.classList.add('dark-mode')
+    } else {
+      body.classList.remove('dark-mode')
+    }
+    setStoredTheme(theme)
+  }, [theme])
 
   return (
     <ThemeContext.Provider value={theme}>

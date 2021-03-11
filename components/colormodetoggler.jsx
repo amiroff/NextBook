@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
 import Text, { _ } from './text'
 import { ThemeContext, ToggleThemeContext } from './themecontext'
@@ -8,15 +8,6 @@ function ColorModeToggler() {
   const toggleTheme = useContext(ToggleThemeContext)
 
   useShortcuts(['shift', 'R'], () => toggleTheme(), [theme])
-
-  useEffect(() => {
-    const body = document.body
-    if (theme === 'dark') {
-      body.classList.add('dark-mode')
-    } else {
-      body.classList.remove('dark-mode')
-    }
-  }, [theme])
 
   return (
     <>
