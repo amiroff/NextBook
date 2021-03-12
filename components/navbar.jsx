@@ -41,12 +41,17 @@ function NavBar({ docTitle }) {
             <kbd className='text-muted'>shift</kbd> + <kbd className='text-muted'>M</kbd>
           </div>
         </div>
-        <span className='ml-auto mr-auto font-weight-bold app-title my-5'>
+        <span className='ml-auto mr-auto font-size-14 font-weight-bold app-title my-5 d-none d-md-block'>
           <Link href='/'>
             <a className='text-decoration-none d-flex align-items-center'>
               <img src='/icon.svg' alt='NextBook Logo' width='34px' className='mr-5' />
               {docTitle}
             </a>
+          </Link>
+        </span>
+        <span className='ml-auto mr-auto font-size-13 app-title my-5 d-block d-md-none'>
+          <Link href='/'>
+            <a className='text-decoration-none d-flex align-items-center'>{docTitle}</a>
           </Link>
         </span>
         <div className='navbar-content ml-10 ml-xs-auto'>
