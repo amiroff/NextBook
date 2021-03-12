@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
+import { ThemeContext, ToggleThemeContext } from './context'
 import Text, { _ } from './text'
-import { ThemeContext, ToggleThemeContext } from './themecontext'
 
 function ColorModeToggler() {
   const theme = useContext(ThemeContext)

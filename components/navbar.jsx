@@ -1,23 +1,15 @@
 import Link from 'next/link'
-import { useEffect } from 'react'
-import { useLocalStorage } from 'react-use'
-import ColorModeToggler from './colormodetoggler'
+import { useContext } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
+import ColorModeToggler from './colormodetoggler'
+import { SideBarContext, ToggleSideBarContext } from './context'
 import { _ } from './text'
 
 function NavBar({ docTitle }) {
-  const [sideBar, setSideBar] = useLocalStorage('sideBar', true)
+  const sideBar = useContext(SideBarContext)
+  const toggleSideBar = useContext(ToggleSideBarContext)
 
-  useEffect(() => {
-    const pageWrapper = document.getElementsByClassName('page-wrapper')[0]
-    if (sideBar) {
-      pageWrapper.removeAttribute('data-sidebar-hidden')
-    } else {
-      pageWrapper.setAttribute('data-sidebar-hidden', 'hidden')
-    }
-  }, [sideBar])
-
-  useShortcuts(['shift', 'M'], () => setSideBar(!sideBar), [sideBar])
+  useShortcuts(['shift', 'M'], () => toggleSideBar(), [sideBar])
 
   return (
     <>
@@ -27,7 +19,7 @@ function NavBar({ docTitle }) {
             id='toggle-sidebar-btn'
             className='btn btn-action'
             type='button'
-            onClick={() => setSideBar(!sideBar)}
+            onClick={toggleSideBar}
             title={_('Table Of Contents')}
           >
             <svg
@@ -61,7 +53,7 @@ function NavBar({ docTitle }) {
           <ColorModeToggler />
         </div>
       </nav>
-      <div className='sidebar-overlay' onClick={() => setSideBar(!sideBar)}></div>
+      <div className='sidebar-overlay' onClick={toggleSideBar}></div>
     </>
   )
 }

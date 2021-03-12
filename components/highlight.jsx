@@ -19,7 +19,7 @@ import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typesc
 import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml'
 import { materialDark, materialLight } from './prism'
 import Text, { _ } from './text'
-import { ThemeContext } from './themecontext'
+import { ThemeContext } from './context'
 
 SyntaxHighlighter.registerLanguage('markdown', markdown)
 SyntaxHighlighter.registerLanguage('css', css)

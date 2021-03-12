@@ -1,6 +1,12 @@
 import { MDXProvider } from '@mdx-js/react'
 import splitbee from '@splitbee/web'
 import {
+  SideBarContext,
+  ThemeContext,
+  ToggleSideBarContext,
+  ToggleThemeContext,
+} from 'components/context'
+import {
   Blockquote,
   Code,
   CustomLink,
@@ -12,7 +18,6 @@ import {
   Table,
   Tabs,
 } from 'components/mdxcomponents'
-import { ThemeContext, ToggleThemeContext } from 'components/themecontext'
 import { useEffect, useState } from 'react'
 import { useLocalStorage } from 'react-use'
 import config from '../config.json'
@@ -40,11 +45,19 @@ if (process.env.NEXT_PUBLIC_ENVIRONMENT !== 'development' && config.splitBeeToke
 
 function MyApp({ Component, pageProps }) {
   const [storedTheme, setStoredTheme] = useLocalStorage('theme', config.defaultTheme)
+  const [storedSideBar, setStoredSideBar] = useLocalStorage('sideBar', true)
+  const [sideBar, setSideBar] = useState(storedSideBar)
   const [theme, setTheme] = useState(storedTheme)
 
   function toggleTheme() {
-    setTheme((currentTheme) => {
-      return currentTheme === 'dark' ? 'light' : 'dark'
+    setTheme((currentValue) => {
+      return currentValue === 'dark' ? 'light' : 'dark'
+    })
+  }
+
+  function toggleSideBar() {
+    setSideBar((currentValue) => {
+      return currentValue === true ? false : true
     })
   }
 
@@ -58,13 +71,27 @@ function MyApp({ Component, pageProps }) {
     setStoredTheme(theme)
   }, [theme])
 
+  useEffect(() => {
+    const pageWrapper = document.getElementsByClassName('page-wrapper')[0]
+    if (sideBar) {
+      pageWrapper.removeAttribute('data-sidebar-hidden')
+    } else {
+      pageWrapper.setAttribute('data-sidebar-hidden', 'hidden')
+    }
+    setStoredSideBar(sideBar)
+  }, [sideBar])
+
   return (
     <ThemeContext.Provider value={theme}>
-      <ToggleThemeContext.Provider value={toggleTheme}>
-        <MDXProvider components={components}>
-          <Component {...pageProps} />
-        </MDXProvider>
-      </ToggleThemeContext.Provider>
+      <SideBarContext.Provider value={sideBar}>
+        <ToggleThemeContext.Provider value={toggleTheme}>
+          <ToggleSideBarContext.Provider value={toggleSideBar}>
+            <MDXProvider components={components}>
+              <Component {...pageProps} />
+            </MDXProvider>
+          </ToggleSideBarContext.Provider>
+        </ToggleThemeContext.Provider>
+      </SideBarContext.Provider>
     </ThemeContext.Provider>
   )
 }
