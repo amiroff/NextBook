@@ -403,10 +403,15 @@ details > summary::marker {
 .next-page,
 .prev-page {
   border: 1px solid var(--lm-horizontal-rule-color);
-  padding: 1rem 2rem;
   border-radius: 6px;
   width: 49%;
   text-decoration: none !important;
+  font-size: 15px;
+}
+
+.next-page div,
+.prev-page div {
+  margin: 1rem;
 }
 
 .dark-mode .next-page,

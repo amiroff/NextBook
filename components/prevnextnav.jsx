@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import config from '../config.json'
 import { useRouter } from 'next/router'
 import { useShortcuts } from 'react-shortcuts-hook'
+import config from '../config.json'
 import { _ } from './text'
 
 function PrevNextNav() {
@@ -38,8 +38,11 @@ function PrevNextNav() {
       <div className='row my-20 d-flex justify-content-between'>
         {prevChapter ? (
           <Link href={prevChapter.path}>
-            <a title={_('Previous chapter')} className='font-size-16 prev-page'>
-              ❮ {prevChapter.title}
+            <a className='prev-page'>
+              <button className='hidden-md-and-up text-capitalize btn-block btn'>
+                ❮ {_('Previous chapter')}
+              </button>
+              <div className='hidden-sm-and-down'>❮ {prevChapter.title}</div>
               <div className='mt-5 ml-10 font-size-12 hidden-sm-and-down text-muted'>
                 <kbd>shift</kbd> + <kbd>❮</kbd>
               </div>
@@ -51,8 +54,11 @@ function PrevNextNav() {
 
         {nextChapter && (
           <Link href={nextChapter.path}>
-            <a className='font-size-16 next-page text-right' title={_('Next chapter')}>
-              {nextChapter.title} ❯
+            <a className='next-page text-right'>
+              <div className='hidden-sm-and-down'>{nextChapter.title} ❯</div>
+              <button className='hidden-md-and-up text-capitalize btn-block btn'>
+                {_('Next chapter')} ❯
+              </button>
               <div className='mt-5 ml-10 font-size-12 hidden-sm-and-down text-muted'>
                 <kbd>shift</kbd> + <kbd>❯</kbd>
               </div>
