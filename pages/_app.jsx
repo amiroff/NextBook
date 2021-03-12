@@ -72,12 +72,6 @@ function MyApp({ Component, pageProps }) {
   }, [theme])
 
   useEffect(() => {
-    const pageWrapper = document.getElementsByClassName('page-wrapper')[0]
-    if (sideBar) {
-      pageWrapper.removeAttribute('data-sidebar-hidden')
-    } else {
-      pageWrapper.setAttribute('data-sidebar-hidden', 'hidden')
-    }
     setStoredSideBar(sideBar)
   }, [sideBar])
 

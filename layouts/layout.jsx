@@ -6,13 +6,15 @@ import { NextSeo } from 'next-seo'
 import Head from 'next/head'
 import config from '../config.json'
 import { useScroll } from 'react-use'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useContext, useRef, useState } from 'react'
+import { SideBarContext } from 'components/context'
 
 export default function Layout({ title, description, children, part }) {
   const { projectTitle, projectURL, projectDescription, toc } = config
   const scrollRef = useRef(null)
   const { x, y } = useScroll(scrollRef)
   const [progressStyle, setprogressStyle] = useState({})
+  const sideBar = useContext(SideBarContext)
 
   useEffect(() => {
     const windowHeight = scrollRef.current.scrollHeight - scrollRef.current.clientHeight
@@ -20,10 +22,13 @@ export default function Layout({ title, description, children, part }) {
     setprogressStyle({ transform: `scale(${percentage}, 1)`, opacity: `${percentage}` })
   }, [x, y])
 
+  const hiddenData = sideBar ? {} : { 'data-sidebar-hidden': 'hidden' }
+
   return (
     <div
       className='page-wrapper with-navbar with-sidebar with-transitions'
       data-sidebar-type='overlayed-sm-and-down'
+      {...hiddenData}
     >
       <NextSeo
         title={`${title} | ${projectTitle}`}
