@@ -2,6 +2,7 @@ import { MDXProvider } from '@mdx-js/react'
 import splitbee from '@splitbee/web'
 import {
   SideBarContext,
+  SideBarDataContext,
   ThemeContext,
   ToggleSideBarContext,
   ToggleThemeContext,
@@ -47,6 +48,7 @@ function MyApp({ Component, pageProps }) {
   const [storedTheme, setStoredTheme] = useLocalStorage('theme', config.defaultTheme)
   const [storedSideBar, setStoredSideBar] = useLocalStorage('sideBar', true)
   const [sideBar, setSideBar] = useState(storedSideBar)
+  const [sideBarData, setSideBarData] = useState({})
   const [theme, setTheme] = useState(storedTheme)
 
   function toggleTheme() {
@@ -73,18 +75,21 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     setStoredSideBar(sideBar)
+    setSideBarData(sideBar ? {} : { 'data-sidebar-hidden': 'hidden' })
   }, [sideBar])
 
   return (
     <ThemeContext.Provider value={theme}>
       <SideBarContext.Provider value={sideBar}>
-        <ToggleThemeContext.Provider value={toggleTheme}>
-          <ToggleSideBarContext.Provider value={toggleSideBar}>
-            <MDXProvider components={components}>
-              <Component {...pageProps} />
-            </MDXProvider>
-          </ToggleSideBarContext.Provider>
-        </ToggleThemeContext.Provider>
+        <SideBarDataContext.Provider value={sideBarData}>
+          <ToggleThemeContext.Provider value={toggleTheme}>
+            <ToggleSideBarContext.Provider value={toggleSideBar}>
+              <MDXProvider components={components}>
+                <Component {...pageProps} />
+              </MDXProvider>
+            </ToggleSideBarContext.Provider>
+          </ToggleThemeContext.Provider>
+        </SideBarDataContext.Provider>
       </SideBarContext.Provider>
     </ThemeContext.Provider>
   )

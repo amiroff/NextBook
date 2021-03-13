@@ -29,6 +29,7 @@ const IconDown = () => (
 
 const SideBarSection = ({ toc, pathName, history, part }) => {
   const [menuVisible, setMenuVisible] = useState(true)
+  const [loadingDone, setLoadingDone] = useState(false)
 
   const chapterItems = (
     <div>
@@ -49,14 +50,15 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
 
   useEffect(() => {
     setMenuVisible(toc.part === part)
+    setLoadingDone(true)
   }, [])
 
   return (
-    <div className='sidebar-section'>
+    <div className={loadingDone ? 'sidebar-section' : 'd-none'}>
       {/* display toggleable titlebar only when we have a part */}
       {toc.part && (
         <div
-          className='d-flex justify-content-between sidebar-title font-size-14 font-weight-bold'
+          className='d-flex justify-content-between sidebar-title font-size-15 font-weight-bold'
           onClick={toggleMenu}
         >
           <div className='part-title'>{toc.part}</div>
@@ -69,7 +71,6 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
       ) : (
         <div>{chapterItems}</div>
       )}
-      <hr className='my-5' />
     </div>
   )
 }

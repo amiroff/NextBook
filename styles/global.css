@@ -258,26 +258,17 @@ details p:nth-child(2) {
   color: white;
 }
 
-.sidebar-link {
-  line-height: 1.6rem;
-  height: 1rem;
-}
-
 .sidebar-link.active,
 .sidebar-link.active:hover,
 .sidebar-link:hover {
-  color: black;
+  color: var(-primary-color);
+  background-color: var(--lm-input-bg-color);
 }
 
 .dark-mode .sidebar-link.active,
 .dark-mode .sidebar-link.active:hover,
 .dark-mode .sidebar-link:hover {
-  color: white;
-}
-
-.part-items .sidebar-link {
-  /* indent chapters under part a little */
-  margin-left: 4px;
+  background-color: var(--dm-input-bg-color);
 }
 
 .sidebar-icon {
@@ -464,6 +455,12 @@ mark {
 .sidebar-title {
   cursor: pointer;
   user-select: none;
+  margin: 0px 20px;
+  padding: 4px 0 0 4px;
+}
+
+.sidebar-section {
+  width: 260px;
 }
 
 .sidebar-section .sidebar-title {
