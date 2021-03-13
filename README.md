@@ -4,7 +4,7 @@
 
 ## What Is NextBook?
 
-**Try live example and detailed documentation on [official website](https://next-book.vercel.app).**
+**Try live examples and read detailed documentation at [official website](https://next-book.vercel.app).**
 
 NextBook is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It's built with [MDX](https://mdxjs.com/), [Next.js](https://nextjs.org/) and [React](https://reactjs.org/) and works by compiling markdown or MDX down to plain static html. This way, first content render on user's device is very fast, then hydration kicks in and React takes over to add dynamic stuff. The possibilities are endless.
 
@@ -38,8 +38,8 @@ NextBook is quick and easy way to buid technical books or documentation that sup
 
 ### Content Creation
 
-- Rich [markdown](https://www.markdownguide.org/) suport for content.
-- For more interactivity, [MDX](https://mdxjs.com/) power is at your fingertips.
+- Rich [markdown suport](https://next-book.vercel.app/documentation/markdown) for content.
+- For more interactivity, [MDX](https://next-book.vercel.app/documentation/using-mdx) power is at your fingertips.
 - Fenced code with metadata support allowing code titles, line numbers, links to source, clipboard copying, line highlighting, diffing.
 - Need even more dynamic features? See [customization & extensibility](#customization--extensibility) below.
 
@@ -53,9 +53,10 @@ NextBook is quick and easy way to buid technical books or documentation that sup
 
 - Built on open-source.
 - Customizable and easy to read code.
-- Built on top of libraries like [Next.js](https://nextjs.org/), [React](https://reactjs.org/), [MDX](https://mdxjs.com/) and [remark](https://github.com/remarkjs/remark). You can leverage everything these libraries are able to offer to improve it further and suit your needs.
+- Built on top of libraries like [Next.js](https://nextjs.org/), [React](https://reactjs.org/), [MDX](https://mdxjs.com/) and [remark](https://github.com/remarkjs/remark). You can leverage everything these libraries are able to offer to improve it further to suit your needs.
 
 ## Get Started
+Clicking the following button will fork the repo and deploy it to Vercel. Now you can edit pages, commit, push and see results.
 [![Clone and deploy NOW!](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook)
 
 ## Learn More
