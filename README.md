@@ -1,3 +1,5 @@
+![logo](https://next-book.vercel.app/180.png)
+
 # NextBook: Create lovely documentation with MDX!
 
 <a href="https://www.producthunt.com/posts/nextbook-3?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-nextbook-3" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=286336&theme=light" alt="NextBook - Create lovely documentation with MDX | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
@@ -56,7 +58,9 @@ NextBook is quick and easy way to buid technical books or documentation that sup
 - Built on top of libraries like [Next.js](https://nextjs.org/), [React](https://reactjs.org/), [MDX](https://mdxjs.com/) and [remark](https://github.com/remarkjs/remark). You can leverage everything these libraries are able to offer to improve it further to suit your needs.
 
 ## Get Started
+
 Clicking the following button will fork the repo and deploy it to Vercel. Now you can edit pages, commit, push and see results.
+
 [![Clone and deploy NOW!](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook)
 
 ## Learn More
