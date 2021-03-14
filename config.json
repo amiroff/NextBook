@@ -4,8 +4,9 @@
   "projectURL": "https://next-book.vercel.app",
   "splitBeeToken": "T7AY7GSIOMQI",
   "defaultTheme": "light",
+  "locale": "en",
   "text": {
-    "Keywords": "Keywords",
+    "Tags": "Tags",
     "Last Update": "Last Update",
     "Toggle color mode": "Toggle color mode",
     "Toggle dark mode": "Toggle dark mode",

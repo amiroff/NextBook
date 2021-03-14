@@ -4,9 +4,11 @@ import InPageToc from 'components/inpagetoc'
 import PrevNextNav from 'components/prevnextnav'
 import Text from 'components/text'
 import Layout from 'layouts/layout'
+import config from '../config.json'
 
 export default function DocsLayout({ children, frontMatter }) {
   const showToc = !frontMatter.hide_toc && frontMatter.tocRaw.length > 0
+  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
 
   return (
     <Layout
@@ -23,25 +25,30 @@ export default function DocsLayout({ children, frontMatter }) {
               {frontMatter.tags && (
                 <div className='mb-5'>
                   <span>
-                    <Text tid='Keywords' />: {''}
+                    <Text tid='Tags' />:
                   </span>
                   {frontMatter.tags.map((tag) => (
-                    <span className='badge p-5 ml-3 mr-5' key={tag}>
+                    <span className='badge p-5 ml-3 mx-5' key={tag}>
                       {`#${tag}`}
                     </span>
                   ))}
-                </div>
-              )}
-              {frontMatter.updated && (
-                <div className='mt-5'>
-                  <Text tid='Last Update' />: {frontMatter.updated}
                 </div>
               )}
               <hr className='mt-20' />
             </div>
 
             <div className='md-content'>{children}</div>
-            <hr className='mt-20' />
+            <hr className='mt-10' />
+            {frontMatter.updated && (
+              <div className='mt-5 text-muted'>
+                <Text tid='Last Update' />:{' '}
+                {new Date(frontMatter.updated).toLocaleDateString(
+                  config.locale || 'en',
+                  dateOptions
+                )}
+              </div>
+            )}
+            <hr className='mt-10' />
             <div>
               <PrevNextNav />
             </div>

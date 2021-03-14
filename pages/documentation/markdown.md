@@ -4,7 +4,7 @@ part: Documentation
 title: Markdown Usage
 description: While this is not a complete markdown referece, here are markdown features that you can use right away in your books.
 tags: [markdown, reference, NextBook, md]
-updated: 25-02-2021
+updated: 2021-3-14
 ---
 
 ## Front Matter
@@ -18,7 +18,7 @@ part: Documentation
 title: Markdown Usage
 description: While this is not a complete markdown referece, here are markdown features that you can use right away in your books.
 tags: [markdown, reference, NextBook, md]
-updated: 25-02-2021
+updated: 2021-3-14
 ---
 ```
 
