@@ -20,6 +20,7 @@ import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml'
 import { materialDark, materialLight } from './prism'
 import Text, { _ } from './text'
 import { ThemeContext } from './context'
+import { Copied, Copy } from './svgicons'
 
 SyntaxHighlighter.registerLanguage('markdown', markdown)
 SyntaxHighlighter.registerLanguage('css', css)
@@ -92,37 +93,7 @@ const Highlight = ({
                 type='button'
                 title={_('Copy to clipboard')}
               >
-                {copied ? (
-                  <svg
-                    className='w-6 h-6'
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4'
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className='w-6 h-6'
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'
-                    xmlns='http://www.w3.org/2000/svg'
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3'
-                    />
-                  </svg>
-                )}
+                {copied ? <Copied /> : <Copy />}
                 {copied ? <Text tid='Copied!' /> : <Text tid='Copy' />}
               </button>
             </CopyToClipboard>

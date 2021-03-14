@@ -1,31 +1,6 @@
 import { useEffect, useState } from 'react'
 import SideBarItem from './sidebaritem'
-
-const IconRight = () => (
-  <svg
-    height='20px'
-    className='sidebar-title-icon'
-    fill='none'
-    stroke='currentColor'
-    viewBox='0 0 24 24'
-    xmlns='http://www.w3.org/2000/svg'
-  >
-    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
-  </svg>
-)
-
-const IconDown = () => (
-  <svg
-    height='20px'
-    className='sidebar-title-icon'
-    fill='none'
-    stroke='currentColor'
-    viewBox='0 0 24 24'
-    xmlns='http://www.w3.org/2000/svg'
-  >
-    <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M19 9l-7 7-7-7' />
-  </svg>
-)
+import { AngleDown, AngleRight } from './svgicons'
 
 const SideBarSection = ({ toc, pathName, history, part }) => {
   const [menuVisible, setMenuVisible] = useState(true)
@@ -37,7 +12,7 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
         <SideBarItem
           item={item}
           pathname={pathName}
-          bulletStyle={history.includes(item.path) ? '⭑' : '•'}
+          bulletStyle={history.includes(item.path) ? 'check' : 'bullet'}
           key={id}
         />
       ))}
@@ -62,7 +37,7 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
           onClick={toggleMenu}
         >
           <div className='part-title'>{toc.part}</div>
-          <div>{menuVisible ? <IconDown /> : <IconRight />}</div>
+          <div>{menuVisible ? <AngleDown /> : <AngleRight />}</div>
         </div>
       )}
 

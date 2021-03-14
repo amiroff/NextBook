@@ -102,6 +102,10 @@ ul > li {
   list-style-type: disc;
 }
 
+.main-content {
+  padding: 1em 2em
+}
+
 .md-content p {
   line-height: 3rem;
 }
@@ -394,20 +398,23 @@ details > summary::marker {
 .next-page,
 .prev-page {
   border: 1px solid var(--lm-horizontal-rule-color);
+  background-color: var(--lm-button-bg-color-hover);
   border-radius: 6px;
-  width: 49%;
+  width: 100%;
   text-decoration: none !important;
   font-size: 15px;
+  margin: 2px;
 }
 
 .next-page div,
 .prev-page div {
-  margin: 1rem;
+  margin: .8rem;
 }
 
 .dark-mode .next-page,
 .dark-mode .prev-page {
   border: 1px solid var(--dm-horizontal-rule-color);
+  background-color: var(--dm-button-bg-color);
 }
 
 .next-page:hover,
@@ -461,11 +468,17 @@ mark {
 
 .sidebar-section {
   width: 260px;
+  border-bottom: 1px solid var(--lm-horizontal-rule-color);
+}
+.dark-mode
+.sidebar-section {
+  border-color: var(--dm-horizontal-rule-color);
 }
 
 .sidebar-section .sidebar-title {
-  line-height: 2rem;
-  margin-top: 1rem;
+  /* line-height: 3rem; */
+  /* margin: 1rem 0; */
+  padding: 10px 0 5px 0;
 }
 
 .sidebar-section .sidebar-title-icon {

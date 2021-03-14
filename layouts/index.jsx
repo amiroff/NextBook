@@ -16,7 +16,7 @@ export default function DocsLayout({ children, frontMatter }) {
     >
       <div className='container-fluid'>
         <div className='row'>
-          <div className={showToc ? 'col-lg-9 px-20' : 'col-lg-12 px-20'}>
+          <div className={showToc ? 'col-lg-9 main-content' : 'col-lg-12 main-content'}>
             <div className='my-20'>
               {frontMatter.title && <h1>{frontMatter.title}</h1>}
               {frontMatter.description && <p>{frontMatter.description}</p>}
