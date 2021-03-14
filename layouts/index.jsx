@@ -40,15 +40,17 @@ export default function DocsLayout({ children, frontMatter }) {
             <div className='md-content'>{children}</div>
             <hr className='mt-10' />
             {frontMatter.updated && (
-              <div className='mt-5 text-muted'>
-                <Text tid='Last Update' />:{' '}
-                {new Date(frontMatter.updated).toLocaleDateString(
-                  config.locale || 'en',
-                  dateOptions
-                )}
-              </div>
+              <>
+                <div className='mt-5 text-muted'>
+                  <Text tid='Last Update' />:{' '}
+                  {new Date(frontMatter.updated).toLocaleDateString(
+                    config.locale || 'en',
+                    dateOptions
+                  )}
+                </div>
+                <hr className='mt-10' />
+              </>
             )}
-            <hr className='mt-10' />
             <div>
               <PrevNextNav />
             </div>
