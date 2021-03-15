@@ -403,7 +403,6 @@ details > summary::marker {
   width: 100%;
   text-decoration: none !important;
   font-size: 15px;
-  margin: 2px;
 }
 
 .next-page div,
@@ -476,8 +475,6 @@ mark {
 }
 
 .sidebar-section .sidebar-title {
-  /* line-height: 3rem; */
-  /* margin: 1rem 0; */
   padding: 10px 0 5px 0;
 }
 

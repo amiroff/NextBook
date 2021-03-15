@@ -39,14 +39,13 @@ function PrevNextNav() {
       <div className='my-20 d-flex'>
         {prevChapter && (
           <Link href={prevChapter.path}>
-            <a className='prev-page d-flex justify-content-between align-items-center'>
+            <a className='prev-page mr-10 d-flex hidden-xs-and-down justify-content-between align-items-center'>
               <div>
                 <ArrowLeft />
               </div>
               <div className='text-right'>
-                <span className='hidden-md-and-up text-capitalize'>{_('Previous chapter')}</span>
-                <div className='hidden-sm-and-down'>{prevChapter.title}</div>
-                <div className='mt-5 ml-10 font-size-12 hidden-sm-and-down text-muted'>
+                <div>{prevChapter.title}</div>
+                <div className='mt-5 ml-10 font-size-12 text-muted'>
                   <kbd>shift</kbd> + <kbd>←</kbd>
                 </div>
               </div>
@@ -56,11 +55,14 @@ function PrevNextNav() {
 
         {nextChapter && (
           <Link href={nextChapter.path}>
-            <a className='prev-page d-flex justify-content-between align-items-center'>
+            <a className='next-page d-flex justify-content-between align-items-center'>
               <div className='text-left'>
-                <span className='hidden-md-and-up text-capitalize'>{_('Next chapter')}</span>
-                <div className='hidden-sm-and-down'>{nextChapter.title}</div>
-                <div className='mt-5 ml-10 font-size-12 hidden-sm-and-down text-muted'>
+                <span className='hidden-sm-and-up text-capitalize'>
+                  <span className='text-muted'>{_('Next chapter')}:</span> <br />{' '}
+                  {nextChapter.title}
+                </span>
+                <div className='hidden-xs-and-down'>{nextChapter.title}</div>
+                <div className='mt-5 ml-10 font-size-12 hidden-xs-and-down text-muted'>
                   <kbd>shift</kbd> + <kbd>→</kbd>
                 </div>
               </div>
