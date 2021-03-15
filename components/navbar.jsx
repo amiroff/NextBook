@@ -42,6 +42,15 @@ function NavBar({ docTitle }) {
             <a className='text-decoration-none d-flex align-items-center'>{docTitle}</a>
           </Link>
         </span>
+        <iframe
+          src='https://ghbtns.com/github-btn.html?user=amiroff&repo=nextbook&type=star&count=true'
+          frameBorder='0'
+          scrolling='0'
+          width='90'
+          height='20'
+          title='NextBook on Github'
+          className='mt-5 d-none d-md-block'
+        ></iframe>
         <div className='navbar-content ml-10 ml-xs-auto'>
           <ColorModeToggler />
         </div>
