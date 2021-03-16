@@ -12,7 +12,10 @@ export default function DocsLayout({ children, frontMatter }) {
 
   return (
     <Layout
-      title={frontMatter.part ? `${frontMatter.part} - ${frontMatter.title}` : frontMatter.title}
+      title={frontMatter.title}
+      htmlTitle={
+        frontMatter.part ? `${frontMatter.part} - ${frontMatter.title}` : frontMatter.title
+      }
       description={frontMatter.description}
       part={frontMatter.part}
     >

@@ -98,7 +98,7 @@ h1 {
   font-weight: 600;
 }
 
-ul > li {
+.main-content ul > li {
   list-style-type: disc;
 }
 
@@ -108,10 +108,6 @@ ul > li {
 
 .md-content p {
   line-height: 3rem;
-}
-
-.app-title {
-  font-size: 1.5rem;
 }
 
 .svg-button {
@@ -368,21 +364,21 @@ ul.contains-task-list li {
   margin-right: 1.2rem;
 }
 
-a:not(.sidebar-link) {
+.main-content a {
   color: black;
   text-decoration: underline;
 }
 
-a:not(.sidebar-link):hover {
+.main-content a:hover {
   color: var(--primary-color);
   text-decoration: underline;
 }
 
-.dark-mode a:not(.sidebar-link) {
+.dark-mode .main-content a {
   color: white;
 }
 
-.dark-mode a:not(.sidebar-link):hover {
+.dark-mode .main-content a:hover {
   color: var(--primary-color);
   text-decoration: underline;
 }

@@ -9,7 +9,7 @@ import { useScroll } from 'react-use'
 import { useEffect, useContext, useRef, useState } from 'react'
 import { SideBarDataContext } from 'components/context'
 
-export default function Layout({ title, description, children, part }) {
+export default function Layout({ title, htmlTitle, description, children, part }) {
   const { projectTitle, projectURL, projectDescription, toc } = config
   const scrollRef = useRef(null)
   const { x, y } = useScroll(scrollRef)
@@ -29,7 +29,7 @@ export default function Layout({ title, description, children, part }) {
       {...sideBarData}
     >
       <NextSeo
-        title={`${title} | ${projectTitle}`}
+        title={`${htmlTitle} | ${projectTitle}`}
         description={description ? description : projectDescription}
         openGraph={{
           type: 'website',
@@ -53,8 +53,8 @@ export default function Layout({ title, description, children, part }) {
       <div className='progressBarContainer'>
         <div className='progressBar' style={progressStyle} />
       </div>
-      <NavBar docTitle={projectTitle} />
-      <SideBar toc={toc} part={part} />
+      <NavBar title={title} />
+      <SideBar toc={toc} part={part} docTitle={projectTitle} />
       <div className='content-wrapper' ref={scrollRef}>
         {children}
       </div>

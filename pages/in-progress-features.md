@@ -4,7 +4,6 @@ title: Work In Progress Features
 
 Here is a list of features which are planned to be implemented in future in no particular order. 
 
-- [x] Side menu quick filter.
 - [x] In-page TOC indentation for sub headings.
 - [x] Localization.
 - [x] Sitemap generation on build.

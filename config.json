@@ -5,6 +5,7 @@
   "splitBeeToken": "T7AY7GSIOMQI",
   "defaultTheme": "light",
   "locale": "en",
+  "useTitleLogo": true,
   "text": {
     "Tags": "Tags",
     "Last Update": "Last Update",
@@ -18,9 +19,7 @@
     "Table Of Contents": "Table Of Contents",
     "Previous chapter": "Previous",
     "Next chapter": "Next",
-    "Filter content": "Filter content",
-    "Figure": "Figure",
-    "Reset search": "Reset search"
+    "Figure": "Figure"
   },
   "toc": [
     {
