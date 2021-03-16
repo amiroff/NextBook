@@ -6,6 +6,7 @@
   "defaultTheme": "light",
   "locale": "en",
   "useTitleLogo": true,
+  "GitHubURL": "https://github.com/amiroff/nextbook",
   "text": {
     "Tags": "Tags",
     "Last Update": "Last Update",

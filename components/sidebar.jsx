@@ -1,9 +1,10 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useLocalStorage } from 'react-use'
-import SideBarSection from './sidebarsection'
-import Link from 'next/link'
 import config from '../config.json'
+import SideBarSection from './sidebarsection'
+import { GitHub } from './svgicons'
 
 function SideBar({ toc, part, docTitle }) {
   const router = useRouter()
@@ -42,17 +43,19 @@ function SideBar({ toc, part, docTitle }) {
             />
           ))}
         </div>
-        <div className='mx-auto w-100'>
-          <iframe
-            src='https://ghbtns.com/github-btn.html?user=amiroff&repo=nextbook&type=star&count=true'
-            frameBorder='0'
-            scrolling='0'
-            width='90'
-            height='20'
-            title='NextBook on Github'
-            className='mt-5 d-none d-md-block'
-          ></iframe>
-        </div>
+        {config.GitHubURL && (
+          <div className='sidebar-content d-flex justify-content-center'>
+            <a
+              href={config.GitHubURL}
+              className='hyperlink text-muted d-flex align-items-center'
+              target='_blank'
+              rel='noreferrer noopener'
+            >
+              <GitHub />
+              <span className='ml-5 mt-5'>GitHub</span>
+            </a>
+          </div>
+        )}
       </div>
     </>
   )
