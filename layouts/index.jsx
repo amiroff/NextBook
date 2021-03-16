@@ -44,14 +44,13 @@ export default function DocsLayout({ children, frontMatter }) {
             <hr className='mt-10' />
             {frontMatter.updated && (
               <>
-                <div className='mt-5 text-muted'>
+                <div className='mt-5 text-muted font-size-12'>
                   <Text tid='Last Update' />:{' '}
                   {new Date(frontMatter.updated).toLocaleDateString(
                     config.locale || 'en',
                     dateOptions
                   )}
                 </div>
-                <hr className='mt-10' />
               </>
             )}
             <div>
