@@ -41,10 +41,10 @@ export default function DocsLayout({ children, frontMatter }) {
             </div>
 
             <div className='md-content'>{children}</div>
-            <hr className='mt-10' />
+            <hr className='my-20 mx-10' />
             {frontMatter.updated && (
               <>
-                <div className='mt-5 text-muted font-size-12'>
+                <div className='mb-20 text-muted text-center font-size-12'>
                   <Text tid='Last Update' />:{' '}
                   {new Date(frontMatter.updated).toLocaleDateString(
                     config.locale || 'en',
@@ -53,9 +53,7 @@ export default function DocsLayout({ children, frontMatter }) {
                 </div>
               </>
             )}
-            <div>
-              <PrevNextNav />
-            </div>
+            <PrevNextNav />
           </div>
           {showToc && (
             <div className='col-lg-3 d-none d-lg-block'>

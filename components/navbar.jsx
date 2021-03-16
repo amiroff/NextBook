@@ -28,7 +28,7 @@ function NavBar({ title }) {
             <kbd className='text-muted'>shift</kbd> + <kbd className='text-muted'>M</kbd>
           </div>
         </div>
-        <span className='mx-auto font-size-13 font-weight-bold'>{title}</span>
+        <span className='mx-auto font-size-13'>{title}</span>
         <div className='navbar-content ml-10 ml-xs-auto'>
           <ColorModeToggler />
         </div>

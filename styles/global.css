@@ -103,7 +103,7 @@ h1 {
 }
 
 .main-content {
-  padding: 1em 2em
+  padding: 0 2em;
 }
 
 .md-content p {
