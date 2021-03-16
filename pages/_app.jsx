@@ -24,6 +24,7 @@ import { useLocalStorage } from 'react-use'
 import config from '../config.json'
 import '../styles/halfmoon-variables.min.css'
 import '../styles/global.css'
+import '../styles/custom.css'
 
 const components = {
   table: Table,
