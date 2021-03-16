@@ -27,7 +27,9 @@ be displayed in monospace font.
 
 ### Theme-Aware Highlighting
 
-You can add syntax highlighting by specifying code's language from the list below after triple ```. NextBook uses [PrismJS](https://github.com/PrismJS) for themes and language definitions as it is the most complete currently. When application's theme changes, so does the fenced code theme. Try it now by pressing <kbd>shift</kbd> + <kbd>R</kbd>.
+You can add syntax highlighting by specifying code's [language](https://prismjs.com/index.html#supported-languages) after triple ```. NextBook uses [PrismJS](https://github.com/PrismJS) for themes and language definitions as it is currently the most complete one. 
+
+When application's theme changes, so does the fenced code theme. Try it now by pressing <kbd>shift</kbd> + <kbd>R</kbd>.
 
 ~~~
 ```jsx
