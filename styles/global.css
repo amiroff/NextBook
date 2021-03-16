@@ -444,14 +444,15 @@ details > summary::marker {
 }
 
 mark {
-  background-color: transparent !important;
-  color: inherit;
-  box-shadow: inset 0 -0.4em 0 0 #e2fca4, 0 0.1em 0 0 #e2fca4;
+  color: rgb(48, 48, 48);
+  padding: 3px;
+  background-color: yellow;
+  border-radius: 2px;
 }
 
 .dark-mode mark {
-  color: black;
-  box-shadow: inset 0 -1.4em 0 0 #e2fca4, 0 0.1em 0 0 #e2fca4;
+  color: rgb(255, 217, 0);
+  background-color: rgb(100, 93, 42);
 }
 
 .sidebar-title {
