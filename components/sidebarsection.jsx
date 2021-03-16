@@ -7,7 +7,7 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
   const [loadingDone, setLoadingDone] = useState(false)
 
   const chapterItems = (
-    <div>
+    <>
       {toc.chapters?.map((item, id) => (
         <SideBarItem
           item={item}
@@ -16,7 +16,7 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
           key={id}
         />
       ))}
-    </div>
+    </>
   )
 
   const toggleMenu = () => {
