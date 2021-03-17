@@ -1,4 +1,5 @@
-import { useContext, useState } from 'react'
+import { useDarkMode } from 'next-dark-mode'
+import { useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash'
@@ -18,9 +19,8 @@ import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql'
 import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript'
 import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml'
 import { materialDark, materialLight } from './prism'
-import Text, { _ } from './text'
-import { ThemeContext } from './context'
 import { Copied, Copy } from './svgicons'
+import Text, { _ } from './text'
 
 SyntaxHighlighter.registerLanguage('markdown', markdown)
 SyntaxHighlighter.registerLanguage('css', css)
@@ -50,7 +50,7 @@ const Highlight = ({
   dark,
   children,
 }) => {
-  const theme = useContext(ThemeContext)
+  const { darkModeActive } = useDarkMode()
   const [copied, setCopied] = useState(false)
   const markedArray = marked.split(',').map(function (n) {
     return Number(n)
@@ -58,7 +58,7 @@ const Highlight = ({
 
   const customPreStyles = dark ? 'code dark' : 'code'
   const customPre = (props) => <pre className={customPreStyles}>{props.children}</pre>
-  let colorMode = dark ? materialDark : theme === 'dark' ? materialDark : materialLight
+  let colorMode = dark ? materialDark : darkModeActive ? materialDark : materialLight
 
   let wrapper = (lineNumber) => {
     const style = { borderLeft: '3px solid transparent', display: 'block', paddingLeft: '10px' }

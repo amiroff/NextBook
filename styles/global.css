@@ -481,3 +481,7 @@ mark {
 .sidebar-section .sidebar-icon {
   margin-left: 1.8rem;
 }
+
+.dark-mode .content-wrapper {
+  background-color: var(--dm-base-body-bg-color);
+}
