@@ -8,9 +8,11 @@ import config from '../config.json'
 import { useScroll } from 'react-use'
 import { useEffect, useContext, useRef, useState } from 'react'
 import { SideBarDataContext } from 'components/context'
+import { useDarkMode } from 'next-dark-mode'
 
 export default function Layout({ title, htmlTitle, description, children, part }) {
   const { projectTitle, projectURL, projectDescription, toc } = config
+  const { darkModeActive } = useDarkMode()
   const scrollRef = useRef(null)
   const { x, y } = useScroll(scrollRef)
   const [progressStyle, setprogressStyle] = useState({})
@@ -24,39 +26,50 @@ export default function Layout({ title, htmlTitle, description, children, part }
 
   return (
     <div
-      className='page-wrapper with-navbar with-sidebar with-transitions'
-      data-sidebar-type='overlayed-sm-and-down'
-      {...sideBarData}
+      className={
+        darkModeActive
+          ? 'with-custom-webkit-scrollbars with-custom-css-scrollbars dark-mode'
+          : 'with-custom-webkit-scrollbars with-custom-css-scrollbars'
+      }
     >
-      <NextSeo
-        title={`${htmlTitle} | ${projectTitle}`}
-        description={description ? description : projectDescription}
-        openGraph={{
-          type: 'website',
-          url: projectURL,
-          title: title,
-          description: description,
-        }}
-      />
-      <Head>
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=5.0' name='viewport' />
-        <meta
-          name='google-site-verification'
-          content='6NCUAOmwT6024Sb1WKubeknfrtCOuHEvY6XLIdLmcak'
+      <div
+        className='page-wrapper with-navbar with-sidebar with-transitions'
+        data-sidebar-type='overlayed-sm-and-down'
+        {...sideBarData}
+      >
+        <NextSeo
+          title={`${htmlTitle} | ${projectTitle}`}
+          description={description ? description : projectDescription}
+          openGraph={{
+            type: 'website',
+            url: projectURL,
+            title: title,
+            description: description,
+          }}
         />
-        <link rel='icon' href='/favicon.ico' />
-        <link rel='icon' href='/icon.svg' type='image/svg+xml' />
-        <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
-        <link rel='manifest' href='/manifest.webmanifest' />
-      </Head>
+        <Head>
+          <meta
+            content='width=device-width, initial-scale=1.0, maximum-scale=5.0'
+            name='viewport'
+          />
+          <meta
+            name='google-site-verification'
+            content='6NCUAOmwT6024Sb1WKubeknfrtCOuHEvY6XLIdLmcak'
+          />
+          <link rel='icon' href='/favicon.ico' />
+          <link rel='icon' href='/icon.svg' type='image/svg+xml' />
+          <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+          <link rel='manifest' href='/manifest.webmanifest' />
+        </Head>
 
-      <div className='progressBarContainer'>
-        <div className='progressBar' style={progressStyle} />
-      </div>
-      <NavBar title={title} />
-      <SideBar toc={toc} part={part} docTitle={projectTitle} />
-      <div className='content-wrapper' ref={scrollRef}>
-        {children}
+        <div className='progressBarContainer'>
+          <div className='progressBar' style={progressStyle} />
+        </div>
+        <NavBar title={title} />
+        <SideBar toc={toc} part={part} docTitle={projectTitle} />
+        <div className='content-wrapper' ref={scrollRef}>
+          {children}
+        </div>
       </div>
     </div>
   )
