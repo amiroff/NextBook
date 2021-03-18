@@ -5,7 +5,6 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Cantarell',
     'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
-  font-size: 15px;
 }
 
 kbd,
@@ -17,7 +16,6 @@ code,
 }
 
 .code {
-  font-size: 14px;
   border-radius: 6px;
   background-color: #f5f7f9;
 }
@@ -185,7 +183,6 @@ li p {
 details p:nth-child(2) {
   margin: 0;
   padding: var(--collapse-content-padding);
-  font-size: var(--collapse-content-font-size);
   color: var(--lm-collapse-content-text-color);
   background-color: var(--lm-collapse-content-bg-color);
   border: var(--collapse-content-border-width) solid var(--lm-collapse-content-border-color);
@@ -242,7 +239,6 @@ details p:nth-child(2) {
 }
 
 .page-toc-container li {
-  font-size: 1.4rem;
   padding: 0.4rem 0 0.4rem 0rem;
   line-height: 2rem;
   margin: 0;
@@ -334,7 +330,6 @@ ul.contains-task-list li {
 .code-filename {
   flex: 1;
   padding: 1.2rem;
-  font-size: 1.4rem;
   font-weight: 500;
 }
 
@@ -398,12 +393,11 @@ details > summary::marker {
   border-radius: 6px;
   width: 100%;
   text-decoration: none !important;
-  font-size: 15px;
 }
 
 .next-page div,
 .prev-page div {
-  margin: .8rem;
+  margin: 0.8rem;
 }
 
 .dark-mode .next-page,
@@ -463,11 +457,10 @@ mark {
 }
 
 .sidebar-section {
-  width: 260px;
+  width: 100%;
   border-bottom: 1px solid var(--lm-horizontal-rule-color);
 }
-.dark-mode
-.sidebar-section {
+.dark-mode .sidebar-section {
   border-color: var(--dm-horizontal-rule-color);
 }
 
