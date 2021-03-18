@@ -53,8 +53,8 @@ export const Tabs = (props) => {
   let tabs = props.children.map((child, index) => {
     let style =
       activeIndex === index
-        ? 'btn font-size-14 btn-rounded active border-top-0 border-bottom'
-        : 'btn font-size-14 btn-rounded alt-dm tab-label border-top-0 border-bottom'
+        ? 'btn btn-rounded active border-top-0 border-bottom'
+        : 'btn btn-rounded alt-dm tab-label border-top-0 border-bottom'
 
     return (
       <button className={style} onClick={() => setActiveIndex(index)} key={index}>

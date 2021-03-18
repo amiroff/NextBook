@@ -25,15 +25,9 @@ export default function Layout({ title, htmlTitle, description, children, part }
   }, [x, y])
 
   return (
-    <div
-      className={
-        darkModeActive
-          ? 'with-custom-webkit-scrollbars with-custom-css-scrollbars dark-mode'
-          : 'with-custom-webkit-scrollbars with-custom-css-scrollbars'
-      }
-    >
+    <div className={darkModeActive ? 'dark-mode' : ''}>
       <div
-        className='page-wrapper with-navbar with-sidebar with-transitions'
+        className='page-wrapper with-navbar with-sidebar'
         data-sidebar-type='overlayed-sm-and-down'
         {...sideBarData}
       >

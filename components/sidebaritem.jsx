@@ -4,8 +4,8 @@ import { Check, Dot } from './svgicons'
 const SideBarItem = ({ bulletStyle, item, pathname }) => {
   const classnameActive =
     pathname === item.path
-      ? 'sidebar-link pl-5 font-size-14 sidebar-link-with-icon active'
-      : 'sidebar-link pl-5 font-size-14 sidebar-link-with-icon'
+      ? 'sidebar-link pl-5 sidebar-link-with-icon active'
+      : 'sidebar-link pl-5 sidebar-link-with-icon'
 
   return (
     <Link href={item.path} key={item.path}>

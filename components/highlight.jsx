@@ -108,6 +108,7 @@ const Highlight = ({
           wrapLines
           lineProps={wrapper}
           PreTag={customPre}
+          codeTagProps={{}}
         >
           {children}
         </SyntaxHighlighter>

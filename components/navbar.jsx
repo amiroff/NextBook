@@ -24,11 +24,11 @@ function NavBar({ title }) {
           >
             <Hamburger />
           </button>
-          <div className='mt-5 ml-10 font-size-12 hidden-sm-and-down text-muted'>
-            <kbd className='text-muted'>shift</kbd> + <kbd className='text-muted'>M</kbd>
+          <div className='mt-5 ml-10 hidden-sm-and-down text-muted'>
+            <kbd className='text-muted'>shift + M</kbd>
           </div>
         </div>
-        <span className='mx-auto font-size-13'>{title}</span>
+        <span className='mx-auto'>{title}</span>
         <div className='navbar-content ml-10 ml-xs-auto'>
           <ColorModeToggler />
         </div>

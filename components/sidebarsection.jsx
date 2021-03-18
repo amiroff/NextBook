@@ -33,7 +33,7 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
       {/* display toggleable titlebar only when we have a part */}
       {toc.part && (
         <div
-          className='d-flex justify-content-between sidebar-title font-size-15 font-weight-bold'
+          className='d-flex justify-content-between sidebar-title font-weight-bold'
           onClick={toggleMenu}
         >
           <div className='part-title'>{toc.part}</div>

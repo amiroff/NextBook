@@ -429,7 +429,7 @@ Ooooops, an unknown error occured.
 ## Emojis
 
 Nothing fancy, just use typical 🥳 emojis.  
-Press <kbd>control</kbd> + <kbd>command</kbd> + <kbd>space</kbd> on macOS and <kbd>windows</kbd> + <kbd>.</kbd> on Windows.
+Press <kbd>control + command + space</kbd> on macOS and <kbd>windows + .</kbd> on Windows.
 
 ## Tabs
 

@@ -45,8 +45,8 @@ function PrevNextNav() {
               </div>
               <div className='text-right'>
                 <div>{prevChapter.title}</div>
-                <div className='mt-5 ml-10 font-size-12 text-muted'>
-                  <kbd>shift</kbd> + <kbd>←</kbd>
+                <div className='mt-5 ml-10 text-muted'>
+                  <kbd className='text-muted'>shift + ←</kbd>
                 </div>
               </div>
             </a>
@@ -62,8 +62,8 @@ function PrevNextNav() {
                   {nextChapter.title}
                 </span>
                 <div className='hidden-xs-and-down'>{nextChapter.title}</div>
-                <div className='mt-5 ml-10 font-size-12 hidden-xs-and-down text-muted'>
-                  <kbd>shift</kbd> + <kbd>→</kbd>
+                <div className='mt-5 ml-10 hidden-xs-and-down text-muted'>
+                  <kbd className='text-muted'>shift + →</kbd>
                 </div>
               </div>
               <div>
