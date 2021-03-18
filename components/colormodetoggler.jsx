@@ -18,8 +18,8 @@ function ColorModeToggler() {
 
   return (
     <>
-      <div className='mt-5 mr-10 hidden-sm-and-down text-muted'>
-        <kbd className='text-muted'>shift + R</kbd>
+      <div className='mr-10 hidden-sm-and-down text-muted'>
+        <kbd className='text-muted font-size-12'>shift + R</kbd>
       </div>
       <button
         className='btn btn-action'

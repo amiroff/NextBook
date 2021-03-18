@@ -16,11 +16,11 @@ Clicking the following link will fork the repo to your [Github](https://github.c
 </a>
 
 
-## For The Patient
+## For The Patient Reader
 
 - Clone the repo from [repo](https://github.com/amiroff/NextBook) or just use degit: `npx degit amiroff/NextBook`
-- Run `npm install` or `yarn install` in project folder.
-- Create your [markdown, mdx](/documentation/markdown) or jsx content in `pages` folder.
-- Update `config.json` with your table of contents.
-- Deploy your respository to [edge](https://vercel.com/new).
-- Profit!
+- Run `npm install` or `yarn install` in project folder (assuming you have [Node](https://nodejs.org/en/download/) installed).
+- Create your [markdown](/documentation/markdown) or [MDX](/documentation/using-mdx) content in `pages` folder.
+- Update `config.json` with your table of contents and other information.
+- Build (`npm run build`) and [deploy](https://vercel.com/new) your respository to any static hosting provider like Vercel, Netlify, Github Pages.
+- Profit! 🎉
