@@ -13,6 +13,7 @@ code,
 .code {
   font-family: 'Recursive', 'SF Mono', 'Menlo', 'Cascadia Code', 'Consolas',
     'Bitsream Vera Sans Mono', 'Droid Sans Mono', 'Ubuntu Mono', monospace;
+  font-size: var(--base-font-size);
 }
 
 .code {
@@ -32,6 +33,37 @@ pre.code {
 
 .clean .linenumber {
   display: none !important;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(201, 201, 201) transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(201, 201, 201);
+  border-radius: 10px;
+}
+
+/*  */
+
+.dark-mode * {
+  scrollbar-color: rgb(65, 65, 65) transparent;
+}
+
+.dark-mode *::-webkit-scrollbar-thumb {
+  background-color: rgb(65, 65, 65);
 }
 
 .dark-mode pre,
