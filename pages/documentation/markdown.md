@@ -236,10 +236,10 @@ results in:
 
 ## Checkboxes
 
-These are often used to indicate todo items.
+These are often used to indicate task items.
 
 ```
-**TODO LIST**
+**TASK LIST**
 
 - [x] Clone repo
 - [x] Create some pages
@@ -248,7 +248,7 @@ These are often used to indicate todo items.
 ```
 results in:
 
-**TODO LIST**
+**TASK LIST**
 
 - [x] Clone repo
 - [x] Create some pages
@@ -259,7 +259,7 @@ results in:
 
 Tables are a bit tricky, because you have to use all those pipes, but this is how markdown was designed. Using a special markdown editor like [Typora](https://typora.io/) will make your life easier with these. 
 
-**Standard columns**
+**Standard Columns**
 
 ```
 | Option | Description                                                 |

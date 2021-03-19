@@ -1,16 +1,21 @@
 ![logo](https://next-book.vercel.app/180.png)
 
-# NextBook: Create lovely documentation with MDX!
+# NextBook: Easy Docs With Markdown!
 
-<a href="https://www.producthunt.com/posts/nextbook-3?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-nextbook-3" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=286336&theme=light" alt="NextBook - Create lovely documentation with MDX | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-
-## What Is NextBook?
-
-**Try live examples and read detailed documentation at [official website](https://next-book.vercel.app).**
+<a href="https://www.producthunt.com/posts/nextbook-3?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-nextbook-3" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=286336&theme=light" alt="NextBook - Easy Docs With Markdown | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 **NextBook** is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It works by compiling markdown or MDX to static pages. This way, first content render on user's device is near instant.
 
-## Primary Features
+NextBook makes writing technical docs stupid simple while keeping featureset minimal: 
+
+1. Create markdown content files in `pages` folder 
+1. Update table of contents 
+
+... and voila 🎉! This should be enough to have a statically generated documentation page or book.
+
+With the advantages of [Next.js](https://nextjs.com), anything fancy (grading, level switching, you name it..) can be added along the way.
+
+## Primary Features 🧿
 
 - 💅 Good looking, simple and readable UI including `dark mode`. 
 - 🌎 Great SEO out of the box.
@@ -21,13 +26,15 @@
 - 🤓 Familiar [Git](https://github.com/) workflow and collaboration.
 - ⌨︎ Keyboard shortcuts for frequently used actions.
 - 🔎 In-page dynamic table of contents with scroolspy.
-- © You own your data, code `is` the data. Committing to repository and seeing results in the simplest form.
+- © You own your data, ==code is the data==. Committing to repository and seeing results in the simplest form.
 - 🏎 Fast to get started, just clone the repo and modify to your liking.
 - 🎊 One click (or push) [deployment](https://vercel.com/new)
 - 🛠 Unlimited dynamic features can be added with [MDX](https://mdxjs.com/)
 - ⚙︎ Customisable and extensible code.
 - ❤ Built on open-source.
-- 🧿 And many more small details...
+- 👍 And many more small details...
+
+> **Use Right Tool For The Job:** NextBook is not geared towards API documentation, rather it is optimised for tutorial/book style documentation. For API docs [ReadTheDocs](https://readthedocs.org/), [Docusaurus](https://docusaurus.io/) or plain [Spinx](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) would be a better fit.
 
 ## Get Started
 
@@ -37,4 +44,4 @@ Clicking the following button will fork the repo and deploy it to Vercel. Now yo
 
 ## Learn More
 
-Check the [NextBook website](https://next-book.vercel.app/) for detailed information.
+Check [Getting Started](https://next-book.vercel.app/documentation/getting-started) section for detailed information.
