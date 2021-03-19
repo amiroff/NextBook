@@ -351,19 +351,21 @@ results in:
 Links can be auto-detected, but it would be better to be implicit and have support other markdown tools. Also, all external links in your documentation will be autodetected and appropriate html code will be generated.
 
 ```
-[link to github](https://github.com)
+- [Basic link](https://github.com)
 
-[link with title](https://github.com 'Github FTW')
+- [Link with title](https://github.com 'Github FTW')
 
-With angle brackets: <https://github.com/remarkjs>
+- Link with angle brackets: <https://github.com/remarkjs>
 
-Autoconverted link https://github.com/remarkjs
+- Autoconverted link https://github.com/remarkjs
 
-Cross page [absolute link](/documentation/getting-started) for single page app navigation.
+- Cross page [absolute link](/documentation/getting-started) for single page app navigation.
 
-Linking with image: 
+- Link to [part of a page](#links)
 
-[![Deploy with Vercel raw][1]][2]
+- Linking with image: 
+
+- [![Deploy with Vercel raw][1]][2]
 
 [1]:  https://vercel.com/button
 [2]:  https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook "Deploy With Vercel now!"
@@ -371,19 +373,19 @@ Linking with image:
 ```
 results in:
 
-[link to github](https://github.com)
+- [Basic link](https://github.com)
 
-[link with title](https://github.com 'Github FTW')
+- [Link with title](https://github.com 'Github FTW')
 
-With angle brackets: <https://github.com/remarkjs>
+- Link with angle brackets: <https://github.com/remarkjs>
 
-Autoconverted link https://github.com/remarkjs
+- Autoconverted link https://github.com/remarkjs
 
-Cross page [absolute link](/documentation/getting-started) for single page app navigation.
+- Cross page [absolute link](/documentation/getting-started) for single page app navigation.
 
-Linking with image: 
+- Link to [part of a page](#links)
 
-[![Deploy with Vercel raw][1]][2]
+- Linking with image: [![Deploy with Vercel raw][1]][2]
 
 [1]:  https://vercel.com/button
 [2]:  https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook "Deploy With Vercel now!"
