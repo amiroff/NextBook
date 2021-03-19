@@ -262,51 +262,51 @@ Tables are a bit tricky, because you have to use all those pipes, but this is ho
 **Standard columns**
 
 ```
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
+| Option | Description                                                 |
+| ------ | ------------------------------------------------------------|
+| data   | path to data files to supply the data passed into templates.|
+| engine | engine to be used for processing templates.                 |
+| ext    | extension to be used for dest files.                        |
 ```
 results in:
 
-| Option | Description                                                               |
-| ------ | ------------------------------------------------------------------------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default.    |
-| ext    | extension to be used for dest files.                                      |
+| Option | Description                                                 |
+| ------ | ------------------------------------------------------------|
+| data   | path to data files to supply the data passed into templates.|
+| engine | engine to be used for processing templates.                 |
+| ext    | extension to be used for dest files.                        |
 
 **Right Aligned Columns**
 
 ```
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
+| Option | Description                                                   |
+| -----: | ------------------------------------------------------------: |
+| data   | path to data files to supply the data passed into templates.  |
+| engine | engine to be used for processing templates.                   |
+| ext    | extension to be used for dest files.                          |
 ```
 results in:
 
-| Option |                                                               Description |
-| -----: | ------------------------------------------------------------------------: |
-|   data | path to data files to supply the data that will be passed into templates. |
-| engine |    engine to be used for processing templates. Handlebars is the default. |
-|    ext |                                      extension to be used for dest files. |
+| Option | Description                                                   |
+| -----: | ------------------------------------------------------------: |
+| data   | path to data files to supply the data passed into templates.  |
+| engine | engine to be used for processing templates.                   |
+| ext    | extension to be used for dest files.                          |
 
 **Mixed Columns**
 
 ```
 | Left-aligned | Center-aligned | Right-aligned |
 | :----------- | :------------: | ------------: |
-| git status   |   git status   |    git status |
-| git diff     |    git diff    |      git diff |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
 ```
 results in:
 
 | Left-aligned | Center-aligned | Right-aligned |
 | :----------- | :------------: | ------------: |
-| git status   |   git status   |    git status |
-| git diff     |    git diff    |      git diff |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
 
 ## Images
 
