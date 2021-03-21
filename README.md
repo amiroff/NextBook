@@ -32,14 +32,8 @@ With the advantages of [Next.js](https://nextjs.com), anything fancy (grading, l
 - ❤ Built on open-source.
 - 👍 And many more small details...
 
-> **Use Right Tool For The Job:** NextBook is not geared towards API documentation, rather it is optimised for tutorial/book style documentation. For API docs [ReadTheDocs](https://readthedocs.org/), [Docusaurus](https://docusaurus.io/) or plain [Spinx](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) would be a better fit.
-
 ## Get Started
 
 Clicking the following button will fork the repo and deploy it to Vercel. Now you can edit pages, commit, push and see results.
 
 [![Clone and deploy NOW! raw](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook)
-
-## Learn More
-
-Check [Getting Started](https://next-book.vercel.app/documentation/getting-started) section for detailed information.
