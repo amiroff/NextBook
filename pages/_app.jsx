@@ -14,7 +14,7 @@ import {
   Tabs,
 } from 'components/mdxcomponents'
 import { useEffect, useState } from 'react'
-import { useLocalStorage } from 'react-use'
+import { useLocalStorage, useMedia } from 'react-use'
 import withDarkMode from 'next-dark-mode'
 import config from '../config.json'
 import '../styles/halfmoon-variables.min.css'
@@ -41,7 +41,8 @@ if (process.env.NEXT_PUBLIC_ENVIRONMENT !== 'development' && config.splitBeeToke
 }
 
 function MyApp({ Component, pageProps }) {
-  const [storedSideBar, setStoredSideBar] = useLocalStorage('sideBar', true)
+  const isWide = useMedia('(min-width: 1024px)')
+  const [storedSideBar, setStoredSideBar] = useLocalStorage('sideBar', isWide ? true : false)
   const [sideBar, setSideBar] = useState(storedSideBar)
   const [sideBarData, setSideBarData] = useState({})
 
