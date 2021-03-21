@@ -1,5 +1,5 @@
 {
-  "projectTitle": "NextBook: Lovely docs with MDX!",
+  "projectTitle": "NextBook: Easy Docs With Markdown!",
   "projectDescription": "NextBook is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It's built with MDX, Next.js and React and works by compiling markdown or MDX down to plain static html.",
   "projectURL": "https://next-book.vercel.app",
   "splitBeeToken": "T7AY7GSIOMQI",

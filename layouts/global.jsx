@@ -10,7 +10,7 @@ import { useEffect, useContext, useRef, useState } from 'react'
 import { SideBarDataContext } from 'components/context'
 import { useDarkMode } from 'next-dark-mode'
 
-export default function Layout({ title, htmlTitle, description, children, part }) {
+export default function GlobalLayout({ title, htmlTitle, description, children, part }) {
   const { projectTitle, projectURL, projectDescription, toc } = config
   const { darkModeActive } = useDarkMode()
   const scrollRef = useRef(null)

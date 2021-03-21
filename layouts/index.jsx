@@ -1,9 +1,9 @@
-// This is the layout file used by .mdx files.
+// This is the default layout file used by content (stuff in pages folder).
 
 import InPageToc from 'components/inpagetoc'
 import PrevNextNav from 'components/prevnextnav'
 import Text from 'components/text'
-import Layout from 'layouts/layout'
+import Layout from 'layouts/global'
 import config from '../config.json'
 
 export default function DocsLayout({ children, frontMatter }) {

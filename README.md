@@ -1,8 +1,6 @@
-![logo](https://next-book.vercel.app/180.png)
-
-# NextBook: Easy Docs With Markdown!
-
-<a href="https://www.producthunt.com/posts/nextbook-3?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-nextbook-3" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=286336&theme=light" alt="NextBook - Easy Docs With Markdown | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+---
+layout: empty
+---
 
 **NextBook** is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It works by compiling markdown or MDX to static pages. This way, first content render on user's device is near instant.
 
@@ -40,7 +38,7 @@ With the advantages of [Next.js](https://nextjs.com), anything fancy (grading, l
 
 Clicking the following button will fork the repo and deploy it to Vercel. Now you can edit pages, commit, push and see results.
 
-[![Clone and deploy NOW!](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook)
+[![Clone and deploy NOW! raw](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook)
 
 ## Learn More
 
