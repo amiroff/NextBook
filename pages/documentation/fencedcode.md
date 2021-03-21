@@ -301,6 +301,44 @@ results in:
 </html>
 ```
 
+## Line Diffing
+
+Sometimes you want to show which lines were added or removed from code. This can be achieved by passing related line numbers as `added` and `removed` parameters. Added lines will be highlighted with light green, removed lines with light red color. Note that displaying numbers, although works, in this case would cause a confusion as line numbers do not repeat.
+
+~~~
+```html removed=2,8 added=3,9,10
+<!DOCTYPE html>
+<html lang='en'>
+<html lang='ja'>
+<head>
+...
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <h1>こんにちは世界!</h1>
+    <p>今日は天気がいいですね。</p>
+</body>
+</html>
+```
+~~~
+
+results in:
+
+```html removed=2,8 added=3,9,10
+<!DOCTYPE html>
+<html lang='en'>
+<html lang='ja'>
+<head>
+...
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <h1>こんにちは世界!</h1>
+    <p>今日は天気がいいですね。</p>
+</body>
+</html>
+```
+
 You can also pass every other parameter mentioned above together. Here we are adding some of them:
 
 ~~~

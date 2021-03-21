@@ -39,6 +39,11 @@ SyntaxHighlighter.registerLanguage('python', python)
 SyntaxHighlighter.registerLanguage('django', django)
 SyntaxHighlighter.registerLanguage('javascript', javascript)
 
+const yamlToArray = (yamlString) =>
+  yamlString.split(',').map(function (n) {
+    return Number(n)
+  })
+
 const Highlight = ({
   lang,
   title,
@@ -47,6 +52,8 @@ const Highlight = ({
   startline = 1,
   clipboard,
   marked = '',
+  added = '',
+  removed = '',
   dark,
   children,
 }) => {
@@ -55,16 +62,22 @@ const Highlight = ({
   const markedArray = marked.split(',').map(function (n) {
     return Number(n)
   })
+  const addedArray = yamlToArray(added)
+  const removedArray = yamlToArray(removed)
+  const pseudoNumbered = markedArray.concat(removedArray).concat(addedArray).length > 1 && !numbered
 
   const customPreStyles = dark ? 'code dark' : 'code'
   const customPre = (props) => <pre className={customPreStyles}>{props.children}</pre>
   let colorMode = dark ? materialDark : darkModeActive ? materialDark : materialLight
 
   let wrapper = (lineNumber) => {
-    const style = { borderLeft: '3px solid transparent', display: 'block', paddingLeft: '10px' }
-    if (lineNumber && markedArray.includes(lineNumber)) {
+    const style = { borderLeft: '3px solid transparent', display: 'block', paddingLeft: '16px' }
+    if (markedArray.includes(lineNumber)) {
       style.backgroundColor = '#9e9e9e20'
       style.borderLeft = '1px solid #9e9e9e60'
+    }
+    if (addedArray.concat(removedArray).includes(lineNumber)) {
+      style.backgroundColor = addedArray.includes(lineNumber) ? '#6ace5030' : '#ff909030'
     }
     return {
       style,
@@ -99,10 +112,10 @@ const Highlight = ({
           )}
         </div>
       )}
-      <div className={markedArray.length > 1 && !numbered ? 'clean code-body' : 'code-body'}>
+      <div className={pseudoNumbered ? 'clean code-body' : 'code-body'}>
         <SyntaxHighlighter
           language={lang}
-          showLineNumbers={markedArray.length > 1 && !numbered ? true : numbered}
+          showLineNumbers={pseudoNumbered ? true : numbered}
           startingLineNumber={parseInt(startline)}
           style={colorMode}
           wrapLines

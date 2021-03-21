@@ -15,6 +15,7 @@ Here is a list of features which are planned to be implemented in future in no p
 - [x] Analytics with Splitbee.
 - [x] Standalone chapters with no part information.
 - [x] Cross-part navigation.
+- [x] Fenced code diff support.
 - [ ] Global search. (Algolia?)
 - [ ] Live code edit & preview support.
 - [ ] Automatic image optimization using next/image.
