@@ -42,7 +42,9 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
       )}
 
       {toc.part ? (
-        <div className={menuVisible ? 'part-items' : 'd-none part-items'}>{chapterItems}</div>
+        <div className={menuVisible ? 'part-items' : 'd-none part-items'}>
+          {chapterItems}
+        </div>
       ) : (
         <div>{chapterItems}</div>
       )}

@@ -14,14 +14,20 @@ export default function DocsLayout({ children, frontMatter }) {
     <Layout
       title={frontMatter.title}
       htmlTitle={
-        frontMatter.part ? `${frontMatter.part} - ${frontMatter.title}` : frontMatter.title
+        frontMatter.part
+          ? `${frontMatter.part} - ${frontMatter.title}`
+          : frontMatter.title
       }
       description={frontMatter.description}
       part={frontMatter.part}
     >
       <div className='container-fluid'>
         <div className='row'>
-          <div className={showToc ? 'col-lg-9 main-content' : 'col-lg-12 main-content'}>
+          <div
+            className={
+              showToc ? 'col-lg-9 main-content' : 'col-lg-12 main-content'
+            }
+          >
             <div className='my-20'>
               {frontMatter.title && <h1>{frontMatter.title}</h1>}
               {frontMatter.description && <p>{frontMatter.description}</p>}

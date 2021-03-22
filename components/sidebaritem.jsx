@@ -11,7 +11,9 @@ const SideBarItem = ({ bulletStyle, item, pathname }) => {
     <Link href={item.path} key={item.path}>
       <a className={classnameActive}>
         <span className='sidebar-icon bg-transparent'>
-          <span aria-hidden='true'>{bulletStyle === 'check' ? <Check /> : <Dot />}</span>
+          <span aria-hidden='true'>
+            {bulletStyle === 'check' ? <Check /> : <Dot />}
+          </span>
         </span>
         {item.title}
       </a>

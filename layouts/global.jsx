@@ -10,7 +10,13 @@ import { useEffect, useContext, useRef, useState } from 'react'
 import { SideBarDataContext } from 'components/context'
 import { useDarkMode } from 'next-dark-mode'
 
-export default function GlobalLayout({ title, htmlTitle, description, children, part }) {
+export default function GlobalLayout({
+  title,
+  htmlTitle,
+  description,
+  children,
+  part
+}) {
   const { projectTitle, projectURL, projectDescription, toc } = config
   const { darkModeActive } = useDarkMode()
   const scrollRef = useRef(null)
@@ -19,9 +25,13 @@ export default function GlobalLayout({ title, htmlTitle, description, children, 
   const sideBarData = useContext(SideBarDataContext)
 
   useEffect(() => {
-    const windowHeight = scrollRef.current.scrollHeight - scrollRef.current.clientHeight
+    const windowHeight =
+      scrollRef.current.scrollHeight - scrollRef.current.clientHeight
     const percentage = y / windowHeight
-    setprogressStyle({ transform: `scale(${percentage}, 1)`, opacity: `${percentage}` })
+    setprogressStyle({
+      transform: `scale(${percentage}, 1)`,
+      opacity: `${percentage}`
+    })
   }, [x, y])
 
   return (
@@ -38,7 +48,7 @@ export default function GlobalLayout({ title, htmlTitle, description, children, 
             type: 'website',
             url: projectURL,
             title: title,
-            description: description,
+            description: description
           }}
         />
         <Head>

@@ -3,15 +3,23 @@ import { useState } from 'react'
 import Highlight from './highlight'
 import Text from './text'
 
-export const Table = (props) => <table className='table custom-table' {...props} />
+export const Table = (props) => (
+  <table className='table custom-table' {...props} />
+)
 
-export const Blockquote = (props) => <blockquote className='blockquote' {...props} />
+export const Blockquote = (props) => (
+  <blockquote className='blockquote' {...props} />
+)
 
 export const Pre = ({ children }) => <>{children}</>
 
-export const Details = (props) => <details className='collapse-panel mw-full my-10' {...props} />
+export const Details = (props) => (
+  <details className='collapse-panel mw-full my-10' {...props} />
+)
 
-export const Summary = (props) => <summary className='collapse-header text-muted' {...props} />
+export const Summary = (props) => (
+  <summary className='collapse-header text-muted' {...props} />
+)
 
 export const CustomLink = (props) => (
   <Link {...props}>
@@ -45,7 +53,9 @@ export const Code = (props) => {
   )
 }
 
-export const Tab = ({ children }) => <div className='tab-content'>{children}</div>
+export const Tab = ({ children }) => (
+  <div className='tab-content'>{children}</div>
+)
 
 export const Tabs = (props) => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -57,7 +67,11 @@ export const Tabs = (props) => {
         : 'btn btn-rounded alt-dm tab-label border-top-0 border-bottom'
 
     return (
-      <button className={style} onClick={() => setActiveIndex(index)} key={index}>
+      <button
+        className={style}
+        onClick={() => setActiveIndex(index)}
+        key={index}
+      >
         {child.props.label}
       </button>
     )
@@ -68,7 +82,9 @@ export const Tabs = (props) => {
       <div className='btn-group w-full' role='group'>
         {tabs}
       </div>
-      <div className='card bg-transparent m-0 border-0 p-5'>{props.children[activeIndex]}</div>
+      <div className='card bg-transparent m-0 border-0 p-5'>
+        {props.children[activeIndex]}
+      </div>
     </div>
   )
 }

@@ -55,7 +55,7 @@ const Highlight = ({
   added = '',
   removed = '',
   dark,
-  children,
+  children
 }) => {
   const { darkModeActive } = useDarkMode()
   const [copied, setCopied] = useState(false)
@@ -64,24 +64,37 @@ const Highlight = ({
   })
   const addedArray = yamlToArray(added)
   const removedArray = yamlToArray(removed)
-  const pseudoNumbered = markedArray.concat(removedArray).concat(addedArray).length > 1 && !numbered
+  const pseudoNumbered =
+    markedArray.concat(removedArray).concat(addedArray).length > 1 && !numbered
 
   const customPreStyles = dark ? 'code dark' : 'code'
-  const customPre = (props) => <pre className={customPreStyles}>{props.children}</pre>
-  let colorMode = dark ? materialDark : darkModeActive ? materialDark : materialLight
+  const customPre = (props) => (
+    <pre className={customPreStyles}>{props.children}</pre>
+  )
+  let colorMode = dark
+    ? materialDark
+    : darkModeActive
+    ? materialDark
+    : materialLight
 
   let wrapper = (lineNumber) => {
-    const style = { borderLeft: '3px solid transparent', display: 'block', paddingLeft: '16px' }
+    const style = {
+      borderLeft: '3px solid transparent',
+      display: 'block',
+      paddingLeft: '16px'
+    }
     if (markedArray.includes(lineNumber)) {
       style.backgroundColor = '#9e9e9e20'
       style.borderLeft = '1px solid #9e9e9e60'
     }
     if (addedArray.concat(removedArray).includes(lineNumber)) {
-      style.backgroundColor = addedArray.includes(lineNumber) ? '#6ace5030' : '#ff909030'
+      style.backgroundColor = addedArray.includes(lineNumber)
+        ? '#6ace5030'
+        : '#ff909030'
     }
     return {
       style,
-      onClick() {},
+      onClick() {}
     }
   }
 

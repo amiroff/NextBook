@@ -29,10 +29,17 @@ function PrevNextNav() {
     currentPart?.chapters[currentChapterIndex - 1] ||
     prevPart?.chapters[prevPart?.chapters.length - 1]
   // find next page, if not, use first page of next part
-  let nextChapter = currentPart?.chapters[currentChapterIndex + 1] || nextPart?.chapters[0]
+  let nextChapter =
+    currentPart?.chapters[currentChapterIndex + 1] || nextPart?.chapters[0]
 
-  useShortcuts(['shift', 'ArrowRight'], () => nextChapter && router.push(nextChapter.path))
-  useShortcuts(['shift', 'ArrowLeft'], () => prevChapter && router.push(prevChapter.path))
+  useShortcuts(
+    ['shift', 'ArrowRight'],
+    () => nextChapter && router.push(nextChapter.path)
+  )
+  useShortcuts(
+    ['shift', 'ArrowLeft'],
+    () => prevChapter && router.push(prevChapter.path)
+  )
 
   return (
     <>
@@ -58,8 +65,8 @@ function PrevNextNav() {
             <a className='next-page d-flex justify-content-between align-items-center'>
               <div className='text-left'>
                 <span className='hidden-sm-and-up text-capitalize'>
-                  <span className='text-muted'>{_('Next chapter')}:</span> <br />{' '}
-                  {nextChapter.title}
+                  <span className='text-muted'>{_('Next chapter')}:</span>{' '}
+                  <br /> {nextChapter.title}
                 </span>
                 <div className='hidden-xs-and-down'>{nextChapter.title}</div>
                 <div className='mt-5 ml-10 hidden-xs-and-down text-muted'>

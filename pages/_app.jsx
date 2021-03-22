@@ -1,6 +1,10 @@
 import { MDXProvider } from '@mdx-js/react'
 import splitbee from '@splitbee/web'
-import { SideBarContext, SideBarDataContext, ToggleSideBarContext } from 'components/context'
+import {
+  SideBarContext,
+  SideBarDataContext,
+  ToggleSideBarContext
+} from 'components/context'
 import {
   Blockquote,
   Code,
@@ -11,7 +15,7 @@ import {
   Summary,
   Tab,
   Table,
-  Tabs,
+  Tabs
 } from 'components/mdxcomponents'
 import { useEffect, useState } from 'react'
 import { useLocalStorage, useMedia } from 'react-use'
@@ -31,18 +35,24 @@ const components = {
   summary: Summary,
   code: Code,
   tabs: Tabs,
-  tab: Tab,
+  tab: Tab
 }
 
-if (process.env.NEXT_PUBLIC_ENVIRONMENT !== 'development' && config.splitBeeToken) {
+if (
+  process.env.NEXT_PUBLIC_ENVIRONMENT !== 'development' &&
+  config.splitBeeToken
+) {
   splitbee.init({
-    token: config.splitBeeToken,
+    token: config.splitBeeToken
   })
 }
 
 function MyApp({ Component, pageProps }) {
   const isWide = useMedia('(min-width: 1024px)')
-  const [storedSideBar, setStoredSideBar] = useLocalStorage('sideBar', isWide ? true : false)
+  const [storedSideBar, setStoredSideBar] = useLocalStorage(
+    'sideBar',
+    isWide ? true : false
+  )
   const [sideBar, setSideBar] = useState(storedSideBar)
   const [sideBarData, setSideBarData] = useState({})
 

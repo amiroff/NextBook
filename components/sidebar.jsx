@@ -25,7 +25,11 @@ function SideBar({ toc, part, docTitle }) {
             <Link href='/'>
               <a className='text-decoration-none d-flex flex-column align-items-center'>
                 {config.useTitleLogo && (
-                  <img src='/icon.svg' alt='NextBook Logo' className='mb-10 w-100' />
+                  <img
+                    src='/icon.svg'
+                    alt='NextBook Logo'
+                    className='mb-10 w-100'
+                  />
                 )}
                 {docTitle}
               </a>
