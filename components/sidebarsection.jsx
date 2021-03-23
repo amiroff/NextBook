@@ -23,8 +23,7 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
   }
 
   useEffect(() => {
-    console.log(toc.part)
-    setMenuVisible(toc.part === part)
+    setMenuVisible(toc.part !== undefined && toc.part === part)
   }, [])
 
   return (
