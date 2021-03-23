@@ -99,9 +99,13 @@ function Square(props) {
 }
 ```
 
+## Clipboard Button
+
+Any code block will have automatic `Copy` icon clicking which copies contents of code block to clipboard.
+
 ## Code Header Information
 
-You can display various information like title, link to source and clipboard button in code header. 
+You can display various information like title and link to source in code header. 
 
 ### Code Title
 
@@ -161,40 +165,6 @@ def diff(a, b):
     TODO: fix this function!!
     """
     return a - b
-```
-
-### Clipboard Button
-
-A classic nowadays, any code block can have automatic `Copy` icon. Just provide `clipboard` metadata:
-
-~~~
-```python title=inspect.py clipboard
-from django.conf.urls import include, url
-from django.contrib import admin
-
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-
-    url(r'^api/', include('conduit.apps.articles.urls', namespace='articles')),
-    url(r'^api/', include('conduit.apps.authentication.urls', namespace='authentication')),
-    url(r'^api/', include('conduit.apps.profiles.urls', namespace='profiles')),
-]
-```
-~~~
-
-results in:
-
-```python title=inspect.py clipboard
-from django.conf.urls import include, url
-from django.contrib import admin
-
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-
-    url(r'^api/', include('conduit.apps.articles.urls', namespace='articles')),
-    url(r'^api/', include('conduit.apps.authentication.urls', namespace='authentication')),
-    url(r'^api/', include('conduit.apps.profiles.urls', namespace='profiles')),
-]
 ```
 
 ## Line Numbering
@@ -342,7 +312,7 @@ results in:
 You can also pass every other parameter mentioned above together. Here we are adding some of them:
 
 ~~~
-```html clipboard numbered marked=2,5,6,10 title=public/index.html link=https://gist.github.com/amiroff/04d57ef025845b191d9cd30c7ca13f20 
+```html numbered marked=2,5,6,10 title=public/index.html link=https://gist.github.com/amiroff/04d57ef025845b191d9cd30c7ca13f20 
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -359,7 +329,7 @@ You can also pass every other parameter mentioned above together. Here we are ad
 ~~~
 results in 
 
-```html clipboard numbered marked=2,5,6,10 title=public/index.html link=https://gist.github.com/amiroff/04d57ef025845b191d9cd30c7ca13f20 
+```html numbered marked=2,5,6,10 title=public/index.html link=https://gist.github.com/amiroff/04d57ef025845b191d9cd30c7ca13f20 
 <!DOCTYPE html>
 <html lang='en'>
 <head>

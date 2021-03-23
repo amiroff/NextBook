@@ -50,7 +50,6 @@ const Highlight = ({
   link,
   numbered,
   startline = 1,
-  clipboard,
   marked = '',
   added = '',
   removed = '',
@@ -100,7 +99,7 @@ const Highlight = ({
 
   return (
     <>
-      {(clipboard || title) && (
+      {title && (
         <div className='code-header'>
           <div className='code-filename'>
             {link ? (
@@ -111,21 +110,19 @@ const Highlight = ({
               <span>{title}</span>
             )}
           </div>
-          {clipboard && (
-            <CopyToClipboard text={children} onCopy={() => setCopied(true)}>
-              <button
-                className='copy-to-clipboard btn btn-sm btn-primary '
-                type='button'
-                title={_('Copy to clipboard')}
-              >
-                {copied ? <Copied /> : <Copy />}
-                {copied ? <Text tid='Copied!' /> : <Text tid='Copy' />}
-              </button>
-            </CopyToClipboard>
-          )}
         </div>
       )}
       <div className={pseudoNumbered ? 'clean code-body' : 'code-body'}>
+        <div className='copy-container'>
+          <CopyToClipboard text={children} onCopy={() => setCopied(true)}>
+            <button
+              className='copy-to-clipboard btn btn-sm btn-transparent'
+              title={_('Copy to clipboard')}
+            >
+              {copied ? <Copied /> : <Copy />}
+            </button>
+          </CopyToClipboard>
+        </div>
         <SyntaxHighlighter
           language={lang}
           showLineNumbers={pseudoNumbered ? true : numbered}

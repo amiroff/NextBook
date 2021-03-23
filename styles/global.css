@@ -331,19 +331,30 @@ ul.contains-task-list li {
   color: #8d8d8d50 !important;
 }
 
+.copy-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
 .copy-to-clipboard {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  opacity: 0.4;
   cursor: pointer;
-  background-color: transparent;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
+  padding: 0 2px 0 3px;
+}
+
+.copy-to-clipboard:hover {
+  opacity: 0.8;
 }
 
 .copy-to-clipboard svg {
   vertical-align: sub;
   display: inline-block;
   width: 16px;
-  margin-right: 4px;
 }
 
 .code-filename {

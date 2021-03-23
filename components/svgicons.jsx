@@ -91,7 +91,6 @@ export const Hamburger = () => (
 
 export const Copied = () => (
   <svg
-    className='w-6 h-6'
     fill='none'
     stroke='currentColor'
     viewBox='0 0 24 24'
@@ -108,7 +107,6 @@ export const Copied = () => (
 
 export const Copy = () => (
   <svg
-    className='w-6 h-6'
     fill='none'
     stroke='currentColor'
     viewBox='0 0 24 24'
