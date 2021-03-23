@@ -439,35 +439,48 @@ While [markdown spec](https://commonmark.org) does not offer any tabbed interfac
 
 ```html
 <tabs>
-<tab label='Windows Directions'>
+  <tab label='Windows Directions'>
 
-Install via [chocolatey](https://chocolatey.org):
+  Install via [chocolatey](https://chocolatey.org):
 
-`choco install python`
+  `choco install python`
 
-</tab>
-<tab label='macOS Directions'>
+  </tab>
+  <tab label='macOS Directions'>
 
-Install via [brew](https://brew.sh):
+  Install via [brew](https://brew.sh):
 
-`brew install python3`
-</tab>
+  `brew install python3`
+  </tab>
+
+  <tab label='Linux Directions'>
+
+  Install via apt:
+
+  `sudo apt install python3`
+  </tab>
 </tabs>
 ```
 results in:
 
 <tabs>
-<tab label='Windows Directions'>
+  <tab label='Windows Directions'>
 
-Install via [chocolatey](https://chocolatey.org):
+  Install via [chocolatey](https://chocolatey.org):
+  
+  `choco install python`
+  </tab>
+  <tab label='macOS Directions'>
 
-`choco install python`
+  Install via [brew](https://brew.sh):
 
-</tab>
-<tab label='macOS Directions'>
+  `brew install python3`
+  </tab>
 
-Install via [brew](https://brew.sh):
+  <tab label='Linux Directions'>
 
-`brew install python3`
-</tab>
+  Install via apt:
+
+  `sudo apt install python3`
+  </tab>
 </tabs>
