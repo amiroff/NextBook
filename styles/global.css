@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght,CRSV,MONO@300..800,0,1&display=swap');
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, 'Cantarell',
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
-    font-size: 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1.5rem;
 }
 
 kbd,
@@ -219,7 +219,8 @@ details p:nth-child(2) {
   padding: var(--collapse-content-padding);
   color: var(--lm-collapse-content-text-color);
   background-color: var(--lm-collapse-content-bg-color);
-  border: var(--collapse-content-border-width) solid var(--lm-collapse-content-border-color);
+  border: var(--collapse-content-border-width) solid
+    var(--lm-collapse-content-border-color);
   box-shadow: var(--lm-collapse-content-box-shadow);
   border-top: none;
   border-bottom-left-radius: var(--collapse-content-border-radius);
@@ -286,19 +287,6 @@ details p:nth-child(2) {
 .dark-mode .page-toc-container li.page-toc-active {
   border-color: white;
   color: white;
-}
-
-.sidebar-link.active,
-.sidebar-link.active:hover,
-.sidebar-link:hover {
-  color: var(-primary-color);
-  background-color: var(--lm-input-bg-color);
-}
-
-.dark-mode .sidebar-link.active,
-.dark-mode .sidebar-link.active:hover,
-.dark-mode .sidebar-link:hover {
-  background-color: var(--dm-input-bg-color);
 }
 
 .sidebar-icon {
@@ -456,7 +444,11 @@ details > summary::marker {
 }
 
 .progressBar {
-  background: linear-gradient(to left, rgba(255, 0, 0, 0.7), rgba(238, 130, 238, 1));
+  background: linear-gradient(
+    to left,
+    rgba(255, 0, 0, 0.7),
+    rgba(238, 130, 238, 1)
+  );
   transform-origin: top left;
   transform: scale(0, 0);
   opacity: 0;
@@ -494,6 +486,7 @@ mark {
   width: 100%;
   border-bottom: 1px solid var(--lm-horizontal-rule-color);
 }
+
 .dark-mode .sidebar-section {
   border-color: var(--dm-horizontal-rule-color);
 }
@@ -511,4 +504,12 @@ mark {
 
 .dark-mode .content-wrapper {
   background-color: var(--dm-base-body-bg-color);
+}
+
+.dark-mode .open {
+  background-color: var(--dm-base-body-bg-color);
+}
+
+.open {
+  background-color: white;
 }

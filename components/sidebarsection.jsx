@@ -4,7 +4,6 @@ import { AngleDown, AngleRight } from './svgicons'
 
 const SideBarSection = ({ toc, pathName, history, part }) => {
   const [menuVisible, setMenuVisible] = useState(true)
-  const [loadingDone, setLoadingDone] = useState(false)
 
   const chapterItems = (
     <>
@@ -24,16 +23,16 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
   }
 
   useEffect(() => {
+    console.log(toc.part)
     setMenuVisible(toc.part === part)
-    setLoadingDone(true)
   }, [])
 
   return (
-    <div className={loadingDone ? 'sidebar-section' : 'd-none'}>
+    <div className={menuVisible ? 'sidebar-section open' : 'sidebar-section'}>
       {/* display toggleable titlebar only when we have a part */}
       {toc.part && (
         <div
-          className='d-flex justify-content-between sidebar-title font-weight-bold'
+          className='d-flex justify-content-between m-0 px-20 sidebar-title font-weight-bold'
           onClick={toggleMenu}
         >
           <div className='part-title'>{toc.part}</div>
@@ -42,7 +41,7 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
       )}
 
       {toc.part ? (
-        <div className={menuVisible ? 'part-items' : 'd-none part-items'}>
+        <div className={menuVisible ? 'part-items open' : 'd-none part-items'}>
           {chapterItems}
         </div>
       ) : (
