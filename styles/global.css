@@ -122,8 +122,7 @@ h4,
 h5,
 h6 {
   font-weight: 500 !important;
-  margin-top: 3rem;
-  line-height: 4.4rem;
+  margin: 1rem 0;
 }
 
 h1 {
@@ -512,4 +511,14 @@ mark {
 
 .open {
   background-color: white;
+}
+
+.linked-heading span {
+  font-size: 13px;
+  opacity: 0;
+}
+
+.linked-heading:hover span {
+  cursor: pointer;
+  opacity: 0.5;
 }

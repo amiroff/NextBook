@@ -1,7 +1,10 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import config from '../config.json'
 import Highlight from './highlight'
-import Text from './text'
+import Text, { _ } from './text'
 
 export const Table = (props) => (
   <table className='table custom-table' {...props} />
@@ -86,5 +89,80 @@ export const Tabs = (props) => {
         {props.children[activeIndex]}
       </div>
     </div>
+  )
+}
+
+const Heading = (props) => {
+  const [copied, setCopied] = useState(false)
+  const router = useRouter()
+  const fullPath = `${config.projectURL}${router.pathname}#${props.id}`
+  const Tag = 'h' + props.level
+
+  return (
+    <div className='linked-heading'>
+      <Tag id={props.id} className='d-inline-block'>
+        {props.children}
+      </Tag>
+      <CopyToClipboard text={fullPath} onCopy={() => setCopied(true)}>
+        <span
+          className={
+            copied
+              ? 'd-inline-block m-5 font-size-20 text-success'
+              : 'd-inline-block m-5 font-size-20'
+          }
+          title={_('Copy link')}
+        >
+          ¶
+        </span>
+      </CopyToClipboard>
+    </div>
+  )
+}
+
+export const H1 = ({ children, id }) => {
+  return (
+    <Heading level='1' id={id}>
+      {children}
+    </Heading>
+  )
+}
+
+export const H2 = ({ children, id }) => {
+  return (
+    <Heading level='2' id={id}>
+      {children}
+    </Heading>
+  )
+}
+
+export const H3 = ({ children, id }) => {
+  return (
+    <Heading level='3' id={id}>
+      {children}
+    </Heading>
+  )
+}
+
+export const H4 = ({ children, id }) => {
+  return (
+    <Heading level='4' id={id}>
+      {children}
+    </Heading>
+  )
+}
+
+export const H5 = ({ children, id }) => {
+  return (
+    <Heading level='5' id={id}>
+      {children}
+    </Heading>
+  )
+}
+
+export const H6 = ({ children, id }) => {
+  return (
+    <Heading level='6' id={id}>
+      {children}
+    </Heading>
   )
 }

@@ -14,6 +14,7 @@
     "Toggle dark mode": "Toggle dark mode",
     "Toggle light mode": "Toggle light mode",
     "Copy to clipboard": "Copy to clipboard",
+    "Copy link": "Copy link to this heading",
     "Copy": "Copy",
     "Copied!": "Copied!",
     "Page Contents": "Page Contents",
@@ -29,8 +30,14 @@
     {
       "part": "Documentation",
       "chapters": [
-        { "title": "Getting Started", "path": "/documentation/getting-started" },
-        { "title": "NextBook Features", "path": "/documentation/nextbook-features" },
+        {
+          "title": "Getting Started",
+          "path": "/documentation/getting-started"
+        },
+        {
+          "title": "NextBook Features",
+          "path": "/documentation/nextbook-features"
+        },
         { "title": "Markdown Usage", "path": "/documentation/markdown" },
         { "title": "Fenced Code Usage", "path": "/documentation/fencedcode" },
         { "title": "Using MDX", "path": "/documentation/using-mdx" }
@@ -38,10 +45,17 @@
     },
     {
       "part": "Contributing",
-      "chapters": [{ "title": "Contributing Features", "path": "/contributing/contributing" }]
+      "chapters": [
+        {
+          "title": "Contributing Features",
+          "path": "/contributing/contributing"
+        }
+      ]
     },
     {
-      "chapters": [{ "title": "In Progress Features", "path": "/in-progress-features" }]
+      "chapters": [
+        { "title": "In Progress Features", "path": "/in-progress-features" }
+      ]
     }
   ]
 }

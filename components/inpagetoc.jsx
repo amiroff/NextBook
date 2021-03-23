@@ -5,7 +5,7 @@ function InPageTocElement(props) {
   // remove 1 from first heading to prevent exe left padding and add standard left padding
   const style = { paddingLeft: `${props.levels[props.children] - 1 + 0.2}em` }
   return (
-    <li style={style} className={props.className} {...props}>
+    <li style={style} className={props.className} onClick={props.onClick}>
       {props.children}
     </li>
   )
@@ -32,7 +32,7 @@ function InPageToc({ tocRaw }) {
           itemElement={<InPageTocElement levels={levels} />}
           itemContainerClassName='page-toc-container'
           activeItemClassName='page-toc-active'
-          includeParentClasses={true}
+          includeParentClasses={false}
         />
       </div>
     )
