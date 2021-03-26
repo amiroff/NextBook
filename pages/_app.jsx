@@ -1,6 +1,6 @@
 import { MDXProvider } from '@mdx-js/react'
 import splitbee from '@splitbee/web'
-import { SideBarContextProvider } from 'components/context'
+import { SideBarContextProvider } from 'components/store/sidebar-context'
 import withDarkMode from 'next-dark-mode'
 import { componentMap } from 'components/component-mapper'
 import config from '../config.json'

@@ -1,13 +1,13 @@
 import { useContext } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
 import ColorModeToggler from './colormode-toggler'
-import SideBarContext from './context'
+import SideBarContext from './store/sidebar-context'
 import { Hamburger } from './svg-icons'
 import { _ } from './text'
 
 function NavBar({ title, part }) {
   const sideBarCtx = useContext(SideBarContext)
-  useShortcuts(['M'], () => sideBarCtx.toggle(), [sideBarCtx.sidebar])
+  useShortcuts(['M'], () => sideBarCtx.toggleSideBar(), [sideBarCtx.sideBar])
 
   return (
     <>
@@ -17,7 +17,7 @@ function NavBar({ title, part }) {
             id='toggle-sidebar-btn'
             className='btn btn-action'
             type='button'
-            onClick={sideBarCtx.toggle}
+            onClick={sideBarCtx.toggleSideBar}
             title={_('Table Of Contents')}
           >
             <Hamburger />
@@ -34,7 +34,7 @@ function NavBar({ title, part }) {
           <ColorModeToggler />
         </div>
       </nav>
-      <div className='sidebar-overlay' onClick={sideBarCtx.toggle}></div>
+      <div className='sidebar-overlay' onClick={sideBarCtx.toggleSideBar}></div>
     </>
   )
 }
