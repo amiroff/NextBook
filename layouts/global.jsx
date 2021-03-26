@@ -64,6 +64,10 @@ export default function GlobalLayout({
           <link rel='icon' href='/icon.svg' type='image/svg+xml' />
           <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
           <link rel='manifest' href='/manifest.webmanifest' />
+          <link
+            href='https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css'
+            rel='stylesheet'
+          />
         </Head>
 
         <div className='progressBarContainer'>
