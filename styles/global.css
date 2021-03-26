@@ -138,6 +138,15 @@ h1 {
   font-weight: 600;
 }
 
+.navbar {
+  border: none;
+  box-shadow: 0px 6px 25px -12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .navbar {
+  box-shadow: 0px 6px 25px -12px rgb(0, 0, 0, 0.8);
+}
+
 .main-content ul > li {
   list-style-type: disc;
 }
