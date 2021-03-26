@@ -1,20 +1,13 @@
-import { useDarkMode } from 'next-dark-mode'
+import { useContext } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
+import ThemeContext from './store/theme-context'
 import { Moon, Sun } from './svg-icons'
+
 import { _ } from './text'
 
 function ColorModeToggler() {
-  const { darkModeActive, switchToDarkMode, switchToLightMode } = useDarkMode()
-
-  const toggleTheme = () => {
-    if (darkModeActive) {
-      switchToLightMode()
-    } else {
-      switchToDarkMode()
-    }
-  }
-
-  useShortcuts(['T'], () => toggleTheme(), [darkModeActive])
+  const themeCtx = useContext(ThemeContext)
+  useShortcuts(['T'], () => themeCtx.toggleTheme(), [themeCtx.theme])
 
   return (
     <>
@@ -24,10 +17,14 @@ function ColorModeToggler() {
       <button
         className='btn btn-action'
         type='button'
-        onClick={toggleTheme}
-        title={darkModeActive ? _('Toggle light mode') : _('Toggle dark mode')}
+        onClick={themeCtx.toggleTheme}
+        title={
+          themeCtx.darkModeActive
+            ? _('Toggle light mode')
+            : _('Toggle dark mode')
+        }
       >
-        {darkModeActive ? <Sun /> : <Moon />}
+        {themeCtx.darkModeActive ? <Sun /> : <Moon />}
         <span></span>
       </button>
     </>

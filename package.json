@@ -12,7 +12,6 @@
   "dependencies": {
     "@splitbee/web": "^0.2.4",
     "next": "10.0.9",
-    "next-dark-mode": "^3.0.0",
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^17.0.2",

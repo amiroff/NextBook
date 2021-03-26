@@ -8,7 +8,7 @@ import config from '../config.json'
 import { useScroll } from 'react-use'
 import { useEffect, useContext, useRef, useState } from 'react'
 import SideBarContext from 'components/store/sidebar-context'
-import { useDarkMode } from 'next-dark-mode'
+import ThemeContext from 'components/store/theme-context'
 
 export default function GlobalLayout({
   title,
@@ -18,7 +18,7 @@ export default function GlobalLayout({
   part
 }) {
   const { projectTitle, projectURL, projectDescription, toc } = config
-  const { darkModeActive } = useDarkMode()
+  const themeCtx = useContext(ThemeContext)
   const scrollRef = useRef(null)
   const { x, y } = useScroll(scrollRef)
   const [progressStyle, setprogressStyle] = useState({})
@@ -35,7 +35,7 @@ export default function GlobalLayout({
   }, [x, y])
 
   return (
-    <div className={darkModeActive ? 'dark-mode' : ''}>
+    <div className={themeCtx.darkModeActive ? 'dark-mode' : ''}>
       <div
         className='page-wrapper with-navbar with-sidebar'
         data-sidebar-type='overlayed-sm-and-down'

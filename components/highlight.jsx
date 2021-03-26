@@ -1,5 +1,4 @@
-import { useDarkMode } from 'next-dark-mode'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import bash from 'react-syntax-highlighter/dist/cjs/languages/prism/bash'
@@ -19,8 +18,9 @@ import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql'
 import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript'
 import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml'
 import { materialDark, materialLight } from './prism'
+import ThemeContext from './store/theme-context'
 import { Copied, Copy } from './svg-icons'
-import Text, { _ } from './text'
+import { _ } from './text'
 
 SyntaxHighlighter.registerLanguage('markdown', markdown)
 SyntaxHighlighter.registerLanguage('css', css)
@@ -56,7 +56,7 @@ const Highlight = ({
   dark,
   children
 }) => {
-  const { darkModeActive } = useDarkMode()
+  const themeCtx = useContext(ThemeContext)
   const [copied, setCopied] = useState(false)
   const markedArray = marked.split(',').map(function (n) {
     return Number(n)
@@ -72,7 +72,7 @@ const Highlight = ({
   )
   let colorMode = dark
     ? materialDark
-    : darkModeActive
+    : themeCtx.darkModeActive
     ? materialDark
     : materialLight
 
