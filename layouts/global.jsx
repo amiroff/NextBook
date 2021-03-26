@@ -7,7 +7,7 @@ import Head from 'next/head'
 import config from '../config.json'
 import { useScroll } from 'react-use'
 import { useEffect, useContext, useRef, useState } from 'react'
-import { SideBarDataContext } from 'components/context'
+import SideBarContext from 'components/context'
 import { useDarkMode } from 'next-dark-mode'
 
 export default function GlobalLayout({
@@ -22,7 +22,7 @@ export default function GlobalLayout({
   const scrollRef = useRef(null)
   const { x, y } = useScroll(scrollRef)
   const [progressStyle, setprogressStyle] = useState({})
-  const sideBarData = useContext(SideBarDataContext)
+  const sideBarCtx = useContext(SideBarContext)
 
   useEffect(() => {
     const windowHeight =
@@ -39,7 +39,7 @@ export default function GlobalLayout({
       <div
         className='page-wrapper with-navbar with-sidebar'
         data-sidebar-type='overlayed-sm-and-down'
-        {...sideBarData}
+        {...sideBarCtx.props}
       >
         <NextSeo
           title={`${htmlTitle} | ${projectTitle}`}

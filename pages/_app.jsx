@@ -1,10 +1,6 @@
 import { MDXProvider } from '@mdx-js/react'
 import splitbee from '@splitbee/web'
-import {
-  SideBarContext,
-  SideBarDataContext,
-  ToggleSideBarContext
-} from 'components/context'
+import { SideBarContextProvider } from 'components/context'
 import {
   Blockquote,
   Code,
@@ -23,8 +19,6 @@ import {
   H5,
   H6
 } from 'components/mdxcomponents'
-import { useEffect, useState } from 'react'
-import { useLocalStorage, useMedia } from 'react-use'
 import withDarkMode from 'next-dark-mode'
 import config from '../config.json'
 import '../styles/halfmoon-variables.min.css'
@@ -60,35 +54,12 @@ if (
 }
 
 function MyApp({ Component, pageProps }) {
-  const isWide = useMedia('(min-width: 1024px)')
-  const [storedSideBar, setStoredSideBar] = useLocalStorage(
-    'sideBar',
-    isWide ? true : false
-  )
-  const [sideBar, setSideBar] = useState(storedSideBar)
-  const [sideBarData, setSideBarData] = useState({})
-
-  function toggleSideBar() {
-    setSideBar((currentValue) => {
-      return currentValue === true ? false : true
-    })
-  }
-
-  useEffect(() => {
-    setStoredSideBar(sideBar)
-    setSideBarData(sideBar ? {} : { 'data-sidebar-hidden': 'hidden' })
-  }, [sideBar])
-
   return (
-    <SideBarContext.Provider value={sideBar}>
-      <SideBarDataContext.Provider value={sideBarData}>
-        <ToggleSideBarContext.Provider value={toggleSideBar}>
-          <MDXProvider components={components}>
-            <Component {...pageProps} />
-          </MDXProvider>
-        </ToggleSideBarContext.Provider>
-      </SideBarDataContext.Provider>
-    </SideBarContext.Provider>
+    <SideBarContextProvider>
+      <MDXProvider components={components}>
+        <Component {...pageProps} />
+      </MDXProvider>
+    </SideBarContextProvider>
   )
 }
 

@@ -1,17 +1,13 @@
 import { useContext } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
-import { useMedia } from 'react-use'
 import ColorModeToggler from './colormodetoggler'
-import { SideBarContext, ToggleSideBarContext } from './context'
+import SideBarContext from './context'
 import { Hamburger } from './svgicons'
 import { _ } from './text'
 
 function NavBar({ title, part }) {
-  const sideBar = useContext(SideBarContext)
-  const toggleSideBar = useContext(ToggleSideBarContext)
-  const isWide = useMedia('(min-width: 1024px)')
-
-  useShortcuts(['M'], () => toggleSideBar(), [sideBar])
+  const sideBarCtx = useContext(SideBarContext)
+  useShortcuts(['M'], () => sideBarCtx.toggle(), [sideBarCtx.sidebar])
 
   return (
     <>
@@ -21,7 +17,7 @@ function NavBar({ title, part }) {
             id='toggle-sidebar-btn'
             className='btn btn-action'
             type='button'
-            onClick={toggleSideBar}
+            onClick={sideBarCtx.toggle}
             title={_('Table Of Contents')}
           >
             <Hamburger />
@@ -31,14 +27,14 @@ function NavBar({ title, part }) {
           </div>
         </div>
         <span className='mx-auto font-weight-bold'>
-          {isWide && part && `${part} / `}
+          <span className='hidden-sm-and-down'>{part && `${part} / `}</span>
           {title}
         </span>
         <div className='navbar-content ml-10 ml-xs-auto'>
           <ColorModeToggler />
         </div>
       </nav>
-      <div className='sidebar-overlay' onClick={toggleSideBar}></div>
+      <div className='sidebar-overlay' onClick={sideBarCtx.toggleSideBar}></div>
     </>
   )
 }
