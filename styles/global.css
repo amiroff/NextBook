@@ -118,12 +118,6 @@ pre,
   overflow-x: auto;
 }
 
-.sidebar *,
-.toc *,
-.page-toc * {
-  letter-spacing: 0.3px;
-}
-
 h1,
 h2,
 h3,
@@ -131,7 +125,7 @@ h4,
 h5,
 h6 {
   font-weight: 500 !important;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
 h1 {
@@ -281,7 +275,8 @@ details p:nth-child(2) {
 .page-toc-container li {
   color: rgba(0, 0, 0, 0.5);
   border-left: 1px solid rgba(0, 0, 0, 0.2);
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 1.4rem;
 }
 
 .dark-mode .page-toc-container li {
@@ -291,7 +286,7 @@ details p:nth-child(2) {
 }
 
 .page-toc-container li {
-  padding: 0.4rem 0 0.4rem 0rem;
+  padding: 0.3rem 0 0.3rem 0rem;
   line-height: 2rem;
   margin: 0;
 }
