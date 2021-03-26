@@ -69,7 +69,7 @@ export default function GlobalLayout({
         <div className='progressBarContainer'>
           <div className='progressBar' style={progressStyle} />
         </div>
-        <NavBar title={title} />
+        <NavBar title={title} part={part} />
         <SideBar toc={toc} part={part} docTitle={projectTitle} />
         <div className='content-wrapper' ref={scrollRef}>
           {children}

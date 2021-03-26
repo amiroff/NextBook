@@ -1,13 +1,15 @@
 import { useContext } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
+import { useMedia } from 'react-use'
 import ColorModeToggler from './colormodetoggler'
 import { SideBarContext, ToggleSideBarContext } from './context'
 import { Hamburger } from './svgicons'
 import { _ } from './text'
 
-function NavBar({ title }) {
+function NavBar({ title, part }) {
   const sideBar = useContext(SideBarContext)
   const toggleSideBar = useContext(ToggleSideBarContext)
+  const isWide = useMedia('(min-width: 1024px)')
 
   useShortcuts(['M'], () => toggleSideBar(), [sideBar])
 
@@ -28,7 +30,10 @@ function NavBar({ title }) {
             <kbd className='text-muted font-size-12'>M</kbd>
           </div>
         </div>
-        <span className='mx-auto font-weight-bold'>{title}</span>
+        <span className='mx-auto font-weight-bold'>
+          {isWide && part && `${part} / `}
+          {title}
+        </span>
         <div className='navbar-content ml-10 ml-xs-auto'>
           <ColorModeToggler />
         </div>
