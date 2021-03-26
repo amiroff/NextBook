@@ -18,9 +18,7 @@ title: NextBook Features
 - SEO optimised meta tags.
 - robots.txt generated at build time.
 - Sitemap generated at built time.
-- Great lighthouse score (100% in all fields).
-
-![Lighthouse Scores](/images/lighthouse-score.png)
+- Great lighthouse scores.
 
 ## Functionality & Speed
 
