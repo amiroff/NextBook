@@ -86,10 +86,13 @@ const Highlight = ({
       style.backgroundColor = '#9e9e9e20'
       style.borderLeft = '1px solid #9e9e9e60'
     }
-    if (addedArray.concat(removedArray).includes(lineNumber)) {
-      style.backgroundColor = addedArray.includes(lineNumber)
-        ? '#6ace5030'
-        : '#ff909030'
+    if (addedArray.includes(lineNumber)) {
+      style.backgroundColor = '#6ace5030'
+      style.borderLeft = '1px solid #6ace5060'
+    }
+    if (removedArray.includes(lineNumber)) {
+      style.backgroundColor = '#ff909030'
+      style.borderLeft = '1px solid #ff909060'
     }
     return {
       style,
