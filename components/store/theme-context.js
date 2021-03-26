@@ -13,8 +13,9 @@ export function ThemeContextProvider(props) {
   const darkModeActive = theme === 'dark'
 
   function toggleTheme() {
-    setTheme(theme === 'light' ? 'dark' : 'light')
-    setStoredTheme(theme)
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setStoredTheme(newTheme)
+    setTheme(newTheme)
   }
 
   const context = {

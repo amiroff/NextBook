@@ -22,6 +22,7 @@ export default function GlobalLayout({
   const scrollRef = useRef(null)
   const { x, y } = useScroll(scrollRef)
   const [progressStyle, setprogressStyle] = useState({})
+  const [themeProps, setThemeProps] = useState(null)
   const sideBarCtx = useContext(SideBarContext)
 
   useEffect(() => {
@@ -34,8 +35,12 @@ export default function GlobalLayout({
     })
   }, [x, y])
 
+  useEffect(() => {
+    setThemeProps(themeCtx.darkModeActive ? 'dark-mode' : '')
+  })
+
   return (
-    <div className={themeCtx.darkModeActive ? 'dark-mode' : ''}>
+    <div className={themeProps}>
       <div
         className='page-wrapper with-navbar with-sidebar'
         data-sidebar-type='overlayed-sm-and-down'
