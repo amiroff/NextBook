@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import SideBarItem from './sidebaritem'
 import { AngleUp, AngleDown } from './svgicons'
 
 const SideBarSection = ({ toc, pathName, history, part }) => {
-  const [menuVisible, setMenuVisible] = useState(true)
-
+  const [menuVisible, setMenuVisible] = useState(false)
+  const isActivePart = toc.part !== undefined && toc.part === part
   const chapterItems = (
     <>
       {toc.chapters?.map((item, id) => (
@@ -22,25 +22,31 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
     setMenuVisible((current) => !current)
   }
 
-  useEffect(() => {
-    setMenuVisible(toc.part !== undefined && toc.part === part)
-  }, [])
-
   return (
-    <div className={menuVisible ? 'sidebar-section open' : 'sidebar-section'}>
+    <div
+      className={
+        isActivePart || menuVisible ? 'sidebar-section open' : 'sidebar-section'
+      }
+    >
       {/* display toggleable titlebar only when we have a part */}
       {toc.part && (
         <div
           className='d-flex justify-content-between m-0 px-20 sidebar-title font-weight-bold'
-          onClick={toggleMenu}
+          onClick={isActivePart ? () => {} : toggleMenu}
         >
           <div className='part-title'>{toc.part}</div>
-          <div>{menuVisible ? <AngleUp /> : <AngleDown />}</div>
+          <div>{isActivePart || menuVisible ? <AngleUp /> : <AngleDown />}</div>
         </div>
       )}
 
       {toc.part ? (
-        <div className={menuVisible ? 'part-items open' : 'd-none part-items'}>
+        <div
+          className={
+            isActivePart || menuVisible
+              ? 'part-items open'
+              : 'part-items d-none'
+          }
+        >
           {chapterItems}
         </div>
       ) : (
