@@ -9,7 +9,7 @@ function NavBar({ title }) {
   const sideBar = useContext(SideBarContext)
   const toggleSideBar = useContext(ToggleSideBarContext)
 
-  useShortcuts(['shift', 'M'], () => toggleSideBar(), [sideBar])
+  useShortcuts(['M'], () => toggleSideBar(), [sideBar])
 
   return (
     <>
@@ -25,7 +25,7 @@ function NavBar({ title }) {
             <Hamburger />
           </button>
           <div className='ml-10 hidden-sm-and-down text-muted'>
-            <kbd className='text-muted font-size-12'>shift + M</kbd>
+            <kbd className='text-muted font-size-12'>M</kbd>
           </div>
         </div>
         <span className='mx-auto font-weight-bold'>{title}</span>

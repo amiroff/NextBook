@@ -33,11 +33,11 @@ function PrevNextNav() {
     currentPart?.chapters[currentChapterIndex + 1] || nextPart?.chapters[0]
 
   useShortcuts(
-    ['shift', 'ArrowRight'],
+    ['ArrowRight'],
     () => nextChapter && router.push(nextChapter.path)
   )
   useShortcuts(
-    ['shift', 'ArrowLeft'],
+    ['ArrowLeft'],
     () => prevChapter && router.push(prevChapter.path)
   )
 
@@ -52,9 +52,6 @@ function PrevNextNav() {
               </div>
               <div className='text-right'>
                 <div>{prevChapter.title}</div>
-                <div className='mt-5 ml-10 text-muted'>
-                  <kbd className='text-muted'>shift + ←</kbd>
-                </div>
               </div>
             </a>
           </Link>
@@ -69,9 +66,6 @@ function PrevNextNav() {
                   <br /> {nextChapter.title}
                 </span>
                 <div className='hidden-xs-and-down'>{nextChapter.title}</div>
-                <div className='mt-5 ml-10 hidden-xs-and-down text-muted'>
-                  <kbd className='text-muted'>shift + →</kbd>
-                </div>
               </div>
               <div>
                 <ArrowRight />

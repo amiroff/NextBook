@@ -29,7 +29,7 @@ be displayed in monospace font.
 
 You can add syntax highlighting by specifying code's [language](https://prismjs.com/index.html#supported-languages) after triple ```. NextBook uses [PrismJS](https://github.com/PrismJS) for themes and language definitions as it is currently the most complete one. 
 
-When application's theme changes, so does the fenced code theme. Try it now by pressing <kbd>shift + R</kbd>.
+When application's theme changes, so does the fenced code theme. Try it now by pressing <kbd>T</kbd>.
 
 ~~~
 ```jsx
@@ -65,7 +65,7 @@ function Square(props) {
 
 ### Forced Dark Theme
 
-You can force dark syntax highlighting even on light theme. Provide `dark` parameter to do that. Swith to light mode by pressing <kbd>shift</kbd> + <kbd>R</kbd>. to see code block below still using dark theme.
+You can force dark syntax highlighting even on light theme. Provide `dark` parameter to do that. Swith to light theme by pressing <kbd>T</kbd>. to see code block below still using dark theme.
 
 ~~~
 ```jsx dark

@@ -14,12 +14,12 @@ function ColorModeToggler() {
     }
   }
 
-  useShortcuts(['shift', 'R'], () => toggleTheme(), [darkModeActive])
+  useShortcuts(['T'], () => toggleTheme(), [darkModeActive])
 
   return (
     <>
       <div className='mr-10 hidden-sm-and-down text-muted'>
-        <kbd className='text-muted font-size-12'>shift + R</kbd>
+        <kbd className='text-muted font-size-12'>T</kbd>
       </div>
       <button
         className='btn btn-action'
