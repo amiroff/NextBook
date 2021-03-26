@@ -3,7 +3,8 @@ import { useLocalStorage, useMedia } from 'react-use'
 
 const SideBarContext = createContext({
   sideBar: true,
-  toggleSideBar: () => {}
+  toggleSideBar: () => {},
+  sideBarProps: {}
 })
 
 export function SideBarContextProvider(props) {
@@ -13,6 +14,7 @@ export function SideBarContextProvider(props) {
     isWide ? true : false
   )
   const [sideBar, setSideBar] = useState(storedSideBar)
+  const [sideBarProps, setSideBarProps] = useState(null)
 
   function toggleSideBar() {
     setStoredSideBar(!sideBar)
@@ -21,9 +23,14 @@ export function SideBarContextProvider(props) {
     })
   }
 
+  useEffect(() => {
+    setSideBarProps(sideBar ? {} : { 'data-sidebar-hidden': 'hidden' })
+  }, [sideBar])
+
   const context = {
     sideBar: sideBar,
-    toggleSideBar: toggleSideBar
+    toggleSideBar: toggleSideBar,
+    sideBarProps: sideBarProps
   }
 
   return (

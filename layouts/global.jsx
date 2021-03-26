@@ -1,14 +1,13 @@
 // This is the global layout used by whole app
-
 import NavBar from 'components/navbar'
 import SideBar from 'components/sidebar'
-import { NextSeo } from 'next-seo'
-import Head from 'next/head'
-import config from '../config.json'
-import { useScroll } from 'react-use'
-import { useEffect, useContext, useRef, useState } from 'react'
 import SideBarContext from 'components/store/sidebar-context'
 import ThemeContext from 'components/store/theme-context'
+import { NextSeo } from 'next-seo'
+import Head from 'next/head'
+import { useContext, useEffect, useRef, useState } from 'react'
+import { useScroll } from 'react-use'
+import config from '../config.json'
 
 export default function GlobalLayout({
   title,
@@ -18,19 +17,11 @@ export default function GlobalLayout({
   part
 }) {
   const { projectTitle, projectURL, projectDescription, toc } = config
-  const themeCtx = useContext(ThemeContext)
   const scrollRef = useRef(null)
   const { x, y } = useScroll(scrollRef)
   const [progressStyle, setprogressStyle] = useState({})
-  const [themeProps, setThemeProps] = useState(null)
   const sideBarCtx = useContext(SideBarContext)
-
-  const [sideBarProps, setSideBarProps] = useState(null)
-  useEffect(() => {
-    setSideBarProps(
-      sideBarCtx.sideBar ? {} : { 'data-sidebar-hidden': 'hidden' }
-    )
-  }, [sideBarCtx.sideBar])
+  const themeCtx = useContext(ThemeContext)
 
   useEffect(() => {
     const windowHeight =
@@ -42,16 +33,12 @@ export default function GlobalLayout({
     })
   }, [x, y])
 
-  useEffect(() => {
-    setThemeProps(themeCtx.darkModeActive ? 'dark-mode' : '')
-  })
-
   return (
-    <div className={themeProps}>
+    <div {...themeCtx.themeProps}>
       <div
         className='page-wrapper with-navbar with-sidebar'
         data-sidebar-type='overlayed-sm-and-down'
-        {...sideBarProps}
+        {...sideBarCtx.sideBarProps}
       >
         <NextSeo
           title={`${htmlTitle} | ${projectTitle}`}
