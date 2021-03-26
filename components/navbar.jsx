@@ -34,7 +34,7 @@ function NavBar({ title, part }) {
           <ColorModeToggler />
         </div>
       </nav>
-      <div className='sidebar-overlay' onClick={sideBarCtx.toggleSideBar}></div>
+      <div className='sidebar-overlay' onClick={sideBarCtx.toggle}></div>
     </>
   )
 }
