@@ -11,27 +11,27 @@
   },
   "dependencies": {
     "@splitbee/web": "^0.2.4",
-    "next": "10.0.7",
+    "next": "10.0.9",
     "next-dark-mode": "^3.0.0",
-    "react": "^17.0.1",
+    "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.3",
-    "react-dom": "^17.0.1",
+    "react-dom": "^17.0.2",
     "react-scrollspy-ez": "^1.0.2",
     "react-shortcuts-hook": "^1.1.0",
     "react-syntax-highlighter": "^15.4.3",
-    "react-use": "^17.1.1"
+    "react-use": "^17.2.1"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@next/bundle-analyzer": "^10.0.7",
-    "@next/mdx": "^10.0.6",
+    "@next/mdx": "^10.0.9",
     "github-slugger": "^1.3.0",
     "markdown-toc": "^1.2.0",
     "next-compose-plugins": "^2.2.1",
     "next-mdx-enhanced": "^5.0.0",
-    "next-seo": "^4.20.0",
-    "next-sitemap": "^1.5.8",
+    "next-seo": "^4.23.0",
+    "next-sitemap": "^1.6.9",
     "prettier": "^2.2.1",
     "remark-breaks": "^2.0.1",
     "remark-code-import": "^0.2.0",
@@ -39,7 +39,7 @@
     "remark-hint": "^1.0.9",
     "remark-mark-plus": "^1.0.21",
     "remark-slug": "^6.0.0",
-    "remark-sub-super": "^1.0.19"
+    "remark-sub-super": "^1.0.20"
   },
   "license": "MIT"
 }
