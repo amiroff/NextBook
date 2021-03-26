@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Check } from './svgicons'
+import { Check } from './svg-icons'
 
 const SideBarItem = ({ bulletStyle, item, pathname }) => {
   const classnameActive =

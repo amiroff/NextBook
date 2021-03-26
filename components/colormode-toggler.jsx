@@ -1,6 +1,6 @@
 import { useDarkMode } from 'next-dark-mode'
 import { useShortcuts } from 'react-shortcuts-hook'
-import { Moon, Sun } from './svgicons'
+import { Moon, Sun } from './svg-icons'
 import { _ } from './text'
 
 function ColorModeToggler() {

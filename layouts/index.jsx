@@ -1,7 +1,7 @@
 // This is the default layout file used by content (stuff in pages folder).
 
-import InPageToc from 'components/inpagetoc'
-import PrevNextNav from 'components/prevnextnav'
+import InPageToc from 'components/in-page-toc'
+import PageNav from 'components/page-nav'
 import Text from 'components/text'
 import Layout from 'layouts/global'
 import config from '../config.json'
@@ -59,7 +59,7 @@ export default function DocsLayout({ children, frontMatter }) {
                 </div>
               </>
             )}
-            <PrevNextNav />
+            <PageNav />
           </div>
           {showToc && (
             <div className='col-lg-3 d-none d-lg-block'>

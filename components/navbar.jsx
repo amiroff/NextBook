@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
-import ColorModeToggler from './colormodetoggler'
+import ColorModeToggler from './colormode-toggler'
 import SideBarContext from './context'
-import { Hamburger } from './svgicons'
+import { Hamburger } from './svg-icons'
 import { _ } from './text'
 
 function NavBar({ title, part }) {

@@ -15,7 +15,7 @@ import {
   H4,
   H5,
   H6
-} from './mdxcomponents'
+} from './mdx-components'
 
 export const componentMap = {
   table: Table,

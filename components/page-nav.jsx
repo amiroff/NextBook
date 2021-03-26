@@ -1,11 +1,11 @@
-import { ArrowLeft, ArrowRight } from 'components/svgicons'
+import { ArrowLeft, ArrowRight } from 'components/svg-icons'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useShortcuts } from 'react-shortcuts-hook'
 import config from '../config.json'
 import { _ } from './text'
 
-function PrevNextNav() {
+export default function PageNav() {
   const router = useRouter()
   const { toc } = config
 
@@ -77,5 +77,3 @@ function PrevNextNav() {
     </>
   )
 }
-
-export default PrevNextNav

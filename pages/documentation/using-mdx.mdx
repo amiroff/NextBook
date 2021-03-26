@@ -30,7 +30,7 @@ Here is a small demo video for curious:
 
 Say we have a basic React counter component like this:
 
-```jsx title=components/counter.jsx
+```jsx title=components/example-counter.jsx
 import React, { useState } from 'react'
 
 export default function Counter() {
@@ -47,15 +47,15 @@ export default function Counter() {
 
 We then include it in our `.mdx` file and display it just like in React application:
 
-```jsx title=pages/docs/mypage.mdx
-import Counter from '../../components/counter'
+```jsx title=pages/documentation/mypage.mdx
+import Counter from 'components/example-counter'
 
 <Counter />
 ```
 
 will result in:
 
-import Counter from '../../components/counter'
+import Counter from 'components/example-counter'
 
 <Counter />
 

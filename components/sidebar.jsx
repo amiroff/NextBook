@@ -3,8 +3,8 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useLocalStorage } from 'react-use'
 import config from '../config.json'
-import SideBarSection from './sidebarsection'
-import { GitHub } from './svgicons'
+import SideBarSection from './sidebar-section'
+import { GitHub } from './svg-icons'
 
 function SideBar({ toc, part, docTitle }) {
   const router = useRouter()

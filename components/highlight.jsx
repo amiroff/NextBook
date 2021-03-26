@@ -19,7 +19,7 @@ import sql from 'react-syntax-highlighter/dist/cjs/languages/prism/sql'
 import typescript from 'react-syntax-highlighter/dist/cjs/languages/prism/typescript'
 import yaml from 'react-syntax-highlighter/dist/cjs/languages/prism/yaml'
 import { materialDark, materialLight } from './prism'
-import { Copied, Copy } from './svgicons'
+import { Copied, Copy } from './svg-icons'
 import Text, { _ } from './text'
 
 SyntaxHighlighter.registerLanguage('markdown', markdown)
