@@ -5,7 +5,7 @@
     "dev": "next",
     "devdebug": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
+    "postbuild": "next-sitemap --config next-sitemap-config.js",
     "start": "next start",
     "export": "next export"
   },
