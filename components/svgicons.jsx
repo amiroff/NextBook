@@ -121,20 +121,19 @@ export const Copy = () => (
   </svg>
 )
 
-export const AngleRight = () => (
+export const AngleUp = () => (
   <svg
     height='20px'
     className='sidebar-title-icon'
     fill='none'
-    stroke='currentColor'
     viewBox='0 0 24 24'
-    xmlns='http://www.w3.org/2000/svg'
+    stroke='currentColor'
   >
     <path
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
-      d='M9 5l7 7-7 7'
+      d='M5 15l7-7 7 7'
     />
   </svg>
 )
@@ -158,19 +157,19 @@ export const AngleDown = () => (
 )
 
 export const Check = () => (
-  <svg height='12px' fill='none' viewBox='0 0 20 20' stroke='currentColor'>
+  <svg
+    height='12px'
+    className='check-icon'
+    fill='none'
+    viewBox='0 0 20 20'
+    stroke='currentColor'
+  >
     <path
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={2}
       d='M5 13l4 4L19 7'
     />
-  </svg>
-)
-
-export const Dot = () => (
-  <svg height='20px' fill='currentColor' viewBox='0 0 12 12'>
-    <path d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' />
   </svg>
 )
 

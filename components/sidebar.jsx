@@ -21,7 +21,7 @@ function SideBar({ toc, part, docTitle }) {
     <>
       <div className='sidebar'>
         <div className='sidebar-content'>
-          <div className='mx-auto my-20 font-weight-bold'>
+          <div className='font-weight-bold logo'>
             <Link href='/'>
               <a className='text-decoration-none d-flex flex-column align-items-center'>
                 {config.useTitleLogo && (

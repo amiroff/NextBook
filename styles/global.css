@@ -73,6 +73,15 @@ pre.code {
   background-color: var(--dm-sidebar-bg-color);
 }
 
+.check-icon {
+  opacity: 0.5;
+  margin-bottom: 3px;
+}
+
+.sidebar-link {
+  padding: 1px 5px 1px 5px;
+}
+
 .sidebar {
   border: none;
   background-color: #f5f7f9;
@@ -290,6 +299,7 @@ details p:nth-child(2) {
 
 .sidebar-icon {
   width: 10px;
+  margin-left: 10px;
 }
 
 blockquote {
@@ -483,13 +493,6 @@ mark {
   background-color: rgb(100, 93, 42);
 }
 
-.sidebar-title {
-  cursor: pointer;
-  user-select: none;
-  margin: 0px 20px;
-  padding: 4px 0 0 4px;
-}
-
 .sidebar-section {
   width: 100%;
   border-bottom: 1px solid var(--lm-horizontal-rule-color);
@@ -499,15 +502,18 @@ mark {
   border-color: var(--dm-horizontal-rule-color);
 }
 
-.sidebar-section .sidebar-title {
+.sidebar-title {
+  cursor: pointer;
+  user-select: none;
   padding: 10px 0 5px 0;
+}
+
+.part-title {
+  padding-left: 1em;
 }
 
 .sidebar-section .sidebar-title-icon {
   margin-top: 2px;
-}
-.sidebar-section .sidebar-icon {
-  margin-left: 1.8rem;
 }
 
 .dark-mode .content-wrapper {
@@ -530,4 +536,8 @@ mark {
 .linked-heading:hover span {
   cursor: pointer;
   opacity: 0.5;
+}
+
+.logo {
+  width: 222px;
 }

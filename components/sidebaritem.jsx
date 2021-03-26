@@ -1,19 +1,17 @@
 import Link from 'next/link'
-import { Check, Dot } from './svgicons'
+import { Check } from './svgicons'
 
 const SideBarItem = ({ bulletStyle, item, pathname }) => {
   const classnameActive =
     pathname === item.path
-      ? 'sidebar-link pl-5 sidebar-link-with-icon active'
-      : 'sidebar-link pl-5 sidebar-link-with-icon'
+      ? 'sidebar-link sidebar-link-with-icon active'
+      : 'sidebar-link sidebar-link-with-icon'
 
   return (
     <Link href={item.path} key={item.path}>
       <a className={classnameActive}>
         <span className='sidebar-icon bg-transparent'>
-          <span aria-hidden='true'>
-            {bulletStyle === 'check' ? <Check /> : <Dot />}
-          </span>
+          {bulletStyle === 'check' ? <Check /> : null}
         </span>
         {item.title}
       </a>

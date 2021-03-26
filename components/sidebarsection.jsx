@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import SideBarItem from './sidebaritem'
-import { AngleDown, AngleRight } from './svgicons'
+import { AngleUp, AngleDown } from './svgicons'
 
 const SideBarSection = ({ toc, pathName, history, part }) => {
   const [menuVisible, setMenuVisible] = useState(true)
@@ -11,7 +11,7 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
         <SideBarItem
           item={item}
           pathname={pathName}
-          bulletStyle={history.includes(item.path) ? 'check' : 'bullet'}
+          bulletStyle={history.includes(item.path) ? 'check' : null}
           key={id}
         />
       ))}
@@ -35,7 +35,7 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
           onClick={toggleMenu}
         >
           <div className='part-title'>{toc.part}</div>
-          <div>{menuVisible ? <AngleDown /> : <AngleRight />}</div>
+          <div>{menuVisible ? <AngleUp /> : <AngleDown />}</div>
         </div>
       )}
 
