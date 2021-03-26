@@ -25,6 +25,13 @@ export default function GlobalLayout({
   const [themeProps, setThemeProps] = useState(null)
   const sideBarCtx = useContext(SideBarContext)
 
+  const [sideBarProps, setSideBarProps] = useState(null)
+  useEffect(() => {
+    setSideBarProps(
+      sideBarCtx.sideBar ? {} : { 'data-sidebar-hidden': 'hidden' }
+    )
+  }, [sideBarCtx.sideBar])
+
   useEffect(() => {
     const windowHeight =
       scrollRef.current.scrollHeight - scrollRef.current.clientHeight
@@ -44,7 +51,7 @@ export default function GlobalLayout({
       <div
         className='page-wrapper with-navbar with-sidebar'
         data-sidebar-type='overlayed-sm-and-down'
-        {...sideBarCtx.sideBarProps}
+        {...sideBarProps}
       >
         <NextSeo
           title={`${htmlTitle} | ${projectTitle}`}
