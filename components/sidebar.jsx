@@ -29,6 +29,8 @@ function SideBar({ toc, part, docTitle }) {
                     src='/icon.svg'
                     alt='NextBook Logo'
                     className='mb-10 w-100'
+                    width='100'
+                    height='100'
                   />
                 )}
                 {docTitle}
