@@ -545,3 +545,8 @@ mark {
 .logo {
   width: 222px;
 }
+
+.badge p {
+  margin: 0;
+  padding: 0;
+}

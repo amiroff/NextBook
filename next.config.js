@@ -6,11 +6,12 @@ const remarkSubSuper = require('remark-sub-super')
 const hints = require('remark-hint')
 const breaks = require('remark-breaks')
 const remarkMark = require('remark-mark-plus')
+const containers = require('remark-containers')
 const codeImport = require('remark-code-import')
 const withPlugins = require('next-compose-plugins')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+  enabled: process.env.ANALYZE === 'true'
 })
 
 nextConfig = { reactStrictMode: true }
@@ -18,18 +19,30 @@ nextConfig = { reactStrictMode: true }
 const withMdxEnhanced = require('next-mdx-enhanced')({
   defaultLayout: true,
   fileExtensions: ['mdx', 'md'],
-  remarkPlugins: [externalLinks, slug, hints, remarkSubSuper, breaks, remarkMark, codeImport],
+  remarkPlugins: [
+    containers,
+    externalLinks,
+    slug,
+    hints,
+    remarkSubSuper,
+    breaks,
+    remarkMark,
+    codeImport
+  ],
   rehypePlugins: [],
   extendFrontMatter: {
     process: (mdxContent, frontMatter) => {
       const result = toc(mdxContent, { slugify: new GithubSlugger() })
       return {
-        tocRaw: result.json,
+        tocRaw: result.json
       }
     },
-    phase: 'both',
+    phase: 'both'
   },
-  reExportDataFetching: false,
+  reExportDataFetching: false
 })
 
-module.exports = withPlugins([[withBundleAnalyzer], [withMdxEnhanced]], nextConfig)
+module.exports = withPlugins(
+  [[withBundleAnalyzer], [withMdxEnhanced]],
+  nextConfig
+)

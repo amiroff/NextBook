@@ -166,3 +166,13 @@ export const H6 = ({ children, id }) => {
     </Heading>
   )
 }
+
+export const Badge = (props) => (
+  <span className={`badge ${props.className}`}>{props.children}</span>
+)
+
+export const Card = (props) => (
+  <div className={props.className}>
+    <div className='card m-5'>{props.children}</div>
+  </div>
+)

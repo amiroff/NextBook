@@ -14,7 +14,9 @@ import {
   H3,
   H4,
   H5,
-  H6
+  H6,
+  Badge,
+  Card
 } from './mdx-components'
 
 export const componentMap = {
@@ -33,5 +35,7 @@ export const componentMap = {
   h3: H3,
   h4: H4,
   h5: H5,
-  h6: H6
+  h6: H6,
+  badge: Badge,
+  card: Card
 }

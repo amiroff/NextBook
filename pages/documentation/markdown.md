@@ -433,6 +433,63 @@ Ooooops, an unknown error occured.
 Nothing fancy, just use typical 🥳 emojis.  
 Press <kbd>control + command + space</kbd> on macOS and <kbd>windows + .</kbd> on Windows.
 
+## Containers
+
+Containers begin with `::: [noparse] {HTML Element Name} [optional list of classes]` on a new line, and end with `:::` on a new line. Container markers may be indented by up to 2 spaces and be nested. 
+
+```markdown
+::: aside class-one class-two
+# Header One
+
+With container contents. 
+:::
+```
+
+will result in:
+
+```html
+<aside class="class-one class-two">
+  <h1>Header One</h1>
+  <p>With container contents.</p>
+</aside>
+```
+
+Use this for custom UI elements. Some examples:
+
+### Badges
+
+See [reference](https://www.gethalfmoon.com/docs/badges/) for all available classes.
+
+```markdown
+::: badge badge-primary badge-pill
+BASICS
+:::
+```
+
+results in:
+
+::: badge badge-primary badge-pill
+BASICS
+:::
+
+### Cards
+
+See [reference](https://www.gethalfmoon.com/docs/content-and-cards/) for all available classes.
+
+```markdown
+::: card w-400
+The weather forecast didn't say that, but the steel plate in his hip did. 
+He had learned over the years to trust his hip over the weatherman. 
+It was going to rain, so he better get outside and prepare...
+:::
+```
+
+results in:
+
+::: card w-400
+The weather forecast didn't say that, but the steel plate in his hip did. He had learned over the years to trust his hip over the weatherman. It was going to rain, so he better get outside and prepare...
+:::
+
 ## Tabs
 
 While [markdown spec](https://commonmark.org) does not offer any tabbed interface, NextBook has you covered here. Use `tabs` and `tab` tags as follows. Note that these are not JSX elements, just pseudo-html, you don't have to import them into your document.
@@ -461,6 +518,7 @@ While [markdown spec](https://commonmark.org) does not offer any tabbed interfac
   </tab>
 </tabs>
 ```
+
 results in:
 
 <tabs>
@@ -484,3 +542,4 @@ results in:
   `sudo apt install python3`
   </tab>
 </tabs>
+

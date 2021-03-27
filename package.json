@@ -18,7 +18,8 @@
     "react-scrollspy-ez": "^1.0.2",
     "react-shortcuts-hook": "^1.1.0",
     "react-syntax-highlighter": "^15.4.3",
-    "react-use": "^17.2.1"
+    "react-use": "^17.2.1",
+    "remark-containers": "^1.2.0"
   },
   "devDependencies": {
     "@mdx-js/loader": "^1.6.22",
