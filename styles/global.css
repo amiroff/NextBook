@@ -550,3 +550,9 @@ mark {
   margin: 0;
   padding: 0;
 }
+
+summary p {
+  margin: 0;
+  padding: 0;
+  line-height: normal !important;
+}

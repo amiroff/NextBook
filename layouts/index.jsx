@@ -43,9 +43,7 @@ export default function DocsLayout({ children, frontMatter }) {
                   ))}
                 </div>
               )}
-              <hr className='mt-20' />
             </div>
-
             <div className='md-content'>{children}</div>
             <hr className='my-20 mx-10' />
             {frontMatter.updated && (

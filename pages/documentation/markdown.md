@@ -27,24 +27,7 @@ By default, all `.md` and `.mdx` files will use `layouts/index.jsx` as layout. Y
 
 ## HTML Tags
 
-Markdown allows using html tags. This way you can use modern html5 tags, embed audio and video and everything else not covered by standard markdown. Here is an example and what it generates:
-
-```html
-<details>
-  <summary>Toggle Me...</summary>
-  <p>
-    ...and see my content
-  </p>
-</details>
-```
-results in: 
-
-<details>
-  <summary>Toggle Me...</summary>
-  <p>
-    ...and see my content
-  </p>
-</details>
+Markdown allows using html tags except scripts. This way you can use modern html5 tags, embed audio and video and everything else not covered by standard markdown.
 
 ## Text Manipulation
 
@@ -488,6 +471,26 @@ results in:
 
 ::: card w-400
 The weather forecast didn't say that, but the steel plate in his hip did. He had learned over the years to trust his hip over the weatherman. It was going to rain, so he better get outside and prepare...
+:::
+
+## Accordion
+
+``` markdown
+::: details
+  ::: summary
+  Toggle Me
+  :::
+  ...and see my content
+:::
+```
+
+results in:
+
+::: details
+  ::: summary
+  Toggle Me
+  :::
+  ...and see my content
 :::
 
 ## Tabs
