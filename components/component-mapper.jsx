@@ -3,7 +3,7 @@ import {
   Code,
   CustomLink,
   Details,
-  Image,
+  CustomImage,
   Pre,
   Summary,
   Tab,
@@ -22,7 +22,7 @@ import {
 export const componentMap = {
   table: Table,
   a: CustomLink,
-  img: Image,
+  img: CustomImage,
   blockquote: Blockquote,
   pre: Pre,
   details: Details,

@@ -30,16 +30,14 @@ export const CustomLink = (props) => (
   </Link>
 )
 
-export const Image = (props) => {
+export const CustomImage = (props) => {
   return props.className === 'raw' || props.alt?.includes('raw') ? (
     <img {...props} alt={props.alt.replace('raw', '').trim()} />
   ) : (
     <>
-      <span className='d-block'>
-        <img className='img-fluid m-5 d-block mx-auto' {...props} />
-      </span>
+      <img className='m-5 custom img-fluid d-block rounded' {...props} />
       {props.alt && (
-        <span className='text-left font-italic ml-10 text-center d-block'>
+        <span className='text-left font-italic ml-10 d-block'>
           <Text tid='Figure' className='font-weight-bold' />: {props.alt}
         </span>
       )}

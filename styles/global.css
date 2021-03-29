@@ -556,3 +556,11 @@ summary p {
   padding: 0;
   line-height: normal !important;
 }
+
+img.custom {
+  background-color: #f5f7f9;
+}
+
+.dark-mode img.custom {
+  background-color: var(--dark-color);
+}
