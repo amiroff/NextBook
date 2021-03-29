@@ -3,7 +3,7 @@ part: Documentation
 title: Getting Started With NextBook
 ---
 
-## Up & Running With Single Click
+## Up & Running With Single Clicks
 
 Clicking the following link will fork the repo to your [Github](https://github.com) account and deploy it to [Vercel](https://vercel.com). Now you can edit content, push and see the results! Have fun!
 
