@@ -358,7 +358,7 @@ ul.contains-task-list li {
   z-index: 1;
   opacity: 0.4;
   cursor: pointer;
-  padding: 0 2px 0 3px;
+  padding: 0 3px;
 }
 
 .copy-to-clipboard:hover {
