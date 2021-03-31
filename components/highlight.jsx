@@ -84,15 +84,15 @@ const Highlight = ({
     }
     if (markedArray.includes(lineNumber)) {
       style.backgroundColor = '#9e9e9e20'
-      style.borderLeft = '1px solid #9e9e9e60'
+      style.borderLeft = '2px solid #9e9e9e60'
     }
     if (addedArray.includes(lineNumber)) {
       style.backgroundColor = '#6ace5030'
-      style.borderLeft = '1px solid #6ace5060'
+      style.borderLeft = '2px solid #6ace5060'
     }
     if (removedArray.includes(lineNumber)) {
       style.backgroundColor = '#ff909030'
-      style.borderLeft = '1px solid #ff909060'
+      style.borderLeft = '2px solid #ff909060'
     }
     return {
       style,

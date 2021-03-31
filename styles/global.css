@@ -26,7 +26,11 @@ code,
 pre.code {
   margin: 0;
   padding: 10px 0;
-  border: none;
+  border: 1px solid #e7eaec;
+}
+
+.dark-mode pre.code {
+  border: 1px solid var(--dm-navbar-bg-color);
 }
 
 .linenumber {
