@@ -2,8 +2,6 @@
   "projectTitle": "NextBook: Easy Docs With Markdown!",
   "projectDescription": "NextBook is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It's built with MDX, Next.js and React and works by compiling markdown or MDX down to plain static html.",
   "projectURL": "https://next-book.vercel.app",
-  "useTitleLogo": true,
-  "GitHubURL": "https://github.com/amiroff/nextbook",
   "text": {
     "Tags": "Tags",
     "Last Update": "Last Update",
