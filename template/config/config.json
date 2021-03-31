@@ -20,10 +20,13 @@
   },
   "toc": [
     {
+      "chapters": [{ "title": "Homepage", "path": "/" }]
+    },
+    {
       "part": "Part 1",
       "chapters": [
-        { "title": "Homepage", "path": "/" },
-        { "title": "Examples", "path": "/examples" }
+        { "title": "Markdown Examples", "path": "/examples" },
+        { "title": "Fenced Code Examples", "path": "/fencedcode" }
       ]
     }
   ]

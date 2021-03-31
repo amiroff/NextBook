@@ -1,3 +1,7 @@
+---
+layout: empty
+---
+
 **NextBook** is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It works by compiling markdown or MDX to static pages. This way, first content render on user's device is near instant.
 
 NextBook makes writing technical docs stupid simple while keeping featureset minimal: 
