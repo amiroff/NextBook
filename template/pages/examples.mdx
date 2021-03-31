@@ -20,10 +20,10 @@ description: While this is not a complete markdown referece, here are markdown f
 tags: [markdown, reference, NextBook, md]
 updated: 2021-3-14
 ---
-
 ```
 
-!> Note: specifying layout is optional By default, all `.md` and `.mdx` files will use `layouts/index.jsx` as layout. You can use this property to use another one and completely change looks and layout of the page.
+!> Note: specifying layout is optional
+By default, all `.md` and `.mdx` files will use `layouts/index.jsx` as layout. You can use this property to use another one and completely change looks and layout of the page.
 
 ## HTML Tags
 
@@ -46,7 +46,6 @@ Subscript: H~2~O
 
 This is ==highlighted== text.
 ```
-
 results in:
 
 **This is bold text**
@@ -71,12 +70,10 @@ Both of these work:
 ---
 ***
 ```
-
 results in:
 
 ---
-
----
+***
 
 ## Blockquotes
 
@@ -89,7 +86,6 @@ results in:
 > >
 > > > ...or with spaces between arrows.
 ```
-
 results in:
 
 > Here is a blockquote.
@@ -111,7 +107,6 @@ Footnote 2 link. [^second]
 
 [^second]: Simple footnote text.
 ```
-
 results in:
 
 Footnote 1 link. [^first]
@@ -119,6 +114,7 @@ Footnote 1 link. [^first]
 Footnote 2 link. [^second]
 
 [^first]: Footnote **can have markup**
+
 [^second]: Footnote text.
 
 ## Code
@@ -127,21 +123,19 @@ A special care was given to displaying code on screen.
 
 **Inline Code**
 
-```
+~~~
 `$ rm -rf /`
-```
-
+~~~
 results in: `$ rm -rf /`
 
 **Indented Code (4 spaces)**
 
-```
+~~~
     // Some comments
     line 1 of code
     line 2 of code
     line 3 of code
-```
-
+~~~
 results in:
 
     // Some comments
@@ -159,7 +153,6 @@ Most of the time you'll use codefences. Here is a simple example, but you can do
 echo "Hello World"
 ```
 ````
-
 results in:
 
 ```bash
@@ -179,16 +172,14 @@ echo "Hello World"
     - Nulla volutpat aliquam velit
 + Very easy!
 ```
-
 results in:
 
 - Create a list by starting a line with `+`, `-`, or `*`
 - Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
-    - Facilisis in pretium nisl aliquet
-    * Nulla volutpat aliquam velit
-
-* Very easy!
+    * Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
 
 **Ordered List**
 
@@ -200,7 +191,6 @@ results in:
 4. You can use sequential numbers...
 1. ...or keep all the numbers as `1.`
 ```
-
 results in:
 
 1. Lorem ipsum dolor sit amet
@@ -208,7 +198,7 @@ results in:
 3. Integer molestie lorem at massa
 
 4. You can use sequential numbers...
-5. ...or keep all the numbers as `1.`
+1. ...or keep all the numbers as `1.`
 
 **Start Numbering With Offset**
 
@@ -216,7 +206,6 @@ results in:
 57. foo
 1. bar
 ```
-
 results in:
 
 57. foo
@@ -234,7 +223,6 @@ These are often used to indicate task items.
 - [ ] Commit & Push
 - [ ] Deploy!
 ```
-
 results in:
 
 **TASK LIST**
@@ -257,14 +245,13 @@ Tables are a bit tricky, because you have to use all those pipes, but this is ho
 | engine | engine to be used for processing templates.                 |
 | ext    | extension to be used for dest files.                        |
 ```
-
 results in:
 
-| Option | Description                                                  |
-| ------ | ------------------------------------------------------------ |
-| data   | path to data files to supply the data passed into templates. |
-| engine | engine to be used for processing templates.                  |
-| ext    | extension to be used for dest files.                         |
+| Option | Description                                                 |
+| ------ | ------------------------------------------------------------|
+| data   | path to data files to supply the data passed into templates.|
+| engine | engine to be used for processing templates.                 |
+| ext    | extension to be used for dest files.                        |
 
 **Right Aligned Columns**
 
@@ -275,14 +262,13 @@ results in:
 | engine | engine to be used for processing templates.                   |
 | ext    | extension to be used for dest files.                          |
 ```
-
 results in:
 
-| Option |                                                  Description |
-| -----: | -----------------------------------------------------------: |
-|   data | path to data files to supply the data passed into templates. |
-| engine |                  engine to be used for processing templates. |
-|    ext |                         extension to be used for dest files. |
+| Option | Description                                                   |
+| -----: | ------------------------------------------------------------: |
+| data   | path to data files to supply the data passed into templates.  |
+| engine | engine to be used for processing templates.                   |
+| ext    | extension to be used for dest files.                          |
 
 **Mixed Columns**
 
@@ -292,13 +278,12 @@ results in:
 | git status   | git status     | git status    |
 | git diff     | git diff       | git diff      |
 ```
-
 results in:
 
 | Left-aligned | Center-aligned | Right-aligned |
 | :----------- | :------------: | ------------: |
-| git status   |   git status   |    git status |
-| git diff     |    git diff    |      git diff |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
 
 ## Images
 
@@ -309,10 +294,10 @@ You will use images a lot! Drop your images or svg vectors in public folder and 
 ![The Surface](/images/surface.jpg 'The Surface Device')
 ![Git Branching](/images/branching.svg 'Excalidraw FTW')
 ```
-
 results in:
 
-![](/images/octocat.png) ![The Surface](/images/surface.jpg 'The Surface Device')
+![](/images/octocat.png)
+![The Surface](/images/surface.jpg 'The Surface Device')
 
 If you use [Excalidraw]() svg drawings and want them to change colors accordingly in dark mode, add `|ex` to image alt text. See below example in light/dark modes:
 
@@ -349,7 +334,6 @@ Links can be auto-detected, but it would be better to be implicit and have suppo
 [2]:  https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook "Deploy With Vercel now!"
 
 ```
-
 results in:
 
 - [Basic link](https://github.com)
@@ -366,59 +350,61 @@ results in:
 
 - Linking with image: [![Deploy with Vercel raw][1]][2]
 
-[1]: https://vercel.com/button
-[2]: https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook 'Deploy With Vercel now!'
+[1]:  https://vercel.com/button
+[2]:  https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook "Deploy With Vercel now!"
+
 
 ## Notifications
 
 These are custom features often needed to display hints. I find them very useful.
 
-**Hints**
+### Hints
 
 ```
 !> A Hint Title
 Make sure to check out [Markdown Guide](https://www.markdownguide.org/) to check the basic markdown syntax you can use with NextBook.
 ```
-
 results in:
 
-!> A Hint Title Make sure to check out [Markdown Guide](https://www.markdownguide.org/) to check the basic markdown syntax you can use with NextBook.
+!> A Hint Title
+Make sure to check out [Markdown Guide](https://www.markdownguide.org/) to check the basic markdown syntax you can use with NextBook.
 
-**Warnings**
+### Warnings
 
 ```
 ?> And Warning Title
 Try to keep usage of html elements to rare cases where standard markdown does not cover your basic markup needs.
 ```
-
 results in:
 
-?> And Warning Title Try to keep usage of html elements to rare cases where standard markdown does not cover your basic markup needs.
+?> And Warning Title
+Try to keep usage of html elements to rare cases where standard markdown does not cover your basic markup needs.
 
-**Errors**
+### Errors
 
 ```
 x> An Error Title
 Ooooops, an unknown error occured.
 ```
-
 results in:
 
-x> An Error Title Ooooops, an unknown error occured.
+x> An Error Title
+Ooooops, an unknown error occured.
 
 ## Emojis
 
-Nothing fancy, just use typical 🥳 emojis. Press <kbd>control + command + space</kbd> on macOS and <kbd>windows + .</kbd> on Windows.
+Nothing fancy, just use typical 🥳 emojis.
+Press <kbd>control + command + space</kbd> on macOS and <kbd>windows + .</kbd> on Windows.
 
 ## Containers
 
-Containers begin with `::: [noparse] {HTML Element Name} [optional list of classes]` on a new line, and end with `:::` on a new line. Container markers may be indented by up to 2 spaces and be nested. 
+Containers begin with `::: [noparse] {HTML Element Name} [optional list of classes]` on a new line, and end with `:::` on a new line. Container markers may be indented by up to 2 spaces and be nested.
 
 ```markdown
 ::: aside class-one class-two
 # Header One
 
-With container contents. 
+With container contents.
 :::
 ```
 
@@ -455,8 +441,8 @@ See [reference](https://www.gethalfmoon.com/docs/content-and-cards/) for all ava
 
 ```markdown
 ::: card w-400
-The weather forecast didn't say that, but the steel plate in his hip did. 
-He had learned over the years to trust his hip over the weatherman. 
+The weather forecast didn't say that, but the steel plate in his hip did.
+He had learned over the years to trust his hip over the weatherman.
 It was going to rain, so he better get outside and prepare...
 :::
 ```
@@ -496,7 +482,7 @@ While [markdown spec](https://commonmark.org) does not offer any tabbed interfac
   ::: tab Windows Directions
 
   Install via [chocolatey](https://chocolatey.org):
-  
+
   `choco install python`
   :::
   ::: tab macOS Directions
@@ -520,7 +506,7 @@ results in:
   ::: tab Windows Directions
 
   Install via [chocolatey](https://chocolatey.org):
-  
+
   `choco install python`
   :::
   ::: tab macOS Directions

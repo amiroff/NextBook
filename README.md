@@ -6,10 +6,12 @@ layout: empty
 
 NextBook makes writing technical docs stupid simple while keeping featureset minimal: 
 
-1. Bootstrap a project with `npx create-next-app myAwesomeBook -e https://github.com/amiroff/NextBook/tree/master/template`
-2. Create markdown content files in `pages` folder 
-3. Update table of contents in `config/config.json`
-3. Check [documentation site](https://next-book.vercel.app/) to see what's possible with NextBook
+1. Bootstrap a project with `yarn create next-app my-awesome-book -e https://github.com/amiroff/NextBook/tree/master/template`
+2. `cd my-awesome-book`
+3. Create markdown content files in `pages` folder 
+4. Update table of contents in `config/config.json`
+5. run `yarn dev` and open [http://localhost:3000/](http://localhost:3000/)
+6. Check examples to see what's possible with NextBook.
 
 ... and voila 🎉! This should be enough to have a statically generated documentation page or book.
 
