@@ -304,30 +304,16 @@ results in:
 
 ![](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
-![Git Branching](/images/branching.svg)
 
-If you want to just include simple image without bells and whistles above, use markdown image with `raw` in alt description or html `img` tag with `raw` class:
+If you use [Excalidraw]() svg drawings and want them to change colors accordingly in dark mode, add `|ex` to image alt text. See below example in light/dark modes:
 
 ```
-<a
-  href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook'
-  target='_blank'
-  rel='noopener'
->
-  <img src='https://vercel.com/button' alt='Deploy with Vercel' className='raw' />
-</a>
+![Git Branching|ex](/images/git-branching.svg)
 ```
+
 results in:
 
-<img src='https://vercel.com/button' alt='Deploy with Vercel' className='raw' />
-
-and:
-```
-![Deploy with Vercel raw](https://vercel.com/button)
-```
-results in:
-
-![Deploy with Vercel raw](https://vercel.com/button)
+![Git Branching|ex](/images/git-branching.svg)
 
 ## Links
 

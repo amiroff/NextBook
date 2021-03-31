@@ -31,14 +31,14 @@ export const CustomLink = (props) => (
 )
 
 export const CustomImage = (props) => {
-  return props.className === 'raw' || props.alt?.includes('raw') ? (
-    <img {...props} alt={props.alt.replace('raw', '').trim()} />
-  ) : (
+  const exClass = props.alt?.includes('|ex') ? 'excalidraw' : 'image'
+  return (
     <>
-      <img className='m-5 custom img-fluid d-block rounded' {...props} />
+      <img className={`m-5 img-fluid d-block rounded ${exClass}`} {...props} />
       {props.alt && (
-        <span className='text-left font-italic ml-10 d-block'>
-          <Text tid='Figure' className='font-weight-bold' />: {props.alt}
+        <span className='text-left ml-10 d-block'>
+          <Text tid='Figure' className='font-weight-bold' />:{' '}
+          {props.alt.replace('|ex', '').trim()}
         </span>
       )}
     </>

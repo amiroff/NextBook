@@ -557,10 +557,10 @@ summary p {
   line-height: normal !important;
 }
 
-img.custom {
+.excalidraw {
   background-color: #f5f7f9;
 }
 
-.dark-mode img.custom {
-  background-color: var(--dark-color);
+.dark-mode .excalidraw {
+  filter: invert(100%) hue-rotate(180deg);
 }
