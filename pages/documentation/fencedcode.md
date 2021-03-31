@@ -148,7 +148,7 @@ function Square(props) {
 In case you need to link to original source you can pass `link` metadata. Now, title will be a link to the specified URL.
 
 ~~~
-```python title=inspect.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py
+```python title=Colors/primary_colors.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py
 def diff(a, b):
     """
     TODO: fix this function!!
@@ -159,7 +159,7 @@ def diff(a, b):
 
 results in:
 
-```python title=inspect.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py
+```python title=Colors/primary_colors.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py
 def diff(a, b):
     """
     TODO: fix this function!!
@@ -207,7 +207,7 @@ results in:
 </html>
 ```
 
-### Automatic Numbering With Manual Offset
+### Numbering With Manual Offset
 
 Code can start from any provided number. Use `numbered` together with `startline` metadata to achive that. Default startline is `1` unless provided.
 
