@@ -6,8 +6,10 @@ layout: empty
 
 NextBook makes writing technical docs stupid simple while keeping featureset minimal: 
 
-1. Create markdown content files in `pages` folder 
-1. Update table of contents 
+1. Bootstrap a project with `npx create-next-app myAwesomeBook -e https://github.com/amiroff/NextBook/tree/master/template`
+2. Create markdown content files in `pages` folder 
+3. Update table of contents in `config/config.json`
+3. Check [documentation site](https://next-book.vercel.app/) to see what's possible with NextBook
 
 ... and voila 🎉! This should be enough to have a statically generated documentation page or book.
 
@@ -31,9 +33,5 @@ With the advantages of [Next.js](https://nextjs.com), anything fancy (grading, l
 - ⚙︎ Customisable and extensible code.
 - ❤ Built on open-source.
 - 👍 And many more small details...
-
-## Get Started
-
-Clicking the following button will fork the repo and deploy it to Vercel. Now you can create your content in `pages/` folder, that will overwrite this content. Copy `_app.jsx` from `src/pages` to `pages/`, commit, push and see results.
 
 [![Clone and deploy NOW! raw](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook)
