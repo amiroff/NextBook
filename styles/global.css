@@ -29,6 +29,10 @@ pre.code {
   border: 1px solid #e7eaec;
 }
 
+.token.content {
+  margin: 0;
+}
+
 .dark-mode pre.code {
   border: 1px solid var(--dm-navbar-bg-color);
 }

@@ -43,6 +43,8 @@ _This is italic text_
 Superscript: 19^th^
 
 Subscript: H~2~O
+
+This is ==highlighted== text.
 ```
 results in: 
 
@@ -58,6 +60,8 @@ Superscript: 19^th^
 
 Subscript: H~2~O
 
+This is ==highlighted== text.
+
 ## Horizontal Lines
 
 Both of these work:
@@ -70,16 +74,6 @@ results in:
 
 ---
 ***
-
-## Marking Text
-Wrap the text you want to mark/highlight  with `==`
-
-```text
-Lorem ==ipsum dolor== sit amet.
-```
-results in:
-
-Lorem ==ipsum dolor== sit amet.
 
 ## Blockquotes
 
@@ -459,7 +453,7 @@ results in:
 The weather forecast didn't say that, but the steel plate in his hip did. He had learned over the years to trust his hip over the weatherman. It was going to rain, so he better get outside and prepare...
 :::
 
-## Accordion
+### Accordion
 
 ``` markdown
 ::: details
@@ -479,56 +473,54 @@ results in:
   ...and see my content
 :::
 
-## Tabs
+### Tabs
 
-While [markdown spec](https://commonmark.org) does not offer any tabbed interface, NextBook has you covered here. Use `tabs` and `tab` tags as follows. Note that these are not JSX elements, just pseudo-html, you don't have to import them into your document.
+While [markdown spec](https://commonmark.org) does not offer any tabbed interface, NextBook has you covered here. Use `tabs` and `tab` containers as follows:
 
-```html
-<tabs>
-  <tab label='Windows Directions'>
-
-  Install via [chocolatey](https://chocolatey.org):
-
-  `choco install python`
-
-  </tab>
-  <tab label='macOS Directions'>
-
-  Install via [brew](https://brew.sh):
-
-  `brew install python3`
-  </tab>
-
-  <tab label='Linux Directions'>
-
-  Install via apt:
-
-  `sudo apt install python3`
-  </tab>
-</tabs>
-```
-
-results in:
-
-<tabs>
-  <tab label='Windows Directions'>
+``` markdown
+::: tabs
+  ::: tab Windows Directions
 
   Install via [chocolatey](https://chocolatey.org):
   
   `choco install python`
-  </tab>
-  <tab label='macOS Directions'>
+  :::
+  ::: tab macOS Directions
 
   Install via [brew](https://brew.sh):
 
   `brew install python3`
-  </tab>
+  :::
 
-  <tab label='Linux Directions'>
+  ::: tab Linux Directions
 
   Install via apt:
 
   `sudo apt install python3`
-  </tab>
-</tabs>
+  :::
+:::
+```
+results in:
+
+::: tabs
+  ::: tab Windows Directions
+
+  Install via [chocolatey](https://chocolatey.org):
+  
+  `choco install python`
+  :::
+  ::: tab macOS Directions
+
+  Install via [brew](https://brew.sh):
+
+  `brew install python3`
+  :::
+
+  ::: tab Linux Directions
+
+  Install via apt:
+
+  `sudo apt install python3`
+  :::
+:::
 

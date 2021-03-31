@@ -31,6 +31,10 @@ export const CustomLink = (props) => (
 )
 
 export const CustomImage = (props) => {
+  if (props.alt?.includes('raw')) {
+    return <img {...props} alt={props.alt.replace('raw', '').trim()} />
+  }
+
   const exClass = props.alt?.includes('|ex') ? 'excalidraw' : 'image'
   return (
     <>
@@ -73,7 +77,7 @@ export const Tabs = (props) => {
         onClick={() => setActiveIndex(index)}
         key={index}
       >
-        {child.props.label}
+        {child.props.className}
       </button>
     )
   })
