@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useLocalStorage } from 'react-use'
-import config from '../config.json'
 import SideBarSection from './sidebar-section'
 import { GitHub } from './svg-icons'
 
@@ -24,10 +23,10 @@ function SideBar({ toc, part, docTitle }) {
           <div className='font-weight-bold logo'>
             <Link href='/'>
               <a className='text-decoration-none d-flex flex-column align-items-center'>
-                {config.useTitleLogo && (
+                {process.env.NEXT_PUBLIC_USE_LOGO && (
                   <img
-                    src='/icon.svg'
-                    alt='NextBook Logo'
+                    src={`/${process.env.NEXT_PUBLIC_USE_LOGO}`}
+                    alt='Logo'
                     className='mb-10 w-100'
                     width='100'
                     height='100'
@@ -49,16 +48,16 @@ function SideBar({ toc, part, docTitle }) {
             />
           ))}
         </div>
-        {config.GitHubURL && (
+        {process.env.NEXT_PUBLIC_GITHUB_URL && (
           <div className='sidebar-content d-flex justify-content-center'>
             <a
-              href={config.GitHubURL}
+              href={process.env.NEXT_PUBLIC_GITHUB_URL}
               className='hyperlink text-muted d-flex align-items-center'
               target='_blank'
               rel='noreferrer noopener'
             >
               <GitHub />
-              <span className='ml-5 mt-5'>GitHub</span>
+              <span className='ml-5 mt-5'>GitHub Repo</span>
             </a>
           </div>
         )}

@@ -1,8 +1,8 @@
 import { ArrowLeft, ArrowRight } from 'components/svg-icons'
+import config from 'config/config.json'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useShortcuts } from 'react-shortcuts-hook'
-import config from '../config.json'
 import { _ } from './text'
 
 export default function PageNav() {

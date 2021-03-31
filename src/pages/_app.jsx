@@ -3,15 +3,14 @@ import splitbee from '@splitbee/web'
 import { componentMap } from 'components/component-mapper'
 import { SideBarContextProvider } from 'components/store/sidebar-context'
 import { ThemeContextProvider } from 'components/store/theme-context'
-import config from '../config.json'
-import '../styles/global.css'
+import 'styles/global.css'
 
 if (
-  process.env.NEXT_PUBLIC_ENVIRONMENT !== 'development' &&
-  config.splitBeeToken
+  process.env.NEXT_PUBLIC_SPLITBEE_TOKEN &&
+  process.env.NEXT_PUBLIC_ENVIRONMENT !== 'development'
 ) {
   splitbee.init({
-    token: config.splitBeeToken
+    token: process.env.NEXT_PUBLIC_SPLITBEE_TOKEN
   })
 }
 

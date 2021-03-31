@@ -21,6 +21,6 @@ Clicking the following link will fork the repo to your [Github](https://github.c
 - Clone the repo from [repo](https://github.com/amiroff/NextBook) or just use degit: `npx degit amiroff/NextBook`
 - Run `npm install` or `yarn install` in project folder (assuming you have [Node](https://nodejs.org/en/download/) installed).
 - Create your [markdown](/documentation/markdown) or [MDX](/documentation/using-mdx) content in `pages` folder.
-- Update `config.json` with your table of contents and other information.
+- Update `config/config.json` with your table of contents and other information.
 - Build (`npm run build`) and [deploy](https://vercel.com/new) your respository to any static hosting provider like Vercel, Netlify, Github Pages.
 - Profit! 🎉

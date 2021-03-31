@@ -7,7 +7,7 @@ import { NextSeo } from 'next-seo'
 import Head from 'next/head'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { useScroll } from 'react-use'
-import config from '../config.json'
+import config from 'config/config.json'
 
 export default function GlobalLayout({
   title,
@@ -55,14 +55,10 @@ export default function GlobalLayout({
             content='width=device-width, initial-scale=1.0, maximum-scale=5.0'
             name='viewport'
           />
-          <meta
-            name='google-site-verification'
-            content='6NCUAOmwT6024Sb1WKubeknfrtCOuHEvY6XLIdLmcak'
-          />
           <link rel='icon' href='/favicon.ico' />
           <link rel='icon' href='/icon.svg' type='image/svg+xml' />
-          <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
-          <link rel='manifest' href='/manifest.webmanifest' />
+          <link rel='apple-touch-icon' href='/512.png' />
+          <link rel='manifest' href='/manifest.json' />
           <link
             href='https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css'
             rel='stylesheet'

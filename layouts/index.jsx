@@ -4,11 +4,22 @@ import InPageToc from 'components/in-page-toc'
 import PageNav from 'components/page-nav'
 import Text from 'components/text'
 import Layout from 'layouts/global'
-import config from '../config.json'
+import { useEffect, useState } from 'react'
 
 export default function DocsLayout({ children, frontMatter }) {
   const showToc = !frontMatter.hide_toc && frontMatter.tocRaw.length > 0
   const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+  const [locale, setLocale] = useState('en')
+
+  useEffect(() => {
+    const browserLocales =
+      navigator.languages === undefined
+        ? [navigator.language]
+        : navigator.languages
+    if (browserLocales[0] !== undefined) {
+      setLocale(browserLocales[0])
+    }
+  }, [])
 
   return (
     <Layout
@@ -51,7 +62,7 @@ export default function DocsLayout({ children, frontMatter }) {
                 <div className='mb-20 text-muted text-center font-size-12'>
                   <Text tid='Last Update' />:{' '}
                   {new Date(frontMatter.updated).toLocaleDateString(
-                    config.locale || 'en',
+                    locale || 'en',
                     dateOptions
                   )}
                 </div>
