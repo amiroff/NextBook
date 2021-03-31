@@ -1,8 +1,6 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import config from '../config.json'
 import Highlight from './highlight'
 import Text, { _ } from './text'
 
@@ -96,16 +94,19 @@ export const Tabs = (props) => {
 
 const Heading = (props) => {
   const [copied, setCopied] = useState(false)
-  const router = useRouter()
-  const fullPath = `${config.projectURL}${router.pathname}#${props.id}`
+  const [location, setlocation] = useState(false)
   const Tag = 'h' + props.level
+
+  useEffect(() => {
+    setlocation(`${window.location.href}#${props.id}`)
+  })
 
   return (
     <div className='linked-heading'>
       <Tag id={props.id} className='d-inline-block'>
         {props.children}
       </Tag>
-      <CopyToClipboard text={fullPath} onCopy={() => setCopied(true)}>
+      <CopyToClipboard text={location} onCopy={() => setCopied(true)}>
         <span
           className={
             copied

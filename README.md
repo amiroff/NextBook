@@ -34,6 +34,6 @@ With the advantages of [Next.js](https://nextjs.com), anything fancy (grading, l
 
 ## Get Started
 
-Clicking the following button will fork the repo and deploy it to Vercel. Now you can edit pages, commit, push and see results.
+Clicking the following button will fork the repo and deploy it to Vercel. Now you can create your content in `pages/` folder, that will overwrite this content. Copy `_app.jsx` from `src/pages` to `pages/`, commit, push and see results.
 
 [![Clone and deploy NOW! raw](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook)
