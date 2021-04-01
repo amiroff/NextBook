@@ -42,3 +42,7 @@ yarn.lock
 
 # docker
 /.devcontainer
+
+# build artifacts
+sitemap.xml
+robots.txt
