@@ -1,6 +1,6 @@
 'use strict'
 
-const config = require('config/config.json')
+const config = require('./config/config.json')
 
 const { projectURL } = config
 
