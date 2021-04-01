@@ -1,4 +1,4 @@
-import Scrollspy from 'react-scrollspy-ez'
+import Scrollspy from 'components/scrollspy'
 import Text from './text'
 
 function InPageTocElement(props) {
