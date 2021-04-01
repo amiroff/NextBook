@@ -35,5 +35,3 @@ With the advantages of [Next.js](https://nextjs.com), anything fancy (grading, l
 - ⚙︎ Customisable and extensible code.
 - ❤ Built on open-source.
 - 👍 And many more small details...
-
-[![Clone and deploy NOW! raw](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Famiroff%2FNextBook)
