@@ -56,7 +56,7 @@ export default function DocsLayout({ children, frontMatter }) {
               )}
             </div>
             <div className='md-content'>{children}</div>
-            <hr className='my-20 mx-10' />
+            <hr className='my-20 mx-10 no-print' />
             {frontMatter.updated && (
               <>
                 <div className='mb-20 text-muted text-center font-size-12'>

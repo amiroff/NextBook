@@ -13,6 +13,7 @@
   .code {
     font-size: 12pt;
     line-height: 1.6em;
+    page-break-inside: avoid;
   }
 
   li > p {
@@ -20,6 +21,7 @@
     margin: 0;
   }
 
+  .no-print,
   .progressBarContainer,
   .navbar,
   .sidebar-overlay,
@@ -44,6 +46,7 @@
     border-collapse: collapse;
     border: 1px solid black;
     padding: 4px;
+    page-break-inside: avoid;
   }
 
   .code * {
@@ -63,6 +66,7 @@
   .warn,
   .error {
     font-style: italic;
+    page-break-inside: avoid;
   }
 
   .hint {
@@ -83,12 +87,14 @@
   blockquote {
     border-left: 4px solid lightgrey;
     padding-left: 1em;
+    page-break-inside: avoid;
   }
 
   .img-fluid {
     max-width: 100%;
     height: auto;
     display: block;
+    page-break-inside: avoid;
   }
 
   .linenumber {
