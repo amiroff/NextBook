@@ -61,6 +61,7 @@ export default function GlobalLayout({
           <link rel='manifest' href='/manifest.json' />
           <link
             href='https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css'
+            media='screen'
             rel='stylesheet'
           />
         </Head>

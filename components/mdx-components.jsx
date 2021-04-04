@@ -106,12 +106,16 @@ const Heading = (props) => {
       <Tag id={props.id} className='d-inline-block'>
         {props.children}
       </Tag>
-      <CopyToClipboard text={location} onCopy={() => setCopied(true)}>
+      <CopyToClipboard
+        aria-hidden='true'
+        text={location}
+        onCopy={() => setCopied(true)}
+      >
         <span
           className={
             copied
-              ? 'd-inline-block m-5 font-size-20 text-success'
-              : 'd-inline-block m-5 font-size-20'
+              ? 'd-inline-block m-5 font-size-20 link-to-heading text-success'
+              : 'd-inline-block m-5 font-size-20 link-to-heading'
           }
           title={_('Copy link')}
         >

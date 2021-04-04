@@ -19,7 +19,7 @@ With the advantages of [Next.js](https://nextjs.com), anything fancy (grading, l
 
 - 💅 Good looking, simple and readable UI including `dark mode`. 
 - 🌎 Great SEO out of the box.
-- 📱 Mobile friendly
+- 📱 Mobile & printer friendly
 - 🚀 Single page application with blazing speed.
 - 🧾 Easy content creation with extensive [markdown](https://www.markdownguide.org/) and [MDX](https://mdxjs.com/) support.
 - 💻 Something more than what basic fenced code offers. Like line highlighting and linking to source, copying to clipboard.
