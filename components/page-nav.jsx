@@ -43,7 +43,7 @@ export default function PageNav() {
 
   return (
     <>
-      <div className='mb-20 d-flex'>
+      <div className='mb-20 d-flex page-nav'>
         {prevChapter && (
           <Link href={prevChapter.path}>
             <a className='prev-page mr-10 d-flex hidden-xs-and-down justify-content-between align-items-center'>

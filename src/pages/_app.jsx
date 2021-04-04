@@ -4,6 +4,7 @@ import { componentMap } from 'components/component-mapper'
 import { SideBarContextProvider } from 'components/store/sidebar-context'
 import { ThemeContextProvider } from 'components/store/theme-context'
 import 'styles/global.css'
+import 'styles/print.css'
 
 if (
   process.env.NEXT_PUBLIC_SPLITBEE_TOKEN &&

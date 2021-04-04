@@ -43,7 +43,7 @@ export default function DocsLayout({ children, frontMatter }) {
               {frontMatter.title && <h1>{frontMatter.title}</h1>}
               {frontMatter.description && <p>{frontMatter.description}</p>}
               {frontMatter.tags && (
-                <div className='mb-5'>
+                <div className='mb-5 tags'>
                   <span>
                     <Text tid='Tags' />:
                   </span>
