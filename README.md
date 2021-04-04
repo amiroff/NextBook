@@ -8,12 +8,15 @@ layout: empty
 
 NextBook makes writing technical docs stupid simple while keeping featureset minimal.
 
-## Get Started
+## Getting Started
 
 1. Bootstrap a project with `npx create-next-app my-awesome-book -e https://github.com/amiroff/NextBook/tree/master/template`
 2. Run `npm run dev` and open [http://localhost:3000/](http://localhost:3000/)
 3. Check examples to see what's possible with NextBook.
-3. Customize content in `pages` and `config.json` to your heart.
+4. Create your [markdown](/documentation/markdown) or [MDX](/documentation/using-mdx) content in `pages` folder.
+5. Update `config/config.json` with your table of contents and other information.
+6. Build (`npm run build`) and [deploy](https://vercel.com/new) your respository to any static hosting provider like Vercel, Netlify, Github Pages or Google cloud.
+7. Profit! 🎉
 
 ... voila 🎉! This should be enough to have a statically generated documentation page / book.
 

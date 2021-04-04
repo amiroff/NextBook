@@ -4,12 +4,16 @@ layout: empty
 
 **NextBook** is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It works by compiling markdown or MDX to static pages. This way, first content render on user's device is near instant.
 
-NextBook makes writing technical docs stupid simple while keeping featureset minimal: 
+NextBook makes writing technical docs stupid simple while keeping featureset minimal:
 
-1. Bootstrap a project with `npx create-next-app my-awesome-book -e https://github.com/amiroff/NextBook/tree/master/template`
-2. run `npm run dev` and open [http://localhost:3000/](http://localhost:3000/)
+## Your Next Steps
+
+1. Change to your project directory (where this file resides).
+2. Run `npm run dev` and open [http://localhost:3000/](http://localhost:3000/)
 3. Check examples to see what's possible with NextBook.
-3. Customize content in `pages` and `config.json` to your heart.
+4. Customize content in `pages` and `config.json` to your heart.
+6. Build (`npm run build`) and [deploy](https://vercel.com/new) your respository to any static hosting provider like Vercel, Netlify, Github Pages or Google cloud.
+7. Profit! 🎉
 
 ... and voila 🎉! This should be enough to have a statically generated documentation page or book.
 
