@@ -473,6 +473,9 @@ results in:
   ...and see my content
 :::
 
+?> Warning
+Accordion component is not print compatible. Use responsibly.
+
 ### Tabs
 
 While [markdown spec](https://commonmark.org) does not offer any tabbed interface, NextBook has you covered here. Use `tabs` and `tab` containers as follows:
