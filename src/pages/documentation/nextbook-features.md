@@ -6,6 +6,7 @@ title: NextBook Features
 ## User Interface
 
 - Fast and responsive UI, content should be readable and accessible on most devices.
+- Looks good even on printouts.
 - Good out of the box looks thanks to [Halfmoon](https://www.gethalfmoon.com/).
 - Keyboard shortcuts to toggle features (sidebar, lights off, next/previous page navigation).
 - Built-in light and dark mode (press <kbd>T</kbd>) for pleasant and safe reading.
