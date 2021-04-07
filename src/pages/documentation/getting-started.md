@@ -12,5 +12,5 @@ title: Getting Started With NextBook
 3. Check examples to see what's possible with NextBook.
 4. Create your [markdown](/documentation/markdown) or [MDX](/documentation/using-mdx) content in `pages` folder.
 5. Update `config/config.json` with your table of contents and other information.
-6. Build (`npm run build`) and [deploy](https://vercel.com/new) your respository to any static hosting provider like Vercel, Netlify, Github Pages or Google cloud.
+6. Build (`npm run build`) and [deploy](https://vercel.com/new) your repository to any static hosting provider like Vercel, Netlify, Github Pages or Google Cloud.
 7. Profit! 🎉
