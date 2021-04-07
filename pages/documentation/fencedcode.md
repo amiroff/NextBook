@@ -355,7 +355,7 @@ Sometimes code to display is so big that it's inconvenient to embed it in markdo
 
 results in:
 
-```json file=../../../public/manifest.json
+```json file=../../public/manifest.json
 ```
 
 ## Escaping Code Blocks
