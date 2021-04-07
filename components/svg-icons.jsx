@@ -107,16 +107,16 @@ export const Copied = () => (
 
 export const Copy = () => (
   <svg
-    height='16px'
-    className='sidebar-title-icon'
-    fill='currentColor'
-    viewBox='0 0 20 20'
+    fill='none'
+    stroke='currentColor'
+    viewBox='0 0 24 24'
     xmlns='http://www.w3.org/2000/svg'
   >
     <path
-      fillRule='evenodd'
-      d='M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z'
-      clipRule='evenodd'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3'
     />
   </svg>
 )
