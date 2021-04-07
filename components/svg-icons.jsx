@@ -193,7 +193,7 @@ export const Dot = () => (
     fill='currentColor'
     className='sidebar-title-icon trans-5'
   >
-    <path fill-rule='evenodd' d='M8 4a4 4 0 100 8 4 4 0 000-8z'></path>
+    <path fillRule='evenodd' d='M8 4a4 4 0 100 8 4 4 0 000-8z'></path>
   </svg>
 )
 
