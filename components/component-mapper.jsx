@@ -1,6 +1,7 @@
 import {
   Blockquote,
   Code,
+  InlineCode,
   CustomLink,
   Details,
   CustomImage,
@@ -28,6 +29,7 @@ export const componentMap = {
   details: Details,
   summary: Summary,
   code: Code,
+  inlineCode: InlineCode,
   tabs: Tabs,
   tab: Tab,
   h1: H1,

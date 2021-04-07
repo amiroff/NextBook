@@ -595,4 +595,9 @@ code,
   .dark-mode .excalidraw {
     filter: invert(100%) hue-rotate(180deg);
   }
+
+  code.inline {
+    line-height: 1.6em;
+    padding: 4px;
+  }
 }

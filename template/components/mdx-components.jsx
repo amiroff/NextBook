@@ -56,6 +56,10 @@ export const Code = (props) => {
   )
 }
 
+export const InlineCode = (props) => {
+  return <code className='inline'>{props.children}</code>
+}
+
 export const Tab = ({ children }) => (
   <div className='tab-content'>{children}</div>
 )
