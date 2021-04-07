@@ -574,7 +574,16 @@ code,
   }
 
   .logo {
-    width: 222px;
+    max-width: 222px;
+  }
+
+  .logo a {
+    color: black;
+  }
+
+
+  .dark-mode .logo a {
+    color: white;
   }
 
   .badge p {
