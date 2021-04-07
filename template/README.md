@@ -12,10 +12,10 @@ NextBook makes writing technical docs stupid simple while keeping featureset min
 2. Run `npm run dev` and open [http://localhost:3000/](http://localhost:3000/)
 3. Check examples to see what's possible with NextBook.
 4. Customize content in `pages` and `config.json` to your heart.
-6. Build (`npm run build`) and [deploy](https://vercel.com/new) your repository to any static hosting provider like Vercel, Netlify, Github Pages or Google cloud.
+6. Build (`npm run build`) and [deploy](https://vercel.com/new) your repository to any static hosting provider like Vercel, Netlify, Github Pages or Google Cloud.
 7. Profit! 🎉
 
-... and voila 🎉! This should be enough to have a statically generated documentation page or book.
+This should be enough to have a statically generated documentation page or book.
 
 With the advantages of [Next.js](https://nextjs.com), anything fancy (grading, level switching, you name it..) can be added along the way.
 
