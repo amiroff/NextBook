@@ -142,11 +142,11 @@ code,
 
   .navbar {
     border: none;
-    box-shadow: 0px 6px 25px -12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 25px -12px rgba(0, 0, 0, 0.3);
   }
 
   .dark-mode .navbar {
-    box-shadow: 0px 6px 25px -12px rgb(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 25px -12px rgb(0, 0, 0, 0.8);
   }
 
   .main-content ul > li {
