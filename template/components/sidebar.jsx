@@ -20,9 +20,9 @@ function SideBar({ toc, part, docTitle }) {
     <>
       <div className='sidebar'>
         <div className='sidebar-content'>
-          <div className='font-weight-bold logo'>
+          <div className='logo'>
             <Link href='/'>
-              <a className='text-decoration-none d-flex flex-column text-muted'>
+              <a className='text-decoration-none d-flex flex-column align-items-center text-center text-muted'>
                 {process.env.NEXT_PUBLIC_USE_LOGO && (
                   <img
                     src={`/${process.env.NEXT_PUBLIC_USE_LOGO}`}

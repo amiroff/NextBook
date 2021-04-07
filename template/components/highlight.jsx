@@ -83,8 +83,8 @@ const Highlight = ({
       paddingLeft: '16px'
     }
     if (markedArray.includes(lineNumber)) {
-      style.backgroundColor = '#9e9e9e20'
-      style.borderLeft = '2px solid #9e9e9e60'
+      style.backgroundColor = '#A0AEC020'
+      style.borderLeft = '2px solid #A0AEC060'
     }
     if (addedArray.includes(lineNumber)) {
       style.backgroundColor = '#6ace5030'
