@@ -87,16 +87,16 @@ code,
   }
 
   .sidebar-link {
-    padding: 1px 5px 1px 5px;
+    padding: 5px 5px 5px 10px;
+  }
+  
+  .part-items .sidebar-link {
+    padding: 0 5px 0 20px;
   }
 
   .sidebar {
     border: none;
     background-color: #f5f7f9;
-    font-weight: 500;
-  }
-
-  .dark-mode .sidebar {
     font-weight: 400;
   }
 
@@ -310,8 +310,10 @@ code,
   }
 
   .sidebar-icon {
-    width: 10px;
-    margin-left: 10px;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    padding-bottom: 4px;
   }
 
   blockquote {
@@ -517,26 +519,47 @@ code,
   .sidebar-title {
     cursor: pointer;
     user-select: none;
-    padding: 10px 0 5px 0;
+    padding: 10px 0 5px 15px;
+    font-weight: 400;
   }
 
   .part-title {
-    padding-left: 1em;
+    padding-left: 5px;
   }
 
   .sidebar-section .sidebar-title-icon {
     margin-top: 2px;
   }
 
+  .trans-7 {
+    opacity: 0.7;
+  }
+
+  .trans-5 {
+    opacity: 0.5;
+  }
+  
+  .current {
+    font-weight: 500;
+    color: black;
+  }
+  
+  .dark-mode .current {
+    font-weight: 500;
+    color: white;
+  }
+  
   .dark-mode .content-wrapper {
     background-color: var(--dm-base-body-bg-color);
   }
 
-  .dark-mode .open {
+  .dark-mode .open,
+  .dark-mode .current.open:hover {
     background-color: var(--dm-base-body-bg-color);
   }
 
-  .open {
+  .open,
+  .current.open:hover {
     background-color: white;
   }
 

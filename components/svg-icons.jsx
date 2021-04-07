@@ -107,23 +107,23 @@ export const Copied = () => (
 
 export const Copy = () => (
   <svg
-    fill='none'
-    stroke='currentColor'
-    viewBox='0 0 24 24'
+    height='16px'
+    className='sidebar-title-icon'
+    fill='currentColor'
+    viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
   >
     <path
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      strokeWidth={2}
-      d='M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3'
+      fillRule='evenodd'
+      d='M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z'
+      clipRule='evenodd'
     />
   </svg>
 )
 
 export const AngleUp = () => (
   <svg
-    height='20px'
+    height='16px'
     className='sidebar-title-icon'
     fill='none'
     viewBox='0 0 24 24'
@@ -140,36 +140,60 @@ export const AngleUp = () => (
 
 export const AngleDown = () => (
   <svg
-    height='20px'
+    height='16px'
     className='sidebar-title-icon'
-    fill='none'
-    stroke='currentColor'
-    viewBox='0 0 24 24'
+    fill='currentColor'
+    viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
   >
     <path
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      strokeWidth={2}
-      d='M19 9l-7 7-7-7'
+      fillRule='evenodd'
+      d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z'
+      clipRule='evenodd'
+    />
+  </svg>
+)
+
+export const AngleRight = () => (
+  <svg
+    height='16px'
+    className='sidebar-title-icon'
+    fill='currentColor'
+    viewBox='0 0 20 20'
+    xmlns='http://www.w3.org/2000/svg'
+  >
+    <path
+      fillRule='evenodd'
+      d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z'
+      clipRule='evenodd'
     />
   </svg>
 )
 
 export const Check = () => (
   <svg
-    height='12px'
-    className='check-icon'
-    fill='none'
+    height='16px'
+    className='sidebar-title-icon trans-7'
+    fill='currentColor'
     viewBox='0 0 20 20'
-    stroke='currentColor'
+    xmlns='http://www.w3.org/2000/svg'
   >
     <path
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      strokeWidth={2}
-      d='M5 13l4 4L19 7'
+      fillRule='evenodd'
+      d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z'
+      clipRule='evenodd'
     />
+  </svg>
+)
+
+export const Dot = () => (
+  <svg
+    viewBox='0 0 16 16'
+    width='10'
+    fill='currentColor'
+    className='sidebar-title-icon trans-5'
+  >
+    <path fill-rule='evenodd' d='M8 4a4 4 0 100 8 4 4 0 000-8z'></path>
   </svg>
 )
 

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import SideBarItem from './sidebar-item'
-import { AngleUp, AngleDown } from './svg-icons'
+import { AngleUp, AngleDown, AngleRight } from './svg-icons'
 
 const SideBarSection = ({ toc, pathName, history, part }) => {
   const [menuVisible, setMenuVisible] = useState(false)
@@ -31,11 +31,17 @@ const SideBarSection = ({ toc, pathName, history, part }) => {
       {/* display toggleable titlebar only when we have a part */}
       {toc.part && (
         <div
-          className='d-flex justify-content-between m-0 px-20 sidebar-title font-weight-bold'
+          className={
+            isActivePart
+              ? 'd-flex justify-content-start m-0 sidebar-title current'
+              : 'd-flex justify-content-start m-0 sidebar-title'
+          }
           onClick={isActivePart ? () => {} : toggleMenu}
         >
+          <div>
+            {isActivePart || menuVisible ? <AngleDown /> : <AngleRight />}
+          </div>
           <div className='part-title'>{toc.part}</div>
-          <div>{isActivePart || menuVisible ? <AngleUp /> : <AngleDown />}</div>
         </div>
       )}
 
