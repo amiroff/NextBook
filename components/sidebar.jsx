@@ -19,9 +19,9 @@ function SideBar({ toc, part, docTitle }) {
   return (
     <div className='sidebar'>
       <div className='sidebar-content'>
-        <div className='font-weight-bold logo'>
+        <div className='logo'>
           <Link href='/'>
-            <a className='text-decoration-none d-flex flex-column'>
+            <a className='text-decoration-none d-flex align-items-center text-center flex-column'>
               {process.env.NEXT_PUBLIC_USE_LOGO && (
                 <img
                   src={`/${process.env.NEXT_PUBLIC_USE_LOGO}`}
@@ -51,7 +51,7 @@ function SideBar({ toc, part, docTitle }) {
         <div className='sidebar-content d-flex justify-content-center'>
           <a
             href={process.env.NEXT_PUBLIC_GITHUB_URL}
-            className='hyperlink text-muted d-flex align-items-center'
+            className='hyperlink d-flex align-items-center'
             target='_blank'
             rel='noreferrer noopener'
           >
