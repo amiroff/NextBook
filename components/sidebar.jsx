@@ -51,7 +51,7 @@ function SideBar({ toc, part, docTitle }) {
         <div className='sidebar-content d-flex justify-content-center'>
           <a
             href={process.env.NEXT_PUBLIC_GITHUB_URL}
-            className='hyperlink text-muted d-flex align-items-center'
+            className='hyperlink d-flex align-items-center'
             target='_blank'
             rel='noreferrer noopener'
           >
