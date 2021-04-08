@@ -26,10 +26,6 @@
       "part": "Documentation",
       "chapters": [
         {
-          "title": "Getting Started",
-          "path": "/documentation/getting-started"
-        },
-        {
           "title": "NextBook Features",
           "path": "/documentation/nextbook-features"
         },
@@ -39,17 +35,8 @@
       ]
     },
     {
-      "part": "Contributing",
       "chapters": [
-        {
-          "title": "Contributing Features",
-          "path": "/contributing/contributing"
-        }
-      ]
-    },
-    {
-      "chapters": [
-        { "title": "In Progress Features", "path": "/in-progress-features" }
+        { "title": "In Progress Features", "path": "/documentation/in-progress-features" }
       ]
     }
   ]
