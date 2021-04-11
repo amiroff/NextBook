@@ -132,6 +132,8 @@ code,
     border: none;
     background-color: var(--gray-50);
     font-weight: 400;
+    position: sticky;
+    top: 50px;
   }
 
   .dark-mode .sidebar {
@@ -601,7 +603,8 @@ code,
     color: var(--gray-200);
   }
 
-  .dark-mode .content-wrapper {
+  .dark-mode .content-wrapper,
+  .dark-mode .page-wrapper {
     background-color: var(--gray-700);
   }
 

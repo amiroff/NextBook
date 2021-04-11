@@ -38,7 +38,6 @@ export default function GlobalLayout({
       <div
         className='page-wrapper with-navbar with-sidebar'
         data-sidebar-type='overlayed-sm-and-down'
-        {...sideBarCtx.sideBarProps}
       >
         <NextSeo
           title={`${htmlTitle} | ${projectTitle}`}
@@ -70,17 +69,25 @@ export default function GlobalLayout({
           <div className='progressBar' style={progressStyle} />
         </div>
         <NavBar title={title} part={part} className='navbar' />
+        {sideBarCtx.sideBar && (
+          <>
+            <div
+              className='sidebar-overlay'
+              onClick={sideBarCtx.toggleSideBar}
+            ></div>
+            <SideBar
+              toc={toc}
+              part={part}
+              docTitle={projectTitle}
+              className='sidebar'
+            />
+          </>
+        )}
         <div
-          className='sidebar-overlay'
-          onClick={sideBarCtx.toggleSideBar}
-        ></div>
-        <SideBar
-          toc={toc}
-          part={part}
-          docTitle={projectTitle}
-          className='sidebar'
-        />
-        <div className='content-wrapper' ref={scrollRef}>
+          className='content-wrapper'
+          ref={scrollRef}
+          style={sideBarCtx.sideBar ? {} : { left: 'inherit', width: '100%' }}
+        >
           {children}
         </div>
       </div>
