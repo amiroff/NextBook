@@ -70,6 +70,10 @@ export default function GlobalLayout({
           <div className='progressBar' style={progressStyle} />
         </div>
         <NavBar title={title} part={part} className='navbar' />
+        <div
+          className='sidebar-overlay'
+          onClick={sideBarCtx.toggleSideBar}
+        ></div>
         <SideBar
           toc={toc}
           part={part}
