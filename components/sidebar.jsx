@@ -5,7 +5,7 @@ import { useLocalStorage } from 'react-use'
 import SideBarSection from './sidebar-section'
 import { GitHub } from './svg-icons'
 
-function SideBar({ toc, part, docTitle }) {
+function SideBar({ toc, part, docTitle, className }) {
   const router = useRouter()
   const [chapters, setChapters] = useLocalStorage('visitedChapters', [])
 
@@ -17,7 +17,7 @@ function SideBar({ toc, part, docTitle }) {
   }, [chapters, router.pathname])
 
   return (
-    <div className='sidebar'>
+    <div className={className}>
       <div className='sidebar-content'>
         <div className='logo'>
           <Link href='/'>

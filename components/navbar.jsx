@@ -5,13 +5,13 @@ import SideBarContext from './store/sidebar-context'
 import { Hamburger } from './svg-icons'
 import { _ } from './text'
 
-function NavBar({ title, part }) {
+function NavBar({ title, part, className }) {
   const sideBarCtx = useContext(SideBarContext)
   useShortcuts(['M'], () => sideBarCtx.toggleSideBar(), [sideBarCtx.sideBar])
 
   return (
     <>
-      <nav className='navbar'>
+      <nav className={className}>
         <div className='navbar-content'>
           <button
             id='toggle-sidebar-btn'
