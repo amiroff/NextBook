@@ -2,29 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght,CRSV,MONO@300..800,0,1&display=swap');
 
 :root {
-  --gray-50:  #F7FAFC;
-  --gray-100: #EDF2F7;
-  --gray-200: #E2E8F0;
-  --gray-300: #CBD5E0;
-  --gray-400: #A0AEC0;
+  --gray-50: #f7fafc;
+  --gray-100: #edf2f7;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e0;
+  --gray-400: #a0aec0;
   --gray-500: #718096;
-  --gray-600: #4A5568;
-  --gray-700: #2D3748;
-  --gray-800: #1A202C;
+  --gray-600: #4a5568;
+  --gray-700: #2d3748;
+  --gray-800: #1a202c;
   --gray-900: #171923;
 
-  --blue-50:  #EBF8FF;
-  --blue-100: #BEE3F8;
-  --blue-200: #90CDF4;
-  --blue-300: #63B3ED;
-  --blue-400: #4299E1;
-  --blue-500: #3182CE;
-  --blue-600: #2B6CB0;
-  --blue-700: #2C5282;
-  --blue-800: #2A4365;
-  --blue-900: #1A365D;
+  --blue-50: #ebf8ff;
+  --blue-100: #bee3f8;
+  --blue-200: #90cdf4;
+  --blue-300: #63b3ed;
+  --blue-400: #4299e1;
+  --blue-500: #3182ce;
+  --blue-600: #2b6cb0;
+  --blue-700: #2c5282;
+  --blue-800: #2a4365;
+  --blue-900: #1a365d;
 }
-
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
@@ -102,7 +101,6 @@ code,
     border-radius: 10px;
   }
 
-
   .dark-mode * {
     scrollbar-color: var(--gray-600) transparent;
   }
@@ -125,7 +123,7 @@ code,
     padding: 5px 5px 5px 15px;
     color: var(--gray-900);
   }
-  
+
   .part-items .sidebar-link {
     padding: 0 5px 5px 25px;
   }
@@ -323,7 +321,6 @@ code,
     color: rgba(0, 0, 0, 0.5);
     border-left: 1px solid var(--gray-200);
     font-weight: 400;
-    font-size: 1.4rem;
     padding: 0.3rem 0 0.3rem 0rem;
     line-height: 2rem;
     margin: 0;
@@ -381,11 +378,11 @@ code,
     border-bottom: 1px solid var(--gray-500);
   }
 
-  .custom-table tbody tr:not(:last-child){
+  .custom-table tbody tr:not(:last-child) {
     border-bottom: 1px solid var(--gray-200);
   }
 
-  .dark-mode .custom-table tbody tr:not(:last-child){
+  .dark-mode .custom-table tbody tr:not(:last-child) {
     border-bottom: 1px solid var(--gray-600);
   }
 
@@ -501,7 +498,7 @@ code,
   .prev-page {
     border: 1px solid var(--gray-200);
     background-color: var(--gray-100);
-    color: var(--gray-600)!important;
+    color: var(--gray-600) !important;
     border-radius: 5px;
     width: 100%;
     text-decoration: none !important;
@@ -516,7 +513,7 @@ code,
   .dark-mode .prev-page {
     border: 1px solid var(--gray-700);
     background-color: var(--gray-600);
-    color: var(--gray-300)!important;
+    color: var(--gray-300) !important;
   }
 
   .next-page:hover,
@@ -593,17 +590,17 @@ code,
   .trans-5 {
     opacity: 0.5;
   }
-  
+
   .current {
     font-weight: 500;
     color: black;
   }
-  
+
   .dark-mode .current {
     font-weight: 500;
     color: var(--gray-200);
   }
-  
+
   .dark-mode .content-wrapper {
     background-color: var(--gray-700);
   }
@@ -639,7 +636,6 @@ code,
     color: black;
   }
 
-
   .dark-mode .logo a {
     color: white;
   }
@@ -669,11 +665,11 @@ code,
     border-color: var(--gray-600);
   }
 
-  details p:nth-child(2){
+  details p:nth-child(2) {
     border-color: var(--gray-200);
   }
 
-  .dark-mode details p:nth-child(2){
+  .dark-mode details p:nth-child(2) {
     border-color: var(--gray-600);
   }
 
@@ -699,13 +695,14 @@ code,
   }
 
   .btn:hover,
-  .btn.active, .btn:focus,
+  .btn.active,
+  .btn:focus,
   .btn.active:focus {
     background-color: var(--gray-200);
   }
 
   .dark-mode .btn:hover,
-  .dark-mode .btn.active, 
+  .dark-mode .btn.active,
   .dark-mode .btn:focus,
   .dark-mode .btn.active:focus {
     background-color: var(--gray-500);
