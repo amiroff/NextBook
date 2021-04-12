@@ -2,7 +2,7 @@
 title: Work In Progress Features
 ---
 
-Here is a list of features which are planned to be implemented in future in no particular order. 
+Here is a list of features which are planned to be implemented in future in no particular order.
 
 - [x] In-page TOC indentation for sub headings.
 - [x] Localization.
@@ -18,6 +18,9 @@ Here is a list of features which are planned to be implemented in future in no p
 - [x] Fenced code diff support.
 - [x] NPX template support.
 - [x] Print styles.
+- [ ] Migrate to Next MDX Remote
+- [ ] Migrate to pure CSS or Tailwind
+- [ ] Add multiple books support
 - [ ] Global search. (Algolia?)
 - [ ] Live code edit & preview support.
 - [ ] Epub export.
