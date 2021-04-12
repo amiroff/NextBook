@@ -203,22 +203,6 @@ code,
     padding: 0.8rem;
   }
 
-  .md-content ul,
-  .md-content ol {
-    margin-left: 1em;
-  }
-
-  .md-content li {
-    list-style-position: outside;
-    margin-left: 0.4em;
-    line-height: 2rem;
-  }
-
-  ul.contains-task-list {
-    list-style-type: none;
-    margin: 0;
-  }
-
   li p {
     display: inline;
     margin: 0;
@@ -396,11 +380,6 @@ code,
   .custom-table td[align='center'],
   .custom-table th[align='center'] {
     text-align: center;
-  }
-
-  ul.contains-task-list li {
-    list-style-type: none;
-    margin-left: 10px;
   }
 
   .react-syntax-highlighter-line-number {
@@ -726,6 +705,51 @@ code,
     margin-left: auto;
     width: var(--container-width);
   }
+
+  /* Custom list items */
+  .md-content ol {
+    list-style: none;
+    counter-reset: custom-counter;
+  }
+
+  .md-content ul li {
+    line-height: 1em;
+    margin: 0.5em;
+  }
+
+  .md-content li {
+    counter-increment: custom-counter;
+    margin: 0.25rem;
+  }
+
+  .md-content ol li::before {
+    content: counter(custom-counter);
+    background: var(--gray-400);
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2.4rem;
+    color: var(--gray-100);
+    text-align: center;
+    margin-right: 0.5rem;
+  }
+
+  .dark-mode .md-content ol li::before {
+    background: var(--gray-600);
+  }
+
+  ul.contains-task-list {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  ul.contains-task-list li {
+    list-style-type: none;
+    margin-left: 10px;
+  }
+
+  /* Extra XXL container */
 
   @media (min-width: 1400px) {
     .container-xxl {

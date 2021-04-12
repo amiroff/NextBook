@@ -200,17 +200,6 @@ results in:
 4. You can use sequential numbers...
 1. ...or keep all the numbers as `1.`
 
-**Start Numbering With Offset**
-
-```
-57. foo
-1. bar
-```
-results in:
-
-57. foo
-1. bar
-
 ## Checkboxes
 
 These are often used to indicate task items.
