@@ -21,19 +21,19 @@ With the advantages of [Next.js](https://nextjs.com), anything fancy (grading, l
 
 ## Primary Features 🧿
 
-- 💅 Good looking, simple and readable UI including `dark mode`. 
-- 🌎 Great SEO out of the box.
-- 📱 Mobile & printer friendly
-- 🚀 Single page application with blazing speed.
-- 🧾 Easy content creation with extensive [markdown](https://www.markdownguide.org/) and [MDX](https://mdxjs.com/) support.
-- 💻 Something more than what basic fenced code offers. Like line highlighting and linking to source, copying to clipboard.
-- 🤓 Familiar [Git](https://github.com/) workflow and collaboration.
-- ⌨︎ Keyboard shortcuts for frequently used actions.
-- 🔎 In-page dynamic table of contents with scroolspy.
-- © You own your data, ==code is the data==. Committing to repository and seeing results in the simplest form.
-- 🏎 Fast to get started, just clone the repo and modify to your liking.
-- 🎊 One click (or push) [deployment](https://vercel.com/new)
-- 🛠 Unlimited dynamic features can be added with [MDX](https://mdxjs.com/)
-- ⚙︎ Customisable and extensible code.
-- ❤ Built on open-source.
+- 💅 Good looking, simple and readable UI including `dark` mode, `fluid` and `centered` layouts, 
+- 🌎 Great SEO out of the box,
+- 📱 Mobile & printer friendly,
+- 🚀 Single page application with pre-fetching,
+- 🧾 Easy content creation with [markdown](https://www.markdownguide.org/) and [MDX](https://mdxjs.com/) support,
+- 💻 Something more than what basic fenced code offers. Like line highlighting, linking to source and copying to clipboard,
+- 🤓 Familiar [Git](https://github.com/) workflow and collaboration,
+- ⌨︎ Keyboard shortcuts for frequently used actions (theme change, sidebar toggle, page navigation),
+- 🔎 In-page optional table of contents with scroolspy,
+- © You own your data, **code is the data**. Committing to repository and seeing results in the simplest form,
+- 🏎 Fast to get started, just one command for up & running locally,
+- 🎊 One click (or push) [deployment](https://vercel.com/new),
+- 🛠 Unlimited dynamic features can be added with [MDX](https://mdxjs.com/),
+- ⚙︎ Customisable, extensible and simple codebase,
+- ❤ Built on open-source,
 - 👍 And many more small details...
