@@ -36,7 +36,7 @@ export default function DocsLayout({ children, frontMatter }) {
         <div className='row'>
           <div
             className={
-              showToc ? 'col-lg-9 main-content' : 'col-lg-12 main-content'
+              showToc ? 'col-lg-9 col-xxl-10 main-content' : 'col main-content'
             }
           >
             <div className='my-20'>
@@ -71,7 +71,7 @@ export default function DocsLayout({ children, frontMatter }) {
             <PageNav />
           </div>
           {showToc && (
-            <div className='col-lg-3 d-none d-lg-block'>
+            <div className='col-lg-3 col-xxl-2 d-none d-lg-block'>
               <InPageToc tocRaw={frontMatter.tocRaw} />
             </div>
           )}

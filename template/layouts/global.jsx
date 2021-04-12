@@ -16,7 +16,13 @@ export default function GlobalLayout({
   children,
   part
 }) {
-  const { projectTitle, projectURL, projectDescription, toc } = config
+  const {
+    projectTitle,
+    projectURL,
+    projectDescription,
+    toc,
+    centeredLayout
+  } = config
   const scrollRef = useRef(null)
   const { x, y } = useScroll(scrollRef)
   const [progressStyle, setprogressStyle] = useState({})
@@ -35,51 +41,102 @@ export default function GlobalLayout({
 
   return (
     <div {...themeCtx.themeProps}>
-      <div
-        className='page-wrapper with-navbar with-sidebar'
-        data-sidebar-type='overlayed-sm-and-down'
-        {...sideBarCtx.sideBarProps}
-      >
-        <NextSeo
-          title={`${htmlTitle} | ${projectTitle}`}
-          description={description ? description : projectDescription}
-          openGraph={{
-            type: 'website',
-            url: projectURL,
-            title: title,
-            description: description
-          }}
+      <NextSeo
+        title={`${htmlTitle} | ${projectTitle}`}
+        description={description ? description : projectDescription}
+        openGraph={{
+          type: 'website',
+          url: projectURL,
+          title: title,
+          description: description
+        }}
+      />
+      <Head>
+        <meta
+          content='width=device-width, initial-scale=1.0, maximum-scale=5.0'
+          name='viewport'
         />
-        <Head>
-          <meta
-            content='width=device-width, initial-scale=1.0, maximum-scale=5.0'
-            name='viewport'
-          />
-          <link rel='icon' href='/favicon.ico' />
-          <link rel='icon' href='/icon.svg' type='image/svg+xml' />
-          <link rel='apple-touch-icon' href='/512.png' />
-          <link rel='manifest' href='/manifest.json' />
-          <link
-            href='https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css'
-            media='screen'
-            rel='stylesheet'
-          />
-        </Head>
+        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/icon.svg' type='image/svg+xml' />
+        <link rel='apple-touch-icon' href='/512.png' />
+        <link rel='manifest' href='/manifest.json' />
+        <link
+          href='https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css'
+          media='screen'
+          rel='stylesheet'
+        />
+      </Head>
 
-        <div className='progressBarContainer'>
-          <div className='progressBar' style={progressStyle} />
+      {centeredLayout ? (
+        <div className='page-wrapper with-navbar'>
+          <div className='progressBarContainer'>
+            <div className='progressBar' style={progressStyle} />
+          </div>
+          <NavBar title={title} part={part} className='navbar' />
+          <div
+            className='content-wrapper'
+            ref={scrollRef}
+            style={sideBarCtx.sideBar ? {} : { left: 'inherit', width: '100%' }}
+          >
+            <div className='container-xxl'>
+              <div className='row'>
+                {sideBarCtx.sideBar && (
+                  <div className='col-6 col-sm-4 col-lg-3'>
+                    <div
+                      className='sidebar-overlay'
+                      onClick={sideBarCtx.toggleSideBar}
+                      style={!sideBarCtx.sideBar ? { display: 'none' } : {}}
+                    ></div>
+                    <SideBar
+                      toc={toc}
+                      part={part}
+                      docTitle={projectTitle}
+                      className='sticky'
+                    />
+                  </div>
+                )}
+                <div
+                  className={
+                    sideBarCtx.sideBar ? 'col-6 col-sm-8 col-lg-9' : 'col'
+                  }
+                >
+                  {children}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <NavBar title={title} part={part} className='navbar' />
-        <SideBar
-          toc={toc}
-          part={part}
-          docTitle={projectTitle}
-          className='sidebar'
-        />
-        <div className='content-wrapper' ref={scrollRef}>
-          {children}
+      ) : (
+        <div
+          className='page-wrapper with-navbar with-sidebar'
+          data-sidebar-type='overlayed-sm-and-down'
+        >
+          <div className='progressBarContainer'>
+            <div className='progressBar' style={progressStyle} />
+          </div>
+          <NavBar title={title} part={part} className='navbar' />
+          <div
+            className='sidebar-overlay'
+            onClick={sideBarCtx.toggleSideBar}
+            style={!sideBarCtx.sideBar ? { display: 'none' } : {}}
+          ></div>
+          {sideBarCtx.sideBar && (
+            <SideBar
+              toc={toc}
+              part={part}
+              docTitle={projectTitle}
+              className='sidebar'
+            />
+          )}
+          <div
+            className='content-wrapper'
+            ref={scrollRef}
+            style={sideBarCtx.sideBar ? {} : { left: 'inherit', width: '100%' }}
+          >
+            {children}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }

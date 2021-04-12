@@ -2,7 +2,8 @@
   "projectTitle": "My Awesome Book Title",
   "projectDescription": "My Awesome Book Description",
   "projectURL": "https://www.myawesomebook.com",
-  "fontAutoScaling": true,
+  "fontAutoScaling": false,
+  "centeredLayout": true,
   "text": {
     "Tags": "Tags",
     "Last Update": "Last Update",
