@@ -42,7 +42,6 @@ code,
 }
 
 @media screen {
-
   body {
     background-color: var(--gray-50);
   }
@@ -601,7 +600,8 @@ code,
     color: var(--gray-200);
   }
 
-  .dark-mode .content-wrapper {
+  .dark-mode .content-wrapper,
+  .dark-mode .page-wrapper {
     background-color: var(--gray-700);
   }
 
@@ -711,5 +711,25 @@ code,
   kbd {
     background-color: var(--gray-100);
     border-color: var(--gray-300);
+  }
+
+  .sticky {
+    position: sticky;
+    top: 0px;
+  }
+
+  .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    width: var(--container-width);
+  }
+
+  @media (min-width: 1400px) {
+    .container-xxl {
+      max-width: 1320px;
+    }
   }
 }

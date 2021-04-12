@@ -23,7 +23,7 @@ function InPageToc({ tocRaw }) {
 
   if (tocIds.length) {
     return (
-      <div className='content position-fixed page-toc top-10 mr-15'>
+      <div className='content position-fixed page-toc top-10 m-0 mt-20 mr-10'>
         <span className='content-title'>
           <Text tid='Page Contents' />
         </span>
