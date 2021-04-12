@@ -91,7 +91,7 @@ export default function GlobalLayout({
                       toc={toc}
                       part={part}
                       docTitle={projectTitle}
-                      className='sticky'
+                      className='sticky-sidebar sticky'
                     />
                   </div>
                 )}
