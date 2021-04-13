@@ -716,16 +716,19 @@ code,
     margin: 0.5em;
     margin-left: 2em;
     list-style-position: outside;
+    line-height: 2.4rem;
   }
 
   .md-content ol li {
     counter-increment: custom-counter;
     margin: 0.25rem;
+    line-height: 2.8rem;
   }
 
   .md-content ol li::before {
     content: counter(custom-counter);
     background: var(--gray-400);
+    font-size: 1.2rem;
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;
