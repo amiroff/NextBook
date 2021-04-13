@@ -713,11 +713,12 @@ code,
   }
 
   .md-content ul li {
-    line-height: 1em;
     margin: 0.5em;
+    margin-left: 2em;
+    list-style-position: outside;
   }
 
-  .md-content li {
+  .md-content ol li {
     counter-increment: custom-counter;
     margin: 0.25rem;
   }
