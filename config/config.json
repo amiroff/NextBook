@@ -22,23 +22,23 @@
   },
   "toc": [
     {
-      "chapters": [{ "title": "Welcome to NextBook", "path": "/" }]
+      "chapters": [{ "title": "Welcome to NextBook", "path": "welcome" }]
     },
     {
       "part": "Documentation",
       "chapters": [
         {
           "title": "NextBook Features",
-          "path": "/documentation/nextbook-features"
+          "path": "nextbook-features"
         },
-        { "title": "Markdown Usage", "path": "/documentation/markdown" },
-        { "title": "Fenced Code Usage", "path": "/documentation/fencedcode" },
-        { "title": "Using MDX", "path": "/documentation/using-mdx" }
+        { "title": "Markdown Usage", "path": "markdown" },
+        { "title": "Fenced Code Usage", "path": "fencedcode" },
+        { "title": "Using MDX", "path": "using-mdx" }
       ]
     },
     {
       "chapters": [
-        { "title": "In Progress Features", "path": "/documentation/in-progress-features" }
+        { "title": "In Progress Features", "path": "in-progress-features" }
       ]
     }
   ]

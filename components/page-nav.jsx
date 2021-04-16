@@ -8,10 +8,11 @@ import { _ } from './text'
 export default function PageNav() {
   const router = useRouter()
   const { toc } = config
+  const { slug } = router.query
 
   // isolate current part array
   const currentPart = toc.find((part) =>
-    part.chapters.some((chapter) => chapter.path === router.pathname)
+    part.chapters.some((chapter) => chapter.path === slug)
   )
   const currentPartIndex = toc.indexOf(currentPart)
 
@@ -21,7 +22,7 @@ export default function PageNav() {
 
   // find index of current title
   const currentChapterIndex = currentPart?.chapters.findIndex(
-    (chapter) => chapter.path === router.pathname
+    (chapter) => chapter.path === slug
   )
 
   // find previous page, iff not, use last page of previous part
@@ -34,11 +35,13 @@ export default function PageNav() {
 
   useShortcuts(
     ['ArrowRight'],
-    () => nextChapter && router.push(nextChapter.path)
+    () => nextChapter && router.push(nextChapter.path),
+    [slug]
   )
   useShortcuts(
     ['ArrowLeft'],
-    () => prevChapter && router.push(prevChapter.path)
+    () => prevChapter && router.push(prevChapter.path),
+    [slug]
   )
 
   return (

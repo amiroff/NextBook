@@ -12,8 +12,6 @@ export const Blockquote = (props) => (
   <blockquote className='blockquote' {...props} />
 )
 
-export const Pre = ({ children }) => <>{children}</>
-
 export const Details = (props) => (
   <details className='collapse-panel mw-full my-10' {...props} />
 )
@@ -47,7 +45,7 @@ export const CustomImage = (props) => {
   )
 }
 
-export const Code = (props) => {
+export const Pre = (props) => {
   const language = props.className?.replace(/language-/, '') || 'text'
   return (
     <Highlight lang={language} {...props}>

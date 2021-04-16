@@ -8,13 +8,14 @@ import { GitHub } from './svg-icons'
 function SideBar({ toc, part, docTitle, className }) {
   const router = useRouter()
   const [chapters, setChapters] = useLocalStorage('visitedChapters', [])
+  const { slug } = router.query
 
   useEffect(() => {
     // update history array with every page visit
-    if (!chapters.includes(router.pathname)) {
-      setChapters((prev) => [...new Set([...prev, router.pathname])])
+    if (!chapters.includes(slug)) {
+      setChapters((prev) => [...new Set([...prev, slug])])
     }
-  }, [chapters, router.pathname])
+  }, [slug])
 
   return (
     <div className={className}>
@@ -41,7 +42,7 @@ function SideBar({ toc, part, docTitle, className }) {
           <SideBarSection
             toc={toc}
             part={part}
-            pathName={router.pathname}
+            pathName={slug}
             history={chapters}
             key={id}
           />

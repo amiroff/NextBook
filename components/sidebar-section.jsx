@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import SideBarItem from './sidebar-item'
-import { AngleUp, AngleDown, AngleRight } from './svg-icons'
+import { AngleDown, AngleRight } from './svg-icons'
 
 const SideBarSection = ({ toc, pathName, history, part }) => {
   const [menuVisible, setMenuVisible] = useState(false)

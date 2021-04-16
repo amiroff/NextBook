@@ -118,7 +118,9 @@ export default function GlobalLayout({
           <div
             className='sidebar-overlay'
             onClick={sideBarCtx.toggleSideBar}
-            style={!sideBarCtx.sideBar ? { display: 'none' } : {}}
+            style={
+              !sideBarCtx.sideBar ? { display: 'none' } : { display: 'block' }
+            }
           ></div>
           {sideBarCtx.sideBar && (
             <SideBar

@@ -1,10 +1,9 @@
 ---
-layout: index
-part: Part 1
-title: Markdown Examples
-description: This page has some quick examples to get you up and running quickly.
-tags: [markdown, reference, NextBook]
-updated: 2021-3-21
+part: Documentation
+title: Markdown Usage
+description: While this is not a complete markdown reference, here are markdown features that you can use right away in your books.
+tags: [markdown, reference, NextBook, md]
+updated: 2021-3-14
 ---
 
 ## Front Matter
@@ -13,7 +12,6 @@ YAML front matter can be used to add title, description, part info, tags and upd
 
 ```yaml
 ---
-layout: index
 part: Documentation
 title: Markdown Usage
 description: While this is not a complete markdown reference, here are markdown features that you can use right away in your books.
@@ -21,9 +19,6 @@ tags: [markdown, reference, NextBook, md]
 updated: 2021-3-14
 ---
 ```
-
-!> Note: specifying layout is optional
-By default, all `.md` and `.mdx` files will use `layouts/index.jsx` as layout. You can use this property to use another one and completely change looks and layout of the page.
 
 ## HTML Tags
 
@@ -46,7 +41,7 @@ Subscript: H~2~O
 
 This is ==highlighted== text.
 ```
-results in:
+results in: 
 
 **This is bold text**
 
@@ -86,7 +81,7 @@ results in:
 > >
 > > > ...or with spaces between arrows.
 ```
-results in:
+results in: 
 
 > Here is a blockquote.
 
@@ -107,7 +102,7 @@ Footnote 2 link. [^second]
 
 [^second]: Simple footnote text.
 ```
-results in:
+results in: 
 
 Footnote 1 link. [^first]
 
@@ -153,7 +148,7 @@ Most of the time you'll use codefences. Here is a simple example, but you can do
 echo "Hello World"
 ```
 ````
-results in:
+results in: 
 
 ```bash
 #!/bin/bash
@@ -223,7 +218,7 @@ results in:
 
 ## Tables
 
-Tables are a bit tricky, because you have to use all those pipes, but this is how markdown was designed. Using a special markdown editor like [Typora](https://typora.io/) will make your life easier with these.
+Tables are a bit tricky, because you have to use all those pipes, but this is how markdown was designed. Using a special markdown editor like [Typora](https://typora.io/) will make your life easier with these. 
 
 **Standard Columns**
 
@@ -279,13 +274,13 @@ results in:
 You will use images a lot! Drop your images or svg vectors in public folder and link to them. NextBook will autoscale them for small displays. You can add captions and `alt` information to your images.
 
 ```
-![](/images/octocat.png)
+![](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
 ![Git Branching](/images/branching.svg 'Excalidraw FTW')
 ```
 results in:
 
-![](/images/octocat.png)
+![](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
 
 If you use [Excalidraw]() svg drawings and want them to change colors accordingly in dark mode, add `|ex` to image alt text. See below example in light/dark modes:
@@ -315,7 +310,7 @@ Links can be auto-detected, but it would be better to be implicit and have suppo
 
 - Link to [part of a page](#links)
 
-- Linking with image:
+- Linking with image: 
 
 - [![Deploy with Vercel raw][1]][2]
 
@@ -382,18 +377,18 @@ Ooooops, an unknown error occured.
 
 ## Emojis
 
-Nothing fancy, just use typical 🥳 emojis.
+Nothing fancy, just use typical 🥳 emojis.  
 Press <kbd>control + command + space</kbd> on macOS and <kbd>windows + .</kbd> on Windows.
 
 ## Containers
 
-Containers begin with `::: [noparse] {HTML Element Name} [optional list of classes]` on a new line, and end with `:::` on a new line. Container markers may be indented by up to 2 spaces and be nested.
+Containers begin with `::: [noparse] {HTML Element Name} [optional list of classes]` on a new line, and end with `:::` on a new line. Container markers may be indented by up to 2 spaces and be nested. 
 
 ```markdown
 ::: aside class-one class-two
 # Header One
 
-With container contents.
+With container contents. 
 :::
 ```
 
@@ -430,8 +425,8 @@ See [reference](https://www.gethalfmoon.com/docs/content-and-cards/) for all ava
 
 ```markdown
 ::: card w-400
-The weather forecast didn't say that, but the steel plate in his hip did.
-He had learned over the years to trust his hip over the weatherman.
+The weather forecast didn't say that, but the steel plate in his hip did. 
+He had learned over the years to trust his hip over the weatherman. 
 It was going to rain, so he better get outside and prepare...
 :::
 ```
