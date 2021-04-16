@@ -1,22 +1,8 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
-import { useLocalStorage } from 'react-use'
 import SideBarSection from './sidebar-section'
 import { GitHub } from './svg-icons'
 
 function SideBar({ toc, part, docTitle, className }) {
-  const router = useRouter()
-  const [chapters, setChapters] = useLocalStorage('visitedChapters', [])
-  const { slug } = router.query
-
-  useEffect(() => {
-    // update history array with every page visit
-    if (!chapters.includes(slug)) {
-      setChapters((prev) => [...new Set([...prev, slug])])
-    }
-  }, [slug])
-
   return (
     <div className={className}>
       <div className='sidebar-content'>
@@ -39,13 +25,7 @@ function SideBar({ toc, part, docTitle, className }) {
       </div>
       <div className='sidebar-menu'>
         {toc.map((toc, id) => (
-          <SideBarSection
-            toc={toc}
-            part={part}
-            pathName={slug}
-            history={chapters}
-            key={id}
-          />
+          <SideBarSection toc={toc} part={part} key={id} />
         ))}
       </div>
       {process.env.NEXT_PUBLIC_GITHUB_URL && (

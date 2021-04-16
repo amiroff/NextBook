@@ -1,4 +1,5 @@
 import splitbee from '@splitbee/web'
+import { HistoryContextProvider } from 'components/store/history-context'
 import { SideBarContextProvider } from 'components/store/sidebar-context'
 import { ThemeContextProvider } from 'components/store/theme-context'
 import 'styles/global.css'
@@ -16,9 +17,11 @@ if (
 export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeContextProvider>
-      <SideBarContextProvider>
-        <Component {...pageProps} />
-      </SideBarContextProvider>
+      <HistoryContextProvider>
+        <SideBarContextProvider>
+          <Component {...pageProps} />
+        </SideBarContextProvider>
+      </HistoryContextProvider>
     </ThemeContextProvider>
   )
 }
