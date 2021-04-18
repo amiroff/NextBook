@@ -2,7 +2,7 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import path from 'path'
-import { contentFilePaths, BOOK_PATH } from '../utils/mdxUtils'
+import { contentFilePaths, CONTENT_PATH } from '../utils/mdxUtils'
 
 export default function Index({ chapters }) {
   return (
@@ -29,7 +29,7 @@ export default function Index({ chapters }) {
 
 export function getStaticProps() {
   const chapters = contentFilePaths.map((filePath) => {
-    const source = fs.readFileSync(path.join(BOOK_PATH, filePath))
+    const source = fs.readFileSync(path.join(CONTENT_PATH, filePath))
     const { content, data } = matter(source)
 
     return {

@@ -15,18 +15,23 @@ import hints from 'remark-hint'
 import remarkMark from 'remark-mark-plus'
 import slug from 'remark-slug'
 import remarkSubSuper from 'remark-sub-super'
-import { BOOK_PATH, contentFilePaths } from '../utils/mdxUtils'
+import { contentMapping, CONTENT_PATH } from 'utils/mdxUtils'
 
-export default function PostPage({ source, frontMatter }) {
+export default function Page({ source, frontMatter }) {
   const content = hydrate(source, { components: componentMap })
-
   return <DocsLayout frontMatter={frontMatter}>{content}</DocsLayout>
 }
 
 export const getStaticProps = async ({ params }) => {
   // get file and split content into data and frontmatter
-  const postFilePath = path.join(BOOK_PATH, `${params.slug}.mdx`)
-  const source = fs.readFileSync(postFilePath)
+  let source = ''
+  const filePath = path.join(CONTENT_PATH, params.part, params.page)
+  console.log(filePath)
+  try {
+    source = fs.readFileSync(`${filePath}.md`)
+  } catch {
+    source = fs.readFileSync(`${filePath}.mdx`)
+  }
   const { content, data } = matter(source)
 
   // Generate in-page-toc data and add it to frontmatter scope
@@ -60,9 +65,7 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths = async () => {
-  const paths = contentFilePaths
-    .map((path) => path.replace(/\.mdx?$/, ''))
-    .map((slug) => ({ params: { slug } }))
+  const paths = contentMapping.flat().map((item) => ({ params: { ...item } }))
 
   return {
     paths,

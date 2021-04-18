@@ -8,16 +8,16 @@ const HistoryContext = createContext({
 
 export function HistoryContextProvider(props) {
   const [history, setHistory] = useLocalStorage('visitedChapters', [])
-
   const router = useRouter()
-  const { slug } = router.query
+
+  console.log(router)
 
   useEffect(() => {
     // update history array with every page visit
-    if (slug && !history.includes(slug)) {
-      setHistory([...history, slug])
+    if (!history.includes(router.asPath)) {
+      setHistory([...history, router.asPath])
     }
-  }, [slug])
+  }, [router.asPath])
 
   const context = {
     history: history

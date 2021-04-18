@@ -20,7 +20,6 @@ export default function GlobalLayout({
     projectTitle,
     projectURL,
     projectDescription,
-    toc,
     centeredLayout
   } = config
   const scrollRef = useRef(null)
@@ -87,12 +86,7 @@ export default function GlobalLayout({
                       onClick={sideBarCtx.toggleSideBar}
                       style={!sideBarCtx.sideBar ? { display: 'none' } : {}}
                     ></div>
-                    <SideBar
-                      toc={toc}
-                      part={part}
-                      docTitle={projectTitle}
-                      className='sticky-sidebar sticky'
-                    />
+                    <SideBar className='sticky-sidebar sticky' />
                   </div>
                 )}
                 <div
@@ -122,14 +116,7 @@ export default function GlobalLayout({
               !sideBarCtx.sideBar ? { display: 'none' } : { display: 'block' }
             }
           ></div>
-          {sideBarCtx.sideBar && (
-            <SideBar
-              toc={toc}
-              part={part}
-              docTitle={projectTitle}
-              className='sidebar'
-            />
-          )}
+          {sideBarCtx.sideBar && <SideBar className='sidebar' />}
           <div
             className='content-wrapper'
             ref={scrollRef}

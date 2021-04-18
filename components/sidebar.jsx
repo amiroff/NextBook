@@ -1,8 +1,13 @@
 import Link from 'next/link'
 import SideBarSection from './sidebar-section'
 import { GitHub } from './svg-icons'
+import config from 'config/config.json'
+import { useRouter } from 'next/router'
 
-function SideBar({ toc, part, docTitle, className }) {
+function SideBar({ className }) {
+  const { projectTitle, toc } = config
+
+  const router = useRouter()
   return (
     <div className={className}>
       <div className='sidebar-content'>
@@ -18,14 +23,14 @@ function SideBar({ toc, part, docTitle, className }) {
                   height='100'
                 />
               )}
-              {docTitle}
+              {projectTitle}
             </a>
           </Link>
         </div>
       </div>
       <div className='sidebar-menu'>
         {toc.map((toc, id) => (
-          <SideBarSection toc={toc} part={part} key={id} />
+          <SideBarSection toc={toc} part={router.query.part} key={id} />
         ))}
       </div>
       {process.env.NEXT_PUBLIC_GITHUB_URL && (
