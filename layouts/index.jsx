@@ -26,7 +26,7 @@ export default function DocsLayout({ children, frontMatter }) {
       title={frontMatter.title}
       htmlTitle={
         frontMatter.part
-          ? `${frontMatter.part} - ${frontMatter.title}`
+          ? `${frontMatter.title} - ${frontMatter.part}`
           : frontMatter.title
       }
       description={frontMatter.description}
