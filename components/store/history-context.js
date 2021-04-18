@@ -10,8 +10,6 @@ export function HistoryContextProvider(props) {
   const [history, setHistory] = useLocalStorage('visitedChapters', [])
   const router = useRouter()
 
-  console.log(router)
-
   useEffect(() => {
     // update history array with every page visit
     if (!history.includes(router.asPath)) {

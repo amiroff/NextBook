@@ -7,16 +7,9 @@ import { Check, Dot } from './svg-icons'
 const SideBarItem = ({ item }) => {
   const router = useRouter()
   const historyCtx = useContext(HistoryContext)
-
-  const BulletStyle = historyCtx.history.includes(item.path) ? (
-    <Check />
-  ) : (
-    <Dot />
-  )
-  const classnameActive =
-    router.asPath === item.path
-      ? 'sidebar-link sidebar-link-with-icon current'
-      : 'sidebar-link sidebar-link-with-icon'
+  const classnameActive = `sidebar-link sidebar-link-with-icon ${
+    router.asPath === item.path ? 'current' : ''
+  }`
 
   return (
     <Link href={item.path} key={item.path}>
