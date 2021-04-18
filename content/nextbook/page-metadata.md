@@ -1,1 +1,4 @@
-# page metadata
+---
+part: NextBook
+title: Page Metadata
+---

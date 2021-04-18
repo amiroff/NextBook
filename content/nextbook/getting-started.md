@@ -1,1 +1,4 @@
-# getting started
+---
+part: NextBook
+title: Getting Started
+---

@@ -1,1 +1,4 @@
-# settings
+---
+part: NextBook
+title: Settings
+---
