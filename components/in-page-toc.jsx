@@ -23,7 +23,7 @@ function InPageToc({ tocRaw }) {
 
   if (tocIds.length) {
     return (
-      <div className='px-4'>
+      <div className='pr-2'>
         <span className='font-medium uppercase'>
           <Text tid='Page Contents' />
         </span>

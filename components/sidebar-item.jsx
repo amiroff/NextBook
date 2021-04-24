@@ -11,7 +11,7 @@ const SideBarItem = ({ item }) => {
   return (
     <Link href={item.path} key={item.path}>
       <a
-        className={`flex items-center py-1 text-gray-700 dark:text-gray-300 ${
+        className={`flex items-center pl-1 text-gray-700 dark:text-gray-300 ${
           router.asPath === item.path ? 'text-blue-500 dark:text-blue-500' : ''
         }`}
       >

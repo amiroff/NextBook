@@ -32,7 +32,8 @@ export default function DocsLayout({ children, frontMatter }) {
       description={frontMatter.description}
       part={frontMatter.part}
     >
-      <div className='content p-2 md:p-4 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md'>
+      {/* max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md */}
+      <div className='content p-2 md:p-4 max-w-screen-sm md:max-w-screen-md xl:max-w-screen-lg'>
         <div className='mx-1 md:mx-4'>
           {frontMatter.title && (
             <h1 className='text-5xl font-bold my-5'>{frontMatter.title}</h1>
@@ -54,7 +55,7 @@ export default function DocsLayout({ children, frontMatter }) {
           )}
 
           <div className='md-content'>{children}</div>
-          <hr className='my-5 mx-10 print:hidden dark:border-gray-600' />
+          <hr className='my-3 mx-10 print:hidden dark:border-gray-600' />
           {frontMatter.updated && (
             <div className='text-center text-xs'>
               <Text tid='Last Update' />:{' '}
@@ -68,7 +69,7 @@ export default function DocsLayout({ children, frontMatter }) {
         </div>
       </div>
       {showToc && (
-        <div className='toc-container flex-none w-56 hidden lg:block'>
+        <div className='toc-container flex-none w-52 hidden lg:block'>
           <div className='toc sticky top-20'>
             <InPageToc tocRaw={frontMatter.tocRaw} />
           </div>

@@ -64,19 +64,19 @@ export default function DefaultLayout({
         <div className='progressBar rounded-r-sm' style={progressStyle}></div>
       </div>
 
-      <header className='z-40 bg-gray-100 dark:bg-gray-800 fixed w-screen top-0 shadow-md h-11 font-medium text-sm md:text-md  backdrop-filter backdrop-blur backdrop-brightness-110 opacity-90 dark:opacity-90 tracking-wide'>
+      <header className='z-40 bg-gray-100 dark:bg-gray-800 fixed w-screen top-0 shadow-md h-11 font-medium text-sm md:text-md  backdrop-filter backdrop-blur backdrop-brightness-110 opacity-90 dark:opacity-90'>
         <NavBar title={title} part={part} />
       </header>
 
       <div
-        className='content-wrapper mt-11 flex lg:container lg:mx-auto'
+        className='content-wrapper mt-11 flex 2xl:container 2xl:mx-auto'
         ref={scrollRef}
       >
-        <div className='sidebar flex-none w-56 p-2 h-screen overflow-scroll fixed top-11 hidden md:block tracking-wide'>
+        <div className='sidebar flex-none w-52 2xl:w-64 p-2 h-screen overflow-scroll fixed top-11 hidden md:block'>
           <SideBar />
         </div>
 
-        <div className='content-wrapper flex md:ml-56'>{children}</div>
+        <div className='md-wrapper flex md:ml-52 2xl:ml-64'>{children}</div>
       </div>
     </>
   )

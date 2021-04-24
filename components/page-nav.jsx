@@ -46,10 +46,10 @@ export default function PageNav() {
 
   return (
     <>
-      <div className='flex flex-col-reverse md:flex-row mt-2'>
+      <div className='flex flex-col-reverse md:flex-row'>
         {prevChapter && (
           <Link href={prevChapter.path}>
-            <a className='flex w-full justify-center rounded m-1 p-3 bg-gray-200 text-gray-600 hover:bg-blue-400 hover:text-white dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-blue-500'>
+            <a className='flex w-full justify-between rounded m-1 p-3 bg-gray-200 text-gray-600 hover:bg-blue-400 hover:text-white dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-blue-500'>
               <ArrowLeft />
               <div className='ml-2'>{prevChapter.title}</div>
             </a>
@@ -58,7 +58,7 @@ export default function PageNav() {
 
         {nextChapter && (
           <Link href={nextChapter.path}>
-            <a className='flex w-full justify-center rounded m-1 p-3 bg-gray-200 text-gray-600 hover:bg-blue-400 hover:text-white dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-blue-500'>
+            <a className='flex w-full justify-between rounded m-1 p-3 bg-gray-200 text-gray-600 hover:bg-blue-400 hover:text-white dark:bg-gray-600 dark:text-gray-200 dark:hover:bg-blue-500'>
               <div className='mr-2'>{nextChapter.title}</div>
               <ArrowRight />
             </a>
