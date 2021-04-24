@@ -30,7 +30,7 @@ function InPageToc({ tocRaw }) {
         <Scrollspy
           ids={tocIds}
           itemElement={<InPageTocElement levels={levels} />}
-          itemContainerClassName='tracking-wide mt-4 text-gray-600 dark:text-gray-400 text-sm border-0 border-l dark:border-gray-600 leading-6 cursor-pointer'
+          itemContainerClassName='tracking-wide mt-4 text-gray-600 dark:text-gray-400 text-sm 2xl:text-base border-0 border-l dark:border-gray-600 leading-6 cursor-pointer'
           activeItemClassName='text-gray-900 dark:text-gray-200 border-l border-gray-900 dark:border-gray-200'
           includeParentClasses={false}
         />

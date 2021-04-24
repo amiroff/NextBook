@@ -11,7 +11,7 @@ function SideBar() {
   return (
     <div className='pt-6'>
       <Link href='/'>
-        <a className='font-bold flex flex-col items-center text-center'>
+        <a className='font-semibold flex flex-col items-center text-center'>
           {process.env.NEXT_PUBLIC_USE_LOGO && (
             <img
               src={`/${process.env.NEXT_PUBLIC_USE_LOGO}`}
@@ -25,7 +25,7 @@ function SideBar() {
         </a>
       </Link>
 
-      <div className='mt-10'>
+      <div className='mt-10 text-sm xl:text-base leading-relaxed tracking-wide'>
         {toc.map((toc, id) => (
           <SideBarSection toc={toc} key={id} />
         ))}

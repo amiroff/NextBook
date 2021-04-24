@@ -45,7 +45,7 @@ export default function PageNav() {
   )
 
   return (
-    <>
+    <div className='mb-3'>
       <div className='flex flex-col-reverse md:flex-row'>
         {prevChapter && (
           <Link href={prevChapter.path}>
@@ -65,6 +65,6 @@ export default function PageNav() {
           </Link>
         )}
       </div>
-    </>
+    </div>
   )
 }

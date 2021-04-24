@@ -170,10 +170,10 @@ export const AngleRight = () => (
 export const Check = () => (
   <svg
     height='16px'
-    className='text-gray-400'
     fill='currentColor'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
+    className='w-3'
   >
     <path
       fillRule='evenodd'
@@ -184,13 +184,7 @@ export const Check = () => (
 )
 
 export const Dot = () => (
-  <svg
-    viewBox='0 0 16 16'
-    width='10'
-    className='text-gray-400'
-    fill='currentColor'
-    className='sidebar-title-icon trans-5'
-  >
+  <svg viewBox='0 0 16 16' fill='currentColor' className='w-3'>
     <path fillRule='evenodd' d='M8 4a4 4 0 100 8 4 4 0 000-8z'></path>
   </svg>
 )

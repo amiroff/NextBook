@@ -11,11 +11,13 @@ const SideBarItem = ({ item }) => {
   return (
     <Link href={item.path} key={item.path}>
       <a
-        className={`flex items-center pl-1 text-gray-700 dark:text-gray-300 ${
-          router.asPath === item.path ? 'text-blue-500 dark:text-blue-500' : ''
+        className={`flex items-center pl-1 ${
+          router.asPath === item.path ? 'text-black dark:text-white' : ''
         }`}
       >
-        {historyCtx.history.includes(item.path) ? <Check /> : <Dot />}
+        <span className='text-gray-400'>
+          {historyCtx.history.includes(item.path) ? <Check /> : <Dot />}
+        </span>
         <span className='pl-2'>{item.title}</span>
       </a>
     </Link>

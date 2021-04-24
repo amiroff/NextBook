@@ -72,11 +72,11 @@ export default function DefaultLayout({
         className='content-wrapper mt-11 flex 2xl:container 2xl:mx-auto'
         ref={scrollRef}
       >
-        <div className='sidebar flex-none w-52 2xl:w-64 p-2 h-screen overflow-scroll fixed top-11 hidden md:block'>
+        <div className='sidebar flex-none w-60 2xl:w-64 p-2 pr-0 h-screen overflow-scroll fixed top-11 hidden md:block'>
           <SideBar />
         </div>
 
-        <div className='md-wrapper flex md:ml-52 2xl:ml-64'>{children}</div>
+        <div className='md-wrapper flex md:ml-60 2xl:ml-64'>{children}</div>
       </div>
     </>
   )

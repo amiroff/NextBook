@@ -67,8 +67,8 @@ const Highlight = ({
     markedArray.concat(removedArray).concat(addedArray).length > 1 && !numbered
 
   const customPreStyles = dark
-    ? 'text-sm overflow-x-auto py-3 my-4 rounded bg-gray-800 text-gray-200 dark:bg-gray-800 dark:text-gray-200'
-    : 'text-sm overflow-x-auto py-3 my-4 rounded bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-200'
+    ? 'text-sm 2xl:text-base overflow-x-auto py-3 my-4 rounded bg-gray-800 text-gray-200 dark:bg-gray-800 dark:text-gray-200'
+    : 'text-sm 2xl:text-base overflow-x-auto py-3 my-4 rounded bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-200'
   const customPre = (props) => (
     <pre
       className={`${customPreStyles} ${title ? 'rounded-t-none mt-0' : 'mt-4'}`}
@@ -109,7 +109,7 @@ const Highlight = ({
   return (
     <>
       {title && (
-        <div className='text-sm overflow-x-auto mt-4 p-2 rounded rounded-b-none bg-gray-300 text-gray-700 dark:bg-gray-600 dark:text-gray-200'>
+        <div className='text-sm 2xl:text-base overflow-x-auto mt-4 p-2 rounded rounded-b-none bg-gray-300 text-gray-700 dark:bg-gray-600 dark:text-gray-200'>
           {link ? (
             <a
               href={link}

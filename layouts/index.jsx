@@ -32,17 +32,16 @@ export default function DocsLayout({ children, frontMatter }) {
       description={frontMatter.description}
       part={frontMatter.part}
     >
-      {/* max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md */}
-      <div className='content p-2 md:p-4 max-w-screen-sm md:max-w-screen-md xl:max-w-screen-lg'>
+      <div className='lg:pt-4 px-2 xl:px-10 w-screen max-w-screen-sm md:max-w-screen-md xl:max-w-screen-lg'>
         <div className='mx-1 md:mx-4'>
           {frontMatter.title && (
-            <h1 className='text-5xl font-bold my-5'>{frontMatter.title}</h1>
+            <h1 className='text-4xl font-bold my-5'>{frontMatter.title}</h1>
           )}
           {frontMatter.description && (
             <p className='my-1'>{frontMatter.description}</p>
           )}
           {frontMatter.tags && (
-            <div className='mb-2 text-sm'>
+            <div className='my-2 text-sm 2xl:text-base'>
               <span>
                 <Text tid='Tags' />:
               </span>

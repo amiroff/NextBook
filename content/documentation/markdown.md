@@ -198,7 +198,6 @@ results in:
 These are often used to indicate task items.
 
 ```
-
 - [x] Clone repo
 - [x] Create some pages
 - [ ] Commit & Push

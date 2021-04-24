@@ -23,9 +23,14 @@ export const Ul = (props) => (
 )
 
 export const Thead = (props) => (
-  <thead className='tracking-wider text-sm font-medium uppercase' {...props} />
+  <thead
+    className='tracking-wider text-sm 2xl:text-base font-medium uppercase'
+    {...props}
+  />
 )
-export const Tbody = (props) => <tbody className='text-sm' {...props} />
+export const Tbody = (props) => (
+  <tbody className='text-sm 2xl:text-base' {...props} />
+)
 export const Tr = (props) => (
   <tr className='border dark:border-gray-600 p-2' {...props} />
 )
@@ -48,11 +53,14 @@ export const Blockquote = (props) => (
 )
 
 export const Details = (props) => (
-  <details className='border border-gray-300 rounded p-2' {...props} />
+  <details className='p-2 pl-0 font-normal' {...props} />
 )
 
 export const Summary = (props) => (
-  <summary className='summary cursor-pointer p-2 font-medium' {...props} />
+  <summary
+    className='summary cursor-pointer p-1 font-semibold pl-0'
+    {...props}
+  />
 )
 
 export const CustomLink = (props) => {
@@ -80,7 +88,7 @@ export const CustomImage = (props) => {
         {...props}
       />
       {props.alt && (
-        <span className='block md:m-2'>
+        <span className='block m-1 md:m-2'>
           <Text tid='Figure' className='font-semibold' />:{' '}
           {props.alt.replace('|ex', '').trim()}
         </span>
@@ -162,8 +170,8 @@ const Heading = (props) => {
         <span
           className={
             copied
-              ? 'inline-block m-1 text-sm print:hidden cursor-pointer text-blue-400'
-              : 'inline-block m-1 text-sm print:hidden cursor-pointer text-transparent hover:text-gray-400'
+              ? 'inline-block m-1 text-sm 2xl:text-base print:hidden cursor-pointer text-blue-400'
+              : 'inline-block m-1 text-sm 2xl:text-base print:hidden cursor-pointer text-transparent hover:text-gray-400'
           }
           title={_('Copy link')}
         >
