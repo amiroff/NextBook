@@ -66,13 +66,19 @@ const Highlight = ({
   const pseudoNumbered =
     markedArray.concat(removedArray).concat(addedArray).length > 1 && !numbered
 
-  const customPreStyles = dark ? 'code dark' : 'code'
+  const customPreStyles = dark
+    ? 'text-sm overflow-x-auto py-3 my-4 rounded bg-gray-800 text-gray-200 dark:bg-gray-800 dark:text-gray-200'
+    : 'text-sm overflow-x-auto py-3 my-4 rounded bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-200'
   const customPre = (props) => (
-    <pre className={customPreStyles}>{props.children}</pre>
+    <pre
+      className={`${customPreStyles} ${title ? 'rounded-t-none mt-0' : 'mt-4'}`}
+    >
+      {props.children}
+    </pre>
   )
   let colorMode = dark
     ? materialDark
-    : themeCtx.darkModeActive
+    : themeCtx.theme === 'dark'
     ? materialDark
     : materialLight
 
@@ -103,23 +109,29 @@ const Highlight = ({
   return (
     <>
       {title && (
-        <div className='code-header'>
-          <div className='code-filename'>
-            {link ? (
-              <a href={link} target='_blank' rel='noreferrer'>
-                {title}
-              </a>
-            ) : (
-              <span>{title}</span>
-            )}
-          </div>
+        <div className='text-sm overflow-x-auto mt-4 p-2 rounded rounded-b-none bg-gray-300 text-gray-700 dark:bg-gray-600 dark:text-gray-200'>
+          {link ? (
+            <a
+              href={link}
+              target='_blank'
+              rel='noreferrer'
+              className='text-blue-600 dark:text-blue-300 underline'
+            >
+              {title}
+            </a>
+          ) : (
+            <span>{title}</span>
+          )}
         </div>
       )}
-      <div className={pseudoNumbered ? 'clean code-body' : 'code-body'}>
-        <div className='copy-container'>
+      <div className={pseudoNumbered ? 'clean' : undefined}>
+        <div className='relative h-0'>
           <CopyToClipboard text={children} onCopy={() => setCopied(true)}>
             <button
-              className='copy-to-clipboard btn btn-sm btn-transparent'
+              className={`absolute top-1 right-1 rounded w-7 h-7 
+                      p-1 z-10 text-gray-500 dark:bg-gray-800 
+                      dark:text-gray-400 focus:outline-none
+                      ${copied && ' text-blue-500 dark:text-blue-500'}`}
               title={_('Copy to clipboard')}
             >
               {copied ? <Copied /> : <Copy />}
@@ -134,7 +146,9 @@ const Highlight = ({
           wrapLines
           lineProps={wrapper}
           PreTag={customPre}
-          codeTagProps={{}}
+          codeTagProps={{
+            className: '!whitespace-pre-wra'
+          }}
         >
           {children}
         </SyntaxHighlighter>

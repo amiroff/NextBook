@@ -4,45 +4,43 @@ import { GitHub } from './svg-icons'
 import config from 'config/config.json'
 import { useRouter } from 'next/router'
 
-function SideBar({ className }) {
+function SideBar() {
   const { projectTitle, toc } = config
 
   const router = useRouter()
   return (
-    <div className={className}>
-      <div className='sidebar-content'>
-        <div className='logo'>
-          <Link href='/'>
-            <a className='text-decoration-none d-flex align-items-center text-center flex-column'>
-              {process.env.NEXT_PUBLIC_USE_LOGO && (
-                <img
-                  src={`/${process.env.NEXT_PUBLIC_USE_LOGO}`}
-                  alt='Logo'
-                  className='mb-10 w-100'
-                  width='100'
-                  height='100'
-                />
-              )}
-              {projectTitle}
-            </a>
-          </Link>
-        </div>
-      </div>
-      <div className='sidebar-menu'>
+    <div className='pt-6'>
+      <Link href='/'>
+        <a className='font-bold flex flex-col items-center text-center'>
+          {process.env.NEXT_PUBLIC_USE_LOGO && (
+            <img
+              src={`/${process.env.NEXT_PUBLIC_USE_LOGO}`}
+              alt='Logo'
+              className='mb-5 w-28'
+              width='112'
+              height='112'
+            />
+          )}
+          {projectTitle}
+        </a>
+      </Link>
+
+      <div className='mt-10'>
         {toc.map((toc, id) => (
-          <SideBarSection toc={toc} part={router.query.part} key={id} />
+          <SideBarSection toc={toc} key={id} />
         ))}
       </div>
+
       {process.env.NEXT_PUBLIC_GITHUB_URL && (
-        <div className='sidebar-content d-flex justify-content-center'>
+        <div className='mt-10'>
           <a
+            className='flex flex-col items-center'
             href={process.env.NEXT_PUBLIC_GITHUB_URL}
-            className='hyperlink d-flex align-items-center'
             target='_blank'
             rel='noreferrer noopener'
           >
             <GitHub />
-            <span className='ml-5 mt-5'>GitHub Repo</span>
+            <span className='text-xs mt-2 underline'>GitHub Repo</span>
           </a>
         </div>
       )}

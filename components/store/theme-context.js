@@ -3,16 +3,12 @@ import { useLocalStorage } from 'react-use'
 
 const ThemeContext = createContext({
   theme: 'light',
-  toggleTheme: () => {},
-  darkModeActive: false,
-  themeProps: {}
+  toggleTheme: () => {}
 })
 
 export function ThemeContextProvider(props) {
   const [storedTheme, setStoredTheme] = useLocalStorage('theme', 'light')
   const [theme, setTheme] = useState(storedTheme)
-  const [themeProps, setThemeProps] = useState(null)
-  const darkModeActive = theme === 'dark'
 
   function toggleTheme() {
     const newTheme = theme === 'light' ? 'dark' : 'light'
@@ -21,14 +17,12 @@ export function ThemeContextProvider(props) {
   }
 
   useEffect(() => {
-    setThemeProps({ className: `${theme}-mode` })
+    document.documentElement.className = theme
   }, [theme])
 
   const context = {
     theme: theme,
-    toggleTheme: toggleTheme,
-    darkModeActive: darkModeActive,
-    themeProps: themeProps
+    toggleTheme: toggleTheme
   }
 
   return (

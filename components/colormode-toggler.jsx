@@ -10,24 +10,20 @@ function ColorModeToggler() {
   useShortcuts(['T'], () => themeCtx.toggleTheme(), [themeCtx.theme])
 
   return (
-    <>
-      <div className='mr-10 hidden-sm-and-down text-muted'>
-        <kbd className='text-muted font-size-12'>T</kbd>
-      </div>
+    <div className='flex items-center space-x-2'>
+      <kbd className='hidden sm:inline-block'>T</kbd>
       <button
-        className='btn btn-action'
-        type='button'
         onClick={themeCtx.toggleTheme}
         title={
-          themeCtx.darkModeActive
+          themeCtx.theme === 'dark'
             ? _('Toggle light mode')
             : _('Toggle dark mode')
         }
+        className='border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded p-1 focus:outline-none  w-7 h-7'
       >
-        {themeCtx.darkModeActive ? <Sun /> : <Moon />}
-        <span></span>
+        {themeCtx.theme === 'dark' ? <Sun /> : <Moon />}
       </button>
-    </>
+    </div>
   )
 }
 

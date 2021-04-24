@@ -8,6 +8,11 @@ import {
   Summary,
   Tab,
   Table,
+  Thead,
+  Tbody,
+  Tr,
+  Td,
+  Th,
   Tabs,
   H1,
   H2,
@@ -15,12 +20,19 @@ import {
   H4,
   H5,
   H6,
-  Badge,
-  Card
+  Ol,
+  Ul,
+  Hr,
+  P
 } from './mdx-components'
 
 export const componentMap = {
   table: Table,
+  thead: Thead,
+  tbody: Tbody,
+  tr: Tr,
+  td: Td,
+  th: Th,
   a: CustomLink,
   img: CustomImage,
   blockquote: Blockquote,
@@ -36,6 +48,8 @@ export const componentMap = {
   h4: H4,
   h5: H5,
   h6: H6,
-  badge: Badge,
-  card: Card
+  ol: Ol,
+  ul: Ul,
+  hr: Hr,
+  p: P
 }

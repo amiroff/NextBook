@@ -3,7 +3,7 @@ part: Documentation
 title: Markdown Usage
 description: While this is not a complete markdown reference, here are markdown features that you can use right away in your books.
 tags: [markdown, reference, NextBook, md]
-updated: 2021-3-14
+updated: '2021-03-14'
 ---
 
 ## Front Matter
@@ -16,7 +16,7 @@ part: Documentation
 title: Markdown Usage
 description: While this is not a complete markdown reference, here are markdown features that you can use right away in your books.
 tags: [markdown, reference, NextBook, md]
-updated: 2021-3-14
+updated: '2021-03-14'
 ---
 ```
 
@@ -116,14 +116,14 @@ Footnote 2 link. [^second]
 
 A special care was given to displaying code on screen.
 
-**Inline Code**
+### Inline Code
 
 ~~~
 `$ rm -rf /`
 ~~~
 results in: `$ rm -rf /`
 
-**Indented Code (4 spaces)**
+### Indented Code (4 spaces)
 
 ~~~
     // Some comments
@@ -138,7 +138,7 @@ results in:
     line 2 of code
     line 3 of code
 
-** Using Fenced Code Blocks**
+### Fenced Code Blocks
 
 Most of the time you'll use codefences. Here is a simple example, but you can do a lot more with them. For advanced fenced code block usages, see [Fenced Code](/documentation/fencedcode) chapter.
 
@@ -157,7 +157,7 @@ echo "Hello World"
 
 ## Lists
 
-**Unordered List**
+### Unordered List
 
 ```
 - Create a list by starting a line with `+`, `-`, or `*`
@@ -176,13 +176,12 @@ results in:
     - Nulla volutpat aliquam velit
 + Very easy!
 
-**Ordered List**
+### Ordered List
 
 ```
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
-
 4. You can use sequential numbers...
 1. ...or keep all the numbers as `1.`
 ```
@@ -191,7 +190,6 @@ results in:
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
-
 4. You can use sequential numbers...
 1. ...or keep all the numbers as `1.`
 
@@ -200,7 +198,6 @@ results in:
 These are often used to indicate task items.
 
 ```
-**TASK LIST**
 
 - [x] Clone repo
 - [x] Create some pages
@@ -208,8 +205,6 @@ These are often used to indicate task items.
 - [ ] Deploy!
 ```
 results in:
-
-**TASK LIST**
 
 - [x] Clone repo
 - [x] Create some pages
@@ -220,7 +215,7 @@ results in:
 
 Tables are a bit tricky, because you have to use all those pipes, but this is how markdown was designed. Using a special markdown editor like [Typora](https://typora.io/) will make your life easier with these. 
 
-**Standard Columns**
+### Standard Columns
 
 ```
 | Option | Description                                                 |
@@ -237,7 +232,7 @@ results in:
 | engine | engine to be used for processing templates.                 |
 | ext    | extension to be used for dest files.                        |
 
-**Right Aligned Columns**
+### Right Aligned Columns
 
 ```
 | Option | Description                                                   |
@@ -254,7 +249,7 @@ results in:
 | engine | engine to be used for processing templates.                   |
 | ext    | extension to be used for dest files.                          |
 
-**Mixed Columns**
+### Mixed Columns
 
 ```
 | Left-aligned | Center-aligned | Right-aligned |
@@ -299,19 +294,12 @@ Links can be auto-detected, but it would be better to be implicit and have suppo
 
 ```
 - [Basic link](https://github.com)
-
 - [Link with title](https://github.com 'Github FTW')
-
 - Link with angle brackets: <https://github.com/remarkjs>
-
 - Autoconverted link https://github.com/remarkjs
-
-- Cross page [absolute link](/documentation/getting-started) for single page app navigation.
-
+- Cross page [absolute link](/nextbook/getting-started) for single page app navigation.
 - Link to [part of a page](#links)
-
 - Linking with image: 
-
 - [![Deploy with Vercel raw][1]][2]
 
 [1]:  https://vercel.com/button
@@ -321,17 +309,11 @@ Links can be auto-detected, but it would be better to be implicit and have suppo
 results in:
 
 - [Basic link](https://github.com)
-
 - [Link with title](https://github.com 'Github FTW')
-
 - Link with angle brackets: <https://github.com/remarkjs>
-
 - Autoconverted link https://github.com/remarkjs
-
-- Cross page [absolute link](/documentation/getting-started) for single page app navigation.
-
+- Cross page [absolute link](/nextbook/getting-started) for single page app navigation.
 - Link to [part of a page](#links)
-
 - Linking with image: [![Deploy with Vercel raw][1]][2]
 
 [1]:  https://vercel.com/button
@@ -382,61 +364,6 @@ Press <kbd>control + command + space</kbd> on macOS and <kbd>windows + .</kbd> o
 
 ## Containers
 
-Containers begin with `::: [noparse] {HTML Element Name} [optional list of classes]` on a new line, and end with `:::` on a new line. Container markers may be indented by up to 2 spaces and be nested. 
-
-```markdown
-::: aside class-one class-two
-# Header One
-
-With container contents. 
-:::
-```
-
-will result in:
-
-```html
-<aside class="class-one class-two">
-  <h1>Header One</h1>
-  <p>With container contents.</p>
-</aside>
-```
-
-Use this for custom UI elements. Some examples:
-
-### Badges
-
-See [reference](https://www.gethalfmoon.com/docs/badges/) for all available classes.
-
-```markdown
-::: badge badge-primary badge-pill
-BASICS
-:::
-```
-
-results in:
-
-::: badge badge-primary badge-pill
-BASICS
-:::
-
-### Cards
-
-See [reference](https://www.gethalfmoon.com/docs/content-and-cards/) for all available classes.
-
-```markdown
-::: card w-400
-The weather forecast didn't say that, but the steel plate in his hip did. 
-He had learned over the years to trust his hip over the weatherman. 
-It was going to rain, so he better get outside and prepare...
-:::
-```
-
-results in:
-
-::: card w-400
-The weather forecast didn't say that, but the steel plate in his hip did. He had learned over the years to trust his hip over the weatherman. It was going to rain, so he better get outside and prepare...
-:::
-
 ### Accordion
 
 ``` markdown
@@ -468,15 +395,11 @@ While [markdown spec](https://commonmark.org) does not offer any tabbed interfac
 ::: tabs
   ::: tab Windows Directions
 
-  ** Windows Directions **
-
   Install via [chocolatey](https://chocolatey.org):
   
   `choco install python`
   :::
   ::: tab macOS Directions
-
-  ** macOS Directions **
 
   Install via [brew](https://brew.sh):
 
@@ -484,8 +407,6 @@ While [markdown spec](https://commonmark.org) does not offer any tabbed interfac
   :::
 
   ::: tab Linux Directions
-
-  ** Linux Directions **
 
   Install via apt:
 
@@ -498,15 +419,11 @@ results in:
 ::: tabs
   ::: tab Windows Directions
 
-  ** Windows Directions **
-
   Install via [chocolatey](https://chocolatey.org):
   
   `choco install python`
   :::
   ::: tab macOS Directions
-
-  ** macOS Directions **
 
   Install via [brew](https://brew.sh):
 
@@ -514,8 +431,6 @@ results in:
   :::
 
   ::: tab Linux Directions
-
-  ** Linux Directions **
 
   Install via apt:
 

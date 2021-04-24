@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clean .linenumber {
+  display: none !important;
+}
+
+.progressBar {
+  background: linear-gradient(to left, rgb(130, 146, 238), rgb(18, 151, 96));
+  transform-origin: top left;
+  transform: scale(0, 0);
+  opacity: 1;
+  height: 3px;
+}
+
+.dark .excalidraw {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+.hint {
+  display: block;
+  padding: 1em 1em 1em 1.4em;
+  margin: 1em 0 1em 0;
+  border-radius: 6px;
+  color: rgb(80, 80, 80);
+  border-left: 4px solid;
+}
+
+.hint a {
+  color: black;
+}
+
+.dark .hint a {
+  color: white;
+}
+
+.dark .hint {
+  color: rgb(230, 218, 218);
+}
+
+.hint.tip {
+  background-color: rgba(152, 199, 197, 0.5);
+  border-color: rgba(152, 199, 197, 0.9);
+}
+
+.hint.warn {
+  background-color: rgba(255, 202, 103, 0.5);
+  border-color: rgba(255, 202, 103, 0.9);
+}
+
+.hint.error {
+  background-color: rgba(231, 154, 154, 0.5);
+  border-color: rgba(231, 154, 154, 0.9);
+}
+
+.hint::first-line {
+  font-weight: 550;
+  line-height: 1.5rem;
+}
+
+li p {
+  margin: 0;
+}
+
+.summary p {
+  display: inline;
+}

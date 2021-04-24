@@ -40,7 +40,6 @@ export const ArrowLeft = () => (
 
 export const Moon = () => (
   <svg
-    className='w-6 h-6 svg-button'
     fill='none'
     stroke='currentColor'
     viewBox='0 0 24 24'
@@ -57,7 +56,6 @@ export const Moon = () => (
 
 export const Sun = () => (
   <svg
-    className='w-6 h-6 svg-button'
     fill='none'
     stroke='currentColor'
     viewBox='0 0 24 24'
@@ -74,7 +72,6 @@ export const Sun = () => (
 
 export const Hamburger = () => (
   <svg
-    className='w-6 h-6 svg-button'
     fill='none'
     stroke='currentColor'
     viewBox='0 0 24 24'
@@ -173,7 +170,7 @@ export const AngleRight = () => (
 export const Check = () => (
   <svg
     height='16px'
-    className='sidebar-title-icon trans-7'
+    className='text-gray-400'
     fill='currentColor'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
@@ -190,6 +187,7 @@ export const Dot = () => (
   <svg
     viewBox='0 0 16 16'
     width='10'
+    className='text-gray-400'
     fill='currentColor'
     className='sidebar-title-icon trans-5'
   >

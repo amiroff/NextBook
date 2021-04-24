@@ -2,7 +2,7 @@ import { useState } from 'react'
 import SideBarItem from './sidebar-item'
 import { AngleDown, AngleRight } from './svg-icons'
 
-const SideBarSection = ({ toc, part }) => {
+const SideBarSection = ({ toc }) => {
   const [menuVisible, setMenuVisible] = useState(false)
   const chapterItems = (
     <>
@@ -17,20 +17,17 @@ const SideBarSection = ({ toc, part }) => {
   }
 
   return (
-    <div className='sidebar-section'>
+    <div className='section'>
       {/* display toggleable titlebar only when we have a part */}
       {toc.part && (
-        <div
-          className='d-flex justify-content-start m-0 sidebar-title'
-          onClick={toggleMenu}
-        >
-          <div>{menuVisible ? <AngleDown /> : <AngleRight />}</div>
-          <div className='part-title'>{toc.part}</div>
+        <div className='flex my-1 items-center' onClick={toggleMenu}>
+          <div className=''>{menuVisible ? <AngleDown /> : <AngleRight />}</div>
+          <div className='pl-2 cursor-pointer'>{toc.part}</div>
         </div>
       )}
 
       {toc.part ? (
-        <div className={menuVisible ? 'part-items' : 'part-items d-none'}>
+        <div className={menuVisible ? 'block ml-3' : 'hidden'}>
           {chapterItems}
         </div>
       ) : (

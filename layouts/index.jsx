@@ -3,7 +3,7 @@
 import InPageToc from 'components/in-page-toc'
 import PageNav from 'components/page-nav'
 import Text from 'components/text'
-import Layout from 'layouts/global'
+import DefaultLayout from 'layouts/default'
 import { useEffect, useState } from 'react'
 
 export default function DocsLayout({ children, frontMatter }) {
@@ -22,7 +22,7 @@ export default function DocsLayout({ children, frontMatter }) {
   }, [])
 
   return (
-    <Layout
+    <DefaultLayout
       title={frontMatter.title}
       htmlTitle={
         frontMatter.part
@@ -32,51 +32,48 @@ export default function DocsLayout({ children, frontMatter }) {
       description={frontMatter.description}
       part={frontMatter.part}
     >
-      <div className='container-fluid'>
-        <div className='row'>
-          <div
-            className={
-              showToc ? 'col-lg-9 col-xxl-10 main-content' : 'col main-content'
-            }
-          >
-            <div className='my-20'>
-              {frontMatter.title && <h1>{frontMatter.title}</h1>}
-              {frontMatter.description && <p>{frontMatter.description}</p>}
-              {frontMatter.tags && (
-                <div className='mb-5 tags'>
-                  <span>
-                    <Text tid='Tags' />:
-                  </span>
-                  {frontMatter.tags.map((tag) => (
-                    <span className='badge p-5 ml-3 mx-5' key={tag}>
-                      {`#${tag}`}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div>
-            <div className='md-content'>{children}</div>
-            <hr className='my-20 mx-10 no-print' />
-            {frontMatter.updated && (
-              <>
-                <div className='mb-20 text-muted text-center font-size-12'>
-                  <Text tid='Last Update' />:{' '}
-                  {new Date(frontMatter.updated).toLocaleDateString(
-                    locale || 'en',
-                    dateOptions
-                  )}
-                </div>
-              </>
-            )}
-            <PageNav />
-          </div>
-          {showToc && (
-            <div className='col-lg-3 col-xxl-2 d-none d-lg-block'>
-              <InPageToc tocRaw={frontMatter.tocRaw} />
+      <div className='content p-2 md:p-4 max-w-screen-sm md:max-w-screen-md lg:max-w-screen-md'>
+        <div className='mx-1 md:mx-4'>
+          {frontMatter.title && (
+            <h1 className='text-5xl font-bold my-5'>{frontMatter.title}</h1>
+          )}
+          {frontMatter.description && (
+            <p className='my-1'>{frontMatter.description}</p>
+          )}
+          {frontMatter.tags && (
+            <div className='mb-2 text-sm'>
+              <span>
+                <Text tid='Tags' />:
+              </span>
+              {frontMatter.tags.map((tag) => (
+                <span className='border rounded m-1 p-1 text-xs' key={tag}>
+                  {`#${tag}`}
+                </span>
+              ))}
             </div>
           )}
+
+          <div className='md-content'>{children}</div>
+          <hr className='my-5 mx-10 print:hidden dark:border-gray-600' />
+          {frontMatter.updated && (
+            <div className='text-center text-xs'>
+              <Text tid='Last Update' />:{' '}
+              {new Date(frontMatter.updated).toLocaleDateString(
+                locale || 'en',
+                dateOptions
+              )}
+            </div>
+          )}
+          <PageNav />
         </div>
       </div>
-    </Layout>
+      {showToc && (
+        <div className='toc-container flex-none w-56 hidden lg:block'>
+          <div className='toc sticky top-20'>
+            <InPageToc tocRaw={frontMatter.tocRaw} />
+          </div>
+        </div>
+      )}
+    </DefaultLayout>
   )
 }

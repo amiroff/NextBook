@@ -7,17 +7,16 @@ import { Check, Dot } from './svg-icons'
 const SideBarItem = ({ item }) => {
   const router = useRouter()
   const historyCtx = useContext(HistoryContext)
-  const classnameActive = `sidebar-link sidebar-link-with-icon ${
-    router.asPath === item.path ? 'current' : ''
-  }`
 
   return (
     <Link href={item.path} key={item.path}>
-      <a className={classnameActive}>
-        <span className='sidebar-icon bg-transparent'>
-          {historyCtx.history.includes(item.path) ? <Check /> : <Dot />}
-        </span>
-        {item.title}
+      <a
+        className={`flex items-center py-1 text-gray-700 dark:text-gray-300 ${
+          router.asPath === item.path ? 'text-blue-500 dark:text-blue-500' : ''
+        }`}
+      >
+        {historyCtx.history.includes(item.path) ? <Check /> : <Dot />}
+        <span className='pl-2'>{item.title}</span>
       </a>
     </Link>
   )
