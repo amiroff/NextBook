@@ -18,9 +18,27 @@
     "Next chapter": "Next",
     "Figure": "Figure"
   },
+  "navbarItems": [
+    {
+      "title": "Home",
+      "path": "/intro"
+    },
+    {
+      "title": "NextBook Features",
+      "path": "/nextbook"
+    },
+    {
+      "title": "Documentation",
+      "path": "/documentation"
+    },
+    {
+      "title": "Github",
+      "path": "https://github.com/amiroff/NextBook"
+    }
+  ],
   "toc": [
     {
-      "chapters": [{ "title": "Welcome to NextBook", "path": "/intro/welcome" }]
+      "chapters": [{ "title": "Welcome to NextBook", "path": "/intro/index" }]
     },
     {
       "part": "NextBook",

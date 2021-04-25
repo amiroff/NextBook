@@ -1,4 +1,3 @@
-// This is the global layout used by whole app
 import NavBar from 'components/navbar'
 import SideBar from 'components/sidebar'
 import SideBarContext from 'components/store/sidebar-context'
@@ -8,23 +7,13 @@ import { useContext, useEffect, useRef, useState } from 'react'
 import { useScroll } from 'react-use'
 import config from 'config/config.json'
 
-export default function DefaultLayout({
-  title,
-  htmlTitle,
-  description,
-  children,
-  part
-}) {
-  const {
-    projectTitle,
-    projectURL,
-    projectDescription,
-    centeredLayout
-  } = config
+export default function DocumentLayout({ title, part, description, children }) {
+  const { projectTitle, projectURL, projectDescription } = config
   const scrollRef = useRef(null)
   const { x, y } = useScroll(scrollRef)
   const [progressStyle, setprogressStyle] = useState({})
   const sideBarCtx = useContext(SideBarContext)
+  const htmlTitle = part ? `${title} - ${part}` : title
 
   useEffect(() => {
     const windowHeight =
@@ -64,19 +53,19 @@ export default function DefaultLayout({
         <div className='progressBar rounded-r-sm' style={progressStyle}></div>
       </div>
 
-      <header className='z-40 bg-gray-100 dark:bg-gray-800 fixed w-screen top-0 shadow-md h-11 font-medium text-sm md:text-md  backdrop-filter backdrop-blur backdrop-brightness-110 opacity-90 dark:opacity-90'>
-        <NavBar title={title} part={part} />
-      </header>
-
-      <div
-        className='content-wrapper mt-11 flex 2xl:container 2xl:mx-auto'
+      <header
+        className='z-40 bg-gray-100 dark:bg-gray-800 fixed w-screen top-0 shadow-md h-12 font-medium text-sm md:text-md  backdrop-filter backdrop-blur backdrop-brightness-75 opacity-90 dark:opacity-90'
         ref={scrollRef}
       >
-        <div className='sidebar flex-none w-60 2xl:w-64 p-2 pr-0 h-screen overflow-scroll fixed top-11 hidden md:block'>
+        <NavBar />
+      </header>
+
+      <div className='content-wrapper mt-8 flex xl:container xl:mx-auto'>
+        <div className='sidebar flex-none  md:w-56 xl:w-64 pr-0 h-screen overflow-scroll fixed top-12 hidden md:block'>
           <SideBar />
         </div>
 
-        <div className='md-wrapper flex md:ml-60 2xl:ml-64'>{children}</div>
+        <div className='md-wrapper flex md:ml-56 xl:ml-64'>{children}</div>
       </div>
     </>
   )

@@ -11,7 +11,6 @@ function ColorModeToggler() {
 
   return (
     <div className='flex items-center space-x-2'>
-      <kbd className='hidden sm:inline-block'>T</kbd>
       <button
         onClick={themeCtx.toggleTheme}
         title={

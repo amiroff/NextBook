@@ -122,8 +122,8 @@ export const Tabs = (props) => {
   let tabs = props.children.map((child, index) => {
     let style =
       activeIndex === index
-        ? 'py-3 px-6 block hover:text-gray-800 focus:outline-none font-medium text-gray-800 dark:text-gray-100 dark:hover:text-gray-100 border-b-2 border-gray-800 dark:border-gray-100'
-        : 'py-3 px-6 block text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-100 focus:outline-none font-medium border-b-2 border-transparent'
+        ? 'py-3 px-6 block hover:text-gray-800 focus:outline-none font-medium text-gray-800 dark:text-gray-100 dark:hover:text-gray-100 border-b border-gray-600 dark:border-gray-400'
+        : 'py-3 px-6 block text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-100 focus:outline-none font-medium border-b border-transparent'
 
     return (
       <button
@@ -170,8 +170,8 @@ const Heading = (props) => {
         <span
           className={
             copied
-              ? 'inline-block m-1 text-sm 2xl:text-base print:hidden cursor-pointer text-blue-400'
-              : 'inline-block m-1 text-sm 2xl:text-base print:hidden cursor-pointer text-transparent hover:text-gray-400'
+              ? 'hidden md:inline-block m-1 text-sm 2xl:text-base print:hidden cursor-pointer text-blue-400'
+              : 'hidden md:inline-block m-1 text-sm 2xl:text-base print:hidden cursor-pointer text-transparent hover:text-gray-400'
           }
           title={_('Copy link')}
         >

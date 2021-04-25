@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import SideBarItem from './sidebar-item'
 import { AngleDown, AngleRight } from './svg-icons'
 
 const SideBarSection = ({ toc }) => {
   const [menuVisible, setMenuVisible] = useState(false)
+  const { asPath: path } = useRouter()
   const chapterItems = (
     <>
       {toc.chapters?.map((item, id) => (
@@ -15,6 +17,14 @@ const SideBarSection = ({ toc }) => {
   const toggleMenu = () => {
     setMenuVisible((current) => !current)
   }
+
+  // Open part containing current page
+  useEffect(() => {
+    const currentPart = toc.chapters.some((chapter) => chapter.path === path)
+    if (currentPart) {
+      setMenuVisible(true)
+    }
+  }, [path])
 
   return (
     <>
