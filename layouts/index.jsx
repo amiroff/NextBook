@@ -43,7 +43,7 @@ export default function DocsLayout({ children, frontMatter }) {
           )}
 
           <div className='md-content'>{children}</div>
-          <hr className='my-3 mx-10 print:hidden dark:border-gray-600' />
+          <hr className='my-3 mx-1 print:hidden dark:border-gray-600' />
           {updated && (
             <div className='text-center text-xs'>
               <Text tid='Last Update' />:{' '}
