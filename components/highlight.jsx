@@ -147,7 +147,7 @@ const Highlight = ({
           lineProps={wrapper}
           PreTag={customPre}
           codeTagProps={{
-            className: '!whitespace-pre-wra'
+            className: ''
           }}
         >
           {children}

@@ -43,6 +43,7 @@
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.10",
+    "tailwind-scrollbar": "^1.3.0",
     "tailwindcss": "^2.1.1"
   }
 }

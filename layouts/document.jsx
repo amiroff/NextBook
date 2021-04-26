@@ -61,7 +61,7 @@ export default function DocumentLayout({ title, part, description, children }) {
       </header>
 
       <div className='content-wrapper mt-8 flex xl:container xl:mx-auto'>
-        <div className='sidebar flex-none  md:w-56 xl:w-64 pr-0 h-screen overflow-scroll fixed top-12 hidden md:block'>
+        <div className='sidebar flex-none md:w-56 xl:w-64 h-screen overflow-y-auto fixed top-12 hidden md:block scrollbar scrollbar-thumb-gray-300 scrollbar-track-gray-100 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-700'>
           <SideBar />
         </div>
 
