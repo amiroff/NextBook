@@ -24,7 +24,7 @@ export default function DocsLayout({ children, frontMatter }) {
     <DocumentLayout title={title} part={part} description={description}>
       <div className='content-container flex'>
         <div
-          className='content pt-2 sm:pt-4 px-4 md:px-8 w-screen max-w-screen-sm 
+          className='content px-4 md:px-8 w-screen max-w-screen-sm 
                     md:max-w-screen-md xl:max-w-screen-md 2xl:max-w-screen-lg'
         >
           {title && <h1 className='text-4xl font-bold my-5'>{title}</h1>}
@@ -43,7 +43,7 @@ export default function DocsLayout({ children, frontMatter }) {
           )}
 
           <div className='md-content'>{children}</div>
-          <hr className='my-3 mx-1 print:hidden dark:border-gray-600' />
+          <hr className='my-3 mx-1 print:hidden border-gray-300 dark:border-gray-600' />
           {updated && (
             <div className='text-center text-xs'>
               <Text tid='Last Update' />:{' '}

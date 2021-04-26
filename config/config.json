@@ -21,15 +21,15 @@
   "navbarItems": [
     {
       "title": "Home",
-      "path": "/intro"
+      "path": "/intro/index"
     },
     {
       "title": "NextBook Features",
-      "path": "/nextbook"
+      "path": "/nextbook/nextbook-features"
     },
     {
       "title": "Documentation",
-      "path": "/documentation"
+      "path": "/documentation/markdown"
     },
     {
       "title": "Github",

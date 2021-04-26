@@ -11,7 +11,7 @@ export const P = (props) => (
   />
 )
 export const Hr = (props) => (
-  <hr className='my-5 mx-10 border-gray-200 dark:border-gray-600' {...props} />
+  <hr className='my-3 mx-1 border-gray-300 dark:border-gray-600' {...props} />
 )
 
 export const Ol = (props) => (

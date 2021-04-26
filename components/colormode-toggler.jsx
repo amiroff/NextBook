@@ -18,7 +18,7 @@ function ColorModeToggler() {
             ? _('Toggle light mode')
             : _('Toggle dark mode')
         }
-        className='border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded p-1 focus:outline-none w-8 h-8'
+        className='border border-gray-300 dark:border-gray-600 bg-gray-300 dark:bg-gray-700 rounded p-1 focus:outline-none w-8 h-8'
       >
         {themeCtx.theme === 'dark' ? <Sun /> : <Moon />}
       </button>

@@ -69,8 +69,9 @@ const Highlight = ({
   const isWindows =
     isBrowser && window.navigator.appVersion.indexOf('Win') != -1
 
-  const customPreStyles = `text-sm 2xl:text-base overflow-x-auto py-3 my-4 rounded dark:bg-gray-800 dark:text-gray-200 
-    ${dark ? 'bg-gray-800 text-gray-200' : 'bg-gray-200 text-gray-700'}
+  const customPreStyles = `text-sm 2xl:text-base overflow-x-auto py-3 my-4 
+                           rounded dark:bg-gray-900 dark:text-gray-200
+    ${dark ? 'bg-gray-900 text-gray-200' : 'bg-gray-100 text-gray-700'}
     ${
       isBrowser && isWindows
         ? 'scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-800'
@@ -116,7 +117,7 @@ const Highlight = ({
   return (
     <>
       {title && (
-        <div className='text-sm 2xl:text-base overflow-x-auto mt-4 p-2 rounded rounded-b-none bg-gray-300 text-gray-700 dark:bg-gray-600 dark:text-gray-200'>
+        <div className='text-sm 2xl:text-base overflow-x-auto mt-4 p-2 rounded rounded-b-none bg-gray-300 text-gray-700 dark:bg-gray-700 dark:text-gray-200'>
           {link ? (
             <a
               href={link}
@@ -136,7 +137,7 @@ const Highlight = ({
           <CopyToClipboard text={children} onCopy={() => setCopied(true)}>
             <button
               className={`absolute top-1 right-1 rounded w-7 h-7 
-                      p-1 z-10 text-gray-500 dark:bg-gray-800 
+                      p-1 z-10 text-gray-500 dark:bg-gray-900 
                       dark:text-gray-400 focus:outline-none
                       ${copied && ' text-blue-500 dark:text-blue-500'}`}
               title={_('Copy to clipboard')}

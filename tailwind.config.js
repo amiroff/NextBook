@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors')
 module.exports = {
   // mode: 'jit',
   purge: [
@@ -8,6 +9,16 @@ module.exports = {
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      gray: colors.blueGray,
+      red: colors.red,
+      blue: colors.lightBlue,
+      yellow: colors.amber
+    },
     extend: {
       screens: {
         print: { raw: 'print' } // => @media print { ... }

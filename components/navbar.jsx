@@ -9,7 +9,7 @@ function NavBar() {
   const router = useRouter()
 
   return (
-    <div className='flex p-2 px-4 items-center'>
+    <div className='flex pt-1 px-3 items-end text-xs lg:text-sm'>
       <SideBarToggler />
       <Link href='/'>
         <a href='/'>
@@ -22,21 +22,24 @@ function NavBar() {
               />
             )}
             <span
-              className='hidden md:inline-block font-bold'
+              className='hidden md:inline-block font-semibold '
               title={projectTitle}
             >
-              NextBook
+              {projectTitle}
             </span>
           </div>
         </a>
       </Link>
-      <div className='text-center flex-auto mr-10 space-x-2'>
+      <div className='text-right text-xs lg:text-sm mr-6 pt-1 flex-auto space-x-2'>
         {navbarItems.map((item) => (
           <Link href={item.path} key={item.path}>
             <a
-              className={`text-sm tracking-wide hover:underline hidden md:inline-block ${
-                router.asPath.includes(item.path) && 'underline'
-              }`}
+              className={`border border-transparent hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600
+               dark:hover:text-white px-2 py-2 rounded-md font-medium hidden md:inline-block ${
+                 router.asPath.includes(item.path)
+                   ? 'dark:bg-gray-600 dark:text-white bg-gray-200 text-black'
+                   : 'dark:text-gray-300 text-gray-600'
+               }`}
             >
               {item.title}
             </a>
