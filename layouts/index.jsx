@@ -24,7 +24,7 @@ export default function DocsLayout({ children, frontMatter }) {
     <DocumentLayout title={title} part={part} description={description}>
       <div className='content-container flex'>
         <div
-          className='content lg:pt-4 px-4 md:px-8 w-screen max-w-screen-sm 
+          className='content pt-2 sm:pt-4 px-4 md:px-8 w-screen max-w-screen-sm 
                     md:max-w-screen-md xl:max-w-screen-md 2xl:max-w-screen-lg'
         >
           {title && <h1 className='text-4xl font-bold my-5'>{title}</h1>}

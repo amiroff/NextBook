@@ -9,17 +9,22 @@ function NavBar() {
   const router = useRouter()
 
   return (
-    <div className='flex p-2 px-6 items-center'>
+    <div className='flex p-2 px-4 items-center'>
       <SideBarToggler />
       <Link href='/'>
         <a href='/'>
           <div className='flex mr-5 items-center'>
-            <img
-              src={`/${process.env.NEXT_PUBLIC_USE_LOGO}`}
-              alt={projectTitle}
-              className='w-8 mr-1 hidden sm:inline-block'
-            />
-            <span className='hidden sm:inline-block' title={projectTitle}>
+            {process.env.NEXT_PUBLIC_USE_LOGO && (
+              <img
+                src={`/${process.env.NEXT_PUBLIC_USE_LOGO}`}
+                alt={projectTitle}
+                className='w-8 mr-1 hidden md:inline-block'
+              />
+            )}
+            <span
+              className='hidden md:inline-block font-bold'
+              title={projectTitle}
+            >
               NextBook
             </span>
           </div>
@@ -29,7 +34,7 @@ function NavBar() {
         {navbarItems.map((item) => (
           <Link href={item.path} key={item.path}>
             <a
-              className={`text-sm tracking-wide hover:underline hidden sm:inline-block ${
+              className={`text-sm tracking-wide hover:underline hidden md:inline-block ${
                 router.asPath.includes(item.path) && 'underline'
               }`}
             >

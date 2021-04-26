@@ -13,7 +13,7 @@ const SideBarToggler = () => {
       <button
         onClick={sideBarCtx.toggleSideBar}
         title={_('Table Of Contents')}
-        className='border sm:hidden border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded p-1 focus:outline-none w-8 h-8'
+        className='border md:hidden border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 rounded p-1 focus:outline-none w-8 h-8'
       >
         <Hamburger />
       </button>
