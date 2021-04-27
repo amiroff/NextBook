@@ -9,7 +9,7 @@ function NavBar() {
   const router = useRouter()
 
   return (
-    <div className='flex pt-1 px-3 items-end text-xs lg:text-sm'>
+    <div className='flex pt-1 px-6 items-end text-xs lg:text-sm'>
       <SideBarToggler />
       <Link href='/'>
         <a href='/'>

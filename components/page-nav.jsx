@@ -49,7 +49,7 @@ export default function PageNav() {
       <div className='flex flex-col-reverse sm:flex-row justify-between'>
         {prevChapter && (
           <Link href={prevChapter.path}>
-            <a className='border border-transparent flex w-full justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-600 hover:border-gray-400 hover:text-white dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 max-w-sm'>
+            <a className='border border-transparent flex w-full justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 dark:hover:text-gray-100 max-w-sm'>
               <ArrowLeft />
               <div className='ml-2'>{prevChapter.title}</div>
             </a>
@@ -58,7 +58,7 @@ export default function PageNav() {
 
         {nextChapter && (
           <Link href={nextChapter.path}>
-            <a className='border border-transparent flex w-full justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-600 hover:border-gray-400 hover:text-white dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 max-w-sm'>
+            <a className='border border-transparent flex w-full justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 dark:hover:text-gray-100 max-w-sm'>
               <div className='mr-2'>{nextChapter.title}</div>
               <ArrowRight />
             </a>
