@@ -12,7 +12,7 @@ function NavBar() {
     <div className='flex pt-1 px-6 items-end text-xs lg:text-sm'>
       <SideBarToggler />
       <Link href='/'>
-        <a href='/'>
+        <a href='/' aria-label={projectTitle}>
           <div className='flex mr-5 items-center'>
             {process.env.NEXT_PUBLIC_USE_LOGO && (
               <img
