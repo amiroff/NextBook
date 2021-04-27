@@ -1,8 +1,10 @@
-export default function () {
-  return <div>Hello</div>
+export default function HomePage() {
+  return <div>Create Your Homepage Here</div>
 }
 
-export async function getStaticProps(context) {
+// Comment the following function to disable redirect
+// and use custom homepage
+export async function getServerSideProps(context) {
   return {
     redirect: {
       destination: '/intro/index',
