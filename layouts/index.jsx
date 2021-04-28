@@ -35,7 +35,10 @@ export default function DocsLayout({ children, frontMatter }) {
                 <Text tid='Tags' />:
               </span>
               {tags.map((tag) => (
-                <span className='border rounded m-1 p-1 text-xs' key={tag}>
+                <span
+                  className='bg-gray-300 dark:bg-gray-700 rounded m-1 p-1 text-xs'
+                  key={tag}
+                >
                   {`#${tag}`}
                 </span>
               ))}
