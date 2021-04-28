@@ -4,12 +4,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 import Highlight from './highlight'
 import Text, { _ } from './text'
 
-export const P = (props) => (
-  <p
-    className='my-1 max-w-md md:max-w-screen-md lg:max-w-screen-lg'
-    {...props}
-  />
-)
+export const P = (props) => <p {...props} />
 export const Hr = (props) => (
   <hr className='my-3 mx-1 border-gray-300 dark:border-gray-600' {...props} />
 )
@@ -170,8 +165,8 @@ const Heading = (props) => {
         <span
           className={
             copied
-              ? 'hidden md:inline-block m-1 text-sm 2xl:text-base print:hidden cursor-pointer text-blue-400'
-              : 'hidden md:inline-block m-1 text-sm 2xl:text-base print:hidden cursor-pointer text-transparent hover:text-gray-400'
+              ? 'hidden md:inline-block m-1 text-sm 2xl:text-base cursor-pointer'
+              : 'hidden md:inline-block m-1 text-sm 2xl:text-base cursor-pointer text-transparent hover:text-gray-400'
           }
           title={_('Copy link')}
         >

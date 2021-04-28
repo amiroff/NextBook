@@ -45,7 +45,7 @@ export default function PageNav() {
   )
 
   return (
-    <div className='my-2'>
+    <div className='my-2 no-print'>
       <div
         className={`flex flex-col-reverse sm:flex-row ${
           !prevChapter && 'justify-end'

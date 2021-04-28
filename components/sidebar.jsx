@@ -1,16 +1,28 @@
 import SideBarContext from 'components/store/sidebar-context'
 import config from 'config/config.json'
 import Link from 'next/link'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
+import { useMedia } from 'react-use'
 import SideBarSection from './sidebar-section'
 
 function SideBar() {
   const { toc, projectTitle } = config
   const sideBarCtx = useContext(SideBarContext)
+  const isWide = useMedia('(min-width: 770px)')
+
+  useEffect(() => {
+    if (isWide) {
+      sideBarCtx.hideSideBar()
+    }
+  }, [isWide])
+
+  const sideBarStyle = sideBarCtx.sideBar
+    ? 'sidebar w-2/3 z-50 h-screen bg-gray-300 dark:bg-gray-900 border-r overflow-y-auto border-gray-400 dark:border-gray-800 fixed pl-4 pr-6 text-lg top-10 md:hidden'
+    : 'sidebar z-50 flex-none md:w-56 xl:w-64 h-screen overflow-y-auto fixed top-10 md:top-14 hidden md:block'
 
   return (
-    <div className='sidebar z-50 flex-none md:w-56 xl:w-64 h-screen overflow-y-auto fixed top-12 md:top-14 hidden md:block'>
-      <div className='flex flex-col mt-10'>
+    <div className={sideBarStyle}>
+      <div className='flex flex-col md:mt-10'>
         <Link href='/'>
           <a href='/' aria-label={projectTitle}>
             <div className='flex flex-col items-center'>

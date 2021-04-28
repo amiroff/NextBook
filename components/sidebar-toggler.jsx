@@ -1,4 +1,4 @@
-import { Hamburger } from './svg-icons'
+import { Hamburger, Close } from './svg-icons'
 import { useContext } from 'react'
 import SideBarContext from './store/sidebar-context'
 import { _ } from 'components/text'
@@ -11,9 +11,9 @@ const SideBarToggler = () => {
       <button
         onClick={sideBarCtx.toggleSideBar}
         title={_('Table Of Contents')}
-        className='shadow bg-gray-100 text-gray-600 dark:text-gray-400 dark:bg-gray-700 rounded p-1 focus:outline-none w-8 h-8'
+        className='shadow bg-gray-100 text-gray-600 dark:text-gray-400 dark:bg-gray-900 rounded p-1 focus:outline-none w-8 h-8'
       >
-        <Hamburger />
+        {sideBarCtx.sideBar ? <Close /> : <Hamburger />}
       </button>
     </div>
   )

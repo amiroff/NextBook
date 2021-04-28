@@ -1,14 +1,11 @@
 import NavBar from 'components/navbar'
 import SideBar from 'components/sidebar'
-import SideBarContext from 'components/store/sidebar-context'
 import config from 'config/config.json'
 import { NextSeo } from 'next-seo'
 import Head from 'next/head'
-import { useContext } from 'react'
 
 export default function DocumentLayout({ title, part, description, children }) {
   const { projectTitle, projectURL, projectDescription } = config
-  const sideBarCtx = useContext(SideBarContext)
   const htmlTitle = part ? `${title} - ${part}` : title
 
   return (

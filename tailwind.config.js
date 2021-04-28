@@ -1,25 +1,18 @@
 const colors = require('tailwindcss/colors')
 module.exports = {
-  mode: 'jit',
+  // mode: 'jit', // has some bugs not picking up styles
   purge: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-    './layouts/**/*.{js,ts,jsx,tsx}',
-    './content/**/*.{md,mdx}'
+    './layouts/**/*.{js,ts,jsx,tsx}'
   ],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     colors: {
       transparent: 'transparent',
-      current: 'currentColor',
-      gray: colors.blueGray,
-      blue: colors.lightBlue
+      gray: colors.blueGray
     },
-    extend: {
-      screens: {
-        print: { raw: 'print' } // => @media print { ... }
-      }
-    }
+    extend: {}
   },
   variants: {
     extend: {}

@@ -109,13 +109,13 @@ const Highlight = ({
   return (
     <>
       {title && (
-        <div className='text-sm 2xl:text-base overflow-x-auto mt-4 p-2 rounded rounded-b-none bg-gray-300 text-gray-700 dark:bg-gray-700 dark:text-gray-200'>
+        <div className='text-sm 2xl:text-base overflow-x-auto mt-4 p-2 rounded rounded-b-none bg-gray-300 text-gray-700 dark:bg-gray-700 dark:text-gray-200 font-sans'>
           {link ? (
             <a
               href={link}
               target='_blank'
               rel='noreferrer'
-              className='text-blue-600 dark:text-blue-300 underline'
+              className='underline'
             >
               {title}
             </a>
@@ -128,10 +128,9 @@ const Highlight = ({
         <div className='relative h-0'>
           <CopyToClipboard text={children} onCopy={() => setCopied(true)}>
             <button
-              className={`absolute top-1 right-1 rounded w-7 h-7 
-                      p-1 z-10 text-gray-500 dark:bg-gray-900 
-                      dark:text-gray-400 focus:outline-none
-                      ${copied && ' text-blue-500 dark:text-blue-500'}`}
+              className='no-print absolute top-1 right-1 rounded w-7 h-7 p-1 z-10 
+              text-gray-500 dark:bg-gray-900 
+              dark:text-gray-400 focus:outline-none'
               title={_('Copy to clipboard')}
             >
               {copied ? <Copied /> : <Copy />}

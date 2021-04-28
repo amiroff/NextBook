@@ -3,7 +3,8 @@ import { useLocalStorage, useMedia } from 'react-use'
 
 const SideBarContext = createContext({
   sideBar: true,
-  toggleSideBar: () => {}
+  toggleSideBar: () => {},
+  hideSideBar: () => {}
 })
 
 export function SideBarContextProvider(props) {
@@ -21,9 +22,15 @@ export function SideBarContextProvider(props) {
     })
   }
 
+  function hideSideBar() {
+    setStoredSideBar(false)
+    setSideBar(false)
+  }
+
   const context = {
     sideBar: sideBar,
-    toggleSideBar: toggleSideBar
+    toggleSideBar: toggleSideBar,
+    hideSideBar: hideSideBar
   }
 
   return (
