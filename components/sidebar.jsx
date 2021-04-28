@@ -30,7 +30,7 @@ function SideBar() {
             </div>
           </a>
         </Link>
-        <div className='mt-6 pl-4 leading-loose tracking-wide'>
+        <div className='mt-6 pl-2 leading-loose tracking-wide'>
           {toc.map((toc, id) => (
             <SideBarSection toc={toc} key={id} />
           ))}

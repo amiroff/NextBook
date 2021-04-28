@@ -32,14 +32,14 @@ export const Tbody = (props) => (
   <tbody className='text-sm 2xl:text-base' {...props} />
 )
 export const Tr = (props) => (
-  <tr className='border dark:border-gray-600 p-2' {...props} />
+  <tr className='border border-gray-400 dark:border-gray-600 p-2' {...props} />
 )
 export const Td = (props) => (
-  <td className='border dark:border-gray-600 p-2' {...props} />
+  <td className='border border-gray-400 dark:border-gray-600 p-2' {...props} />
 )
 export const Th = (props) => (
   <th
-    className='border border-gray-300 p-2 font-semibold bg-gray-200 dark:bg-gray-600 dark:border-gray-500'
+    className='border border-gray-400 p-2 font-semibold bg-gray-300 dark:bg-gray-600 dark:border-gray-500'
     {...props}
   />
 )

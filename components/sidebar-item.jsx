@@ -11,17 +11,17 @@ const SideBarItem = ({ item }) => {
   return (
     <Link href={item.path} key={item.path}>
       <a
-        className={`flex items-center font-normal pl-2 rounded hover:shadow ${
+        className={`flex items-center font-normal pl-2 my-1 rounded hover:bg-gray-300 dark:hover:bg-gray-900 ${
           path === item.path
-            ? 'text-gray-900 dark:text-gray-50 shadow'
-            : 'text-gray-700 dark:text-gray-100'
+            ? 'text-gray-900 dark:text-gray-50 bg-gray-300 dark:bg-gray-900'
+            : 'text-gray-700 dark:text-gray-50'
         }`}
       >
         <span
           className={
             path === item.path
-              ? 'text-gray-900 dark:text-gray-100'
-              : 'text-gray-500 dark:text-gray-400'
+              ? 'text-gray-900 dark:text-gray-50'
+              : 'text-gray-500 dark:text-gray-300'
           }
         >
           {historyCtx.history.includes(item.path) ? <Check /> : <Dot />}

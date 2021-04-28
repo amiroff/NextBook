@@ -15,10 +15,10 @@ function NavBar() {
         {navbarItems.map((item) => (
           <Link href={item.path} key={item.path}>
             <a
-              className={`border border-transparent hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-600
+              className={`border border-transparent hover:bg-gray-300 hover:text-gray-700 dark:hover:bg-gray-600
                dark:hover:text-gray-50 px-2 py-2 rounded-md font-medium hidden md:inline-block ${
-                 router.asPath.includes(item.path)
-                   ? 'dark:bg-gray-600 dark:text-gray-50 bg-gray-100 text-gray-900'
+                 router.query.part && item.path.includes(router.query.part)
+                   ? 'dark:bg-gray-700 dark:text-gray-50 bg-gray-300 text-gray-700'
                    : 'dark:text-gray-300 text-gray-600'
                }`}
             >

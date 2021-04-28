@@ -35,7 +35,7 @@ export default function DocumentLayout({ title, part, description, children }) {
         <link rel='manifest' href='/manifest.json' />
       </Head>
 
-      <header className='z-40 bg-gray-200 dark:bg-gray-800 fixed w-screen top-0 h-10 md:h-14 font-medium'>
+      <header className='z-40 shadow-md bg-gray-200 dark:bg-gray-800 fixed w-screen top-0 h-10 md:h-14 font-medium'>
         <NavBar />
       </header>
 

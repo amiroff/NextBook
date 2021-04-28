@@ -24,13 +24,13 @@ function InPageToc({ tocRaw }) {
   if (tocIds.length) {
     return (
       <div className='pr-2'>
-        <span className='font-medium uppercase'>
+        <div className='font-medium rounded py-2 text-center text-gray-700 dark:text-gray-100 bg-gray-300 dark:bg-gray-900'>
           <Text tid='Page Contents' />
-        </span>
+        </div>
         <Scrollspy
           ids={tocIds}
           itemElement={<InPageTocElement levels={levels} />}
-          itemContainerClassName='tracking-wide mt-4 text-gray-600 dark:text-gray-400 text-sm 2xl:text-base border-0 border-l dark:border-gray-600 leading-6 cursor-pointer'
+          itemContainerClassName='tracking-wide mt-4 text-gray-600 dark:text-gray-400 text-sm 2xl:text-base border-0 border-l border-gray-300 dark:border-gray-600 leading-6 cursor-pointer'
           activeItemClassName='text-gray-900 dark:text-gray-200 border-l border-gray-900 dark:border-gray-200'
           includeParentClasses={false}
         />
