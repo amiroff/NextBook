@@ -9,6 +9,9 @@ const ThemeContext = createContext({
 export function ThemeContextProvider(props) {
   const [storedTheme, setStoredTheme] = useLocalStorage('theme', 'light')
   const [theme, setTheme] = useState(storedTheme)
+  const isBrowser = typeof window !== 'undefined'
+  const isWindows =
+    isBrowser && window.navigator.appVersion.indexOf('Win') != -1
 
   function toggleTheme() {
     const newTheme = theme === 'light' ? 'dark' : 'light'
@@ -17,7 +20,9 @@ export function ThemeContextProvider(props) {
   }
 
   useEffect(() => {
-    document.documentElement.className = theme
+    document.documentElement.className = `${theme}${
+      isWindows ? ' with-custom-webkit-scrollbars' : ''
+    }`
   }, [theme])
 
   const context = {

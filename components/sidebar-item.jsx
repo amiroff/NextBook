@@ -13,7 +13,7 @@ const SideBarItem = ({ item }) => {
       <a
         className={`flex items-center font-normal pl-2 rounded hover:shadow ${
           path === item.path
-            ? 'text-gray-900 dark:text-white shadow'
+            ? 'text-gray-900 dark:text-gray-50 shadow'
             : 'text-gray-700 dark:text-gray-100'
         }`}
       >
