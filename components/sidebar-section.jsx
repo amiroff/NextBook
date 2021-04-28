@@ -31,7 +31,7 @@ const SideBarSection = ({ toc }) => {
       {/* display toggleable titlebar only when we have a part */}
       {toc.part && (
         <div
-          className='flex font-semibold my-2 ml-1 items-center'
+          className='flex font-medium my-2 ml-2 items-center'
           onClick={toggleMenu}
         >
           <div className='text-gray-400 dark:text-gray-400'>
@@ -45,7 +45,7 @@ const SideBarSection = ({ toc }) => {
         <div
           className={
             menuVisible
-              ? 'block ml-3 pl-2 border-l border-gray-300 dark:border-gray-600'
+              ? 'block ml-4 pl-2 border-l border-gray-300 dark:border-gray-600'
               : 'hidden'
           }
         >

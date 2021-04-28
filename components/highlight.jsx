@@ -71,7 +71,7 @@ const Highlight = ({
 
   const customPreStyles = `text-sm 2xl:text-base overflow-x-auto py-3 my-4 
                            rounded dark:bg-gray-900 dark:text-gray-200
-    ${dark ? 'bg-gray-900 text-gray-200' : 'bg-gray-100 text-gray-700'}
+    ${dark ? 'bg-gray-900 text-gray-200' : 'bg-gray-50 text-gray-900'}
     ${
       isBrowser && isWindows
         ? 'scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-200 dark:scrollbar-thumb-gray-600 dark:scrollbar-track-gray-800'

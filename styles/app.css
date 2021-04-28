@@ -6,14 +6,6 @@
   display: none !important;
 }
 
-.progressBar {
-  background: linear-gradient(to left, rgb(130, 146, 238), rgb(18, 151, 96));
-  transform-origin: top left;
-  transform: scale(0, 0);
-  opacity: 1;
-  height: 3px;
-}
-
 .dark .excalidraw {
   filter: invert(100%) hue-rotate(180deg);
 }
