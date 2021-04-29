@@ -29,6 +29,7 @@ With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs
 - Navigation bar.
 - Updated dependencies.
 - Refined mobile UI.
+- Less code (−4,000 LOC).
 
 ## Primary Features 🧿
 
