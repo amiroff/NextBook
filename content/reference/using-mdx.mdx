@@ -17,6 +17,7 @@ Basically, renaming your `.md` file to `.mdx` gives you ability to import and us
 
 Here is a small demo video for curious:
 
+
 <iframe
   width='100%'
   height='400'
@@ -26,31 +27,43 @@ Here is a small demo video for curious:
   allowFullScreen
 ></iframe>
 
-## Basic Usage Example
+## Using Custom Components
 
 Say we have a basic React counter component like this:
 
 ```jsx title=components/example-counter.jsx
 import React, { useState } from 'react'
-
 export default function Counter() {
   const [count, setCount] = useState(0)
 
   return (
-    <div style={{ border: '1px solid purple', padding: '1rem' }}>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+    <div className='border border-gray-500 p-2 m-10 rounded-md bg-gray-700 text-gray-100'>
+      <p>You clicked {count} times!</p>
+      <button
+        onClick={() => setCount(count + 1)}
+        className='rounded border border-gray-500 bg-gray-900 p-1 mt-2'
+      >
+        Click me
+      </button>
     </div>
   )
 }
 ```
 
-We then include it in our `.mdx` file and display it just like in React application:
+If you need to use components in your markdown content files, use `.mdx` extension, and provide any custom components through the `components/component-mapper.jsx` file. Then include it in your `.mdx` file and display it just like in React application:
 
-#todo
+``` markdown
+### Example Counter Component
+<Counter />
+```
 
-Voila! This way you can create dynamic components for your documentation like never before. Live code editors, quizes, exams, cheatsheets, comments, you name it. Possibilities are endless.
+becomes:
+
+### Example Counter Component
+<Counter />
+
+Voila! This way you can create dynamic components for your documentation like never before. Live code editors, quizes, exams, cheatsheets, comments, you name it. Possibilities are endless. Notice that you can use tailwindcss classnames in components for styling.
 
 ## More MDX Wizardry
 
-For more information what can be achieved with MDX, see the official [site](https://mdxjs.com/).
+For more information what can be achieved with MDX, see the [official site](https://mdxjs.com/).

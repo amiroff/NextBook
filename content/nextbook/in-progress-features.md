@@ -21,7 +21,7 @@ Here is a list of features which are planned to be implemented in future in no p
 - [x] Print styles.
 - [x] Migrate to Next MDX Remote
 - [x] Migrate to pure CSS or Tailwind
-- [ ] Multiple books support
+- [x] Multiple books support
 - [ ] Tag index page
 - [ ] Internationalisation
 - [ ] Global search. (Algolia?)

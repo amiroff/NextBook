@@ -1,3 +1,4 @@
+import Counter from './example-counter'
 import {
   Blockquote,
   InlineCode,
@@ -27,6 +28,7 @@ import {
 } from './mdx-components'
 
 export const componentMap = {
+  Counter,
   table: Table,
   thead: Thead,
   tbody: Tbody,

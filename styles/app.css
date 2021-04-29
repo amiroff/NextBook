@@ -7,6 +7,10 @@
   display: none !important;
 }
 
+p {
+  margin: 1em 0;
+}
+
 /* Invert colors of svg's with excalidraw class */
 .dark .excalidraw {
   filter: invert(100%) hue-rotate(180deg);
@@ -48,8 +52,8 @@
 }
 
 .hint::first-line {
-  font-weight: 550;
-  line-height: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
 }
 
 /* Auto-generated li wraps everything in p, remove margins. */

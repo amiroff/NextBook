@@ -10,7 +10,7 @@ const SideBarToggler = () => {
     <div className='flex ml-3 md:hidden'>
       <button
         onClick={sideBarCtx.toggleSideBar}
-        title={_('Table Of Contents')}
+        title={_('Toggle mobile sidebar')}
         className='shadow bg-gray-100 text-gray-600 dark:text-gray-400 dark:bg-gray-900 rounded p-1 focus:outline-none w-8 h-8'
       >
         {sideBarCtx.sideBar ? <Close /> : <Hamburger />}
