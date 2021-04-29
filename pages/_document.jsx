@@ -4,9 +4,9 @@ import config from 'config/config.json'
 class MyDocument extends Document {
   render() {
     return (
-      <Html className={config.fontAutoScaling ? '' : 'auto-scaling-disabled'}>
+      <Html lang={config.locale}>
         <Head />
-        <body>
+        <body className='bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-100'>
           <Main />
           <NextScript />
         </body>

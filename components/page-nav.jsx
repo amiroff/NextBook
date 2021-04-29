@@ -8,10 +8,11 @@ import { _ } from './text'
 export default function PageNav() {
   const router = useRouter()
   const { toc } = config
+  const { asPath } = router
 
   // isolate current part array
   const currentPart = toc.find((part) =>
-    part.chapters.some((chapter) => chapter.path === router.pathname)
+    part.chapters.some((chapter) => chapter.path === asPath)
   )
   const currentPartIndex = toc.indexOf(currentPart)
 
@@ -21,7 +22,7 @@ export default function PageNav() {
 
   // find index of current title
   const currentChapterIndex = currentPart?.chapters.findIndex(
-    (chapter) => chapter.path === router.pathname
+    (chapter) => chapter.path === asPath
   )
 
   // find previous page, iff not, use last page of previous part
@@ -34,46 +35,50 @@ export default function PageNav() {
 
   useShortcuts(
     ['ArrowRight'],
-    () => nextChapter && router.push(nextChapter.path)
+    () => nextChapter && router.push(nextChapter.path),
+    [asPath]
   )
   useShortcuts(
     ['ArrowLeft'],
-    () => prevChapter && router.push(prevChapter.path)
+    () => prevChapter && router.push(prevChapter.path),
+    [asPath]
   )
 
   return (
-    <>
-      <div className='mb-20 d-flex page-nav'>
+    <div className='my-2 no-print'>
+      <div
+        className={`flex flex-col-reverse sm:flex-row ${
+          !prevChapter && 'justify-end'
+        }`}
+      >
         {prevChapter && (
           <Link href={prevChapter.path}>
-            <a className='prev-page mr-10 d-flex hidden-xs-and-down justify-content-between align-items-center'>
-              <div>
-                <ArrowLeft />
-              </div>
-              <div className='text-right'>
-                <div>{prevChapter.title}</div>
-              </div>
+            <a
+              className={`border border-transparent flex w-full justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 dark:hover:text-gray-100 ${
+                !nextChapter && 'max-w-md'
+              }`}
+              title={_('Previous chapter')}
+            >
+              <ArrowLeft />
+              <div className='ml-2'>{prevChapter.title}</div>
             </a>
           </Link>
         )}
 
         {nextChapter && (
           <Link href={nextChapter.path}>
-            <a className='next-page d-flex justify-content-between align-items-center'>
-              <div className='text-left'>
-                <span className='hidden-sm-and-up text-capitalize'>
-                  <span className='text-muted'>{_('Next chapter')}:</span>{' '}
-                  <br /> {nextChapter.title}
-                </span>
-                <div className='hidden-xs-and-down'>{nextChapter.title}</div>
-              </div>
-              <div>
-                <ArrowRight />
-              </div>
+            <a
+              className={`border border-transparent flex w-full justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 dark:hover:text-gray-100 ${
+                !prevChapter && 'max-w-md'
+              }`}
+              title={_('Next chapter')}
+            >
+              <div className='mr-2'>{nextChapter.title}</div>
+              <ArrowRight />
             </a>
           </Link>
         )}
       </div>
-    </>
+    </div>
   )
 }

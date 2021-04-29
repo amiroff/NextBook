@@ -1,65 +1,53 @@
+import SideBarContext from 'components/store/sidebar-context'
+import config from 'config/config.json'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
-import { useLocalStorage } from 'react-use'
+import { useContext, useEffect } from 'react'
+import { useMedia } from 'react-use'
 import SideBarSection from './sidebar-section'
-import { GitHub } from './svg-icons'
 
-function SideBar({ toc, part, docTitle, className }) {
-  const router = useRouter()
-  const [chapters, setChapters] = useLocalStorage('visitedChapters', [])
+function SideBar() {
+  const { toc, projectTitle } = config
+  const sideBarCtx = useContext(SideBarContext)
+  const isWide = useMedia('(min-width: 770px)')
 
   useEffect(() => {
-    // update history array with every page visit
-    if (!chapters.includes(router.pathname)) {
-      setChapters((prev) => [...new Set([...prev, router.pathname])])
+    if (isWide) {
+      sideBarCtx.hideSideBar()
     }
-  }, [chapters, router.pathname])
+  }, [isWide])
+
+  const sideBarStyle = sideBarCtx.sideBar
+    ? 'sidebar w-2/3 z-50 h-screen bg-gray-300 dark:bg-gray-900 border-r overflow-y-auto border-gray-400 dark:border-gray-800 fixed pl-4 pr-6 text-lg top-10 md:hidden'
+    : 'sidebar z-50 flex-none md:w-56 xl:w-64 h-screen overflow-y-auto fixed top-10 md:top-14 hidden md:block'
 
   return (
-    <div className={className}>
-      <div className='sidebar-content'>
-        <div className='logo'>
-          <Link href='/'>
-            <a className='text-decoration-none d-flex align-items-center text-center flex-column'>
+    <div className={sideBarStyle}>
+      <div className='flex flex-col md:mt-10'>
+        <Link href='/'>
+          <a href='/' aria-label={projectTitle}>
+            <div className='flex flex-col items-center'>
               {process.env.NEXT_PUBLIC_USE_LOGO && (
                 <img
                   src={`/${process.env.NEXT_PUBLIC_USE_LOGO}`}
-                  alt='Logo'
-                  className='mb-10 w-100'
-                  width='100'
-                  height='100'
+                  alt={projectTitle}
+                  className='w-24 hidden md:inline-block'
                 />
               )}
-              {docTitle}
-            </a>
-          </Link>
-        </div>
-      </div>
-      <div className='sidebar-menu'>
-        {toc.map((toc, id) => (
-          <SideBarSection
-            toc={toc}
-            part={part}
-            pathName={router.pathname}
-            history={chapters}
-            key={id}
-          />
-        ))}
-      </div>
-      {process.env.NEXT_PUBLIC_GITHUB_URL && (
-        <div className='sidebar-content d-flex justify-content-center'>
-          <a
-            href={process.env.NEXT_PUBLIC_GITHUB_URL}
-            className='hyperlink d-flex align-items-center'
-            target='_blank'
-            rel='noreferrer noopener'
-          >
-            <GitHub />
-            <span className='ml-5 mt-5'>GitHub Repo</span>
+              <span
+                className='hidden text-center md:inline-block font-semibold '
+                title={projectTitle}
+              >
+                {projectTitle}
+              </span>
+            </div>
           </a>
+        </Link>
+        <div className='mt-6 pl-2 leading-loose tracking-wide'>
+          {toc.map((toc, id) => (
+            <SideBarSection toc={toc} key={id} />
+          ))}
         </div>
-      )}
+      </div>
     </div>
   )
 }

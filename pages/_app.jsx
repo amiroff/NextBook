@@ -1,10 +1,10 @@
-import { MDXProvider } from '@mdx-js/react'
 import splitbee from '@splitbee/web'
-import { componentMap } from 'components/component-mapper'
+import { HistoryContextProvider } from 'components/store/history-context'
 import { SideBarContextProvider } from 'components/store/sidebar-context'
 import { ThemeContextProvider } from 'components/store/theme-context'
-import 'styles/global.css'
+import 'tailwindcss/tailwind.css'
 import 'styles/print.css'
+import 'styles/app.css'
 
 if (
   process.env.NEXT_PUBLIC_SPLITBEE_TOKEN &&
@@ -18,11 +18,11 @@ if (
 export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeContextProvider>
-      <SideBarContextProvider>
-        <MDXProvider components={componentMap}>
+      <HistoryContextProvider>
+        <SideBarContextProvider>
           <Component {...pageProps} />
-        </MDXProvider>
-      </SideBarContextProvider>
+        </SideBarContextProvider>
+      </HistoryContextProvider>
     </ThemeContextProvider>
   )
 }

@@ -1,19 +1,32 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useContext } from 'react'
+import HistoryContext from './store/history-context'
 import { Check, Dot } from './svg-icons'
 
-const SideBarItem = ({ bulletStyle, item, pathname }) => {
-  const classnameActive =
-    pathname === item.path
-      ? 'sidebar-link sidebar-link-with-icon current open'
-      : 'sidebar-link sidebar-link-with-icon'
+const SideBarItem = ({ item }) => {
+  const { asPath: path } = useRouter()
+  const historyCtx = useContext(HistoryContext)
 
   return (
-    <Link href={item.path} key={item.path}>
-      <a className={classnameActive}>
-        <span className='sidebar-icon bg-transparent'>
-          {bulletStyle === 'check' ? <Check /> : <Dot />}
+    <Link href={item.path}>
+      <a
+        className={`flex items-center font-normal pl-2 my-1 rounded hover:bg-gray-300 dark:hover:bg-gray-900 ${
+          path === item.path
+            ? 'text-gray-900 dark:text-gray-50 bg-gray-300 dark:bg-gray-900'
+            : 'text-gray-700 dark:text-gray-50'
+        }`}
+      >
+        <span
+          className={
+            path === item.path
+              ? 'text-gray-900 dark:text-gray-50'
+              : 'text-gray-500 dark:text-gray-300'
+          }
+        >
+          {historyCtx.history.includes(item.path) ? <Check /> : <Dot />}
         </span>
-        {item.title}
+        <span className='pl-2'>{item.title}</span>
       </a>
     </Link>
   )

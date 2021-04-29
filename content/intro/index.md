@@ -1,4 +1,9 @@
-![NextBook Screenshot](https://next-book.vercel.app/screenshot.png)
+---
+part: Introduction
+title: Welcome to NextBook!
+---
+
+![](https://next-book.vercel.app/screenshot.png)
 
 **NextBook** is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It works by compiling markdown and MDX to static pages. This way, first content render on user's device is near instant.
 
@@ -40,7 +45,7 @@ With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs
 - 🧾 Easy content creation with [markdown](https://www.markdownguide.org/) and [MDX](https://mdxjs.com/) support,
 - 💻 Something more than what basic fenced code offers. Like line highlighting, linking to source and copying to clipboard,
 - 🤓 Familiar [Git](https://github.com/) workflow and collaboration,
-- ⌨︎ Keyboard shortcuts for frequently used actions (theme change, sidebar toggle, page navigation),
+- ⌨︎ Keyboard shortcuts for frequently used actions (theme change (T), page navigation (<-->)),
 - 🔎 In-page optional table of contents with scroolspy,
 - © You own your data, **code is the data**. Committing to repository and seeing results in the simplest form,
 - 🏎 Fast to get started, just one command for up & running locally,
@@ -49,3 +54,6 @@ With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs
 - ⚙︎ Customisable, extensible and simple codebase,
 - ❤ Built on open-source,
 - 👍 And many more small details...
+
+!> Use Right Tool For The Job 
+NextBook is not geared towards API documentation, rather it is optimised for tutorial/book style documentation. For API docs [ReadTheDocs](https://readthedocs.org/), [Docusaurus](https://docusaurus.io/) or plain [Sphinx](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) would be a better fit.

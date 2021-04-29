@@ -1,40 +1,34 @@
-import { useContext } from 'react'
-import { useShortcuts } from 'react-shortcuts-hook'
 import ColorModeToggler from './colormode-toggler'
-import SideBarContext from './store/sidebar-context'
-import { Hamburger } from './svg-icons'
-import { _ } from './text'
+import SideBarToggler from './sidebar-toggler'
+import config from 'config/config.json'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-function NavBar({ title, part, className }) {
-  const sideBarCtx = useContext(SideBarContext)
-  useShortcuts(['M'], () => sideBarCtx.toggleSideBar(), [sideBarCtx.sideBar])
+function NavBar() {
+  const { navbarItems } = config
+  const router = useRouter()
 
   return (
-    <>
-      <nav className={className}>
-        <div className='navbar-content'>
-          <button
-            id='toggle-sidebar-btn'
-            className='btn btn-action'
-            type='button'
-            onClick={sideBarCtx.toggleSideBar}
-            title={_('Table Of Contents')}
-          >
-            <Hamburger />
-          </button>
-          <div className='ml-10 hidden-sm-and-down text-muted'>
-            <kbd className='text-muted font-size-12'>M</kbd>
-          </div>
-        </div>
-        <span className='mx-auto font-weight-bold'>
-          <span className='hidden-sm-and-down'>{part && `${part} / `}</span>
-          {title}
-        </span>
-        <div className='navbar-content ml-10 ml-xs-auto'>
-          <ColorModeToggler />
-        </div>
-      </nav>
-    </>
+    <div className='flex pt-1 text-xs lg:text-sm'>
+      <SideBarToggler />
+      <div className='text-left text-xs lg:text-sm ml-6 pt-1 flex-auto space-x-1'>
+        {navbarItems.map((item) => (
+          <Link href={item.path} key={item.path}>
+            <a
+              className={`border border-transparent hover:bg-gray-300 hover:text-gray-700 dark:hover:bg-gray-600
+               dark:hover:text-gray-50 px-2 py-2 rounded-md font-medium hidden md:inline-block ${
+                 router.query.part && item.path.includes(router.query.part)
+                   ? 'dark:bg-gray-700 dark:text-gray-50 bg-gray-300 text-gray-700'
+                   : 'dark:text-gray-300 text-gray-600'
+               }`}
+            >
+              {item.title}
+            </a>
+          </Link>
+        ))}
+      </div>
+      <ColorModeToggler />
+    </div>
   )
 }
 

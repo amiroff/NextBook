@@ -40,7 +40,6 @@ export const ArrowLeft = () => (
 
 export const Moon = () => (
   <svg
-    className='w-6 h-6 svg-button'
     fill='none'
     stroke='currentColor'
     viewBox='0 0 24 24'
@@ -57,7 +56,6 @@ export const Moon = () => (
 
 export const Sun = () => (
   <svg
-    className='w-6 h-6 svg-button'
     fill='none'
     stroke='currentColor'
     viewBox='0 0 24 24'
@@ -74,7 +72,6 @@ export const Sun = () => (
 
 export const Hamburger = () => (
   <svg
-    className='w-6 h-6 svg-button'
     fill='none'
     stroke='currentColor'
     viewBox='0 0 24 24'
@@ -85,6 +82,23 @@ export const Hamburger = () => (
       strokeLinejoin='round'
       strokeWidth={2}
       d='M4 6h16M4 12h16M4 18h16'
+    />
+  </svg>
+)
+
+export const Close = () => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    className='h-6 w-6'
+    fill='none'
+    viewBox='0 0 24 24'
+    stroke='currentColor'
+  >
+    <path
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={2}
+      d='M6 18L18 6M6 6l12 12'
     />
   </svg>
 )
@@ -173,10 +187,10 @@ export const AngleRight = () => (
 export const Check = () => (
   <svg
     height='16px'
-    className='sidebar-title-icon trans-7'
     fill='currentColor'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
+    className='w-3'
   >
     <path
       fillRule='evenodd'
@@ -187,12 +201,7 @@ export const Check = () => (
 )
 
 export const Dot = () => (
-  <svg
-    viewBox='0 0 16 16'
-    width='10'
-    fill='currentColor'
-    className='sidebar-title-icon trans-5'
-  >
+  <svg viewBox='0 0 16 16' fill='currentColor' className='w-3'>
     <path fillRule='evenodd' d='M8 4a4 4 0 100 8 4 4 0 000-8z'></path>
   </svg>
 )

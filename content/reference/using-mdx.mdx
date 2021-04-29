@@ -1,0 +1,69 @@
+---
+part: Documentation
+title: Using MDX
+---
+
+## What Is MDX?
+
+MDX to markdown is the same as JSX to JS. To quote the [original site](https://mdxjs.com/),
+
+> MDX is an authorable format that lets you seamlessly write JSX in your Markdown documents. You can import components, such as interactive charts or alerts, and embed them within your content. This makes writing long-form content with components a blast 🚀.
+
+... and this one:
+
+> Writing is fun again when you combine components, that can even be dynamic or load data, with the simplicity of Markdown for long-form content.
+
+Basically, renaming your `.md` file to `.mdx` gives you ability to import and use React components as if it was a normal React or Next.js app.
+
+Here is a small demo video for curious:
+
+
+<iframe
+  width='100%'
+  height='400'
+  src='https://www.youtube-nocookie.com/embed/d2sQiI5NFAM'
+  frameBorder='0'
+  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+  allowFullScreen
+></iframe>
+
+## Using Custom Components
+
+Say we have a basic React counter component like this:
+
+```jsx title=components/example-counter.jsx
+import React, { useState } from 'react'
+export default function Counter() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <div className='border border-gray-500 p-2 m-10 rounded-md bg-gray-700 text-gray-100'>
+      <p>You clicked {count} times!</p>
+      <button
+        onClick={() => setCount(count + 1)}
+        className='rounded border border-gray-500 bg-gray-900 p-1 mt-2'
+      >
+        Click me
+      </button>
+    </div>
+  )
+}
+```
+
+If you need to use components in your markdown content files, use `.mdx` extension, and provide any custom components through the `components/component-mapper.jsx` file. Then include it in your `.mdx` file and display it just like in React application:
+
+``` markdown
+### Example Counter Component
+<Counter />
+```
+
+becomes:
+
+### Example Counter Component
+<Counter />
+
+Voila! This way you can create dynamic components for your documentation like never before. Live code editors, quizes, exams, cheatsheets, comments, you name it. Possibilities are endless. Notice that you can use tailwindcss classnames in components for styling.
+
+## More MDX Wizardry
+
+For more information what can be achieved with MDX, see the [official site](https://mdxjs.com/).

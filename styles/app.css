@@ -1,0 +1,380 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Diffs without line numbering */
+.clean .linenumber {
+  display: none !important;
+}
+
+p {
+  margin: 1em 0;
+}
+
+/* Invert colors of svg's with excalidraw class */
+.dark .excalidraw {
+  filter: invert(100%) hue-rotate(180deg);
+}
+
+.hint {
+  padding: 1em 1em 1em 1.4em;
+  margin: 1em 0 1em 0;
+  border-radius: 6px;
+  color: black;
+  border-left: 4px solid;
+}
+
+.hint a {
+  color: black;
+}
+
+.dark .hint a {
+  color: white;
+}
+
+.dark .hint {
+  color: white;
+}
+
+.hint.tip {
+  background-color: rgba(152, 199, 197, 0.5);
+  border-color: rgba(152, 199, 197, 0.9);
+}
+
+.hint.warn {
+  background-color: rgba(255, 202, 103, 0.5);
+  border-color: rgba(255, 202, 103, 0.9);
+}
+
+.hint.error {
+  background-color: rgba(231, 154, 154, 0.5);
+  border-color: rgba(231, 154, 154, 0.9);
+}
+
+.hint::first-line {
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+/* Auto-generated li wraps everything in p, remove margins. */
+li p {
+  margin: 0;
+}
+
+.summary p {
+  display: inline;
+}
+
+/* Use font antialiasing only in dark mode (makes text thinner) */
+.dark body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Use custom scrollbars. */
+@media (min-width: 769px) {
+  /* Base scrollbar */
+  .with-custom-webkit-scrollbars *::-webkit-scrollbar {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  .with-custom-webkit-scrollbars *::-webkit-scrollbar-track:vertical {
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .with-custom-webkit-scrollbars *::-webkit-scrollbar-track:horizontal {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar-track {
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  .with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb {
+    min-width: 3rem;
+    min-height: 3rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 0.4rem solid transparent;
+    -moz-background-clip: content; /* Firefox 3.6 */
+    -webkit-background-clip: content; /* Safari 4? Chrome 6? */
+    background-clip: content-box;
+    border-radius: 1rem;
+  }
+  .with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: transparent;
+  }
+  .with-custom-webkit-scrollbars *::-webkit-scrollbar-corner {
+    background-color: transparent;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar-corner {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .with-custom-css-scrollbars * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.25) #ffffff;
+  }
+  .dark .with-custom-css-scrollbars * {
+    scrollbar-color: rgba(255, 255, 255, 0.25) #25282c;
+  }
+
+  /* Sidebar scrollbar */
+  /* Only on Windows */
+  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-track {
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-track {
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-width: 0.4rem;
+    border-color: transparent;
+    border-radius: 1rem;
+  }
+  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: transparent;
+  }
+  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-corner {
+    background-color: transparent;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-corner {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .with-custom-css-scrollbars .sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.25) #ffffff;
+  }
+  .dark .with-custom-css-scrollbars .sidebar {
+    scrollbar-color: rgba(255, 255, 255, 0.25) #191c20;
+  }
+
+  /* Modal scrollbar */
+
+  .with-custom-webkit-scrollbars .modal-dialog::-webkit-scrollbar {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars .modal-dialog::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  .with-custom-webkit-scrollbars .modal-dialog::-webkit-scrollbar-track {
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  .dark.with-custom-webkit-scrollbars .modal-dialog::-webkit-scrollbar-track {
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  .with-custom-webkit-scrollbars .modal-dialog::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-width: 0.4rem;
+    border-color: transparent;
+    border-radius: 1rem;
+  }
+  .with-custom-webkit-scrollbars .modal-dialog::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars .modal-dialog::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: transparent;
+  }
+  .dark
+    .with-custom-webkit-scrollbars
+    .modal-dialog::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: transparent;
+  }
+  .with-custom-webkit-scrollbars .modal-dialog::-webkit-scrollbar-corner {
+    background-color: transparent;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .dark.with-custom-webkit-scrollbars .modal-dialog::-webkit-scrollbar-corner {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .with-custom-css-scrollbars .modal-dialog {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+  }
+  .dark .with-custom-css-scrollbars .modal-dialog {
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+  }
+
+  /* Full screen modal scrollbar */
+
+  .with-custom-webkit-scrollbars .modal-full .modal-dialog::-webkit-scrollbar {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: #ffffff;
+  }
+  .dark
+    .with-custom-webkit-scrollbars
+    .modal-full
+    .modal-dialog::-webkit-scrollbar {
+    background-color: #191c20;
+  }
+  .with-custom-webkit-scrollbars
+    .modal-full
+    .modal-dialog::-webkit-scrollbar-track {
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .dark
+    .with-custom-webkit-scrollbars
+    .modal-full
+    .modal-dialog::-webkit-scrollbar-track {
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  .with-custom-webkit-scrollbars
+    .modal-full
+    .modal-dialog::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-width: 0.4rem;
+    border-color: transparent;
+    border-radius: 1rem;
+  }
+  .with-custom-webkit-scrollbars
+    .modal-full
+    .modal-dialog::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: transparent;
+  }
+  .dark
+    .with-custom-webkit-scrollbars
+    .modal-full
+    .modal-dialog::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: transparent;
+  }
+  .dark
+    .with-custom-webkit-scrollbars
+    .modal-full
+    .modal-dialog::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: transparent;
+  }
+  .with-custom-webkit-scrollbars
+    .modal-full
+    .modal-dialog::-webkit-scrollbar-corner {
+    background-color: #ffffff;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .dark
+    .with-custom-webkit-scrollbars
+    .modal-full
+    .modal-dialog::-webkit-scrollbar-corner {
+    background-color: #191c20;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .with-custom-css-scrollbars .modal-full .modal-dialog {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.25) #ffffff;
+  }
+  .dark .with-custom-css-scrollbars .modal-full .modal-dialog {
+    scrollbar-color: rgba(255, 255, 255, 0.25) #191c20;
+  }
+
+  /* Card scrollbar */
+
+  .with-custom-webkit-scrollbars .card::-webkit-scrollbar {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars .card::-webkit-scrollbar {
+    background-color: transparent;
+  }
+  .with-custom-webkit-scrollbars .card::-webkit-scrollbar-track {
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .dark.with-custom-webkit-scrollbars .card::-webkit-scrollbar-track {
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+  .with-custom-webkit-scrollbars .card::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-width: 0.4rem;
+    border-color: transparent;
+    border-radius: 1rem;
+  }
+  .with-custom-webkit-scrollbars .card::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars .card::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: transparent;
+  }
+  .dark.with-custom-webkit-scrollbars .card::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: transparent;
+  }
+  .with-custom-webkit-scrollbars .card::-webkit-scrollbar-corner {
+    background-color: transparent;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+  .dark.with-custom-webkit-scrollbars .card::-webkit-scrollbar-corner {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .with-custom-css-scrollbars .card {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.25) #ffffff;
+  }
+  .dark .with-custom-css-scrollbars .card {
+    scrollbar-color: rgba(255, 255, 255, 0.25) #191c20;
+  }
+
+  /* CSS scrollbar with transparent track (utility class) */
+
+  .with-custom-css-scrollbars .css-scrollbar-transparent-track {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(0, 0, 0, 0.25) transparent !important;
+  }
+  .dark .with-custom-css-scrollbars .css-scrollbar-transparent-track {
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent !important;
+  }
+}
