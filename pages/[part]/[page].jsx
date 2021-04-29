@@ -26,7 +26,6 @@ export const getStaticProps = async ({ params }) => {
   // get file and split content into data and frontmatter
   let source = ''
   const filePath = path.join(CONTENT_PATH, params.part, params.page)
-  console.log(filePath)
   try {
     source = fs.readFileSync(`${filePath}.md`)
   } catch {
