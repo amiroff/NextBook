@@ -7,9 +7,10 @@ import { Check, Dot } from './svg-icons'
 const SideBarItem = ({ item }) => {
   const { asPath: path } = useRouter()
   const historyCtx = useContext(HistoryContext)
+  console.log(historyCtx.history, path)
 
   return (
-    <Link href={item.path} key={item.path}>
+    <Link href={item.path}>
       <a
         className={`flex items-center font-normal pl-2 my-1 rounded hover:bg-gray-300 dark:hover:bg-gray-900 ${
           path === item.path

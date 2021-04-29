@@ -53,7 +53,7 @@ export const Details = (props) => (
 
 export const Summary = (props) => (
   <summary
-    className='summary cursor-pointer p-1 font-semibold pl-0'
+    className='summary cursor-pointer p-1 font-semibold pl-0 select-none'
     {...props}
   />
 )

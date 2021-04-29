@@ -37,7 +37,7 @@ const SideBarSection = ({ toc }) => {
           <div className='text-gray-400 dark:text-gray-400'>
             {menuVisible ? <AngleDown /> : <AngleRight />}
           </div>
-          <div className='pl-2 cursor-pointer'>{toc.part}</div>
+          <div className='pl-2 cursor-pointer select-none'>{toc.part}</div>
         </div>
       )}
 
