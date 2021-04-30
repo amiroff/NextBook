@@ -1,12 +1,20 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import HistoryContext from './store/history-context'
 import { Check, Dot } from './svg-icons'
 
 const SideBarItem = ({ item }) => {
   const { asPath: path } = useRouter()
   const historyCtx = useContext(HistoryContext)
+
+  const [icon, setIcon] = useState(<Dot />)
+
+  useEffect(() => {
+    if (historyCtx.history.includes(item.path)) {
+      setIcon(<Check />)
+    }
+  }, [path])
 
   return (
     <Link href={item.path}>
@@ -24,7 +32,7 @@ const SideBarItem = ({ item }) => {
               : 'text-gray-500 dark:text-gray-300'
           }
         >
-          {historyCtx.history.includes(item.path) ? <Check /> : <Dot />}
+          {icon}
         </span>
         <span className='pl-2'>{item.title}</span>
       </a>
