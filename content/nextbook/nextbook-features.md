@@ -8,7 +8,7 @@ title: NextBook Features
 - Fast and responsive UI, content should be readable and accessible on most devices.
 - Looks good even on printouts.
 - Good out of the box looks thanks to [tailwindcss](https://tailwindcss.com/).
-- Keyboard shortcuts to toggle features (sidebar, lights off, next/previous page navigation).
+- Keyboard shortcuts to toggle features (theme, next/previous page navigation).
 - Built-in light and dark mode (press <kbd>T</kbd>) for pleasant and safe reading.
 - Smooth progressbar on top indicating how far on the page you are.
 - Side menu that keeps reader's read progress.
