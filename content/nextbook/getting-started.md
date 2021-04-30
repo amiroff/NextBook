@@ -11,7 +11,7 @@ Here's how to get started with your own book or documentation.
 4. Run `npm run dev:watch` command and start local web server.
 5. Open [http://localhost:3000/](http://localhost:3000/) in browser of your choise.
 6. Check documentation to see what's possible with NextBook.
-7. Create your [markdown](/documentation/markdown) or [MDX](/documentation/using-mdx) content in `content` folder. Pages should auto-refresh as you modify markdown content.
+7. Create your [markdown](/reference/markdown) or [MDX](/reference/using-mdx) content in `content` folder. Pages should auto-refresh as you modify markdown content.
 8. Update `config/config.json` with your table of contents and other information.
 9. Update `pages/index.jsx` to suit your needs as a standalone landing page or as a redirect to content.
 10. Once you are happy with content, deploy your repository to any static hosting provider like Vercel, Netlify, Github Pages or Google Cloud. I recommend [Vercel](https://vercel.com/new).

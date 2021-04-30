@@ -140,7 +140,7 @@ results in:
 
 ### Fenced Code Blocks
 
-Most of the time you'll use codefences. Here is a simple example, but you can do a lot more with them. For advanced fenced code block usages, see [Fenced Code](/documentation/fencedcode) chapter.
+Most of the time you'll use codefences. Here is a simple example, but you can do a lot more with them. For advanced fenced code block usages, see [Fenced Code](/reference/fencedcode) chapter.
 
 ````
 ```bash
