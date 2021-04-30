@@ -9,7 +9,7 @@ NextBook makes writing technical docs stupid simple while keeping featureset min
 1. Having Node installed beforehand, bootstrap a new project with `npx create-next-app my-awesome-book -e https://github.com/amiroff/NextBook`
 2. Run `npm run dev:watch` and open [http://localhost:3000/](http://localhost:3000/)
 3. Check documentation to see what's possible with NextBook.
-4. Create your [markdown](/documentation/markdown) or [MDX](/documentation/using-mdx) content in `content` folder. Pages should auto-refresh as you modify markdown content.
+4. Create your [markdown](/reference/markdown) or [MDX](/reference/using-mdx) content in `content` folder. Pages should auto-refresh as you modify markdown content.
 5. Update `config/config.json` with your table of contents and other information.
 6. Update `pages/index.jsx` to suit your needs as a standalone landing page or as a redirect to content.
 7. [Deploy](https://vercel.com/new) your repository to any static hosting provider like Vercel, Netlify, Github Pages or Google Cloud.
@@ -40,7 +40,7 @@ With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs
 - 🧾 Easy content creation with [markdown](https://www.markdownguide.org/) and [MDX](https://mdxjs.com/) support,
 - 💻 Something more than what basic fenced code offers. Like line highlighting, linking to source and copying to clipboard,
 - 🤓 Familiar [Git](https://github.com/) workflow and collaboration,
-- ⌨︎ Keyboard shortcuts for frequently used actions (theme change, sidebar toggle, page navigation),
+- ⌨︎ Keyboard shortcuts for frequently used actions (theme change, page navigation),
 - 🔎 In-page optional table of contents with scroolspy,
 - © You own your data, **code is the data**. Committing to repository and seeing results in the simplest form,
 - 🏎 Fast to get started, just one command for up & running locally,
