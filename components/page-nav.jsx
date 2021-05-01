@@ -55,7 +55,7 @@ export default function PageNav() {
           <Link href={prevChapter.path}>
             <a
               className={`border border-transparent flex w-full justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 dark:hover:text-gray-100 ${
-                !nextChapter && 'max-w-md'
+                !nextChapter && 'w-full md:max-w-sm'
               }`}
               title={_('Previous chapter')}
             >
@@ -69,7 +69,7 @@ export default function PageNav() {
           <Link href={nextChapter.path}>
             <a
               className={`border border-transparent flex w-full justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 dark:hover:text-gray-100 ${
-                !prevChapter && 'max-w-md'
+                !prevChapter && 'w-full md:max-w-sm'
               }`}
               title={_('Next chapter')}
             >
