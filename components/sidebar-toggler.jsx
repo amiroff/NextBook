@@ -7,7 +7,7 @@ const SideBarToggler = () => {
   const sideBarCtx = useContext(SideBarContext)
 
   return (
-    <div className='flex ml-3 md:hidden'>
+    <div className='flex ml-1 md:hidden'>
       <button
         onClick={sideBarCtx.toggleSideBar}
         title={_('Toggle mobile sidebar')}
