@@ -11,7 +11,7 @@ function NavBar() {
   return (
     <div className='flex pt-1 text-xs lg:text-sm'>
       <SideBarToggler />
-      <div className='text-left text-xs lg:text-sm ml-6 pt-1 flex-auto space-x-1'>
+      <nav className='text-left text-xs lg:text-sm ml-6 pt-1 flex-auto space-x-1'>
         {navbarItems.map((item) => (
           <Link href={item.path} key={item.path}>
             <a
@@ -26,7 +26,7 @@ function NavBar() {
             </a>
           </Link>
         ))}
-      </div>
+      </nav>
       <ColorModeToggler />
     </div>
   )
