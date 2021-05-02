@@ -24,17 +24,17 @@
     "next-seo": "^4.23.0",
     "next-sitemap": "^1.6.9",
     "prettier": "^2.2.1",
-    "react": "17.0.1",
+    "react": "17.0.2",
     "react-copy-to-clipboard": "^5.0.3",
-    "react-dom": "17.0.1",
+    "react-dom": "17.0.2",
     "react-shortcuts-hook": "^1.1.0",
     "react-syntax-highlighter": "^15.4.3",
-    "react-use": "^17.2.1",
-    "remark-breaks": "^2.0.1",
-    "remark-code-import": "^0.2.0",
+    "react-use": "^17.2.4",
+    "remark-breaks": "^2.0.2",
+    "remark-code-import": "^0.3.0",
     "remark-containers": "^1.2.0",
     "remark-external-links": "^8.0.0",
-    "remark-hint": "^1.0.9",
+    "remark-hint": "^1.0.10",
     "remark-mark-plus": "^1.0.21",
     "remark-slug": "^6.0.0",
     "remark-sub-super": "^1.0.20"
@@ -42,7 +42,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.10",
-    "tailwindcss": "^2.1.1"
+    "postcss": "^8.2.13",
+    "tailwindcss": "^2.1.2"
   }
 }
