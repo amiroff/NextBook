@@ -31,7 +31,6 @@
     "react-syntax-highlighter": "^15.4.3",
     "react-use": "^17.2.4",
     "remark-breaks": "^2.0.2",
-    "remark-code-import": "^0.3.0",
     "remark-containers": "^1.2.0",
     "remark-external-links": "^8.0.0",
     "remark-hint": "^1.0.10",

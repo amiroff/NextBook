@@ -8,7 +8,6 @@ import hydrate from 'next-mdx-remote/hydrate'
 import renderToString from 'next-mdx-remote/render-to-string'
 import path from 'path'
 import breaks from 'remark-breaks'
-import codeImport from 'remark-code-import'
 import containers from 'remark-containers'
 import externalLinks from 'remark-external-links'
 import hints from 'remark-hint'
@@ -48,8 +47,7 @@ export const getStaticProps = async ({ params }) => {
         hints,
         remarkSubSuper,
         breaks,
-        remarkMark,
-        codeImport
+        remarkMark
       ]
     },
     scope: data
