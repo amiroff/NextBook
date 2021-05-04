@@ -268,16 +268,15 @@ results in:
 You will use images a lot! Drop your images or svg vectors in public folder and link to them. NextBook will autoscale them for small displays. You can add captions and `alt` information to your images.
 
 ```
-![](/images/octocat.png) 
+![The Octocat](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
-![Git Branching](/images/branching.svg 'Excalidraw FTW')
 ```
 results in:
 
-![](/images/octocat.png) 
+![he Octocat](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
 
-If you use [Excalidraw]() svg drawings and want them to change colors accordingly in dark mode, add `|ex` to image alt text. See below example in light/dark modes:
+If you use [Excalidraw](https://excalidraw.com/) svg drawings and want them to change colors accordingly in dark mode, add `|ex` to image alt text. See below example in light/dark modes:
 
 ```
 ![Git Branching|ex](/images/git-branching.svg)
