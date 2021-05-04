@@ -1,45 +1,71 @@
-import NavBar from 'components/navbar'
-import SideBar from 'components/sidebar'
-import config from 'config/config.json'
-import { NextSeo } from 'next-seo'
-import Head from 'next/head'
+import InPageToc from 'components/in-page-toc'
+import PageNav from 'components/page-nav'
+import Text from 'components/text'
+import GlobalLayout from 'layouts/global'
+import { useEffect, useState } from 'react'
 
-export default function DocumentLayout({ title, part, description, children }) {
-  const { projectTitle, projectURL, projectDescription } = config
-  const htmlTitle = part ? `${title} - ${part}` : title
+export default function DocumentLayout({ children, frontMatter }) {
+  const showToc = !frontMatter.hide_toc && frontMatter.tocRaw.length > 0
+  const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
+  const [locale, setLocale] = useState('en')
+  const { title, part, description, tags, updated, tocRaw } = frontMatter
+
+  useEffect(() => {
+    const browserLocales =
+      navigator.languages === undefined
+        ? [navigator.language]
+        : navigator.languages
+    if (browserLocales[0] !== undefined) {
+      setLocale(browserLocales[0])
+    }
+  }, [])
 
   return (
-    <>
-      <NextSeo
-        title={`${htmlTitle} | ${projectTitle}`}
-        description={description ? description : projectDescription}
-        openGraph={{
-          type: 'website',
-          url: projectURL,
-          title: title,
-          description: description
-        }}
-      />
+    <GlobalLayout title={title} part={part} description={description}>
+      <div className='content-container flex'>
+        <div
+          className='content px-4 md:px-8 w-screen max-w-screen-sm 
+                    md:max-w-screen-md xl:max-w-screen-md 2xl:max-w-screen-lg'
+        >
+          {title && <h1 className='text-4xl font-bold my-5'>{title}</h1>}
+          {description && <p className='my-1'>{description}</p>}
+          {tags && (
+            <div className='my-2 text-sm 2xl:text-base'>
+              <span>
+                <Text tid='Tags' />:
+              </span>
+              {tags.map((tag) => (
+                <span
+                  className='bg-gray-300 dark:bg-gray-700 rounded m-1 p-1 text-xs'
+                  key={tag}
+                >
+                  {`#${tag}`}
+                </span>
+              ))}
+            </div>
+          )}
 
-      <Head>
-        <meta
-          content='width=device-width, initial-scale=1.0, maximum-scale=5.0'
-          name='viewport'
-        />
-        <link rel='icon' href='/favicon.ico' />
-        <link rel='icon' href='/icon.svg' type='image/svg+xml' />
-        <link rel='apple-touch-icon' href='/512.png' />
-        <link rel='manifest' href='/manifest.json' />
-      </Head>
-
-      <header className='z-40 md:shadow-md bg-gray-200 dark:bg-gray-800 fixed w-screen top-0 h-10 md:h-14 font-medium'>
-        <NavBar />
-      </header>
-
-      <div className='content-wrapper mt-10 md:mt-14 flex xl:container xl:mx-auto'>
-        <SideBar />
-        <div className={`md-wrapper flex md:ml-56 xl:ml-64`}>{children}</div>
+          <div className='md-content'>{children}</div>
+          <hr className='my-3 mx-1 print:hidden border-gray-300 dark:border-gray-600' />
+          {updated && (
+            <div className='text-center text-xs'>
+              <Text tid='Last Update' />:{' '}
+              {new Date(updated).toLocaleDateString(
+                locale || 'en',
+                dateOptions
+              )}
+            </div>
+          )}
+          <PageNav />
+        </div>
+        {showToc && (
+          <div className='toc-container flex-none w-56 hidden lg:block'>
+            <div className='toc sticky top-20'>
+              <InPageToc tocRaw={tocRaw} />
+            </div>
+          </div>
+        )}
       </div>
-    </>
+    </GlobalLayout>
   )
 }
