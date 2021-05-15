@@ -8,7 +8,7 @@ import 'styles/app.css'
 
 if (
   process.env.NEXT_PUBLIC_SPLITBEE_TOKEN &&
-  process.env.NEXT_PUBLIC_ENVIRONMENT !== 'development'
+  process.env.NODE_ENV === 'production'
 ) {
   splitbee.init({
     token: process.env.NEXT_PUBLIC_SPLITBEE_TOKEN
