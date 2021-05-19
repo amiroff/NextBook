@@ -24,12 +24,12 @@ function SideBar() {
   })
 
   const sideBarStyle = sideBarCtx.sideBar
-    ? 'sidebar w-2/3 z-50 h-screen bg-gray-100 dark:bg-gray-900 border-r border-gray-300 dark:border-gray-800 fixed pl-4 text-lg top-10 md:hidden'
+    ? 'sidebar w-2/3 z-50 h-screen bg-gray-100 dark:bg-gray-800 border-r border-gray-300 dark:border-gray-800 fixed pl-4 text-lg top-10 md:hidden'
     : 'sidebar z-50 flex-none md:w-56 xl:w-64 h-screen fixed top-10 md:top-14 hidden md:block'
 
   return (
     <aside className={sideBarStyle} ref={ref}>
-      <div className='w-full pb-40 md:pb-16 h-full overflow-y-auto pr-6'>
+      <div className='w-full pb-40 md:pb-16 h-full overflow-y-auto pr-6 '>
         <div className='flex flex-col md:mt-10'>
           <Link href='/'>
             <a href='/' aria-label={projectTitle}>

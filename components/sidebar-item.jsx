@@ -19,9 +19,9 @@ const SideBarItem = ({ item }) => {
   return (
     <Link href={item.path}>
       <a
-        className={`flex items-center font-normal pl-2 my-1 rounded hover:bg-gray-300 dark:hover:bg-gray-900 ${
+        className={`flex items-center font-normal pl-2 my-1 rounded hover:bg-gray-300 dark:hover:bg-gray-700 ${
           path === item.path
-            ? 'text-gray-900 dark:text-gray-50 bg-gray-300 dark:bg-gray-900'
+            ? 'text-gray-900 dark:text-gray-50 bg-gray-300 dark:bg-gray-700'
             : 'text-gray-700 dark:text-gray-50'
         }`}
       >

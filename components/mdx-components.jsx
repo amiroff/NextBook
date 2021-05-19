@@ -103,7 +103,7 @@ export const Pre = (props) => {
 
 export const InlineCode = (props) => {
   return (
-    <code className='rounded p-1 bg-gray-300 dark:bg-gray-900 text-sm'>
+    <code className='rounded p-1 bg-gray-300 dark:bg-gray-700 text-sm'>
       {props.children}
     </code>
   )

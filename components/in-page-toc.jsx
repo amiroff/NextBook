@@ -24,7 +24,7 @@ function InPageToc({ tocRaw }) {
   if (tocIds.length) {
     return (
       <div className='pr-2'>
-        <div className='font-medium rounded py-2 text-center text-gray-700 dark:text-gray-100 bg-gray-300 dark:bg-gray-900'>
+        <div className='font-medium rounded py-2 text-center text-gray-700 dark:text-gray-100 bg-gray-300 dark:bg-gray-700'>
           <Text tid='Page Contents' />
         </div>
         <Scrollspy
