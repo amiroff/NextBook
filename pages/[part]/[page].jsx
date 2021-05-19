@@ -4,8 +4,8 @@ import GithubSlugger from 'github-slugger'
 import matter from 'gray-matter'
 import DocumentLayout from 'layouts/document'
 import toc from 'markdown-toc'
-import hydrate from 'next-mdx-remote/hydrate'
-import renderToString from 'next-mdx-remote/render-to-string'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
 import path from 'path'
 import breaks from 'remark-breaks'
 import containers from 'remark-containers'
@@ -17,8 +17,11 @@ import remarkSubSuper from 'remark-sub-super'
 import { contentMapping, CONTENT_PATH } from 'utils/mdxUtils'
 
 export default function Page({ source, frontMatter }) {
-  const content = hydrate(source, { components: componentMap })
-  return <DocumentLayout frontMatter={frontMatter}>{content}</DocumentLayout>
+  return (
+    <DocumentLayout frontMatter={frontMatter}>
+      <MDXRemote {...source} components={componentMap} />
+    </DocumentLayout>
+  )
 }
 
 export const getStaticProps = async ({ params }) => {
@@ -37,7 +40,7 @@ export const getStaticProps = async ({ params }) => {
   data.tocRaw = tocData.json
 
   // pre-render markdown content
-  const mdxSource = await renderToString(content, {
+  const mdxSource = await serialize(content, {
     components: componentMap,
     mdxOptions: {
       remarkPlugins: [
