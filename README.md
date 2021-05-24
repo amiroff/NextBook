@@ -12,7 +12,7 @@ NextBook makes writing technical docs stupid simple while keeping featureset min
 4. Create your [markdown](/reference/markdown) or [MDX](/reference/using-mdx) content in `content` folder. Pages should auto-refresh as you modify markdown content.
 5. Update `config/config.json` with your table of contents and other information.
 6. Update `pages/index.jsx` to suit your needs as a standalone landing page or as a redirect to content.
-7. [Deploy](https://vercel.com/new) your repository to any static hosting provider like Vercel, Netlify, Github Pages or Google Cloud.
+7. [Deploy](https://vercel.com/new) your respository or export (`npm run export`) and copy your content to any static hosting provider like Vercel, Netlify, Github Pages or Google Cloud.
 8. Have fun! 🎉
 
 This should be enough to have a statically generated documentation page / book.
