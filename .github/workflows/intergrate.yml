@@ -21,6 +21,8 @@ jobs:
 
       - name: Install and Build
         uses: actions/setup-node@v1
+        with:
+          node-version: 15.x
       - run: npm install
       - run: npm run build
         env:
