@@ -1,0 +1,29 @@
+name: Build
+on: [push, pull_request]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install and Build
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15.x
+      - run: npm install
+      - run: npm run build
+        env:
+            CI: true
