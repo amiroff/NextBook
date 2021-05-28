@@ -1,6 +1,6 @@
 ![NextBook Screenshot](https://next-book.vercel.app/screenshot.png)
 
-[![Integrate](https://github.com/amiroff/NextBook/actions/workflows/integrate.yml/badge.svg)](https://github.com/amiroff/NextBook/actions/workflows/integrate.yml)
+[![Build](https://github.com/amiroff/NextBook/actions/workflows/intergrate.yml/badge.svg?branch=master)](https://github.com/amiroff/NextBook/actions/workflows/intergrate.yml)
 
 **NextBook** is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It works by compiling markdown and MDX to static pages. This way, first content render on user's device is near instant.
 
