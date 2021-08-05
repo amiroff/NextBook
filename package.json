@@ -32,7 +32,7 @@
     "react-use": "^17.2.4",
     "remark-breaks": "^2.0.2",
     "remark-containers": "^1.2.0",
-    "remark-external-links": "^8.0.0",
+    "remark-external-links": "^9.0.0",
     "remark-hint": "^1.0.10",
     "remark-mark-plus": "^1.0.21",
     "remark-slug": "^6.1.0",
