@@ -14,7 +14,7 @@ const SideBarItem = ({ item }) => {
     if (historyCtx.history.includes(item.path)) {
       setIcon(<Check />)
     }
-  }, [path])
+  }, [path, historyCtx, item.path])
 
   return (
     <Link href={item.path}>

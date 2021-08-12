@@ -23,7 +23,7 @@ export function ThemeContextProvider(props) {
     document.documentElement.className = `${theme}${
       isWindows ? ' with-custom-webkit-scrollbars' : ''
     }`
-  }, [theme])
+  }, [theme, isWindows])
 
   const context = {
     theme: theme,

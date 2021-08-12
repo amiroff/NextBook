@@ -15,7 +15,7 @@ function SideBar() {
     if (isWide) {
       sideBarCtx.hideSideBar()
     }
-  }, [isWide])
+  }, [isWide, sideBarCtx])
 
   useClickAway(ref, () => {
     if (!isWide) {
@@ -32,7 +32,7 @@ function SideBar() {
       <div className='w-full pb-40 md:pb-16 h-full overflow-y-auto pr-6 '>
         <div className='flex flex-col md:mt-10'>
           <Link href='/'>
-            <a href='/' aria-label={projectTitle}>
+            <a aria-label={projectTitle}>
               <div className='flex flex-col items-center'>
                 {process.env.NEXT_PUBLIC_USE_LOGO && (
                   <img
