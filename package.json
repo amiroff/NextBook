@@ -1,6 +1,10 @@
 {
   "name": "next-book",
   "version": "2.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amiroff/NextBook.git"
+  },
   "scripts": {
     "dev": "next",
     "dev:debug": "NODE_OPTIONS='--inspect' next dev",
