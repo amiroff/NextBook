@@ -2,36 +2,9 @@
 
 [![Build](https://github.com/amiroff/NextBook/actions/workflows/intergrate.yml/badge.svg?branch=master)](https://github.com/amiroff/NextBook/actions/workflows/intergrate.yml)
 
-**NextBook** is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It works by compiling markdown and MDX to static pages. This way, first content render on user's device is near instant.
+**[NextBook](https://next-book.vercel.app)** is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It works by compiling markdown and MDX to static pages. This way, first content render on user's device is near instant.
 
-NextBook makes writing technical docs stupid simple while keeping featureset minimal but open for further extension.
-
-## Getting Started
-
-1. Having Node installed beforehand, bootstrap a new project with `npx create-next-app my-awesome-book -e https://github.com/amiroff/NextBook`
-2. Run `npm run dev:watch` and open [http://localhost:3000/](http://localhost:3000/)
-3. Check documentation to see what's possible with NextBook.
-4. Create your [markdown](/reference/markdown) or [MDX](/reference/using-mdx) content in `content` folder. Pages should auto-refresh as you modify markdown content.
-5. Update `config/config.json` with your table of contents and other information.
-6. Update `pages/index.jsx` to suit your needs as a standalone landing page or as a redirect to content.
-7. [Deploy](https://vercel.com/new) your respository or export (`npm run export`) and copy your content to any static hosting provider like Vercel, Netlify, Github Pages or Google Cloud.
-8. Have fun! 🎉
-
-This should be enough to have a statically generated documentation page / book.
-
-With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs.org), anything fancy (grading, level switching...) can be added along the way.
-
-## What's New In NextBook 2.0?
-
-- Support for multiple books in one project.
-- Design based on [tailwindcss](https://tailwindcss.com/).
-- Markdown content is now being loaded with [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote). This means content is now separated from routed pages.
-- Auto-centered layout on big resolutions leading to one less configuration option.
-- 40% smaller bundle size.
-- Navigation bar.
-- Updated dependencies.
-- Refined mobile UI.
-- Less code (−4,000 LOC).
+[NextBook](https://next-book.vercel.app) makes writing technical docs stupid simple while keeping featureset minimal but open for further extension.
 
 ## Primary Features 🧿
 
@@ -51,3 +24,30 @@ With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs
 - ⚙︎ Customisable, extensible and simple codebase,
 - ❤ Built on open-source,
 - 👍 And many more small details...
+
+With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs.org) anything fancy (grading, level switching...) can be added along the way.
+
+## What's New In NextBook 2.0?
+
+- Support for multiple books in one project.
+- Design based on [tailwindcss](https://tailwindcss.com/).
+- Markdown content is now being loaded with [next-mdx-remote](https://github.com/hashicorp/next-mdx-remote). This means content is now separated from routed pages.
+- Auto-centered layout on big resolutions leading to one less configuration option.
+- 40% smaller bundle size.
+- Navigation bar.
+- Updated dependencies.
+- Refined mobile UI.
+- Less code (−4,000 LOC).
+
+## Getting Started
+
+1. Having Node installed beforehand, bootstrap a new project with `npx create-next-app my-awesome-book -e https://github.com/amiroff/NextBook`
+2. Run `npm run dev:watch` and open [http://localhost:3000/](http://localhost:3000/)
+3. Check documentation to see what's possible with NextBook.
+4. Create your [markdown](/reference/markdown) or [MDX](/reference/using-mdx) content in `content` folder. Pages should auto-refresh as you modify markdown content.
+5. Update `config/config.json` with your table of contents and other information.
+6. Update `pages/index.jsx` to suit your needs as a standalone landing page or as a redirect to content.
+7. [Deploy](https://vercel.com/new) your respository or export (`npm run export`) and copy your content to any static hosting provider like Vercel, Netlify, Github Pages or Google Cloud.
+8. Have fun! 🎉
+
+This should be enough to have a statically generated documentation page/book.
