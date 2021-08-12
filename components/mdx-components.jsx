@@ -150,7 +150,7 @@ const Heading = (props) => {
 
   useEffect(() => {
     setlocation(`${window.location.href}#${props.id}`)
-  })
+  }, [props.id])
 
   return (
     <div className={`font-semibold my-5 text-${props.size}`}>

@@ -24,7 +24,7 @@ const SideBarSection = ({ toc }) => {
     if (currentPart) {
       setMenuVisible(true)
     }
-  }, [path])
+  }, [path, toc.chapters])
 
   return (
     <>

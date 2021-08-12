@@ -8,7 +8,7 @@ export default function HomePage() {
 
   useEffect(() => {
     router.push(docsIndex)
-  }, [])
+  }, [router])
 
   return (
     <div className='mx-auto max-w-md'>

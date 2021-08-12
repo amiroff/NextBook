@@ -15,7 +15,7 @@ export function HistoryContextProvider(props) {
     if (!history.includes(router.asPath)) {
       setHistory([...history, router.asPath])
     }
-  }, [router.asPath])
+  }, [router.asPath, setHistory, history])
 
   const context = {
     history: history
