@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^11.1.2",
-    "@splitbee/web": "^0.2.4",
+    "@splitbee/web": "^0.3.0",
     "classnames": "^2.3.0",
     "github-slugger": "^1.4.0",
     "gray-matter": "^4.0.2",
