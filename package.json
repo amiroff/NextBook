@@ -26,7 +26,7 @@
     "next-compose-plugins": "^2.2.1",
     "next-mdx-remote": "3.0.4",
     "next-remote-watch": "1.0.0",
-    "next-seo": "^4.26.0",
+    "next-seo": "^4.28.1",
     "next-sitemap": "^1.6.168",
     "prettier": "^2.3.2",
     "react": "17.0.2",
