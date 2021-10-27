@@ -40,7 +40,7 @@
     "remark-external-links": "^9.0.0",
     "remark-hint": "^1.0.10",
     "remark-mark-plus": "^1.0.21",
-    "remark-slug": "^7.0.0",
+    "remark-slug": "^7.0.1",
     "remark-sub-super": "^1.0.20",
     "trim": ">=1.0.1"
   },
