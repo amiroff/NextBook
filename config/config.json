@@ -22,7 +22,7 @@
   "navbarItems": [
     {
       "title": "Home",
-      "path": "/intro/index"
+      "path": "/intro"
     },
     {
       "title": "NextBook Features",
@@ -39,7 +39,7 @@
   ],
   "toc": [
     {
-      "chapters": [{ "title": "Welcome to NextBook", "path": "/intro/index" }]
+      "chapters": [{ "title": "Welcome to NextBook", "path": "/intro" }]
     },
     {
       "part": "Using NextBook",
