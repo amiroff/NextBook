@@ -8,7 +8,7 @@ import SideBarSection from './sidebar-section'
 function SideBar() {
   const { toc, projectTitle } = config
   const sideBarCtx = useContext(SideBarContext)
-  const isWide = useMedia('(min-width: 770px)')
+  const isWide = useMedia('(min-width: 770px)', false)
   const ref = useRef(null)
 
   useEffect(() => {
