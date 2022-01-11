@@ -27,7 +27,7 @@ export default function Page({ source, frontMatter }) {
 export const getStaticProps = async ({ params }) => {
   // get file and split content into data and frontmatter
   let source = ''
-  const filePath = path.join(CONTENT_PATH, params.part, params.page)
+  const filePath = path.join(CONTENT_PATH, params.part, params.page || 'index')
   try {
     source = fs.readFileSync(`${filePath}.md`)
   } catch {
