@@ -26,15 +26,15 @@
     "next-mdx-remote": "3.0.8",
     "next-remote-watch": "1.0.0",
     "next-seo": "^4.28.1",
-    "next-sitemap": "^1.6.203",
+    "next-sitemap": "^1.6.261",
     "prettier": "^2.5.1",
-    "prismjs": ">=1.25.0",
+    "prismjs": ">=1.26.0",
     "react": "17.0.2",
     "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "17.0.2",
     "react-shortcuts-hook": "^1.1.2",
     "react-syntax-highlighter": "^15.4.5",
-    "react-use": "^17.3.1",
+    "react-use": "^17.3.2",
     "remark-breaks": "^3.0.2",
     "remark-containers": "^1.2.0",
     "remark-external-links": "^9.0.1",
@@ -45,11 +45,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "eslint": "8.5.0",
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
     "eslint-config-prettier": "^8.3.0",
     "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.7"
+    "tailwindcss": "^3.0.12"
   }
 }

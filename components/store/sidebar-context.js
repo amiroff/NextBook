@@ -8,7 +8,7 @@ const SideBarContext = createContext({
 })
 
 export function SideBarContextProvider(props) {
-  const isWide = useMedia('(min-width: 1024px)')
+  const isWide = useMedia('(min-width: 1024px)', false)
   const [storedSideBar, setStoredSideBar] = useLocalStorage(
     'sideBar',
     isWide ? true : false
