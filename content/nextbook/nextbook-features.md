@@ -29,7 +29,7 @@ title: NextBook Features
 
 ## Content Creation
 
-- Rich [markdown](https://www.markdownguide.org/) suport for content.
+- Rich [markdown](https://www.markdownguide.org/) support for content.
 - For more interactivity, [MDX](https://mdxjs.com/) power is at your fingertips.
 - Fenced code with metadata support allowing code titles, line numbers, links to source, clipboard copying, line highlighting.
 - Need even more dynamic features? See [customization & extensibility](#customization--extensibility) below.
