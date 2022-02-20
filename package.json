@@ -1,6 +1,6 @@
 {
   "name": "next-book",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/amiroff/NextBook.git"
@@ -21,7 +21,7 @@
     "github-slugger": "^1.4.0",
     "gray-matter": "^4.0.3",
     "markdown-toc": "^1.2.0",
-    "next": "^12.0.10",
+    "next": "^12.1.0",
     "next-compose-plugins": "^2.2.1",
     "next-mdx-remote": "3.0.8",
     "next-remote-watch": "1.0.0",
@@ -47,7 +47,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "eslint": "8.9.0",
-    "eslint-config-next": "12.0.10",
+    "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "^8.3.0",
     "postcss": "^8.4.6",
     "tailwindcss": "^3.0.23"
