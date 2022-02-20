@@ -6,7 +6,7 @@ tags: [metadata, reference, NextBook, md]
 updated: '2021-04-30'
 ---
 
-```yaml
+```yaml nocopy
 ---
 part: NextBook
 title: Page Metadata

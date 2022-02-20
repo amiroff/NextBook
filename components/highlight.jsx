@@ -54,6 +54,7 @@ const Highlight = ({
   added = '',
   removed = '',
   dark,
+  nocopy,
   children
 }) => {
   const themeCtx = useContext(ThemeContext)
@@ -125,7 +126,7 @@ const Highlight = ({
         </div>
       )}
       <div className={pseudoNumbered ? 'clean' : undefined}>
-        <div className='relative h-0'>
+        <div className={`relative h-0 ${nocopy ? 'hidden' : null}`}>
           <CopyToClipboard text={children} onCopy={() => setCopied(true)}>
             <button
               className='no-print absolute top-1 right-1 rounded w-7 h-7 p-1 z-10 
@@ -137,6 +138,7 @@ const Highlight = ({
             </button>
           </CopyToClipboard>
         </div>
+
         <SyntaxHighlighter
           language={lang}
           showLineNumbers={pseudoNumbered ? true : numbered}

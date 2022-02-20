@@ -20,7 +20,7 @@ NextBook is open source and completely customizable. You can modify look & feel 
 
 Here are customizable files/folders of the project:
 
-```
+```text nocopy
 components  -> Your components and state stores live here
 config      -> Main configuration file lives here
 content     -> All book/documentation markdown content goes here.

@@ -18,7 +18,7 @@ be displayed in monospace font.
 
 results in:
 
-```
+```text nocopy
 Everything within fenced code will
 be displayed in monospace font.
 ```
@@ -49,7 +49,7 @@ function Square(props) {
 
 results in:
 
-```jsx
+```jsx nocopy
 import React, { useState } from 'react'
 
 function Square(props) {
@@ -85,7 +85,7 @@ function Square(props) {
 
 results in:
 
-```jsx dark
+```jsx dark nocopy
 import React, { useState } from 'react'
 
 function Square(props) {
@@ -101,7 +101,7 @@ function Square(props) {
 
 ## Clipboard Button
 
-Any code block will have automatic `Copy` icon clicking which copies contents of code block to clipboard.
+Any code block will have automatic `Copy` icon clicking which copies contents of code block to clipboard unless you pass `nocopy` meta value to code fence.
 
 ## Code Header Information
 
@@ -129,7 +129,7 @@ function Square(props) {
 
 results in:
 
-```jsx title=app.jsx
+```jsx title=app.jsx nocopy
 import React, { useState } from 'react'
 
 function Square(props) {
@@ -159,7 +159,7 @@ def diff(a, b):
 
 results in:
 
-```python title=Colors/primary_colors.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py
+```python title=Colors/primary_colors.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py nocopy
 def diff(a, b):
     """
     TODO: fix this function!!
@@ -192,7 +192,7 @@ Lines of code can have automatic numbering. Provide `numbered` metadata to achiv
 
 results in:
 
-```html numbered
+```html numbered nocopy
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -224,7 +224,7 @@ Code can start from any provided number. Use `numbered` together with `startline
 
 results in:
 
-```html numbered startline=3
+```html numbered startline=3 nocopy
 <head>
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -256,7 +256,7 @@ In some cases there's a need to highlight/mark some lines and then describe each
 
 results in:
 
-```html marked=2,5,6,10
+```html marked=2,5,6,10 nocopy
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -294,7 +294,7 @@ Sometimes you want to show which lines were added or removed from code. This can
 
 results in:
 
-```html removed=2,8 added=3,9,10
+```html removed=2,8 added=3,9,10 nocopy
 <!DOCTYPE html>
 <html lang='en'>
 <html lang='ja'>
@@ -329,7 +329,7 @@ You can also pass every other parameter mentioned above together. Here we are ad
 ~~~
 results in 
 
-```html numbered marked=2,5,6,10 title=public/index.html link=https://gist.github.com/amiroff/04d57ef025845b191d9cd30c7ca13f20 
+```html numbered marked=2,5,6,10 title=public/index.html link=https://gist.github.com/amiroff/04d57ef025845b191d9cd30c7ca13f20 nocopy
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -368,7 +368,7 @@ To escape (prevent from displaying as highlighted code) block and simply display
 ````
 will result in:
 
-~~~
+~~~text nocopy
 ```html
 <!DOCTYPE html>
 <html lang='en'>

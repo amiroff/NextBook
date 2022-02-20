@@ -10,7 +10,7 @@ updated: '2021-03-14'
 
 YAML front matter can be used to add title, description, part info, tags and update date to your pages. This page includes a front matter like this:
 
-```yaml
+```yaml nocopy
 ---
 part: Documentation
 title: Markdown Usage
@@ -26,7 +26,7 @@ Markdown allows using html tags except scripts. This way you can use modern html
 
 ## Text Manipulation
 
-```text
+```text nocopy
 **This is bold text**
 
 _This is italic text_
@@ -61,7 +61,7 @@ This is ==highlighted== text.
 
 Both of these work:
 
-```text
+```text nocopy
 ---
 ***
 ```
@@ -72,7 +72,7 @@ results in:
 
 ## Blockquotes
 
-```text
+```text nocopy
 > Here is a blockquote.
 
 > Blockquotes can also be nested...
@@ -93,7 +93,7 @@ results in:
 
 ## Footnotes
 
-```
+```text nocopy
 Footnote 1 link. [^first]
 
 Footnote 2 link. [^second]
@@ -118,14 +118,14 @@ A special care was given to displaying code on screen.
 
 ### Inline Code
 
-~~~
+~~~text nocopy
 `$ rm -rf /`
 ~~~
 results in: `$ rm -rf /`
 
 ### Indented Code (4 spaces)
 
-~~~
+~~~text nocopy
     // Some comments
     line 1 of code
     line 2 of code
@@ -142,7 +142,7 @@ results in:
 
 Most of the time you'll use codefences. Here is a simple example, but you can do a lot more with them. For advanced fenced code block usages, see [Fenced Code](/reference/fencedcode) chapter.
 
-````
+````text nocopy
 ```bash
 #!/bin/bash
 echo "Hello World"
@@ -150,7 +150,7 @@ echo "Hello World"
 ````
 results in: 
 
-```bash
+```bash nocopy
 #!/bin/bash
 echo "Hello World"
 ```
@@ -159,7 +159,7 @@ echo "Hello World"
 
 ### Unordered List
 
-```
+```text nocopy
 - Create a list by starting a line with `+`, `-`, or `*`
 - Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
@@ -178,7 +178,7 @@ results in:
 
 ### Ordered List
 
-```
+```text nocopy
 1. Lorem ipsum dolor sit amet
 2. Consectetur adipiscing elit
 3. Integer molestie lorem at massa
@@ -197,7 +197,7 @@ results in:
 
 These are often used to indicate task items.
 
-```
+```text nocopy
 - [x] Clone repo
 - [x] Create some pages
 - [ ] Commit & Push
@@ -267,7 +267,7 @@ results in:
 
 You will use images a lot! Drop your images or svg vectors in public folder and link to them. NextBook will autoscale them for small displays. You can add captions and `alt` information to your images.
 
-```
+```text nocopy
 ![The Octocat](/images/octocat.png) 
 ![The Surface](/images/surface.jpg 'The Surface Device')
 ```
