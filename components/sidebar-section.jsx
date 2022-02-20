@@ -27,34 +27,23 @@ const SideBarSection = ({ toc }) => {
   }, [path, toc.chapters])
 
   return (
-    <>
+    <div className='text-sm'>
       {/* display toggleable titlebar only when we have a part */}
       {toc.part && (
-        <div
-          className='flex font-medium my-2 ml-2 items-center'
-          onClick={toggleMenu}
-        >
-          <div className='text-gray-400 dark:text-gray-400'>
-            {menuVisible ? <AngleDown /> : <AngleRight />}
-          </div>
-          <div className='pl-2 cursor-pointer select-none'>{toc.part}</div>
+        <div className='flex my-3 ml-2 items-center' onClick={toggleMenu}>
+          <div>{menuVisible ? <AngleDown /> : <AngleRight />}</div>
+          <div className='pl-1 cursor-pointer select-none'>{toc.part}</div>
         </div>
       )}
 
       {toc.part ? (
-        <div
-          className={
-            menuVisible
-              ? 'block ml-4 pl-2 border-l border-gray-300 dark:border-gray-600'
-              : 'hidden'
-          }
-        >
+        <div className={menuVisible ? 'block ml-4 pl-1' : 'hidden'}>
           {chapterItems}
         </div>
       ) : (
         <div>{chapterItems}</div>
       )}
-    </>
+    </div>
   )
 }
 

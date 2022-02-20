@@ -38,7 +38,7 @@ export default function GlobalLayout({ title, part, description, children }) {
 
       <div className='content-wrapper mt-10 md:mt-14 flex xl:container xl:mx-auto'>
         <SideBar />
-        <div className={`md-wrapper flex md:ml-56 xl:ml-64`}>{children}</div>
+        <div className='md-wrapper flex md:ml-56 xl:ml-64'>{children}</div>
       </div>
     </>
   )

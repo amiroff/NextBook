@@ -29,7 +29,7 @@ function SideBar() {
 
   return (
     <aside className={sideBarStyle} ref={ref}>
-      <div className='w-full pb-40 md:pb-16 h-full overflow-y-auto pr-6 '>
+      <div className='w-full pb-40 md:pb-16 h-full overflow-y-auto px-1'>
         <div className='flex flex-col md:mt-10'>
           <Link href='/'>
             <a aria-label={projectTitle}>
@@ -42,7 +42,7 @@ function SideBar() {
                   />
                 )}
                 <span
-                  className='hidden text-center md:inline-block font-semibold '
+                  className='hidden px-4 text-center md:inline-block font-semibold '
                   title={projectTitle}
                 >
                   {projectTitle}
