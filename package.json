@@ -46,7 +46,7 @@
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
-    "eslint": "8.9.0",
+    "eslint": "8.10.0",
     "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "^8.4.0",
     "postcss": "^8.4.6",
