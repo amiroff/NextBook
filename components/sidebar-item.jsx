@@ -17,16 +17,18 @@ const SideBarItem = ({ item }) => {
   }, [path, historyCtx, item.path])
 
   return (
-    <Link href={item.path}>
-      <a
-        className={`flex items-center pl-2 my-2 text-gray-900 dark:text-gray-50 hover:underline ${
-          path === item.path ? 'underline' : ''
-        }`}
-      >
-        <span>{icon}</span>
-        <span className='pl-2'>{item.title}</span>
-      </a>
-    </Link>
+    <div className='flex items-center pl-2 my-2'>
+      <span>{icon}</span>
+      <Link href={item.path}>
+        <a
+          className={`text-gray-900 dark:text-gray-50 pl-2 hover:underline ${
+            path === item.path ? 'underline' : ''
+          }`}
+        >
+          {item.title}
+        </a>
+      </Link>
+    </div>
   )
 }
 
