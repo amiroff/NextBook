@@ -47,7 +47,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.5",
     "eslint": "8.14.0",
-    "eslint-config-next": "12.1.5",
+    "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "postcss": "^8.4.12",
     "tailwindcss": "^3.0.24"
