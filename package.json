@@ -34,7 +34,7 @@
     "react-dom": "17.0.2",
     "react-shortcuts-hook": "^1.1.2",
     "react-syntax-highlighter": "^15.5.0",
-    "react-use": "^17.3.2",
+    "react-use": "^17.4.0",
     "remark-breaks": "^3.0.2",
     "remark-containers": "^1.2.0",
     "remark-external-links": "^9.0.1",
