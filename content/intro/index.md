@@ -45,7 +45,7 @@ With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs
 - 🧾 Easy content creation with [markdown](https://www.markdownguide.org/) and [MDX](https://mdxjs.com/) support,
 - 💻 Something more than what basic fenced code offers. Like line highlighting, linking to source and copying to clipboard,
 - 🤓 Familiar [Git](https://github.com/) workflow and collaboration,
-- ⌨︎ Keyboard shortcuts for frequently used actions (theme change (T), page navigation (<-->)),
+- ⌨︎ Keyboard shortcuts for frequently used actions (theme change (T), page navigation (\<\>)),
 - 🔎 In-page optional table of contents with scroolspy,
 - © You own your data, **code is the data**. Committing to repository and seeing results in the simplest form,
 - 🏎 Fast to get started, just one command for up & running locally,
