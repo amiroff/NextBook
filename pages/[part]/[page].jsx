@@ -13,6 +13,7 @@ import externalLinks from 'remark-external-links'
 import remarkGfm from 'remark-gfm'
 import hints from 'remark-hint'
 import slug from 'remark-slug'
+import { rehypeMetaAsProps } from 'utils/mdxUtils'
 import { contentMapping, CONTENT_PATH } from 'utils/mdxUtils'
 
 export default function Page({ source, frontMatter }) {
@@ -42,6 +43,7 @@ export const getStaticProps = async ({ params }) => {
   const mdxSource = await serialize(content, {
     components: componentMap,
     mdxOptions: {
+      rehypePlugins: [rehypeMetaAsProps],
       remarkPlugins: [emoji, externalLinks, slug, hints, breaks, remarkGfm]
     },
     scope: data
