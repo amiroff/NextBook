@@ -33,7 +33,7 @@ This release contains major speed improvements and backwards **incompatible** ch
     - Subscript: was `~`, became `<sub>` tag.
     - Superscript: was `^`, became `<sup>` tag.
     - Mark (higlight): was `==`, became `<mark>` tag.
-    - `Accordion` and `Tabs` components. See related documentation.
+    - Changed syntax for `Accordion` and `Tabs` components. See related documentation.
 - Removed functionality
     - Indented code. This was removed from `MDX2`. Use other ways to define fenced code blocks.
     - Linking with angle brackets: This was removed from `MDX2`. Use other ways to define links.
