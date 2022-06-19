@@ -91,7 +91,7 @@ export const CustomImage = (props) => {
 }
 
 export const Code = (props) => {
-  // XDM removed inlineCode so this is a hack for backwards compatiblity
+  // MDX v2.0 removed inlineCode so this is a hack for backwards compatiblity
   // Basically a code with any classname is considered a block code
   // A code block with no language has a newline at the end, thus the same.
   // https://github.com/wooorm/xdm/issues/3

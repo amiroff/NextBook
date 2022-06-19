@@ -112,7 +112,7 @@ You can display various information like title and link to source in code header
 Often you need to tell which file you are talking about. You can specify this by adding `title` info:
 
 ~~~
-```jsx title=app.jsx
+```jsx title=somefolder/app.jsx
 import React, { useState } from 'react'
 
 function Square(props) {
@@ -129,7 +129,7 @@ function Square(props) {
 
 results in:
 
-```jsx title=app.jsx nocopy
+```jsx title=somefolder/app.jsx nocopy
 import React, { useState } from 'react'
 
 function Square(props) {
@@ -148,7 +148,7 @@ function Square(props) {
 In case you need to link to original source you can pass `link` metadata. Now, title will be a link to the specified URL.
 
 ~~~
-```python title=Colors/primary_colors.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py
+```python title=colors/primary_colors.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py
 def diff(a, b):
     """
     TODO: fix this function!!
@@ -159,7 +159,7 @@ def diff(a, b):
 
 results in:
 
-```python title=Colors/primary_colors.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py nocopy
+```python title=colors/primary_colors.py link=https://github.com/geekcomputers/Python/blob/master/Colors/primary_colors.py nocopy
 def diff(a, b):
     """
     TODO: fix this function!!
