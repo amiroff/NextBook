@@ -44,21 +44,16 @@ const yamlToArray = (yamlString) =>
     return Number(n)
   })
 
-const Highlight = ({
-  lang,
-  title,
-  link,
-  numbered,
-  startline = 1,
-  marked = '',
-  added = '',
-  removed = '',
-  dark,
-  nocopy,
-  children
-}) => {
+const Highlight = (props) => {
   const themeCtx = useContext(ThemeContext)
   const [copied, setCopied] = useState(false)
+
+  const marked = props.marked ?? ''
+  const added = props.added ?? ''
+  const removed = props.removed ?? ''
+  const dark = props.dark === '' ? true : false
+  const nocopy = props.nocopy === '' ? true : false
+  const numbered = props.numbered === '' ? true : false
   const markedArray = marked.split(',').map(function (n) {
     return Number(n)
   })
@@ -70,11 +65,13 @@ const Highlight = ({
   const customPreStyles = `text-sm 2xl:text-base overflow-x-auto py-3 my-4 
                            rounded dark:bg-gray-900 dark:text-gray-200
     ${dark ? 'bg-gray-900 text-gray-200' : 'bg-gray-50 text-gray-900'}`
-  const customPre = (props) => (
+  const customPre = (prop) => (
     <pre
-      className={`${customPreStyles} ${title ? 'rounded-t-none mt-0' : 'mt-4'}`}
+      className={`${customPreStyles} ${
+        props.title ? 'rounded-t-none mt-0' : 'mt-4'
+      }`}
     >
-      {props.children}
+      {prop.children}
     </pre>
   )
   let colorMode = dark
@@ -109,25 +106,25 @@ const Highlight = ({
 
   return (
     <>
-      {title && (
+      {props.title && (
         <div className='text-sm 2xl:text-base overflow-x-auto mt-4 p-2 rounded rounded-b-none bg-gray-300 text-gray-700 dark:bg-gray-700 dark:text-gray-200 font-sans'>
-          {link ? (
+          {props.link ? (
             <a
-              href={link}
+              href={props.link}
               target='_blank'
               rel='noreferrer'
               className='underline'
             >
-              {title}
+              {props.title}
             </a>
           ) : (
-            <span>{title}</span>
+            <span>{props.title}</span>
           )}
         </div>
       )}
       <div className={pseudoNumbered ? 'clean' : undefined}>
         <div className={`relative h-0 ${nocopy ? 'hidden' : null}`}>
-          <CopyToClipboard text={children} onCopy={() => setCopied(true)}>
+          <CopyToClipboard text={props.children} onCopy={() => setCopied(true)}>
             <button
               className='no-print absolute top-1 right-1 rounded w-7 h-7 p-1 z-10 
               text-gray-500 dark:bg-gray-900 
@@ -140,9 +137,9 @@ const Highlight = ({
         </div>
 
         <SyntaxHighlighter
-          language={lang}
+          language={props.lang}
           showLineNumbers={pseudoNumbered ? true : numbered}
-          startingLineNumber={parseInt(startline)}
+          startingLineNumber={parseInt(props.startline ?? 1)}
           style={colorMode}
           wrapLines
           lineProps={wrapper}
@@ -151,7 +148,7 @@ const Highlight = ({
             className: ''
           }}
         >
-          {children}
+          {props.children}
         </SyntaxHighlighter>
       </div>
     </>

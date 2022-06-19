@@ -47,15 +47,13 @@ export const Blockquote = (props) => (
   />
 )
 
-export const Details = (props) => (
-  <details className='p-2 pl-0 font-normal' {...props} />
-)
-
-export const Summary = (props) => (
-  <summary
-    className='summary cursor-pointer p-1 font-semibold pl-0 select-none'
-    {...props}
-  />
+export const Accordion = (props) => (
+  <details className='p-2 pl-0 font-normal'>
+    <summary className='summary cursor-pointer p-1 font-semibold pl-0 select-none'>
+      {props.title}
+    </summary>
+    {props.children}
+  </details>
 )
 
 export const CustomLink = (props) => {
@@ -92,18 +90,25 @@ export const CustomImage = (props) => {
   )
 }
 
-export const Pre = (props) => {
-  const language = props.className?.replace(/language-/, '') || 'text'
-  return (
-    <Highlight lang={language} {...props}>
-      {props.children.replace(/\n+$/, '')}
-    </Highlight>
-  )
-}
+export const Code = (props) => {
+  // MDX v2.0 removed inlineCode so this is a hack for backwards compatiblity
+  // Basically a code with any classname is considered a block code
+  // A code block with no language has a newline at the end, thus the same.
+  // https://github.com/wooorm/xdm/issues/3
+  if (
+    props.className ||
+    props.children?.charAt(props.children.length - 1) === '\n'
+  ) {
+    const language = props.className?.replace(/language-/, '') || 'text'
+    return (
+      <Highlight lang={language} {...props}>
+        {props.children.replace(/\n+$/, '')}
+      </Highlight>
+    )
+  }
 
-export const InlineCode = (props) => {
   return (
-    <code className='rounded p-1 bg-gray-300 dark:bg-gray-700 text-sm'>
+    <code className='inline rounded p-1 bg-gray-300 dark:bg-gray-700 text-sm'>
       {props.children}
     </code>
   )
@@ -126,7 +131,7 @@ export const Tabs = (props) => {
         onClick={() => setActiveIndex(index)}
         key={index}
       >
-        {child.props.className}
+        {child.props.title}
       </button>
     )
   })
@@ -136,7 +141,7 @@ export const Tabs = (props) => {
       <div className='flex flex-col sm:flex-row' role='group'>
         {tabs}
       </div>
-      <div className='card bg-transparent m-0 border-0 p-5'>
+      <div className='bg-transparent m-0 border-0 px-5 pb-2'>
         {props.children[activeIndex]}
       </div>
     </div>

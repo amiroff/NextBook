@@ -33,13 +33,13 @@ _This is italic text_
 
 **_This is bold italic text_**
 
-~~This is Strikethrough text~~
+~This is strikethrough text~
 
-Superscript: 19^th^
+Superscript: 19<sub>th</sub>
 
-Subscript: H~2~O
+Subscript: H<sub>2</sub>O
 
-This is ==highlighted== text.
+This is <mark>highlighted</mark> text.
 ```
 results in: 
 
@@ -49,13 +49,13 @@ _This is italic text_
 
 **_This is bold italic text_**
 
-~~This is Strikethrough text~~
+~~This is strikethrough text~~
 
-Superscript: 19^th^
+Superscript: 19<sub>th</sub>
 
-Subscript: H~2~O
+Subscript: H<sub>2</sub>O
 
-This is ==highlighted== text.
+This is <mark>highlighted</mark> 
 
 ## Horizontal Lines
 
@@ -123,21 +123,6 @@ A special care was given to displaying code on screen.
 ~~~
 results in: `$ rm -rf /`
 
-### Indented Code (4 spaces)
-
-~~~text nocopy
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-~~~
-results in:
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
 ### Fenced Code Blocks
 
 Most of the time you'll use codefences. Here is a simple example, but you can do a lot more with them. For advanced fenced code block usages, see [Fenced Code](/reference/fencedcode) chapter.
@@ -160,7 +145,7 @@ echo "Hello World"
 ### Unordered List
 
 ```text nocopy
-- Create a list by starting a line with `+`, `-`, or `*`
+- Create a list by starting a line with +, -, or *
 - Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
     * Facilisis in pretium nisl aliquet
@@ -293,7 +278,6 @@ Links can be auto-detected, but it would be better to be implicit and have suppo
 ```
 - [Basic link](https://github.com)
 - [Link with title](https://github.com 'Github FTW')
-- Link with angle brackets: <https://github.com/remarkjs>
 - Autoconverted link https://github.com/remarkjs
 - Cross page [absolute link](/nextbook/getting-started) for single page app navigation.
 - Link to [part of a page](#links)
@@ -308,7 +292,6 @@ results in:
 
 - [Basic link](https://github.com)
 - [Link with title](https://github.com 'Github FTW')
-- Link with angle brackets: <https://github.com/remarkjs>
 - Autoconverted link https://github.com/remarkjs
 - Cross page [absolute link](/nextbook/getting-started) for single page app navigation.
 - Link to [part of a page](#links)
@@ -357,7 +340,7 @@ Ooooops, an unknown error occured.
 
 ## Emojis
 
-Nothing fancy, just use typical 🥳 emojis.  
+Nothing fancy, just use native os supported 🥳 emoji characters or their text representations like `:partying_face:` for :partying_face:.
 Press <kbd>control + command + space</kbd> on macOS and <kbd>windows + .</kbd> on Windows.
 
 ## Containers
@@ -365,22 +348,15 @@ Press <kbd>control + command + space</kbd> on macOS and <kbd>windows + .</kbd> o
 ### Accordion
 
 ``` markdown
-::: details
-  ::: summary
-  Toggle Me
-  :::
-  ...and see my content
-:::
+<Accordion title="Toggle Me">
+...and see my content
+</Accordion>
 ```
 
-results in:
+<Accordion title="Toggle Me">
+...and see my content
+</Accordion>
 
-::: details
-  ::: summary
-  Toggle Me
-  :::
-  ...and see my content
-:::
 
 ?> Warning
 Accordion component is not print compatible. Use responsibly.
@@ -390,49 +366,41 @@ Accordion component is not print compatible. Use responsibly.
 While [markdown spec](https://commonmark.org) does not offer any tabbed interface, NextBook has you covered here. Use `tabs` and `tab` containers as follows:
 
 ``` markdown
-::: tabs
-  ::: tab Windows Directions
-
-  Install via [chocolatey](https://chocolatey.org):
+<Tabs>
+  <Tab title="Windows Directions">
+      Install via [chocolatey](https://chocolatey.org):
   
-  `choco install python`
-  :::
-  ::: tab macOS Directions
+      `choco install python`
+  </Tab>
+  <Tab title="macOS Directions">
+      Install via [brew](https://brew.sh):
 
-  Install via [brew](https://brew.sh):
+     `brew install python3`
+  </Tab>
+  <Tab title="Linux Directions">
+      Install via apt:
 
-  `brew install python3`
-  :::
-
-  ::: tab Linux Directions
-
-  Install via apt:
-
-  `sudo apt install python3`
-  :::
-:::
+      `sudo apt install python3`
+  </Tab>
+</Tabs>
 ```
 results in:
 
-::: tabs
-  ::: tab Windows Directions
+<Tabs>
+  <Tab title="Windows Directions">
+    Install via [chocolatey](https://chocolatey.org):
 
-  Install via [chocolatey](https://chocolatey.org):
-  
-  `choco install python`
-  :::
-  ::: tab macOS Directions
+    `choco install python`
+  </Tab>
+  <Tab title="macOS Directions">
+    Install via [brew](https://brew.sh):
 
-  Install via [brew](https://brew.sh):
-
-  `brew install python3`
-  :::
-
-  ::: tab Linux Directions
-
-  Install via apt:
-
-  `sudo apt install python3`
-  :::
-:::
+    `brew install python3`
+  </Tab>
+  <Tab title="Linux Directions">
+    Install via apt:
+    
+    `sudo apt install python3`
+  </Tab>
+</Tabs>
 

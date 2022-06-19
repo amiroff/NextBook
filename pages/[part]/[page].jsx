@@ -4,16 +4,16 @@ import GithubSlugger from 'github-slugger'
 import matter from 'gray-matter'
 import DocumentLayout from 'layouts/document'
 import toc from 'markdown-toc'
-import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import { serialize } from 'next-mdx-remote/serialize'
 import path from 'path'
 import breaks from 'remark-breaks'
-import containers from 'remark-containers'
+import emoji from 'remark-emoji'
 import externalLinks from 'remark-external-links'
+import remarkGfm from 'remark-gfm'
 import hints from 'remark-hint'
-import remarkMark from 'remark-mark-plus'
 import slug from 'remark-slug'
-import remarkSubSuper from 'remark-sub-super'
+import { rehypeMetaAsProps } from 'utils/mdxUtils'
 import { contentMapping, CONTENT_PATH } from 'utils/mdxUtils'
 
 export default function Page({ source, frontMatter }) {
@@ -43,15 +43,8 @@ export const getStaticProps = async ({ params }) => {
   const mdxSource = await serialize(content, {
     components: componentMap,
     mdxOptions: {
-      remarkPlugins: [
-        containers,
-        externalLinks,
-        slug,
-        hints,
-        remarkSubSuper,
-        breaks,
-        remarkMark
-      ]
+      rehypePlugins: [rehypeMetaAsProps],
+      remarkPlugins: [emoji, externalLinks, slug, hints, breaks, remarkGfm]
     },
     scope: data
   })

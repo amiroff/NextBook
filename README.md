@@ -27,6 +27,20 @@
 
 With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs.org) anything fancy (grading, level switching...) can be added along the way.
 
+## What's New In NextBook 3.0?
+
+This release contains major speed improvements and backwards **incompatible** changes. Most of these come from MDX2 removing some functionality and other old libraries still not supporting ES modules.
+
+- Migrated to `next-mdx-remote v.4` which now uses `MDX2`. This has some speed improvements and stricter MDX syntax checking. See [MDX2](https://mdxjs.com/blog/v2/)
+- Replaced some custom incompatible markdown plugins with MDX counterparts. These are:
+    - Subscript: was `~`, became `<sub>` tag.
+    - Superscript: was `^`, became `<sup>` tag.
+    - Mark (higlight): was `==`, became `<mark>` tag.
+    - Changed syntax for `Accordion` and `Tabs` components. See related documentation.
+- Removed functionality
+    - Indented code. This was removed from `MDX2`. Use other ways to define fenced code blocks.
+    - Linking with angle brackets: This was removed from `MDX2`. Use other ways to define links.
+
 ## What's New In NextBook 2.0?
 
 - Support for multiple books in one project.
@@ -35,7 +49,6 @@ With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs
 - Auto-centered layout on big resolutions leading to one less configuration option.
 - 40% smaller bundle size.
 - Navigation bar.
-- Updated dependencies.
 - Refined mobile UI.
 - Less code (−4,000 LOC).
 

@@ -24,6 +24,20 @@ This should be enough to have a statically generated documentation page / book.
 
 With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs.org), anything fancy (grading, level switching...) can be added along the way.
 
+## What's New In NextBook 3.0?
+
+This release contains major speed improvements and backwards **incompatible** changes. Most of these come from MDX2 removing some functionality and other old libraries still not supporting ES modules.
+
+- Migrated to `next-mdx-remote v.4` which now uses `MDX2`. This has some speed improvements and stricter MDX syntax checking. See [MDX2](https://mdxjs.com/blog/v2/)
+- Replaced some custom incompatible markdown plugins with MDX counterparts. These are:
+    - Subscript: was `~`, became `<sub>` tag.
+    - Superscript: was `^`, became `<sup>` tag.
+    - Mark (higlight): was `==`, became `<mark>` tag.
+    - Changed syntax for `Accordion` and `Tabs` components. See related documentation.
+- Removed functionality
+    - Indented code. This was removed from `MDX2`. Use other ways to define fenced code blocks.
+    - Linking with angle brackets: This was removed from `MDX2`. Use other ways to define links.
+
 ## What's New In NextBook 2.0?
 
 - Support for multiple books in one project.
@@ -45,7 +59,7 @@ With the advantages of [Next.js](https://nextjs.com) and [React](https://reactjs
 - 🧾 Easy content creation with [markdown](https://www.markdownguide.org/) and [MDX](https://mdxjs.com/) support,
 - 💻 Something more than what basic fenced code offers. Like line highlighting, linking to source and copying to clipboard,
 - 🤓 Familiar [Git](https://github.com/) workflow and collaboration,
-- ⌨︎ Keyboard shortcuts for frequently used actions (theme change (T), page navigation (<-->)),
+- ⌨︎ Keyboard shortcuts for frequently used actions (theme change (T), page navigation (\<\>)),
 - 🔎 In-page optional table of contents with scroolspy,
 - © You own your data, **code is the data**. Committing to repository and seeing results in the simplest form,
 - 🏎 Fast to get started, just one command for up & running locally,
