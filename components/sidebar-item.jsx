@@ -21,7 +21,7 @@ const SideBarItem = ({ item }) => {
       <span>{icon}</span>
       <Link href={item.path}>
         <a
-          className={`text-gray-900 dark:text-gray-50 pl-2 hover:underline ${
+          className={`text-base pl-2 hover:underline ${
             path === item.path ? 'underline' : ''
           }`}
         >
