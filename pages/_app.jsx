@@ -1,5 +1,5 @@
 import splitbee from '@splitbee/web'
-import { HistoryContextProvider } from 'components/store/history-context'
+import { OptionalHistoryContextProvider } from 'components/store/history-context'
 import { SideBarContextProvider } from 'components/store/sidebar-context'
 import { ThemeContextProvider } from 'components/store/theme-context'
 import 'tailwindcss/tailwind.css'
@@ -18,11 +18,11 @@ if (
 export default function MyApp({ Component, pageProps }) {
   return (
     <ThemeContextProvider>
-      <HistoryContextProvider>
+      <OptionalHistoryContextProvider>
         <SideBarContextProvider>
           <Component {...pageProps} />
         </SideBarContextProvider>
-      </HistoryContextProvider>
+      </OptionalHistoryContextProvider>
     </ThemeContextProvider>
   )
 }

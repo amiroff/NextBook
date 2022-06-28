@@ -32,7 +32,9 @@ const SideBarSection = ({ toc }) => {
       {toc.part && (
         <div className='flex my-3 ml-2 items-center' onClick={toggleMenu}>
           <div>{menuVisible ? <AngleDown /> : <AngleRight />}</div>
-          <div className='pl-1 cursor-pointer select-none'>{toc.part}</div>
+          <div className='pl-1 text-base text-gray-900  dark:text-gray-50 cursor-pointer select-none'>
+            {toc.part}
+          </div>
         </div>
       )}
 

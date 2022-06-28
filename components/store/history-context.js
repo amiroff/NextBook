@@ -28,4 +28,12 @@ export function HistoryContextProvider(props) {
   )
 }
 
+export function OptionalHistoryContextProvider(props) {
+  return process.env.NEXT_PUBLIC_PAGE_TRACKING_ENABLED == 0 ? (
+    props.children
+  ) : (
+    <HistoryContextProvider>{props.children}</HistoryContextProvider>
+  )
+}
+
 export default HistoryContext
