@@ -7,6 +7,10 @@ const HistoryContext = createContext({
 })
 
 export function HistoryContextProvider(props) {
+  if (process.env.NEXT_PUBLIC_PAGE_TRACKING_ENABLED == 0) {
+    return props.children
+  }
+
   const [history, setHistory] = useLocalStorage('visitedChapters', [])
   const router = useRouter()
 

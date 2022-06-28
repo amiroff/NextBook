@@ -10,8 +10,7 @@ title: NextBook Features
 - Good out of the box looks thanks to [tailwindcss](https://tailwindcss.com/).
 - Keyboard shortcuts to toggle features (theme, next/previous page navigation).
 - Built-in light and dark mode (press <kbd>T</kbd>) for pleasant and safe reading.
-- Smooth progressbar on top indicating how far on the page you are.
-- Side menu that keeps reader's read progress.
+- Side menu that keeps reader's read progress (can be disabled).
 - In-page dynamic table of contents (if titles are used within the document) with scroolspy.
 
 ## SEO
