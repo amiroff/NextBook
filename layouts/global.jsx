@@ -36,9 +36,9 @@ export default function GlobalLayout({ title, part, description, children }) {
         <NavBar />
       </header>
 
-      <div className='content-wrapper mt-10 md:mt-14 flex xl:container xl:mx-auto'>
+      <div className='content-wrapper mt-10 md:mt-14 flex'>
         <SideBar />
-        <div className='md-wrapper flex md:ml-56 xl:ml-64'>{children}</div>
+        <div className='md-wrapper flex md:ml-56 xl:ml-64 grow'>{children}</div>
       </div>
     </>
   )

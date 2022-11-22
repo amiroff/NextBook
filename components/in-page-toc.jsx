@@ -2,8 +2,9 @@ import Scrollspy from 'components/scrollspy'
 import Text from './text'
 
 function InPageTocElement(props) {
-  // remove 1 from first heading to prevent exe left padding and add standard left padding
-  const style = { paddingLeft: `${props.levels[props.children] - 1 + 0.2}em` }
+  // Indent headings based on their level
+  const level = props.levels[props.children] >= 1 ? props.levels[props.children] : 1
+  const style = { paddingLeft: `${level}em` }
   return (
     <li style={style} className={props.className} onClick={props.onClick}>
       {props.children}
