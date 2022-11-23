@@ -25,13 +25,13 @@ I like this because it starts from absolute zero and describes HTML basics in a 
 
 Time to create your first web page! Follow along with the below videos on your computer. You may copy the page in the video, or create your own!
 
-\***\*[**Your first web page. ](https://www.youtube.com/watch?v=88QJumITbQA)(5 min) This features a Live Reload plugin for VSCode, which is a super helpful tool when developing static pages!
+[Your first web page. ](https://www.youtube.com/watch?v=88QJumITbQA)(5 min) This features a Live Reload plugin for VSCode, which is a super helpful tool when developing static pages!
 
-\***\*[**Basic HTML Elements**](https://www.youtube.com/watch?v=PypMN-yui4Y)**
+[**Basic HTML Elements**](https://www.youtube.com/watch?v=PypMN-yui4Y)
 
-\***\*[**Advanced HTML Elements**](https://www.youtube.com/watch?v=1rbo\_HHt5nw)**
+[**Advanced HTML Elements**](https://www.youtube.com/watch?v=1rbo_HHt5nw)
 
-\***\*[**Let's go through once more here**](https://www.freecodecamp.org/news/html-basics-for-beginners/) (15min). ** Follow along in the video and create the same site in VSCode.
+[**Let's go through once more here**](https://www.freecodecamp.org/news/html-basics-for-beginners/) (15min). Follow along in the video and create the same site in VSCode.
 
 ### 2.2 Inspecting HTML/CSS
 

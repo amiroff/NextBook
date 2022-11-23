@@ -68,7 +68,7 @@ We're going to be using Javascript on the command-line, outside of the browser. 
 
 Let's go over the tools we've just installed, and get acquainted with Git. [Watch this video here](https://www.youtube.com/watch?v=HfTXHrWMGVY) (5 min).
 
-### 1.6 PROJECT
+### 1.6 Project: Contribute to a Github Repo
 
 Use the command-line, Git, and VSCode to update a repository.
 

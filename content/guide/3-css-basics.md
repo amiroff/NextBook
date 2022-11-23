@@ -12,7 +12,7 @@ It's a perfect transition from HTML-only to CSS, it introduces styles as a conce
 
 [Let's take a deeper dive into CSS](https://www.youtube.com/watch?v=1PnVor36_40) (20 min)
 
-\***\*[**Style a modern website](https://www.youtube.com/watch?v=Sv\_NAxi\_jNs) (30 min)
+[Style a modern website](https://www.youtube.com/watch?v=Sv_NAxi_jNs) (30 min)
 
 The Odin Project has some great material on CSS fundamentals:
 
@@ -51,11 +51,11 @@ Let's learn about these topics in more depth:
 
 ### 3.3 More CSS
 
-\***\*[**Style a modern website (part 2).](https://www.youtube.com/watch?v=nKa1JPf0ZN4) (30 min)
+[Style a modern website (part 2).](https://www.youtube.com/watch?v=nKa1JPf0ZN4) (30 min)
 
 > Covers percentage widths, layout, buttons
 
-\***\*[**Style a modern website (part 3). ](https://www.youtube.com/watch?v=auWKaf0m0S0)(30 min)
+[Style a modern website (part 3). ](https://www.youtube.com/watch?v=auWKaf0m0S0)(30 min)
 
 > Covers flexbox, responsive design, pseudoselectors
 

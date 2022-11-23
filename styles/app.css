@@ -44,6 +44,10 @@ h6 {
   @apply text-lg font-bold my-5;
 }
 
+pre {
+  @apply rounded-sm overflow-auto max-w-[300px] lg:max-w-md xl:max-w-lg mx-auto;
+}
+
 /* Diffs without line numbering */
 .clean .linenumber {
   display: none !important;

@@ -24,7 +24,7 @@ export default function DocumentLayout({ children, frontMatter }) {
     <GlobalLayout title={title} part={part} description={description}>
       <div className='content-container flex grow'>
         <div
-          className='content px-4 md:px-8 xl:px-20 grow shrink'
+          className='content px-4 md:px-14 xl:px-20 grow shrink'
         >
           {/* {title && <h1>{title}</h1>} */}
           {/* {description && <p className='my-1'>{description}</p>} */}

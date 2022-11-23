@@ -25,7 +25,7 @@ function SideBar() {
 
   const sideBarStyle = sideBarCtx.sideBar
     ? 'sidebar w-2/3 z-50 h-screen bg-gray-100 dark:bg-gray-800 border-r border-gray-300 dark:border-gray-800 fixed pl-4 text-lg top-10 md:hidden'
-    : 'sidebar z-50 shrink h-screen fixed top-10 md:top-14 hidden md:block pl-4 pr-4 border-r h-full overflow-y-auto max-w-xs'
+    : 'sidebar z-50 shrink h-screen fixed top-10 md:top-14 hidden md:block pl-4 pr-4 border-r h-full overflow-y-auto max-w-xs bg-[#ffffff] dark:bg-gray-800'
 
   return (
     <aside className={sideBarStyle} ref={ref}>
