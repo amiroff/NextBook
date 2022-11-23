@@ -1,3 +1,4 @@
+// TODO: Re-render on route change
 import { useEffect, useState } from 'react';
 import router from 'next/router';
 import Scrollspy from 'components/scrollspy'
@@ -14,8 +15,6 @@ function InPageTocElement(props) {
     </li>
   )
 }
-
-
 
 function InPageToc({ tocRaw }) {
   let tocIds = []
