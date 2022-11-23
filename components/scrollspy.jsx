@@ -44,10 +44,13 @@ export default class Scrollspy extends React.Component {
       }
 
       if(this.state.current !== itemInView.id) {
+        // item updated
 
         const update = items.map((item) => {
           return { ...item, inView: item === itemInView }
         })
+
+        // router.push({ hash: itemInView.id }, null, { shallow: true });
 
         this.setState({ items: update, current: itemInView.id  })        
 
