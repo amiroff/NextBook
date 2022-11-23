@@ -9,6 +9,7 @@ export default function DocumentLayout({ children, frontMatter }) {
   const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
   const [locale, setLocale] = useState('en')
   const { title, part, description, tags, updated, tocRaw } = frontMatter
+  const [toc, setToc] = useState(tocRaw)
 
   useEffect(() => {
     const browserLocales =
@@ -19,6 +20,10 @@ export default function DocumentLayout({ children, frontMatter }) {
       setLocale(browserLocales[0])
     }
   }, [])
+
+  useEffect(() => {
+    setToc(tocRaw)
+  }, [tocRaw])
 
   return (
     <GlobalLayout title={title} part={part} description={description}>
@@ -61,7 +66,7 @@ export default function DocumentLayout({ children, frontMatter }) {
         {showToc && (
           <div className='toc-container hidden lg:block grow shrink-0 basis-80'>
             <div className='toc sticky top-20'>
-              <InPageToc tocRaw={tocRaw} />
+              <InPageToc tocRaw={toc} />
             </div>
           </div>
         )}

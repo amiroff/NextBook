@@ -67,6 +67,11 @@ export default class Scrollspy extends React.Component {
     this.spy()
     }
 
+  componentDidUpdate() {
+    this.elements = this.props.ids.map((id) => document.getElementById(id))
+    this.spy()
+  }
+
   componentWillUnmount() {
     window.removeEventListener('scroll', () => this.spy(), false);
     window.removeEventListener('resize', () => this.spy(), false);

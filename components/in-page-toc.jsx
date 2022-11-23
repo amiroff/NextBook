@@ -17,15 +17,21 @@ function InPageTocElement(props) {
 }
 
 function InPageToc({ tocRaw }) {
-  let tocIds = []
-  let levels = {}
-  tocRaw.forEach((row) => {
-    // populate dictionary of heading slugs
-    tocIds.push(row.slug)
-    // populate dictionary of headings and their levels
-    levels[row.slug] = row.lvl
+  const [tocIds, setTocIds] = useState([])
+  const [levels, setLevels] = useState({})
 
-  })
+  useEffect(() => {
+    let tmpIds = []
+    let tmpLevels = {}
+    tocRaw.forEach((row) => {
+      // populate dictionary of heading slugs
+      tmpIds.push(row.slug)
+      // populate dictionary of headings and their levels
+      tmpLevels[row.slug] = row.lvl
+    })
+    setTocIds(tmpIds)
+    setLevels(tmpLevels)
+  }, [tocRaw])
 
   // Update current "copy link" button when the user scrolls
   const [url, setUrl] = useState('')
