@@ -53,7 +53,7 @@ export default function PageNav() {
   )
 
   return (
-    <div className='my-2 no-print'>
+    <div className='my-2 no-print max-w-xs'>
       <div
         className={`flex flex-col-reverse sm:flex-row ${
           !prevChapter && 'justify-end'
@@ -68,7 +68,7 @@ export default function PageNav() {
               title={_('Previous chapter')}
             >
               <ArrowLeft />
-              <div className='ml-2'>{prevChapter.title}</div>
+              <div className='ml-2 truncate'>{prevChapter.title}</div>
             </a>
           </Link>
         )}
@@ -81,7 +81,7 @@ export default function PageNav() {
               }`}
               title={_('Next chapter')}
             >
-              <div className='mr-2'>{nextChapter.title}</div>
+              <div className='mr-2 truncate'>{nextChapter.title}</div>
               <ArrowRight />
             </a>
           </Link>

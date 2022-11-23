@@ -107,7 +107,9 @@ export default class Scrollspy extends React.Component {
               // scroll to the element
               this.scrollTo(item.element)
             },
-            children: item.element.innerText
+            children: item.element.innerText,
+            // Truncate the text to n characters
+            // children: item.element.innerText.replace(/(.{20})..+/, "$1…")
           })
         : null
     })

@@ -7,7 +7,7 @@ title: Welcome to Development 101!
 
 My name is Lacy Morrow, and I'll be your guide through the wonderful world of coding!
 
-![A photo of Lacy smiling](https://next-book.vercel.app/screenshot.png)
+![A photo of Lacy smiling](/images/photo-lacy.jpg)
 
 At AAM institute, we believe there’s a better, faster way to become a top notch coder that doesn’t exist right now.
 

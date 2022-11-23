@@ -5,40 +5,40 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 function NavBar() {
-  const { logo, navbarItems } = config
+  const { branding, navbarItems } = config
   const router = useRouter()
 
   return (
-    <div className='flex pt-1 text-xs lg:text-sm max-h-full bg-gray-50'>
+    <div className='flex pt-1 text-xs lg:text-sm max-h-full bg-gray-50 dark:bg-gray-900'>
       <SideBarToggler />
       <nav className='text-left text-xs lg:text-sm ml-6 flex-auto space-x-1 text-gray-900 dark:text-gray-50'>
 
-        {logo && (
-          <Link href={logo.href || '/'}>
-            <a aria-label={logo.title} className="">
-              {logo.img && (
+        {branding && (
+          <Link href={branding.href || '/'}>
+            <a aria-label={branding.title} className="">
+              {branding.img && (
                 <img
-                  src={logo.img}
-                  alt={logo.alt || logo.title || 'logo'}
+                  src={branding.img}
+                  alt={branding.alt || branding.title || 'logo'}
                   className='h-full hidden md:inline-block mr-4'
                 />
               )}
 
-              {logo.initials && (
+              {branding.initials && (
                 <span
                   className='border border-gray-300 rounded-sm mr-4 text-lg text-center font-bold mt-1 w-6 h-6 md:mt-0 md:w-8 md:h-8 inline-flex justify-center items-center'
-                  title={logo.title}
+                  title={branding.title}
                 >
-                  {logo.initials}
+                  {branding.initials}
                 </span>
               )}
 
-              {logo.title && (
+              {branding.title && (
                 <span
                   className='hidden text-center md:inline-block font-semibold mr-4'
-                  title={logo.title}
+                  title={branding.title}
                 > 
-                  {logo.title}
+                  {branding.title}
                 </span>
               )}
             </a>

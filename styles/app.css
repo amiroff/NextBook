@@ -11,9 +11,37 @@ html {
   }
 }
 
+a {
+  @apply transition-colors duration-200;
+}
+
 a.current {
   background-color: rgba(133, 163, 224, 0.1);
   color: rgb(41, 104, 233);
+}
+
+h1 {
+  @apply text-5xl font-bold my-5;
+}
+
+h2 {
+  @apply text-4xl font-bold my-5;
+}
+
+h3 {
+  @apply text-3xl font-bold my-5;
+}
+
+h4 {
+  @apply text-2xl font-bold my-5;
+}
+
+h5 {
+  @apply text-xl font-bold my-5;
+}
+
+h6 {
+  @apply text-lg font-bold my-5;
 }
 
 /* Diffs without line numbering */
@@ -22,6 +50,7 @@ a.current {
 }
 
 p {
+  @apply text-lg;
   margin: 1em 0;
 }
 

@@ -28,27 +28,31 @@ const SideBarItem = ({ active, item, onClick, icon }) => {
           <Link href={item.path}>
             <a
               style={{userSelect: 'none'}}
-              className={`${sidebarItemStyle} ${currentPath && 'current font-bold bg-gray-100 dark:bg-gray-900'}
-              ${visited ? ' text-gray-600 dark:text-gray-300' : 'text-gray-400'}
+              className={`
+                ${sidebarItemStyle} 
+                ${active && ' font-bold'}
+                ${currentPath && ' current font-bold bg-gray-100 dark:bg-gray-900 '}
+                ${visited ? ' text-gray-600 dark:text-gray-300' : 'text-gray-400 '}
               `}
               >
-              {!icon && <span className='inline-block pr-2'>{visited ? <Check /> : <Dot />}</span> }
-              <div className='grow'>
+              <div className='grow pr-2 break-words w-full truncate'>
                 {item.title}
               </div>
-              {!!icon &&  <span onClick={onClick}>{icon}</span>}
+              {icon ? (
+                <span className='inline-block pr-2' onClick={onClick}>{icon}</span>
+                ) : visited && <span className='inline-block pr-2'><Check /></span>} 
             </a>
           </Link>
         ) : (
           <div
             onClick={onClick}
             style={{userSelect: 'none'}}
-            className={`${sidebarItemStyle} ${active && 'bg-gray-100 dark:bg-gray-900'}`}
+            className={`${sidebarItemStyle} ${active && 'font-bold'}`}
           >
-              <div className='grow'>
+              <div className='grow pr-2 break-words w-full'>
                 {item.title}
               </div>
-              {!!icon &&  <span>{icon}</span>}
+              {icon &&  <span className='inline-block pr-2'>{icon}</span>}
             </div>
         )}
     </div>

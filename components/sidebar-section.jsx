@@ -23,11 +23,12 @@ const SideBarSection = ({ toc }) => {
 
   // Open part containing current page
   useEffect(() => {
+    setMenuActive(false)
     const currentPart = toc.chapters.some((chapter) => chapter.path === path)
     if (currentPart) {
       setMenuVisible(true)
-      setMenuActive(true)
     }
+    setMenuActive(currentPart)
   }, [path, toc.chapters])
 
   if(toc.part) {
@@ -37,7 +38,7 @@ const SideBarSection = ({ toc }) => {
         <div className='flex w-full items-center cursor-pointer select-none' >
             <SideBarItem item={{title: toc.part, path: toc.path || ''}} onClick={toggleMenu} active={menuActive} icon={menuVisible ? <AngleDown /> : <AngleRight />} />
         </div>
-        <div className={menuVisible ? 'block ml-4 pl-1' : 'hidden'}>
+        <div className={menuVisible ? 'block ml-4 border-l border-gray-300 pl-2' : 'hidden'}>
           {chapterItems}
         </div>
       </div>

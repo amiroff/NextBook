@@ -155,7 +155,7 @@ export const AngleUp = () => (
 export const AngleDown = () => (
   <svg
     height='16px'
-    className='sidebar-title-icon'
+    className='sidebar-title-icon w-4'
     fill='currentColor'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
@@ -171,7 +171,7 @@ export const AngleDown = () => (
 export const AngleRight = () => (
   <svg
     height='16px'
-    className='sidebar-title-icon'
+    className='sidebar-title-icon w-4'
     fill='currentColor'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
@@ -190,7 +190,7 @@ export const Check = () => (
     fill='currentColor'
     viewBox='0 0 20 20'
     xmlns='http://www.w3.org/2000/svg'
-    className='w-3'
+    className='w-4'
   >
     <path
       fillRule='evenodd'

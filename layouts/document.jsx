@@ -26,7 +26,7 @@ export default function DocumentLayout({ children, frontMatter }) {
         <div
           className='content px-4 md:px-8 xl:px-20 grow shrink'
         >
-          {title && <h1 className='text-4xl font-bold my-5'>{title}</h1>}
+          {/* {title && <h1>{title}</h1>} */}
           {description && <p className='my-1'>{description}</p>}
           {tags && (
             <div className='my-2 text-sm 2xl:text-base'>
