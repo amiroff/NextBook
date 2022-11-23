@@ -25,14 +25,14 @@ function SideBar() {
 
   const sideBarStyle = sideBarCtx.sideBar
     ? 'sidebar w-2/3 z-50 h-screen bg-gray-100 dark:bg-gray-800 border-r border-gray-300 dark:border-gray-800 fixed pl-4 text-lg top-10 md:hidden'
-    : 'sidebar z-50 shrink h-screen fixed top-10 md:top-14 hidden md:block px-4'
+    : 'sidebar z-50 shrink h-screen fixed top-10 md:top-14 hidden md:block pl-4 pr-2 border-r h-full overflow-y-auto'
 
   return (
     <aside className={sideBarStyle} ref={ref}>
-      <div className='w-full pb-40 md:pb-16 h-full overflow-y-auto px-1'>
-        <div className='flex flex-col md:mt-10'>
+      <div className='w-full'>
+        <div className='flex flex-col'>
           <Link href='/'>
-            <a aria-label={projectTitle}>
+            <a aria-label={projectTitle} className="py-4 md:py-16">
               <div className='flex flex-col items-center'>
                 {process.env.NEXT_PUBLIC_USE_LOGO && (
                   <img
@@ -42,7 +42,7 @@ function SideBar() {
                   />
                 )}
                 <span
-                  className='hidden px-4 text-center md:inline-block font-semibold '
+                  className='hidden px-4 text-center md:inline-block font-semibold'
                   title={projectTitle}
                 >
                   {projectTitle}
@@ -50,7 +50,7 @@ function SideBar() {
               </div>
             </a>
           </Link>
-          <div className='mt-6 pl-2 leading-loose tracking-wide'>
+          <div className='mt-6 leading-loose tracking-wide'>
             {toc.map((toc, id) => (
               <SideBarSection toc={toc} key={id} />
             ))}

@@ -13,11 +13,19 @@
     "Copy link": "Copy link to this heading",
     "Copy": "Copy",
     "Copied!": "Copied!",
-    "Page Contents": "Page Contents",
+    "Permalink": "Copy Link",
+    "Page Contents": "On This Page",
     "Toggle mobile sidebar": "Toggle mobile sidebar",
     "Previous chapter": "Previous chapter (<-)",
     "Next chapter": "Next chapter (->)",
     "Figure": "Figure"
+  },
+  "logo": {
+    "initials": "A",
+    "title": "AAM Institute: Development 101",
+    "href": "https://development-101.vercel.app",
+    "img": "/images/logo.png",
+    "alt": "AAM Institute: Development 101"
   },
   "navbarItems": [
     {
@@ -47,6 +55,7 @@
     },
     {
       "part": "Development 101",
+      "path": "/guide/0-programming-mindset",
       "chapters": [
         {
           "title": "Programming Mindset",

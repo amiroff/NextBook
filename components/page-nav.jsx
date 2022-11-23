@@ -2,46 +2,54 @@ import { ArrowLeft, ArrowRight } from 'components/svg-icons'
 import config from 'config/config.json'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import { useShortcuts } from 'react-shortcuts-hook'
 import { _ } from './text'
 
 export default function PageNav() {
-  const router = useRouter()
   const { toc } = config
-  const { asPath } = router
+  const router = useRouter()
+  const [prevChapter, setPrevChapter] = useState('')
+  const [nextChapter, setNextChapter] = useState('')
 
-  // isolate current part array
-  const currentPart = toc.find((part) =>
-    part.chapters.some((chapter) => chapter.path === asPath)
-  )
-  const currentPartIndex = toc.indexOf(currentPart)
+  useEffect(() => {
+    
+    // isolate current part array
+    const currentPart = toc.find((part) =>
+      part.chapters.some((chapter) => chapter.path === router.asPath)
+    )
+    const currentPartIndex = toc.indexOf(currentPart)
 
-  // find previous and next parts even if they do not exist
-  const prevPart = toc[currentPartIndex - 1]
-  const nextPart = toc[currentPartIndex + 1]
+    // find previous and next parts even if they do not exist
+    const prevPart = toc[currentPartIndex - 1]
+    const nextPart = toc[currentPartIndex + 1]
 
-  // find index of current title
-  const currentChapterIndex = currentPart?.chapters.findIndex(
-    (chapter) => chapter.path === asPath
-  )
+    // find index of current title
+    const currentChapterIndex = currentPart?.chapters.findIndex(
+      (chapter) => chapter.path === router.asPath
+    )
+    
 
-  // find previous page, iff not, use last page of previous part
-  let prevChapter =
-    currentPart?.chapters[currentChapterIndex - 1] ||
-    prevPart?.chapters[prevPart?.chapters.length - 1]
-  // find next page, if not, use first page of next part
-  let nextChapter =
-    currentPart?.chapters[currentChapterIndex + 1] || nextPart?.chapters[0]
+    // find previous page, iff not, use last page of previous part
+    setPrevChapter(
+      currentPart?.chapters[currentChapterIndex - 1] ||
+      prevPart?.chapters[prevPart?.chapters.length - 1]
+    )
+    // find next page, if not, use first page of next part
+    setNextChapter(
+      currentPart?.chapters[currentChapterIndex + 1] || nextPart?.chapters[0]
+    )
+  }, [])
 
   useShortcuts(
     ['ArrowRight'],
     () => nextChapter && router.push(nextChapter.path),
-    [asPath]
+    [router.asPath]
   )
   useShortcuts(
     ['ArrowLeft'],
     () => prevChapter && router.push(prevChapter.path),
-    [asPath]
+    [router.asPath]
   )
 
   return (

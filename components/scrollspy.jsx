@@ -2,57 +2,72 @@
  * @class Scrollspy
  * Taken verbatim from https://github.com/telega/react-scrollspy-ez
  * and stripped of TS interfaces.
+ * 
+ * Lacy - November 2022: Added nextJS router support
+ * TODO: update hashchange on scroll
  */
 
 import React from 'react'
 import classnames from 'classnames'
-
-const SPY_INTERVAL = 100
+import router from 'next/router'
 
 export default class Scrollspy extends React.Component {
   constructor(props) {
     super(props)
+    this.elements = []
     this.state = {
-      items: []
+      items: [],
+      current: ''
     }
   }
 
   timer = 0
 
   spy() {
-    const items = this.props.ids
-      .map((id) => {
-        const element = document.getElementById(id)
-        if (element) {
-          return {
-            inView: this.isInView(element),
-            element
+    // I don't understand why this was implemented this way, but I optimized it
+    if(this.elements) {
+      const items = this.elements
+        .map((element) => {
+          if (element) {
+            return {
+              id: element.id,
+              inView: this.isInView(element),
+              element
+            }
+          } else {
+            return
           }
-        } else {
-          return
-        }
-      })
-      .filter((item) => item)
+        })
 
-    const firstTrueItem = items.find((item) => !!item && item.inView)
+      const itemInView = items.find((item) => !!item && item.inView)
 
-    if (!firstTrueItem) {
-      return // dont update state
-    } else {
-      const update = items.map((item) => {
-        return { ...item, inView: item === firstTrueItem }
-      })
+      if (!itemInView) {
+        return
+      }
 
-      this.setState({ items: update })
+      if(this.state.current !== itemInView.id) {
+
+        const update = items.map((item) => {
+          return { ...item, inView: item === itemInView }
+        })
+
+        this.setState({ items: update, current: itemInView.id  })        
+
+      }
     }
   }
 
+
   componentDidMount() {
-    this.timer = window.setInterval(() => this.spy(), SPY_INTERVAL)
-  }
+    this.elements = this.props.ids.map((id) => document.getElementById(id))
+    window.addEventListener('scroll', () => this.spy(), false);
+    window.addEventListener('resize', () => this.spy(), false);
+    this.spy()
+    }
 
   componentWillUnmount() {
-    window.clearInterval(this.timer)
+    window.removeEventListener('scroll', () => this.spy(), false);
+    window.removeEventListener('resize', () => this.spy(), false);
   }
 
   isInView = (element) => {
@@ -60,8 +75,7 @@ export default class Scrollspy extends React.Component {
       return false
     }
     const { offset } = this.props
-    const rect = element.getBoundingClientRect()
-
+    const rect = element.getBoundingClientRect() 
     return rect.top >= 0 - offset && rect.bottom <= window.innerHeight + offset
   }
 
@@ -86,7 +100,13 @@ export default class Scrollspy extends React.Component {
               itemClassName,
               item.inView ? activeItemClassName : null
             ),
-            onClick: () => this.scrollTo(item.element),
+            onClick: () => {
+              // use next router to update url hash
+              router.push({ hash: item.element.id }, null, { shallow: true });
+
+              // scroll to the element
+              this.scrollTo(item.element)
+            },
             children: item.element.innerText
           })
         : null
@@ -95,7 +115,7 @@ export default class Scrollspy extends React.Component {
 
   render() {
     const { itemContainerClassName, containerElement } = this.props
-    return containerElement
+    return containerElement && this.state.items
       ? React.cloneElement(containerElement, {
           className: classnames(itemContainerClassName),
           children: this.renderItems()

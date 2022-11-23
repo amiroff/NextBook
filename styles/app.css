@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* GitBook Overrides */
+html {
+  scroll-behavior: smooth;
+  &:not(.dark) body {
+    @apply text-gray-700;
+  }
+}
+
+a.current {
+  background-color: rgba(133, 163, 224, 0.1);
+  color: rgb(41, 104, 233);
+}
+
 /* Diffs without line numbering */
 .clean .linenumber {
   display: none !important;
@@ -69,101 +83,4 @@ li p {
 .dark body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Use custom scrollbars. */
-@media (min-width: 769px) {
-  /* Base scrollbar */
-
-  /* Firefox */
- .with-custom-webkit-scrollbars, .with-custom-webkit-scrollbars *
-  {
-    scrollbar-color: #cbd5e1 transparent;
-    scrollbar-width: thin;
-  }
-  .dark.with-custom-webkit-scrollbars, .dark.with-custom-webkit-scrollbars * {
-    scrollbar-color: #334155 transparent;
-    scrollbar-width: thin;
-  }
-
-  /* Webkit based browsers */
-
-  .with-custom-webkit-scrollbars *::-webkit-scrollbar {
-    width: 1.4rem;
-    height: 1.4rem;
-    background-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar {
-    background-color: transparent;
-  }
-
-  .with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb {
-    min-width: 3rem;
-    min-height: 3rem;
-    background-color: rgba(0, 0, 0, 0.25);
-    border: 0.4rem solid transparent;
-    -moz-background-clip: content; /* Firefox 3.6 */
-    -webkit-background-clip: content; /* Safari 4? Chrome 6? */
-    background-clip: content-box;
-    border-radius: 1rem;
-  }
-  .with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-color: transparent;
-  }
-  .with-custom-webkit-scrollbars *::-webkit-scrollbar-corner {
-    background-color: transparent;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar-corner {
-    background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.05);
-  }
-
-  /* Sidebar scrollbar */
-  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar {
-    width: 1.4rem;
-    height: 1.4rem;
-    background-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar {
-    background-color: transparent;
-  }
-
-  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.25);
-    border-width: 0.4rem;
-    border-color: transparent;
-    border-radius: 1rem;
-  }
-  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-color: transparent;
-  }
-  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-corner {
-    background-color: transparent;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-corner {
-    background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.05);
-  }
 }
