@@ -4,7 +4,29 @@ title: Further Development & Tooling
 
 # 6.0 Further Development & Tooling
 
-### 6.1 Configuration Files
+## 6.1 UNIX command-line
+
+At this point you should have had some interaction with the command-line shell using `git`. The command-line is a powerful and dangerous tool, and you should never enter commands from sources you don’t trust, as some pranks encourage running `sudo rm -rf /*`, which will wipe your entire system and data. Let's look into what this command does.
+
+sudo - “Superuser Do,” runs the proceeding command with full root/administrator privileges
+
+rm - “Remove,” a Unix command to delete files from the system
+
+\-rf - Flags follow a command and can come in a few forms, “-r -f”, “--recursive –force”, “-rf” all have the same meaning
+
+\-r - Recursive, meaning the remove command will delete directories and loop into the child directories to delete files as well
+
+\-f - Force, meaning the remove command will ask for no confirmations before deleting files
+
+/ - a “/” means “root directory,” or the highest folder within the file system. On Windows OS this is usually `C:\`. This tells the remove command from which directory to begin deleting files
+
+/\* - an asterisk\* is a wildcard character that tells the remove command to match any file/folder name. It can be used with partial strings like `wedding*` to match “wedding-photo.jpg” file and “wedding photos” folder or “\*.jpg” to match any JPG image
+
+Project: Using the command-line, change directories (`cd`) to your home folder (`/home/<username>` or `~`) and create a new directory (`mkdir`) named “Repos”.
+
+Change directories into the newly-created “Repos” folder and create a new file (`touch`) named “hello.txt”. Open the file using `nano` and add the word “world” to the file contents. Save (`ctrl-O`) and exit (`ctrl-X`)
+
+### 6.2 Configuration Files
 
 Configuration files are specific to the language, framework, or application you are working with. They may contain information about the project or its dependencies. The filenames may begin with a `.` , which usually indicates a hidden file/directory.
 
@@ -18,13 +40,13 @@ Node comes with a built-in package manager to handle dependencies. `npm` is the 
 
 Once you have Node installed, you can generate a new `package.json` file by running `npm init` within a project directory.
 
-### 6.2 CSS Pre-processors
+### 6.3 CSS Pre-processors
 
 SASS (Syntactically Awesome Style Sheets) is a pre-processor scripting language that will be compiled or interpreted into CSS. **SCSS is the main syntax for the SASS which builds on top of the existing CSS syntax.** CSS is a subset of SCSS, which means that CSS is valid SCSS.
 
 <mark>**Assignment:**</mark> Complete this [Sass Crash Course](https://www.youtube.com/watch?v=Zz6eOVaaelI).
 
-### 6.3 Javascript Bundling & Scaffolding
+### 6.4 Javascript Bundling & Scaffolding
 
 <mark>**Watch this video:**</mark> [Why do we use a Javascript bundler?](https://www.youtube.com/watch?v=3UWlufSzO4k) This is a dead simple explanation to bundling and why it is useful.
 

@@ -1,8 +1,8 @@
 ---
-title: Basic Setup
+title: Initial Setup
 ---
 
-# 1.0 Basic Setup
+# 1.0 Initial Setup
 
 ### 1.1 Operating System
 
@@ -30,27 +30,15 @@ The Odin Project walks through setup of a UNIX OS in a virtual machine. **Window
 
 - Read [this page here](https://www.theodinproject.com/lessons/foundations-installation-overview) first, then [this one here](https://www.theodinproject.com/lessons/foundations-installations).
 
-## 1.2 UNIX command-line
+## Command-Line Interface (CLI)
 
-The command-line is a powerful and dangerous tool, and you should never enter commands from sources you don’t trust, as some pranks encourage running `sudo rm -rf /*`, which will wipe your entire system and data.
+A terminal (or command-prompt) is a program for text input and output. It acts as a wrapper and allows us to enter commands that the computer processes. In plain English again, it's the "window" in which you enter the actual commands your computer will process. As developers we will make extensive use of the command-line so it's best to play around and get comfortable with some commands on your own.
 
-sudo - “Superuser Do,” runs the proceeding command with full root/administrator privileges
+Some helpful commands: |---|---|
 
-rm - “Remove,” a Unix command to delete files from the system
+|`mkdir <directory>`| **M**a**k**e **Dir**ectory. Create a new folder/directory on your system |
 
-\-rf - Flags follow a command and can come in a few forms, “-r -f”, “--recursive –force”, “-rf” all have the same meaning
-
-\-r - Recursive, meaning the remove command will delete directories and loop into the child directories to delete files as well
-
-\-f - Force, meaning the remove command will ask for no confirmations before deleting files
-
-/ - a “/” means “root directory,” or the highest folder within the file system. On Windows OS this is usually `C:\`. This tells the remove command from which directory to begin deleting files
-
-/\* - an asterisk\* is a wildcard character that tells the remove command to match any file/folder name. It can be used with partial strings like `wedding*` to match “wedding-photo.jpg” file and “wedding photos” folder or “\*.jpg” to match any JPG image
-
-Project: Using the command-line, change directories (`cd`) to your home folder (`/home/<username>` or `~`) and create a new directory (`mkdir`) named “Repos”.
-
-Change directories into the newly-created “Repos” folder and create a new file (`touch`) named “hello.txt”. Open the file using `nano` and add the word “world” to the file contents. Save (`ctrl-O`) and exit (`ctrl-X`)
+|`touch <file>`| Creates an empty file |
 
 ## 1.3 Version Control - Git (AKA a time machine for your files)
 
