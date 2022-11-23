@@ -45,20 +45,23 @@ function NavBar() {
           </Link>
         )}
 
-        {navbarItems.map((item) => (
-          <Link href={item.path} key={item.path}>
-            <a
-              className={`border border-transparent hover:bg-gray-300 hover:text-gray-700 dark:hover:bg-gray-600
-               dark:hover:text-gray-50 px-2 py-2 rounded-md font-medium hidden md:inline-block ${
-                 router.query.part && item.path.includes(router.query.part)
-                   ? 'dark:bg-gray-700 dark:text-gray-50 bg-gray-300 text-gray-700'
-                   : 'dark:text-gray-300 text-gray-600'
-               }`}
-            >
-              {item.title}
-            </a>
-          </Link>
-        ))}
+        {navbarItems.map((item) => {
+          // Highlight current page
+          return (
+            <Link href={item.path} key={item.path}>
+              <a
+                className={`border border-transparent hover:bg-gray-300 hover:text-gray-700 dark:hover:bg-gray-600
+                dark:hover:text-gray-50 px-2 py-2 rounded-md font-medium hidden md:inline-block ${
+                  router.query.page && item.path.includes(router.query.page)
+                    ? 'dark:bg-gray-700 dark:text-gray-50 bg-gray-300 text-gray-700'
+                    : 'dark:text-gray-300 text-gray-600'
+                }`}
+              >
+                {item.title}
+              </a>
+            </Link>
+          )}
+        )}
       </nav>
       <ColorModeToggler />
     </div>

@@ -20,7 +20,7 @@ We suggest using Chrome as your browser. Just like Chrome, Apple's Safari and Mi
 
 Windows is NOT a UNIX OS, that means that the command prompt in Windows is totally different than Linux or Mac terminal/command-line.
 
-There are some differences in command prompt, bash, and powershell you'll want to be aware of. <mark>**Watch**</mark> [this video here.](https://www.youtube.com/watch?v=nahtw_csB5w)
+There are some differences in command-prompt, bash, and powershell you'll want to be aware of. <mark>**Watch**</mark> [this video here.](https://www.youtube.com/watch?v=nahtw_csB5w)
 
 #### Virtual Machine Setup
 
@@ -30,15 +30,18 @@ The Odin Project walks through setup of a UNIX OS in a virtual machine. **Window
 
 - Read [this page here](https://www.theodinproject.com/lessons/foundations-installation-overview) first, then [this one here](https://www.theodinproject.com/lessons/foundations-installations).
 
-## Command-Line Interface (CLI)
+## 1.2 Command-Line Interface (CLI)
 
 A terminal (or command-prompt) is a program for text input and output. It acts as a wrapper and allows us to enter commands that the computer processes. In plain English again, it's the "window" in which you enter the actual commands your computer will process. As developers we will make extensive use of the command-line so it's best to play around and get comfortable with some commands on your own.
 
-Some helpful commands: |---|---|
+Some helpful commands:
 
-|`mkdir <directory>`| **M**a**k**e **Dir**ectory. Create a new folder/directory on your system |
+| Commands (with \<arguments\>) | Description |
+| --- | --- |
+| `mkdir <directory>` | **M**a**k**e **Dir**ectory. Create a new folder/directory on your system |
+| `touch <file>` | Creates an empty file |
 
-|`touch <file>`| Creates an empty file |
+###### _Replace text and carets `<`/`>` with your own values_
 
 ## 1.3 Version Control - Git (AKA a time machine for your files)
 

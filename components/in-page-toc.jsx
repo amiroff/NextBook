@@ -28,9 +28,11 @@ function InPageToc({ tocRaw }) {
   })
 
   // Update current "copy link" button when the user scrolls
-  const [url, setUrl] = useState('/')
+  const [url, setUrl] = useState('')
 
   useEffect(()=>{
+    setUrl(router.asPath)
+
     const onHashChangeStart = (url) => {
         setUrl(url)
     };

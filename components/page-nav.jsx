@@ -30,7 +30,7 @@ export default function PageNav() {
     )
     
 
-    // find previous page, iff not, use last page of previous part
+    // find previous page, if not, use last page of previous part
     setPrevChapter(
       currentPart?.chapters[currentChapterIndex - 1] ||
       prevPart?.chapters[prevPart?.chapters.length - 1]
@@ -39,7 +39,7 @@ export default function PageNav() {
     setNextChapter(
       currentPart?.chapters[currentChapterIndex + 1] || nextPart?.chapters[0]
     )
-  }, [router.asPath, toc])
+  }, []) //router.asPath, toc
 
   useShortcuts(
     ['ArrowRight'],
