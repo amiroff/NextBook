@@ -1,10 +1,14 @@
+---
+title: HTML Basics
+---
+
 # 2.0 HTML Basics
 
 **Welcome to Web Dev (continued):**
 
-HTML is the foundation of the web. Check out [this quick video](https://www.youtube.com/watch?v=88QJumITbQA) to get a high level overview of the most important topics. (5 min)
+HTML is the foundation of the web. <mark>**Watch**</mark> [this quick video](https://www.youtube.com/watch?v=88QJumITbQA) to get a high level overview of the most important topics.
 
-Let's use Codepen to try out writing some basic HTML!&#x20;
+Let's use Codepen to try out writing some basic HTML!
 
 Open a new [Codepen instance](https://codepen.io/pen) and follow along with parts of the following, [absolute beginners introduction to HTML](https://www.youtube.com/watch?v=ONin3xInlGw) (50min)
 
@@ -21,13 +25,13 @@ I like this because it starts from absolute zero and describes HTML basics in a 
 
 Time to create your first web page! Follow along with the below videos on your computer. You may copy the page in the video, or create your own!
 
-[**Your first web page.**](https://www.youtube.com/watch?v=88QJumITbQA)(5 min) This features a Live Reload plugin for VSCode, which is a super helpful tool when developing static pages!
+\***\*[**Your first web page. ](https://www.youtube.com/watch?v=88QJumITbQA)(5 min) This features a Live Reload plugin for VSCode, which is a super helpful tool when developing static pages!
 
-[**Basic HTML Elements**](https://www.youtube.com/watch?v=PypMN-yui4Y) (10 min)
+\***\*[**Basic HTML Elements**](https://www.youtube.com/watch?v=PypMN-yui4Y)**
 
-[**Advanced HTML Elements**](https://www.youtube.com/watch?v=1rbo_HHt5nw) (15 min)
+\***\*[**Advanced HTML Elements**](https://www.youtube.com/watch?v=1rbo\_HHt5nw)**
 
-[**Let's go through once more here**](https://www.freecodecamp.org/news/html-basics-for-beginners/) (15min). Follow along in the video and create the same site in VSCode.
+\***\*[**Let's go through once more here**](https://www.freecodecamp.org/news/html-basics-for-beginners/) (15min). ** Follow along in the video and create the same site in VSCode.
 
 ### 2.2 Inspecting HTML/CSS
 
@@ -51,13 +55,17 @@ Topics:
 
 #### Finding non-copyrighted images
 
-We have to abide by software licenses and copyrights when using assets online, but there are some services which offer copyright-free assets. One of these resources is [Unsplash](https://unsplash.com/).&#x20;
+> [https://unsplash.com/](https://unsplash.com/)
+
+We have to abide by software licenses and copyrights when using assets online, but there are some services which offer copyright-free assets. One of these resources is [Unsplash](https://unsplash.com/).
 
 Read [this short guide](https://awik.io/generate-random-images-unsplash-without-using-api/) and [follow along in this video](https://www.youtube.com/watch?v=e8p1zSNmK7Q) to see how we can generate mock images of specific sizes to act as a placeholder while your site is being built.
 
-You can use this URL format to grab a random image with a width/height value: `https://source.unsplash.com/featured/480x320`
+You can use the URL format [`https://source.unsplash.com/featured/`](https://source.unsplash.com/featured/300x201)`(<WIDTH>x<HEIGHT>)` to get a random image. (Example: [`https://source.unsplash.com/featured/480x320`](https://source.unsplash.com/featured/480x320)``
 
 #### Filler Text or Dummy Content (AKA [Lorem Ipsum](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjspICmgK_7AhUuSzABHb4SAI0QmhN6BAgaEAI&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLorem_ipsum&usg=AOvVaw0_rKsmfs2-75sm_MYbRlS3))
+
+> [https://loremipsum.io/](https://loremipsum.io/)
 
 When creating layouts it helps to have fake content in varying lengths to see how the site will render if section content changes. Lorem ipsum is a gibberish text often used for exactly this. Use it to generate paragraphs on the fly:
 
@@ -67,11 +75,9 @@ Pharetra magna ac placerat vestibulum lectus mauris ultrices eros. Aliquam etiam
 Molestie a iaculis at erat pellentesque adipiscing commodo.
 ```
 
-#### More Resources
-
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web) and [W3Schools](https://www.w3schools.com/) are _schools and resources for web developers_, if web technologies had a manual, these would be them
-- [Can I Use.](https://caniuse.com) Not all HTML/CSS/JS features are created equal. Certain features (Ex: CSS content-queries) may not be available in certain browsers or devices and therefore will only be seen by a fraction of users to your website. You can see browser support for all features using&#x20;
-- [StackOverflow](https://stackoverflow.com) is the #1 place to ask programming questions and find answers for common programming knowledge. Remember to do proper research beforehand and include any additional information with your question. Ask your question in the appropriate category:&#x20;
+- [Can I Use.](https://caniuse.com) Not all HTML/CSS/JS features are created equal. Certain features (Ex: CSS content-queries) may not be available in certain browsers or devices and therefore will only be seen by a fraction of users to your website. You can see browser support for all features using
+- [StackOverflow](https://stackoverflow.com) is the #1 place to ask programming questions and find answers for common programming knowledge. Remember to do proper research beforehand and include any additional information with your question. Ask your question in the appropriate category:
 - The **Manual** - Reading the manual or documentation for the library, framework, or language is often the best way to answer your questions, and experienced devs will look here first if they need answers. It's easy to copy code on SO but the documentation will give you much more insight.
 
 ### 2.5 Project: HTML
@@ -95,3 +101,9 @@ You should now know how to use their IDE, command-line and version control basic
 **Bonus:** Include an Image/Avatar on your page!
 
 > [Example repository](https://github.com/AAM-Institute/project-002)
+
+### Module 2.0 Survey
+
+You know the drill! **Even if you don't have much to share, please tell us any of your thoughts. **<mark>**This also helps us track how far you are in the course!**</mark> <mark></mark><mark></mark>
+
+<mark>**Please complete this**</mark> [**short survey here**](https://docs.google.com/forms/d/e/1FAIpQLScN2_BCzqP1ObkJwUAH-DlCzDPmFBJErRhgMYho997yBRkwtw/viewform) <mark>**for this module.**</mark>

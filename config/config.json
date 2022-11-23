@@ -63,7 +63,7 @@
           "path": "/guide/0-programming-mindset"
         },
         {
-          "title": "Prerequisites",
+          "title": "Basic Setup",
           "path": "/guide/1-prerequisites"
         },
         {
@@ -79,12 +79,20 @@
           "path": "/guide/4-javascript-basics"
         },
         {
-          "title": "Page Metadata",
-          "path": "/nextbook/page-metadata"
+          "title": "Back End Basics",
+          "path": "/guide/5-back-end-basics"
         },
         {
-          "title": "In Progress Features",
-          "path": "/nextbook/in-progress-features"
+          "title": "Further Development and Tooling",
+          "path": "/guide/6-tooling"
+        },
+        {
+          "title": "Full-Stack Javascript",
+          "path": "/guide/7-react"
+        },
+        {
+          "title": "Conclusion",
+          "path": "/guide/8-conclusion"
         }
       ]
     },

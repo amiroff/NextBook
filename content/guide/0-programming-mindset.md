@@ -1,20 +1,10 @@
 ---
-part: Guide
 title: Programming Mindset
 ---
 
 # 0.0 Programming Mindset
 
-## 0.1 Beginner intro
-
-We've put hours and hours into research to find the online sources and tools that we believe are the best, and have combined them into this introductory course. A heads up, we don't own the majority of this content. Our next step after this pilot program is to re-create this course from scratch. If you have a great experience with these resources, we'll know we did a good job selecting them, and will use them as inspiration for our real course.
-
-If you complete Dev101, you'll have an opportunity to apply to our AAM Pilot. It will be a free, hands-on program where students will work hands-on with me to learn more.
-
-- I like this because it introduces the greater web concepts in a simple manner. Concepts discussed are front end/back end/full-stack, and the tools used.
-- This gives a dead-simple overview of working within web. The TOP text follows:
-
-### Introduction
+### 0.1 Introduction to Web Development
 
 What do web developers do? In short, they build and maintain websites.
 
@@ -24,7 +14,7 @@ Web development could be a good profession for you if you like solving logical p
 
 For more details, Wikipedia describes the breadth of the web development profession in their [entry on web design](https://en.wikipedia.org/wiki/Web_design).
 
-### Types of Web Developers
+#### Types of Web Developers
 
 Earlier, we mentioned that web development work could be in the front end, the back end, or the full stack. What exactly do these terms mean?
 
@@ -36,7 +26,7 @@ The **back end** refers to the guts of the application, which live on the server
 
 For more detail, Udacity has a great blog post on this topic: [3 Web Dev Careers Decoded: Front-End vs Back-End vs Full Stack](http://blog.udacity.com/2014/12/front-end-vs-back-end-vs-full-stack-web-developers.html)
 
-### Types of Careers
+#### Types of Careers
 
 Now that you know about the different types of web developers, let’s cover what we mentioned earlier about the different types of clients and employers you may work with.
 
@@ -50,7 +40,7 @@ As a consultant for a web consultancy, you would give up some of your freelancin
 
 Finally, large, older companies still need web developers. These companies offer a good work/life balance, pay, and benefits but often move slower than a company that is highly focused on tech.
 
-### Tools of the Trade
+#### Tools of the Trade
 
 These are some of the basic tools you will use regularly. You may not know what they are now, but you most certainly will going forward.
 
@@ -62,18 +52,30 @@ These are some of the basic tools you will use regularly. You may not know what 
 - [**Git**](https://git-scm.com/)
 - [**GitHub**](https://github.com/)
 
-### Motivation
+#### Motivation
 
-Learning to code is incredibly rewarding but can also be difficult and frustrating. The strongest assets you can have as a student are a desire to build, a problem-solving mind, and persistence in the face of setbacks.
+Learning to code is not easy. The strongest assets you can have as a student are a desire to build, a problem-solving mind, and persistence in the face of setbacks.
 
 The web development industry has a long history of successful developers with varying backgrounds, so people tend to care more about what you’ve actually **built** than how you got there.
 
-## 0.2 Mindset
+### 0.2 Mindset
 
-Please take the time to go through [this awesome motivation/mindset article](<[https://www.theodinproject.com/lessons/foundations-motivation-and-mindset](https://www.theodinproject.com/lessons/foundations-motivation-and-mindset)>) by The Odin Project. It really gives you a feeling of what it takes to be a successful software developer, and will set the stage for what the journey will be like.
+<mark>**Assignment:**</mark> Please take the time to go through [this awesome motivation/mindset article](https://www.theodinproject.com/lessons/foundations-motivation-and-mindset) by The Odin Project. It really gives you a feeling of what it takes to be a successful software developer, and will set the stage for what the journey will be like.
 
-## 0.3 Join the Discord!
+### 0.3 Join the Discord!
 
-AAM is a community of developers working together to improve our skills. Join the AAM Institute Discord server to ask questions, discuss problems, and get immediate help from professors.
+AAM is a community of developers working together to improve our skills. We use Discord, a community chat/messaging platform, to ask questions, discuss problems, and get immediate help from professors.
 
-[**Join the AAM Discord Server**](https://discord.gg/5fY5efPd)
+<mark>**Assignment:**</mark> <mark style={{color:'red'}}></mark> Join our Discord community!
+
+1. [**Click here to join the AAM Discord Server.**](https://discord.gg/5fY5efPd)
+2. **Go to the channel #introductions and tell us about yourself!** You can include anything you want but here are some ideas to get you started:
+   - Why did you decide to learn coding?
+   - Where are you from?
+   - What are some fun facts and/or hobbies of yours?
+
+### Module 0.0 Survey
+
+Remember, this course is free because we're testing our ideas. **We want to know what you think!!**
+
+<mark>**Please complete this**</mark> [**short survey here**](https://docs.google.com/forms/d/e/1FAIpQLScT8vYmaKoXM8Gd96Yfvg-GAC2eEqvgG6jZMb5qzl8kLfzQyw/viewform) <mark>**for this module.**</mark>

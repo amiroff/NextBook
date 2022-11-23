@@ -1,20 +1,14 @@
-# 1.0 Prerequisites
+---
+title: Basic Setup
+---
 
-### (OS, Browser, running in a VM) [0-6 hours]
+# 1.0 Basic Setup
 
-Let's first dig into some key tools that make our experience on the internet possible.
+### 1.1 Operating System
 
-Via The Odin Project:
+<mark>**Read**</mark>[ this awesome article here](https://edu.gcfglobal.org/en/computerbasics/understanding-operating-systems/1/) to learn about Operating Systems.
 
-> **If you are already using MacOS, Ubuntu, or** [**an official flavor of Ubuntu**](https://wiki.ubuntu.com/UbuntuFlavors) **as your operating system and have Google Chrome as an installed browser, you can skip this section and start with the UNIX Command-line.**
-
-> We can only support the operating systems indicated above. Our instructions have been tested with MacOS, Ubuntu, and official flavors of Ubuntu. We do not recommend installing an OS that is only based on Ubuntu (like Mint, Pop!\_OS, ElementaryOS, etc).
-
-#### Operating System
-
-What is an Operating System? [Check this out here.](https://edu.gcfglobal.org/en/computerbasics/understanding-operating-systems/1/)
-
-#### Browsers
+### 1.2 Browsers
 
 There are many browsers available for various desktop and mobile platforms, the one we will be using is [Google Chrome](https://www.google.com/chrome/). Some website features may work differently or not at all depending on the user's OS, browser, and versions. Therefore this course will assume you are using the latest version of Chrome.
 
@@ -22,9 +16,11 @@ We suggest using Chrome as your browser. Just like Chrome, Apple's Safari and Mi
 
 ### 1.1 Windows Prerequisites (install Ubuntu Linux)
 
+**If you are using a Mac/Ubuntu/Linux, you can skip this section.**
+
 Windows is NOT a UNIX OS, that means that the command prompt in Windows is totally different than Linux or Mac terminal/command-line.
 
-There are some differences in command prompt, bash, and powershell you'll want to be aware of. [Watch this video.](https://www.youtube.com/watch?v=nahtw_csB5w) (5 min)
+There are some differences in command prompt, bash, and powershell you'll want to be aware of. <mark>**Watch**</mark> [this video here.](https://www.youtube.com/watch?v=nahtw_csB5w)
 
 #### Virtual Machine Setup
 
@@ -32,7 +28,7 @@ Window users only: To better serve you during AAM, let's get you set up on a Vir
 
 The Odin Project walks through setup of a UNIX OS in a virtual machine. **Windows users will need to follow these instructions**
 
-- # Read [this page here](https://www.theodinproject.com/lessons/foundations-installation-overview) first, then [this one here](https://www.theodinproject.com/lessons/foundations-installations).&#x20;
+- Read [this page here](https://www.theodinproject.com/lessons/foundations-installation-overview) first, then [this one here](https://www.theodinproject.com/lessons/foundations-installations).
 
 ## 1.2 UNIX command-line
 
@@ -96,3 +92,9 @@ This can be done using the Github UI. Bonus points for using the command-line an
 **Bonus:** Clone your fork to your local machine. Edit the files in VSCode then use the CLI to `git commit` and `git push`. Then create a Pull Request using the Github UI as normal.
 
 > [Example repository](https://github.com/AAM-Institute/project-001)
+
+### Module 1.0 Survey
+
+**Just like last time, want to know what you think about this module!**
+
+<mark>**Please complete this**</mark> [**short survey here**](https://docs.google.com/forms/d/e/1FAIpQLSczM5DwiahZeFhkUoieNQ7xDSMzibc8Q4jDKiTQ-O1beCM1Pg/viewform) <mark>**for this module.**</mark>

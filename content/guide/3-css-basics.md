@@ -1,6 +1,10 @@
+---
+title: CSS Basics
+---
+
 # 3.0 CSS Basics
 
-[Watch this video here](https://www.youtube.com/watch?v=dC34rfY8Eyk) as an introduction to CSS. (5 min)&#x20;
+[Watch this video here](https://www.youtube.com/watch?v=dC34rfY8Eyk) as an introduction to CSS. (5 min)
 
 It's a perfect transition from HTML-only to CSS, it introduces styles as a concept.
 
@@ -8,12 +12,12 @@ It's a perfect transition from HTML-only to CSS, it introduces styles as a conce
 
 [Let's take a deeper dive into CSS](https://www.youtube.com/watch?v=1PnVor36_40) (20 min)
 
-[**Style a modern website**](https://www.youtube.com/watch?v=Sv_NAxi_jNs) (30 min)
+\***\*[**Style a modern website](https://www.youtube.com/watch?v=Sv\_NAxi\_jNs) (30 min)
 
 The Odin Project has some great material on CSS fundamentals:
 
 - [CSS Foundations ](https://www.theodinproject.com/lessons/foundations-css-foundations)
-- [The Box Model](https://www.theodinproject.com/lessons/foundations-the-box-model)&#x20;
+- [The Box Model](https://www.theodinproject.com/lessons/foundations-the-box-model)
 - [Display: Block & Inline](https://www.theodinproject.com/lessons/foundations-block-and-inline)
 
 Let's learn about these topics in more depth:
@@ -47,20 +51,20 @@ Let's learn about these topics in more depth:
 
 ### 3.3 More CSS
 
-[**Style a modern website (part 2).**](https://www.youtube.com/watch?v=nKa1JPf0ZN4) (30 min)
+\***\*[**Style a modern website (part 2).](https://www.youtube.com/watch?v=nKa1JPf0ZN4) (30 min)
 
 > Covers percentage widths, layout, buttons
 
-[**Style a modern website (part 3).** ](https://www.youtube.com/watch?v=auWKaf0m0S0)(30 min)
+\***\*[**Style a modern website (part 3). ](https://www.youtube.com/watch?v=auWKaf0m0S0)(30 min)
 
 > Covers flexbox, responsive design, pseudoselectors
 
 More from The Odin Project:
 
-- [Flexbox](https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox)&#x20;
-- [Flexbox: Growing and shrinking](https://www.theodinproject.com/lessons/foundations-growing-and-shrinking)&#x20;
-- [Flexbox: Axes](https://www.theodinproject.com/lessons/foundations-axes)&#x20;
-- [Flexbox: Alignment](https://www.theodinproject.com/lessons/foundations-alignment)&#x20;
+- [Flexbox](https://www.theodinproject.com/lessons/foundations-introduction-to-flexbox)
+- [Flexbox: Growing and shrinking](https://www.theodinproject.com/lessons/foundations-growing-and-shrinking)
+- [Flexbox: Axes](https://www.theodinproject.com/lessons/foundations-axes)
+- [Flexbox: Alignment](https://www.theodinproject.com/lessons/foundations-alignment)
 
 ### 3.4 Deployment (Github Pages)
 
@@ -72,7 +76,7 @@ Supplementary:
 
 - [The Official Github pages video](https://www.youtube.com/watch?v=QyFcl_Fba-k) (15 min) This video provides a better overview to the features and themes offered by GH pages, as well as basic deployment overview.
 
-### 3.4 Project: CSS
+### 3.5 Project: CSS
 
 Use HTML/CSS to style your digital landing page. You may use the site created in the previous course, or follow along with [this tutorial here.](https://www.theodinproject.com/lessons/foundations-landing-page)
 
@@ -85,3 +89,9 @@ Use HTML/CSS to style your digital landing page. You may use the site created in
 **Bonus:** Use CSS transitions or animations to create a hover effect on your image!
 
 > [Example repository](https://github.com/AAM-Institute/project-003)
+
+### Module 3.0 Survey
+
+Our favorite part!
+
+<mark>**Please complete this**</mark> [**short survey here**](https://docs.google.com/forms/d/e/1FAIpQLSdWtRhKt2qBbgtfmJZVdzABdBECoSuGirAY9s6xe55boMlBtw/viewform) <mark>**for this module.**</mark>

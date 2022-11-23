@@ -1,12 +1,12 @@
 # Glossary
 
-> \__[\_View a more comprehensive glossary_](https://medium.com/progate/a-programmers-dictionary-7b13100a3662)
+> [_View a more comprehensive glossary_](https://medium.com/progate/a-programmers-dictionary-7b13100a3662)
 
 #### Browser
 
 A web browser takes you anywhere on the internet. It is a computer program that retrieves information from other parts of the web and displays it on your desktop or mobile device.
 
-#### Command-line Interface (CLI)&#x20;
+#### Command-line Interface (CLI)
 
 Referring to a program that uses a terminal or command prompt for interaction. AKA: Terminal, Console, Shell
 
@@ -18,7 +18,7 @@ Can refer to a line between two vertices (ex: in a binary search tree), or a ser
 
 Git is _a mature, actively maintained open source revision control system used_ by thousands of developers around the world.
 
-#### Local Machine&#x20;
+#### Local Machine
 
 A programmers personal computer. This is used to describe where a program is running. When running code or a website on your computer, you are running the code _locally_, vs. on a server or using a cloud provider.
 
@@ -34,7 +34,7 @@ In their simplest form, pull requests are a mechanism for a developer to notify 
 
 RTFM is an initialism and internet slang for the expression "read the fucking manual" – typically used to reply to a basic question where the answer is easily found in the documentation, user guide, owner's manual, man page, online help, internet forum, software documentation or FAQ.
 
-#### Vendor&#x20;
+#### Vendor
 
 A vendor is a third-party entity that creates resources used by a company or within a coding project, usually another company, group, or open-source project. If you use Google Analytics, or use a library like Bootstrap, they are both considered vendor
 

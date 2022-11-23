@@ -39,7 +39,7 @@ We've put hours and hours into research to find the online sources and tools tha
 
 We believe the process we’ve put together with these materials is the fastest and most fun way to get up to speed with coding basics.
 
-**This course is free for you because it’s a test. We are only opening it to a very small amount of people.** Can you help us out by letting me know how your experience goes, what questions you have and where you struggled most?&#x20;
+**This course is free for you because it’s a test. We are only opening it to a very small amount of people.** Can you help us out by letting me know how your experience goes, what questions you have and where you struggled most?
 
 **I’ll be with you every step of the way to help.**
 

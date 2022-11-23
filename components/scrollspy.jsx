@@ -21,8 +21,6 @@ export default class Scrollspy extends React.Component {
     }
   }
 
-  timer = 0
-
   spy() {
     // I don't understand why this was implemented this way, but I optimized it
     if(this.elements) {
@@ -62,12 +60,18 @@ export default class Scrollspy extends React.Component {
     this.elements = this.props.ids.map((id) => document.getElementById(id))
     window.addEventListener('scroll', () => this.spy(), false);
     window.addEventListener('resize', () => this.spy(), false);
+    // fire on router change
+    router.events.on('routeChangeComplete', () => this.spy())
+
+    // run on mount
     this.spy()
     }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', () => this.spy(), false);
     window.removeEventListener('resize', () => this.spy(), false);
+    router.events.off('routeChangeComplete')
+
   }
 
   isInView = (element) => {
@@ -102,11 +106,12 @@ export default class Scrollspy extends React.Component {
             ),
             onClick: () => {
               // use next router to update url hash
-              router.push({ hash: item.element.id }, null, { shallow: true });
+              router.push({ hash: item.id }, null, { shallow: true });
 
               // scroll to the element
               this.scrollTo(item.element)
             },
+            slug: item.id,
             children: item?.element?.innerText,
             // Truncate the text to n characters
             // children: item.element.innerText.replace(/(.{20})..+/, "$1…")

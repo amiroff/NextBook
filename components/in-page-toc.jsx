@@ -6,14 +6,16 @@ import { Link } from './svg-icons';
 
 function InPageTocElement(props) {
   // Indent headings based on their level
-  const level = props.levels[props.children] >= 1 ? props.levels[props.children] : 1
-  const style = { paddingLeft: `${level / 2}em` }
+  const level = props.levels[props.slug] >= 1 ? props.levels[props.slug] : 1
+  const style = { paddingLeft: `${level/2}em` }
   return (
     <li style={style} className={props.className} onClick={props.onClick}>
       {props.children}
     </li>
   )
 }
+
+
 
 function InPageToc({ tocRaw }) {
   let tocIds = []
@@ -22,7 +24,8 @@ function InPageToc({ tocRaw }) {
     // populate dictionary of heading slugs
     tocIds.push(row.slug)
     // populate dictionary of headings and their levels
-    levels[row.content] = row.lvl
+    levels[row.slug] = row.lvl
+
   })
 
   // Update current "copy link" button when the user scrolls
