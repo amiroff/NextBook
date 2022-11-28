@@ -4,9 +4,7 @@ title: Back End
 
 # 5.0 Back End Basics
 
-## 5.0 Back End Basics
-
-I think The Odin Project has a good approach to introducing back-end, instead of having back-end as a core focus of the introductory courses (Dev101), it briefly introduces the major concepts of back-end and does a deeper dive in the intermediate/advanced courses
+The back end or server is what allows websites to serve different content to different users. A server uses a programming language to generate pages on-the-fly and "serve" them to the client (which is you!). A server or cloud is just another computer or array of computers setup to be publicly accessible by the internet.
 
 ### 5.1 Introduction to the Back End
 

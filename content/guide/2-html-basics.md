@@ -82,23 +82,36 @@ Molestie a iaculis at erat pellentesque adipiscing commodo.
 
 ### 2.5 Project: HTML
 
-You should now know how to use their IDE, command-line and version control basics, and have the ability to create and view webpages.
+You should now know how to use their IDE, command-line and version control basics, and have the ability to create and view webpages. Now let's use this knowledge to create your own digital business card or contact card with your name (or nickname), a job title ("awesome web dev!"), and some way to contact you.
 
-- Use Git to create a new repository. You can use the Github UI or `git init` on the command-line.
-- Use HTML to create a static webpage: Create your own digital business card or contact card with your name (or nickname), a job title ("awesome web dev!"), and some way to contact you.
+Here's mine:
 
 #### [Live demo](https://aam-101-html.netlify.app/)
 
 > This was deployed to [Netlify](https://www.netlify.com/) for free, try it yourself!
 
+#### Steps
+
+**Create a Git Repo:**
+
+- Use Git to create a new repository. You can use the Github UI or `git init` on the command-line.
+- Clone your Git repo locally and open it in VSCode.
+
+**Use HTML to create a static webpage:**
+
+- Create an `index.html` file in your new project directory.
+- Use the new tags you have learned in this section to create a basic HTML page with at least these tags: `<a>`, `<img>`, `<h1>`, `<ul>`/`<li>`, `<b>`, `<em>`
+
+**Commit and Submit:**
+
+- Add and save (commit) your project changes and push them up to git.
+
 **Helpful information**
 
-- `git add .`
-- Adds all of the files in the current directory `.` to git tracking in order to be committed.
-- `git commit -am “Commit message for git history”`
-- Commits -a (all) of the currently staged/tracked files with the -m (message) “Commit message for git history”
+- **`git add .`** - Adds all of the files in the current directory `.` to git tracking in order to be committed.
+- **`git commit -am “Commit message for git history”`** - Commits all (-a) of the currently staged/tracked files with the message (-m) “Commit message for git history”
 
-**Bonus:** Include an Image/Avatar on your page!
+**Bonus:** Create a `mailto` link so that users can click to email you directly. Use HTML attributes like `<img alt="text">` or `aria-label`.
 
 > [Example repository](https://github.com/AAM-Institute/project-002)
 
