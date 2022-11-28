@@ -1,6 +1,6 @@
 {
-  "projectTitle": "AAM Institute: Development 101",
-  "projectDescription": "Welcome to Development 101, a step-by-step primer to Web Development to prepare you for the AAM Institute.",
+  "projectTitle": "AAM institute: Dev101",
+  "projectDescription": "Welcome to Dev101, a step-by-step primer to Web Development to prepare you for the AAM institute.",
   "projectURL": "https://development-101.vercel.app",
   "locale": "en",
   "text": {
@@ -21,12 +21,12 @@
     "Figure": "Figure"
   },
   "branding": {
-    "title": "AAM Institute: Development 101",
+    "title": "AAM institute: Dev101",
     "initials": "A",
-    "sidebarTitle": "Development 101",
+    "sidebarTitle": "Dev101 by AAM institute",
     "href": "https://development-101.vercel.app",
     "img": "/images/logo.png",
-    "alt": "AAM Institute: Development 101"
+    "alt": "AAM institute: Dev101"
   },
   "navbarItems": [
     {
@@ -34,7 +34,7 @@
       "path": "/intro"
     },
     {
-      "title": "Development 101",
+      "title": "Dev101",
       "path": "/guide/0-programming-mindset"
     },
     {
@@ -52,10 +52,10 @@
   ],
   "toc": [
     {
-      "chapters": [{ "title": "Welcome to Development 101 ", "path": "/intro" }]
+      "chapters": [{ "title": "Welcome to Dev101 ", "path": "/intro" }]
     },
     {
-      "part": "Development 101",
+      "part": "Dev101 Contents",
       "path": "/guide/0-programming-mindset",
       "chapters": [
         {
@@ -89,10 +89,6 @@
         {
           "title": "Full-Stack Javascript",
           "path": "/guide/7-react"
-        },
-        {
-          "title": "Conclusion",
-          "path": "/guide/8-conclusion"
         }
       ]
     },

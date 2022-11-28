@@ -6,7 +6,7 @@ title: Back End
 
 ## 5.0 Back End Basics
 
-I think The Odin Project has a good approach to introducing back-end, instead of having back-end as a core focus of the introductory courses (Development 101), it briefly introduces the major concepts of back-end and does a deeper dive in the intermediate/advanced courses
+I think The Odin Project has a good approach to introducing back-end, instead of having back-end as a core focus of the introductory courses (Dev101), it briefly introduces the major concepts of back-end and does a deeper dive in the intermediate/advanced courses
 
 ### 5.1 Introduction to the Back End
 

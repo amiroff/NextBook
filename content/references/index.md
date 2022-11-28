@@ -1,8 +1,8 @@
 ---
 part: Documentation
-title: Development 101
+title: Dev101
 ---
 
-# [Development 101](/)
+# [Dev101](/)
 
-# [AAM Institute](http://aaminstitute.com)
+# [AAM institute](http://aaminstitute.com)

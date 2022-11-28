@@ -1,9 +1,9 @@
 ---
 part: Introduction
-title: Welcome to Development 101!
+title: Welcome to Dev101!
 ---
 
-# Development 101
+# Dev101
 
 My name is Lacy Morrow, and I'll be your guide through the wonderful world of coding!
 
@@ -27,7 +27,7 @@ So many college classes and bootcamps are based around cookie-cutter projects. Y
 
 #### So how do we get started?
 
-Enter Development 101, our precursor to our full AAM program. This crash course will give you the foundational knowledge needed for you to be functional during our AAM pilot.
+Enter Dev101, our precursor to our full AAM program. This crash course will give you the foundational knowledge needed for you to be functional during our AAM pilot.
 
 This course **is not meant to make you a job-ready coder.** It’s just the basics to get you up to speed. We’ve developed it to be as short as possible, because we know the real learning and development happens during AAM.
 
