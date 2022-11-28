@@ -1,4 +1,4 @@
-// TODO: Re-render on route change
+// TODO: Update current page link when the user scrolls
 import { useEffect, useState } from 'react';
 import router from 'next/router';
 import Scrollspy from 'components/scrollspy'

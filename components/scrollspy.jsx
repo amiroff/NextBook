@@ -4,7 +4,6 @@
  * and stripped of TS interfaces.
  * 
  * Lacy - November 2022: Added nextJS router support
- * TODO: update hashchange on scroll
  */
 
 import React from 'react'
@@ -18,6 +17,27 @@ export default class Scrollspy extends React.Component {
     this.state = {
       items: [],
       current: ''
+    }
+  }
+
+  updateHash = (hash) => {
+    if (hash !== this.state.current) {
+      router
+      .replace( // or push or whatever you want
+        {
+          hash,
+        },
+        null,
+        {
+          shallow: true,
+        }
+      )
+      .catch((e) => {
+        // TODO: workaround for https://github.com/vercel/next.js/issues/37362
+        if (!e.cancelled) {
+          throw e
+        }
+      })
     }
   }
 
@@ -50,10 +70,9 @@ export default class Scrollspy extends React.Component {
           return { ...item, inView: item === itemInView }
         })
 
-        // router.push({ hash: itemInView.id }, null, { shallow: true });
-
-        this.setState({ items: update, current: itemInView.id  })        
-
+        
+        this.setState({ items: update, current: itemInView.id  })
+        
       }
     }
   }
@@ -76,9 +95,9 @@ export default class Scrollspy extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', () => this.spy(), false);
-    window.removeEventListener('resize', () => this.spy(), false);
-    router.events.off('routeChangeComplete')
+    window.removeEventListener('scroll', this.spy, false);
+    window.removeEventListener('resize', this.spy, false);
+    router.events.off('routeChangeComplete', this.spy)
 
   }
 
@@ -114,7 +133,7 @@ export default class Scrollspy extends React.Component {
             ),
             onClick: () => {
               // use next router to update url hash
-              router.push({ hash: item.id }, null, { shallow: true });
+              this.updateHash(item.id)
 
               // scroll to the element
               this.scrollTo(item.element)

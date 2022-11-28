@@ -6,8 +6,16 @@
 /* GitBook Overrides */
 html {
   scroll-behavior: smooth;
-  &:not(.dark) body {
-    @apply text-gray-700;
+  
+  /* Offset for fixed header */
+  scroll-padding-top: 100px; 
+  
+  body {
+      @apply text-gray-600;
+  }
+
+  &:has(.dark) body {
+    @apply text-gray-300;
   }
 }
 
