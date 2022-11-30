@@ -95,9 +95,9 @@ export default class Scrollspy extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.spy, false);
-    window.removeEventListener('resize', this.spy, false);
-    router.events.off('routeChangeComplete', this.spy)
+    window.removeEventListener('scroll', () => this.spy(), false);
+    window.removeEventListener('resize', () => this.spy(), false);
+    router.events.off('routeChangeComplete', () => this.spy())
 
   }
 

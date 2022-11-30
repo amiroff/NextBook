@@ -5,7 +5,7 @@ import SideBarItem from './sidebar-item'
 import { AngleDown, AngleRight } from './svg-icons'
 
 const SideBarSection = ({ toc }) => {
-  const [menuVisible, setMenuVisible] = useState(false)
+  const [menuVisible, setMenuVisible] = useState(toc.openByDefault || false)
   const [menuActive, setMenuActive] = useState(false)
   const { asPath: path } = useRouter()
   const chapterItems = (

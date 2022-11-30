@@ -53,6 +53,7 @@
     {
       "part": "Using NextBook",
       "path": "/nextbook/nextbook-features",
+      "openByDefault": true,
       "chapters": [
         {
           "title": "NextBook Features",
