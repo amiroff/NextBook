@@ -62,8 +62,8 @@ export default function PageNav() {
         {prevChapter && (
           <Link href={prevChapter.path}>
             <a
-              className={`border border-transparent flex w-1/2 justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 dark:hover:text-gray-100 ${
-                !nextChapter && 'w-full md:max-w-sm'
+              className={`border border-transparent flex md:w-1/2 justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 dark:hover:text-gray-100 ${
+                !nextChapter && 'md:w-full md:max-w-sm'
               }`}
               title={_('Previous chapter')}
             >
@@ -78,8 +78,8 @@ export default function PageNav() {
         {nextChapter && (
           <Link href={nextChapter.path}>
             <a
-              className={`border border-transparent flex w-1/2 justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 dark:hover:text-gray-100 ${
-                !prevChapter && 'w-full md:max-w-sm'
+              className={`border border-transparent flex md:w-1/2 justify-center md:justify-between rounded m-1 p-3 bg-gray-300 text-gray-700 hover:border-gray-400 hover:text-gray-900 dark:bg-gray-700 dark:text-gray-200 dark:hover:border-gray-600 dark:hover:text-gray-100 ${
+                !prevChapter && 'md:w-full md:max-w-sm'
               }`}
               title={_('Next chapter')}
             >

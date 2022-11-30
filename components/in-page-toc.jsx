@@ -63,7 +63,7 @@ function InPageToc({ tocRaw }) {
         </a>
 
         <div className='py-2 text-gray-400 dark:text-gray-300 uppercase text-sm font-bold'>
-          <Text tid='Page Contents' />
+          <Text tid='Page Contents' className="tracking-widest" />
         </div>
         <Scrollspy
           ids={tocIds}
