@@ -9,9 +9,9 @@ function NavBar() {
   const router = useRouter()
 
   return (
-    <div className='flex pt-1 text-xs lg:text-sm max-h-full bg-gray-50 dark:bg-gray-900'>
+    <div className='flex pt-1 text-xs lg:text-sm max-h-full max-w-screen-2xl mx-auto'>
       <SideBarToggler />
-      <nav className='text-left text-xs lg:text-sm ml-6 flex-auto space-x-1 text-gray-900 dark:text-gray-50'>
+      <nav className='text-left text-xs lg:text-sm ml-6 flex-auto space-x-1 text-gray-900 dark:text-[#FFFFFF]'>
 
         {branding && (
           <Link href={branding.href || '/'}>
