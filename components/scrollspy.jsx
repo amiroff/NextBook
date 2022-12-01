@@ -9,7 +9,9 @@
 import React from 'react'
 import classnames from 'classnames'
 import router from 'next/router'
+import debounce from 'utils/debounce'
 
+const DEBOUNCE_DELAY = 500
 export default class Scrollspy extends React.Component {
   constructor(props) {
     super(props)
@@ -21,25 +23,16 @@ export default class Scrollspy extends React.Component {
   }
 
   updateHash = (hash) => {
-    if (hash !== this.state.current) {
-      router
-      .replace( // or push or whatever you want
-        {
-          hash,
-        },
-        null,
-        {
-          shallow: true,
-        }
-      )
-      .catch((e) => {
-        // TODO: workaround for https://github.com/vercel/next.js/issues/37362
-        if (!e.cancelled) {
-          throw e
-        }
-      })
-    }
+    // enforce hash # prefix
+    if ((''+hash).charAt(0) !== '#') hash = '#' + hash;
+    router.replace({
+      pathname: router.pathname,
+      query: { ...router.query },
+    }, undefined, { shallow: true, scroll: false })
+    // history.replaceState({}, '', hash)
   }
+
+  dUpdateHash = debounce(this.updateHash, DEBOUNCE_DELAY)
 
   spy() {
     // I don't understand why this was implemented this way, but I optimized it
@@ -70,9 +63,11 @@ export default class Scrollspy extends React.Component {
           return { ...item, inView: item === itemInView }
         })
 
-        
         this.setState({ items: update, current: itemInView.id  })
-        
+
+        // update page hash
+        this.dUpdateHash(itemInView.id)
+
       }
     }
   }
@@ -83,7 +78,7 @@ export default class Scrollspy extends React.Component {
     window.addEventListener('scroll', () => this.spy(), false);
     window.addEventListener('resize', () => this.spy(), false);
     // fire on router change
-    router.events.on('routeChangeComplete', () => this.spy())
+    // router.events.on('routeChangeComplete', () => this.spy())
 
     // run on mount
     this.spy()
@@ -97,7 +92,7 @@ export default class Scrollspy extends React.Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', () => this.spy(), false);
     window.removeEventListener('resize', () => this.spy(), false);
-    router.events.off('routeChangeComplete', () => this.spy())
+    // router.events.off('routeChangeComplete', () => this.spy())
 
   }
 
@@ -133,7 +128,7 @@ export default class Scrollspy extends React.Component {
             ),
             onClick: () => {
               // use next router to update url hash
-              this.updateHash(item.id)
+              this.dUpdateHash(item.id)
 
               // scroll to the element
               this.scrollTo(item.element)
