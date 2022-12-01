@@ -25,11 +25,11 @@ export default class Scrollspy extends React.Component {
   updateHash = (hash) => {
     // enforce hash # prefix
     if ((''+hash).charAt(0) !== '#') hash = '#' + hash;
-    router.replace({
-      pathname: router.pathname,
-      query: { ...router.query },
-    }, undefined, { shallow: true, scroll: false })
-    // history.replaceState({}, '', hash)
+    
+    // router.replace causes a scroll
+    history.replaceState({}, '', hash);
+
+    this.props.onUpdateHash(hash)
   }
 
   dUpdateHash = debounce(this.updateHash, DEBOUNCE_DELAY)
