@@ -10,8 +10,10 @@ import React from 'react'
 import classnames from 'classnames'
 import router from 'next/router'
 import debounce from 'utils/debounce'
+import throttle from 'utils/throttle'
 
-const DEBOUNCE_DELAY = 500
+const DEBOUNCE_HASH_DELAY = 500
+const THROTTLE_DELAY = 20
 export default class Scrollspy extends React.Component {
   constructor(props) {
     super(props)
@@ -32,7 +34,7 @@ export default class Scrollspy extends React.Component {
     this.props.onUpdateHash(hash)
   }
 
-  dUpdateHash = debounce(this.updateHash, DEBOUNCE_DELAY)
+  dUpdateHash = debounce(this.updateHash, DEBOUNCE_HASH_DELAY)
 
   spy() {
     // I don't understand why this was implemented this way, but I optimized it
@@ -72,13 +74,14 @@ export default class Scrollspy extends React.Component {
     }
   }
 
+  tSpy = throttle(this.spy, THROTTLE_DELAY)
 
   componentDidMount() {
     this.elements = this.props.ids.map((id) => document.getElementById(id))
-    window.addEventListener('scroll', () => this.spy(), false);
-    window.addEventListener('resize', () => this.spy(), false);
+    window.addEventListener('scroll', () => this.tSpy(), false);
+    window.addEventListener('resize', () => this.tSpy(), false);
     // fire on router change
-    // router.events.on('routeChangeComplete', () => this.spy())
+    // router.events.on('routeChangeComplete', () => this.tSpy())
 
     // run on mount
     this.spy()
@@ -90,9 +93,9 @@ export default class Scrollspy extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', () => this.spy(), false);
-    window.removeEventListener('resize', () => this.spy(), false);
-    // router.events.off('routeChangeComplete', () => this.spy())
+    window.removeEventListener('scroll', () => this.tSpy(), false);
+    window.removeEventListener('resize', () => this.tSpy(), false);
+    // router.events.off('routeChangeComplete', () => this.tSpy())
 
   }
 

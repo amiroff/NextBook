@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-link: rgb(42, 102, 230);
+  --color-link-hover: rgb(42, 102, 230);
+  --color-link-visited: rgb(42, 102, 230);
+  --color-link-active: rgb(42, 102, 230);
+  --color-link-focus: rgb(42, 102, 230);
+  --color-bg: rgba(132, 160, 225, 0.1);
+}
 
 /* GitBook Overrides */
 html {
@@ -24,8 +32,14 @@ a {
 }
 
 a.current {
-  background-color: rgba(133, 163, 224, 0.1);
-  color: rgb(41, 104, 233);
+  background-color: var(--color-bg);
+  color: var(--color-link);
+}
+
+.md-content a,
+.toc li.active {
+  border-color: var(--color-link);
+  color: var(--color-link);
 }
 
 h1 {
