@@ -48,9 +48,9 @@ function InPageToc({ tocRaw }) {
 
   if (tocIds.length) {
     return (
-      <div className='px-4 max-w-xs'>
+      <div className='px-4'>
         <a
-          className='m-4 text-sm text-gray-400 hover:text-gray-500 dark:text-gray-400  dark:hover:text-gray-300 text-center block'
+          className='m-4 text-sm text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-300 block'
           href={url}
         >
           <Link />
@@ -63,7 +63,7 @@ function InPageToc({ tocRaw }) {
         <Scrollspy
           ids={tocIds}
           itemElement={<InPageTocElement levels={levels} />}
-          itemContainerClassName='tracking-wide mt-4 text-gray-600 dark:text-gray-400 text-sm 2xl:text-base border-0 border-l border-gray-200 dark:border-gray-600 leading-6 cursor-pointer'
+          itemContainerClassName='tracking-wide mt-4 text-gray-600 dark:text-gray-400 text-xs 2xl:text-sm border-0 border-l border-gray-200 dark:border-gray-600 leading-6 cursor-pointer'
           itemClassName="text-gray-500 truncate py-1 hover:text-gray-700 dark:hover:text-gray-300"
           activeItemClassName='active text-gray-700 dark:text-gray-200 border-l-2 border-gray-900 dark:border-gray-200'
           includeParentClasses={false}

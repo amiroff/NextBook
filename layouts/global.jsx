@@ -32,7 +32,7 @@ export default function GlobalLayout({ title, part, description, children }) {
         <link rel='manifest' href='/manifest.json' />
       </Head>
 
-      <header className='z-[60] md:shadow-md bg-[#FFFFFF] dark:bg-gray-900 fixed w-screen top-0 h-10 md:h-14 font-medium'>
+      <header className='z-[60] md:shadow-sm bg-[#FFFFFF] dark:bg-gray-900 fixed w-screen top-0 h-10 md:h-14 font-medium'>
         <NavBar />
       </header>
 
