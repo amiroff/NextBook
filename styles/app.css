@@ -34,20 +34,20 @@ a.current {
   color: var(--color-link);
 }
 
-.md-content a,
-.toc li.active {
+html.light .md-content a,
+html.light .toc li.active {
   border-color: var(--color-link);
   color: var(--color-link);
   text-decoration: none;
 }
 
-.md-content a:hover,
-.md-content a:focus {
+html.light .md-content a:hover,
+html.light .md-content a:focus {
   color: var(--color-link-hover);
   text-decoration: underline;
 }
 
-.md-content a:visited {
+html.light .md-content a:visited {
   color: var(--color-link-visited);
 }
 
@@ -76,7 +76,7 @@ h6 {
 }
 
 pre {
-  @apply rounded-sm overflow-auto mx-auto max-w-[88vw] md:max-w-[46vw] lg:max-w-[30vw] xl:max-w-[38vw] 2xl:max-w-[48vw];
+  @apply rounded-sm overflow-auto mx-auto max-w-[88vw] md:max-w-[46vw] lg:max-w-[30vw] xl:max-w-[38vw] 2xl:max-w-[32vw];
 }
 
 /* Diffs without line numbering */

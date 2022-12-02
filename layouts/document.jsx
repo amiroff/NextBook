@@ -64,7 +64,7 @@ export default function DocumentLayout({ children, frontMatter }) {
           <PageNav />
         </div>
         {showToc && (
-          <div className='toc-container hidden lg:block grow shrink-0 basis-64'>
+          <div className='toc-container hidden lg:block shrink-0 basis-64 min-w-0'>
             <div className='toc sticky top-20'>
               <InPageToc tocRaw={toc} />
             </div>
