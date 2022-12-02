@@ -3,11 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --color-link: rgb(42, 102, 230);
-  --color-link-hover: rgb(42, 102, 230);
-  --color-link-visited: rgb(42, 102, 230);
-  --color-link-active: rgb(42, 102, 230);
-  --color-link-focus: rgb(42, 102, 230);
+  --color-link: hsl(221, 79%, 60%);
+  --color-link-hover: hsl(221, 79%, 30%);
+  --color-link-visited: hsl(221, 79%, 42%);
   --color-bg: rgba(132, 160, 225, 0.1);
 }
 
@@ -40,6 +38,17 @@ a.current {
 .toc li.active {
   border-color: var(--color-link);
   color: var(--color-link);
+  text-decoration: none;
+}
+
+.md-content a:hover,
+.md-content a:focus {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+.md-content a:visited {
+  color: var(--color-link-visited);
 }
 
 h1 {
