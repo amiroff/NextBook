@@ -27,7 +27,7 @@
     "next-remote-watch": "2.0.0",
     "next-seo": "^5.14.1",
     "next-sitemap": "^3.1.25",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.1",
     "prismjs": ">=1.29.0",
     "react": "18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
