@@ -39,7 +39,7 @@ export default function PageNav() {
     setNextChapter(
       currentPart?.chapters[currentChapterIndex + 1] || nextPart?.chapters[0]
     )
-  }, [router.asPath, toc]) //router.asPath, toc
+  }, [router.asPath, toc])
 
   useShortcuts(
     ['ArrowRight'],
