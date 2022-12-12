@@ -36,7 +36,7 @@ function InPageToc({ tocRaw }) {
   const [url, setUrl] = useState('')
 
   const onUpdateHash = (hash) => {
-    setUrl(`${window.location.origin}${window.location.pathname}#${hash}`)
+    setUrl(window.location.origin + window.location.pathname + hash)
   }
 
   // on mount, set the initial hash
