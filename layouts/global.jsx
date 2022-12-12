@@ -38,7 +38,7 @@ export default function GlobalLayout({ title, part, description, children }) {
 
       <div className='content-wrapper mt-10 md:mt-20 flex max-w-screen-2xl mx-auto'>
         <SideBar />
-        <div className='md-wrapper flex md:ml-72 grow'>{children}</div>
+        <div className='md-wrapper flex md:pl-64 grow max-w-full'>{children}</div>
       </div>
     </>
   )

@@ -12,7 +12,7 @@ import router from 'next/router'
 import debounce from 'utils/debounce'
 import throttle from 'utils/throttle'
 
-const DEBOUNCE_HASH_DELAY = 500
+const DEBOUNCE_HASH_DELAY = 300
 const THROTTLE_DELAY = 20
 export default class Scrollspy extends React.Component {
   constructor(props) {

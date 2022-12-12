@@ -75,10 +75,6 @@ h6 {
   @apply text-lg font-bold my-5;
 }
 
-pre {
-  @apply rounded-sm overflow-auto mx-auto max-w-[88vw] md:max-w-[46vw] lg:max-w-[30vw] xl:max-w-[38vw] 2xl:max-w-[32vw];
-}
-
 /* Diffs without line numbering */
 .clean .linenumber {
   display: none !important;
@@ -147,4 +143,11 @@ li p {
 .dark body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* GitBook Overrides */
+.toc {
+  @apply sticky top-20 overflow-auto;
+  max-height: calc(100vh - 5rem);
 }

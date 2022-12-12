@@ -27,9 +27,9 @@ export default function DocumentLayout({ children, frontMatter }) {
 
   return (
     <GlobalLayout title={title} part={part} description={description}>
-      <div className='content-container flex grow'>
+      <div className='content-container flex grow max-w-full relative'>
         <div
-          className='content px-4 md:px-14 xl:px-20 grow shrink'
+          className='content px-4 md:px-14 lg:pr-72 xl:pl-20 max-w-full'
         >
           {title && <h1>{title}</h1>}
           {description && <p className='my-1 mb-8 text-sm md:text-xl tracking-wide text-gray-400'>{description}</p>}
@@ -64,8 +64,8 @@ export default function DocumentLayout({ children, frontMatter }) {
           <PageNav />
         </div>
         {showToc && (
-          <div className='toc-container hidden lg:block shrink-0 basis-64 min-w-0'>
-            <div className='toc sticky top-20'>
+          <div className='toc-container hidden lg:block -ml-60 w-60'>
+            <div className='toc'>
               <InPageToc tocRaw={toc} />
             </div>
           </div>
