@@ -61,6 +61,10 @@
           "path": "/nextbook/page-metadata"
         },
         {
+          "title": "MDX Embed",
+          "path": "/nextbook/mdx-embed"
+        },
+        {
           "title": "In Progress Features",
           "path": "/nextbook/in-progress-features"
         }
