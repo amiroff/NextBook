@@ -238,7 +238,7 @@ results in:
 In some cases there's a need to highlight/mark some lines and then describe each line seperately. Any number of lines can be marked by providing `marked` parameter:
 
 ~~~
-```html marked=2,5,6,10
+```html marked=2,4-6,6,10
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -256,7 +256,7 @@ In some cases there's a need to highlight/mark some lines and then describe each
 
 results in:
 
-```html marked=2,5,6,10 nocopy
+```html marked=2,4-6,10 nocopy
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -276,7 +276,7 @@ results in:
 Sometimes you want to show which lines were added or removed from code. This can be achieved by passing related line numbers as `added` and `removed` parameters. Added lines will be highlighted with light green, removed lines with light red color. Note that displaying numbers, although works, in this case would cause a confusion as line numbers do not repeat.
 
 ~~~
-```html removed=2,8 added=3,9,10
+```html removed=2,8 added=3,6,7-10
 <!DOCTYPE html>
 <html lang='en'>
 <html lang='ja'>
@@ -294,7 +294,7 @@ Sometimes you want to show which lines were added or removed from code. This can
 
 results in:
 
-```html removed=2,8 added=3,9,10 nocopy
+```html removed=2,8 added=3,6,7-10 nocopy
 <!DOCTYPE html>
 <html lang='en'>
 <html lang='ja'>
