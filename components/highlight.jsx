@@ -39,10 +39,20 @@ SyntaxHighlighter.registerLanguage('python', python)
 SyntaxHighlighter.registerLanguage('django', django)
 SyntaxHighlighter.registerLanguage('javascript', javascript)
 
-const yamlToArray = (yamlString) =>
-  yamlString.split(',').map(function (n) {
-    return Number(n)
-  })
+const rangeToArray = (rangeString) => {
+  return rangeString.split(',').flatMap((item) => {
+    const trimmedItem = item.trim();
+    if (trimmedItem.includes('-')) {
+      const [start, end] = trimmedItem.split('-').map(s => Number(s.trim()));
+      if (!isNaN(start) && !isNaN(end)) {
+        return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+      }
+      return [];
+    }
+    const number = Number(trimmedItem);
+    return isNaN(number) ? [] : [number];
+  });
+};
 
 const Highlight = (props) => {
   const themeCtx = useContext(ThemeContext)
@@ -54,11 +64,9 @@ const Highlight = (props) => {
   const dark = props.dark === '' ? true : false
   const nocopy = props.nocopy === '' ? true : false
   const numbered = props.numbered === '' ? true : false
-  const markedArray = marked.split(',').map(function (n) {
-    return Number(n)
-  })
-  const addedArray = yamlToArray(added)
-  const removedArray = yamlToArray(removed)
+  const markedArray = rangeToArray(marked)
+  const addedArray = rangeToArray(added)
+  const removedArray = rangeToArray(removed)
   const pseudoNumbered =
     markedArray.concat(removedArray).concat(addedArray).length > 1 && !numbered
 
