@@ -6,14 +6,13 @@
  * Lacy - November 2022: Added nextJS router support
  */
 
-import React from 'react'
 import classnames from 'classnames'
-import router from 'next/router'
+import React from 'react'
 import debounce from 'utils/debounce'
 import throttle from 'utils/throttle'
-
-const DEBOUNCE_HASH_DELAY = 300
 const THROTTLE_DELAY = 20
+const DEBOUNCE_HASH_DELAY = 100
+
 export default class Scrollspy extends React.Component {
 	constructor(props) {
 		super(props)
@@ -54,21 +53,17 @@ export default class Scrollspy extends React.Component {
 
 			let itemInView = items.find((item) => !!item && item.inView)
 
-			if (!itemInView) {
-				itemInView = items[0]
-			}
-
-			if (this.state.current !== itemInView.id) {
+			if (itemInView && this.state.current !== itemInView?.id) {
 				// item updated
 
 				const update = items.map((item) => {
 					return { ...item, inView: item === itemInView }
 				})
 
-				this.setState({ items: update, current: itemInView.id })
+				this.setState({ items: update, current: itemInView?.id })
 
 				// update page hash
-				this.dUpdateHash(itemInView.id)
+				itemInView?.id && this.dUpdateHash(itemInView.id)
 
 			}
 		}
