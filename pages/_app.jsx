@@ -2,9 +2,10 @@ import splitbee from '@splitbee/web'
 import { OptionalHistoryContextProvider } from 'components/store/history-context'
 import { SideBarContextProvider } from 'components/store/sidebar-context'
 import { ThemeContextProvider } from 'components/store/theme-context'
-import 'tailwindcss/tailwind.css'
-import 'styles/print.css'
+
+// app.css imports tailwindcss styles
 import 'styles/app.css'
+import 'styles/print.css'
 
 if (
   process.env.NEXT_PUBLIC_SPLITBEE_TOKEN &&

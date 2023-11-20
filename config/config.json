@@ -1,6 +1,6 @@
 {
   "projectTitle": "NextBook: Easy Docs With Markdown!",
-  "projectDescription": "NextBook is quick and easy way to buid technical books or documentation that support modern standards and run blazingly fast. It's built with MDX, Next.js and React and works by compiling markdown or MDX down to plain static html.",
+  "projectDescription": "NextBook is quick and easy way to build technical books or documentation that support modern standards and run blazingly fast. It's built with MDX, Next.js and React and works by compiling markdown or MDX down to plain static html.",
   "projectURL": "https://next-book.vercel.app",
   "locale": "en",
   "text": {
@@ -14,10 +14,19 @@
     "Copy": "Copy",
     "Copied!": "Copied!",
     "Page Contents": "Page Contents",
+    "Permalink": "Copy Link",
     "Toggle mobile sidebar": "Toggle mobile sidebar",
     "Previous chapter": "Previous chapter (<-)",
     "Next chapter": "Next chapter (->)",
     "Figure": "Figure"
+  },
+  "branding": {
+    "title": "Nextbook!",
+    "initials": "N",
+    "sidebarTitle": "Nextbook Docs",
+    "href": "https://next-book.vercel.app",
+    "img": "/images/logo.png",
+    "alt": "Nextbook logo"
   },
   "navbarItems": [
     {
@@ -43,6 +52,8 @@
     },
     {
       "part": "Using NextBook",
+      "path": "/nextbook/nextbook-features",
+      "openByDefault": true,
       "chapters": [
         {
           "title": "NextBook Features",

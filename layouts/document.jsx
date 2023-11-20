@@ -9,6 +9,7 @@ export default function DocumentLayout({ children, frontMatter }) {
   const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' }
   const [locale, setLocale] = useState('en')
   const { title, part, description, tags, updated, tocRaw } = frontMatter
+  const [toc, setToc] = useState(tocRaw)
 
   useEffect(() => {
     const browserLocales =
@@ -20,15 +21,19 @@ export default function DocumentLayout({ children, frontMatter }) {
     }
   }, [])
 
+  useEffect(() => {
+    setToc(tocRaw)
+  }, [tocRaw])
+
   return (
     <GlobalLayout title={title} part={part} description={description}>
-      <div className='content-container flex'>
+      <div className='content-container flex grow max-w-full relative'>
         <div
-          className='content px-4 md:px-8 w-screen max-w-screen-sm 
-                    md:max-w-screen-md xl:max-w-screen-md 2xl:max-w-screen-lg'
+          className='content px-4 md:px-14 lg:pr-72 xl:pl-20 max-w-full'
         >
-          {title && <h1 className='text-4xl font-bold my-5'>{title}</h1>}
-          {description && <p className='my-1'>{description}</p>}
+          {title && <h1>{title}</h1>}
+          {description && <p className='my-1 mb-8 text-sm md:text-xl tracking-wide text-gray-400'>{description}</p>}
+          
           {tags && (
             <div className='my-2 text-sm 2xl:text-base'>
               <span>
@@ -59,9 +64,9 @@ export default function DocumentLayout({ children, frontMatter }) {
           <PageNav />
         </div>
         {showToc && (
-          <div className='toc-container flex-none w-56 hidden lg:block'>
-            <div className='toc sticky top-20'>
-              <InPageToc tocRaw={tocRaw} />
+          <div className='toc-container hidden lg:block -ml-60 w-60'>
+            <div className='toc'>
+              <InPageToc tocRaw={toc} />
             </div>
           </div>
         )}

@@ -1,10 +1,12 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import SideBarItem from './sidebar-item'
 import { AngleDown, AngleRight } from './svg-icons'
 
 const SideBarSection = ({ toc }) => {
-  const [menuVisible, setMenuVisible] = useState(false)
+  const [menuVisible, setMenuVisible] = useState(toc.openByDefault || false)
+  const [menuActive, setMenuActive] = useState(false)
   const { asPath: path } = useRouter()
   const chapterItems = (
     <>
@@ -14,39 +16,36 @@ const SideBarSection = ({ toc }) => {
     </>
   )
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+    e.preventDefault()
     setMenuVisible((current) => !current)
   }
 
   // Open part containing current page
   useEffect(() => {
+    setMenuActive(false)
     const currentPart = toc.chapters.some((chapter) => chapter.path === path)
     if (currentPart) {
       setMenuVisible(true)
     }
+    setMenuActive(currentPart)
   }, [path, toc.chapters])
 
-  return (
-    <div className='text-sm'>
-      {/* display toggleable titlebar only when we have a part */}
-      {toc.part && (
-        <div className='flex my-3 ml-2 items-center' onClick={toggleMenu}>
-          <div>{menuVisible ? <AngleDown /> : <AngleRight />}</div>
-          <div className='pl-1 text-base text-gray-900  dark:text-gray-50 cursor-pointer select-none'>
-            {toc.part}
-          </div>
+  if(toc.part) {
+    return (
+       <div className='text-sm'>
+        {/* display toggleable titlebar only when we have a part */}
+        <div className='flex w-full items-center cursor-pointer select-none' >
+            <SideBarItem item={{title: toc.part, path: toc.path || ''}} onClick={toggleMenu} active={menuActive} icon={menuVisible ? <AngleDown /> : <AngleRight />} />
         </div>
-      )}
-
-      {toc.part ? (
-        <div className={menuVisible ? 'block ml-4 pl-1' : 'hidden'}>
+        <div className={menuVisible ? 'block ml-4 border-l border-gray-300 pl-2' : 'hidden'}>
           {chapterItems}
         </div>
-      ) : (
-        <div>{chapterItems}</div>
-      )}
-    </div>
-  )
+      </div>
+    )
+  } 
+
+  return ( <div className='text-sm'>{chapterItems}</div>)
 }
 
 export default SideBarSection
