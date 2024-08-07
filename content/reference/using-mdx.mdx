@@ -17,7 +17,6 @@ Basically, renaming your `.md` file to `.mdx` gives you ability to import and us
 
 Here is a small demo video for curious:
 
-
 <iframe
   width='100%'
   height='400'
@@ -52,17 +51,31 @@ export default function Counter() {
 
 If you need to use components in your markdown content files, use `.mdx` extension, and provide any custom components through the `components/component-mapper.jsx` file. Then include it in your `.mdx` file and display it just like in React application:
 
-``` markdown
+```markdown
 ### Example Counter Component
+
 <Counter />
 ```
 
 becomes:
 
 ### Example Counter Component
+
 <Counter />
 
 Voila! This way you can create dynamic components for your documentation like never before. Live code editors, quizes, exams, cheatsheets, comments, you name it. Possibilities are endless. Notice that you can use tailwindcss classnames in components for styling.
+
+## MDX-Embed
+
+You can also use any components from [MDX-Embed](https://mdx-embed.com/) to embed content from other sites like YouTube, Twitter, Codepen, etc. For example, to embed a YouTube video, you can use the following syntax:
+
+```markdown
+<YouTube youTubeId='dQw4w9WgXcQ' />
+```
+
+becomes:
+
+<YouTube youTubeId='dQw4w9WgXcQ' />
 
 ## More MDX Wizardry
 

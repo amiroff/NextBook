@@ -6,7 +6,7 @@ class MyDocument extends Document {
     return (
       <Html lang={config.locale}>
         <Head />
-        <body className='bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-100'>
+        <body className='dark:bg-gray-800 text-gray-800 dark:text-gray-100'>
           <Main />
           <NextScript />
         </body>

@@ -2,12 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-link: hsl(221, 79%, 60%);
+  --color-link-hover: hsl(221, 79%, 30%);
+  --color-link-visited: hsl(221, 79%, 42%);
+  --color-bg: rgba(132, 160, 225, 0.1);
+}
+
+/* GitBook Overrides */
+html {
+  scroll-behavior: smooth;
+  
+  /* Offset for fixed header */
+  scroll-padding-top: 100px; 
+  
+  body {
+      @apply text-gray-600;
+  }
+
+  &:has(.dark) body {
+    @apply text-gray-300;
+  }
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+a.current {
+  background-color: var(--color-bg);
+  color: var(--color-link);
+}
+
+html.light .md-content a,
+html.light .toc li.active {
+  border-color: var(--color-link);
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+html.light .md-content a:hover,
+html.light .md-content a:focus {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+html.light .md-content a:visited {
+  color: var(--color-link-visited);
+}
+
+h1 {
+  @apply text-5xl font-bold my-5;
+}
+
+h2 {
+  @apply text-4xl font-bold my-5;
+}
+
+h3 {
+  @apply text-3xl font-bold my-5;
+}
+
+h4 {
+  @apply text-2xl font-bold my-5;
+}
+
+h5 {
+  @apply text-xl font-bold my-5;
+}
+
+h6 {
+  @apply text-lg font-bold my-5;
+}
+
 /* Diffs without line numbering */
 .clean .linenumber {
   display: none !important;
 }
 
 p {
+  @apply text-lg;
   margin: 1em 0;
 }
 
@@ -71,99 +145,9 @@ li p {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Use custom scrollbars. */
-@media (min-width: 769px) {
-  /* Base scrollbar */
 
-  /* Firefox */
- .with-custom-webkit-scrollbars, .with-custom-webkit-scrollbars *
-  {
-    scrollbar-color: #cbd5e1 transparent;
-    scrollbar-width: thin;
-  }
-  .dark.with-custom-webkit-scrollbars, .dark.with-custom-webkit-scrollbars * {
-    scrollbar-color: #334155 transparent;
-    scrollbar-width: thin;
-  }
-
-  /* Webkit based browsers */
-
-  .with-custom-webkit-scrollbars *::-webkit-scrollbar {
-    width: 1.4rem;
-    height: 1.4rem;
-    background-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar {
-    background-color: transparent;
-  }
-
-  .with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb {
-    min-width: 3rem;
-    min-height: 3rem;
-    background-color: rgba(0, 0, 0, 0.25);
-    border: 0.4rem solid transparent;
-    -moz-background-clip: content; /* Firefox 3.6 */
-    -webkit-background-clip: content; /* Safari 4? Chrome 6? */
-    background-clip: content-box;
-    border-radius: 1rem;
-  }
-  .with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-color: transparent;
-  }
-  .with-custom-webkit-scrollbars *::-webkit-scrollbar-corner {
-    background-color: transparent;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  .dark.with-custom-webkit-scrollbars *::-webkit-scrollbar-corner {
-    background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.05);
-  }
-
-  /* Sidebar scrollbar */
-  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar {
-    width: 1.4rem;
-    height: 1.4rem;
-    background-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar {
-    background-color: transparent;
-  }
-
-  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.25);
-    border-width: 0.4rem;
-    border-color: transparent;
-    border-radius: 1rem;
-  }
-  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.25);
-    border-color: transparent;
-  }
-  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-color: transparent;
-  }
-  .with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-corner {
-    background-color: transparent;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.1);
-  }
-  .dark.with-custom-webkit-scrollbars .sidebar::-webkit-scrollbar-corner {
-    background-color: transparent;
-    border-color: rgba(255, 255, 255, 0.05);
-  }
+/* GitBook Overrides */
+.toc {
+  @apply sticky top-20 overflow-auto;
+  max-height: calc(100vh - 5rem);
 }

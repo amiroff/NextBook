@@ -37,9 +37,6 @@ yarn-error.log*
 /.idea/
 /.vscode/
 
-# yarn
-yarn.lock
-
 # docker
 /.devcontainer
 
